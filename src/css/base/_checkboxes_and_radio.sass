@@ -1,0 +1,90 @@
+.checkbox
+  color: #979797
+  display: block
+  font-weight: 500
+  line-height: 20px
+  min-height: 20px
+  margin-bottom: 20px
+  position: relative
+  padding-left: 30px
+
+  @media(min-width: 1200px)
+    margin-bottom: 30px
+
+  &:last-child
+    margin-bottom: 0
+
+  &__input
+    display: none
+
+    &:disabled + .checkbox__icon
+    &.disabled + .checkbox__icon
+      border-color: #f7f7f7
+      cursor: default
+
+    &:checked + .checkbox__icon
+      background: url("../images/icons/checkbox-checked.png") no-repeat 50% 50% #000294
+      border-color: #000294
+
+  &__icon
+    border: 2px solid #808080
+    border-radius: 4px
+    cursor: pointer
+    height: 18px
+    left: 0
+    position: absolute
+    top: 0
+    width: 18px
+
+  a
+    color: inherit
+    text-decoration: underline
+
+.radio
+  display: block
+  font-weight: 500
+  line-height: 20px
+  min-height: 20px
+  margin-bottom: 20px
+  position: relative
+  padding-left: 40px
+
+  @media(min-width: 1200px)
+    margin-bottom: 30px
+
+  &:last-child
+    margin-bottom: 0
+
+  &__input
+    display: none
+
+    &:disabled + .radio__icon
+    &.disabled + .radio__icon
+      border-color: #f7f7f7
+      cursor: default
+
+    &:checked + .radio__icon
+      &::before
+        display: block
+
+  &__icon
+    border: 2px solid #808080
+    border-radius: 50%
+    cursor: pointer
+    height: 20px
+    left: 0
+    position: absolute
+    top: 0
+    width: 20px
+
+    &::before
+      background-color: #000294
+      border-radius: 50%
+      content: ""
+      display: none
+      height: 10px
+      left: 50%
+      position: absolute
+      top: 50%
+      transform: translate(-50%, -50%)
+      width: 10px

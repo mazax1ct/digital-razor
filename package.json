@@ -1,0 +1,20 @@
+{
+  "name": "arcom",
+  "version": "1.0.0",
+  "description": "",
+  "author": "mazax1ct",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "browser-sync": "^2.2.3",
+    "gulp-autoprefixer": "^2.1.0",
+    "gulp-clean-css": "^3.7.0",
+    "gulp-csscomb": "^3.0.8",
+    "gulp-group-css-media-queries": "^1.2.0",
+    "gulp-imagemin": "^2.2.1",
+    "gulp-rigger": "^0.5.8",
+    "gulp-sass": "^3.1.0",
+    "gulp-watch": "^4.1.1",
+    "imagemin-pngquant": "^4.0.0",
+    "rimraf": "^2.3.1"
+  }
+}

@@ -1,0 +1,119 @@
+.input,
+.textarea
+  background-color: #f7f7f7
+  border: 2px solid #f7f7f7
+  border-radius: 0
+  box-shadow: none
+  color: #808080
+  font-family: "Muller", "Arial", sans-serif
+  font-size: 12px
+  font-weight: 400
+  transition: box-shadow 0.3s
+  -webkit-appearance: none
+  -moz-appearance: none
+  appearance: none
+
+  @media(min-width: 1200px)
+    font-size: 16px
+
+  &:focus
+    box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.25)
+
+  &.error
+    border-color: #ec1a40
+    background-color: #ec1a40
+    box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.25)
+    color: #fff
+
+    &:focus
+      border-color: #ec1a40
+      background-color: #ec1a40
+      color: #fff
+
+input,
+textarea
+  &:focus
+    outline: 0
+
+.input
+  height: 40px
+  line-height: 40px
+  padding: 0 10px
+
+  @media(min-width: 1200px)
+    padding-left: 15px
+    padding-right: 15px
+
+.textarea
+  height: 250px
+  padding: 10px
+  resize: none
+
+/*placeholder*/
+.input::-webkit-input-placeholder
+  color: #979797
+  opacity: 1
+  transition: opacity 0.3s
+
+.input::-moz-placeholder
+  color: #979797
+  opacity: 1
+  transition: opacity 0.3s
+
+.input:-ms-input-placeholder
+  color: #979797
+  opacity: 1
+  transition: opacity 0.3s
+
+.textarea::-webkit-input-placeholder
+  color: #979797
+  opacity: 1
+  transition: opacity 0.3s
+
+.textarea::-moz-placeholder
+  color: #979797
+  opacity: 1
+  transition: opacity 0.3s
+
+.textarea:-ms-input-placeholder
+  color: #979797
+  opacity: 1
+  transition: opacity 0.3s
+
+//error
+.input.error::-webkit-input-placeholder
+  color: #fff
+
+.input.error::-moz-placeholder
+  color: #fff
+
+.input.error:-ms-input-placeholder
+  color: #fff
+
+.textarea.error::-webkit-input-placeholder
+  color: #fff
+
+.textarea.error::-moz-placeholder
+  color: #fff
+
+.textarea.error:-ms-input-placeholder
+  color: #fff
+
+/*:focus placeholder*/
+.input:focus::-webkit-input-placeholder
+  opacity: 0
+
+.input:focus::-moz-placeholder
+  opacity: 0
+
+.input:focus:-ms-input-placeholder
+  opacity: 0
+
+.textarea:focus::-webkit-input-placeholder
+  opacity: 0
+
+.textarea:focus::-moz-placeholder
+  opacity: 0
+
+.textarea:focus:-ms-input-placeholder
+  opacity: 0

@@ -1,0 +1,29 @@
+.button
+  background: none
+  border: 1px solid #fff
+  color: #fff
+  cursor: pointer
+  display: inline-block
+  line-height: 18px
+  min-height: 40px
+  min-width: 120px
+  padding: 9px
+  text-decoration: none
+  text-align: center
+  vertical-align: middle
+
+  @media(min-width: 768px)
+    font-size: 20px
+    min-height: 50px
+    min-width: 200px
+    padding-top: 14px
+
+  &:hover
+    text-decoration: none
+
+  &.disabled,
+  &:disabled
+    cursor: default
+
+  &--red
+    background-color: #E7212E
