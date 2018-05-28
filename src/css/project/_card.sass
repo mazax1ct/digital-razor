@@ -3,9 +3,9 @@
   display: flex
   flex-direction: column
   max-width: 390px
-  margin-bottom: 15px
   margin-left: auto
   margin-right: auto
+  padding-bottom: 20px
 
   &:hover
     text-decoration: none
@@ -15,6 +15,66 @@
 
   @media(min-width: 768px)
     height: 100%
+
+  @media(min-width: 992px)
+    padding-bottom: 0
+
+  &--glared
+    border-bottom: 10px solid #4a4a4a
+    transition: border-bottom-color 0.3s
+
+    &:hover
+      border-bottom-color: #F13724
+
+    .card__top-block
+      background: none
+
+    .card__image
+      overflow: hidden
+      position: relative
+
+      img
+        position: relative
+        z-index: 1
+
+      &::after
+        background-color: #272727
+        bottom: 0
+        content: ''
+        height: 100%
+        left: 0
+        position: absolute
+        top: auto
+        transform: skewY(-23deg) translateY(71.4%)
+        width: 100%
+
+    .card__title
+      background-color: #1d1d1d
+      padding-top: 15px
+      position: relative
+      z-index: 1
+
+    .card__info
+      background-color: #272727
+      border-bottom: 1px solid #2a2a2a
+      overflow: hidden
+      position: relative
+
+      &::after
+        background-color: #3a3a3a
+        bottom: 0
+        content: ''
+        height: 0
+        left: 0
+        position: absolute
+        padding-bottom: 100%
+        top: auto
+        transform: skewY(-23deg) translateY(79%)
+        width: 100%
+
+    .card__option
+      position: relative
+      z-index: 1
 
   &__top-block,
   &__image,
@@ -33,13 +93,11 @@
     font-family: 'Russo One', Arial, sans-serif
     font-size: 28px
     margin-top: -1em
-    text-align: center
+    padding-left: 15px
+    padding-right: 15px
 
-    @media(min-width: 992px)
+    @media(min-width: 992px) and (max-width: 1200px)
       font-size: 22px
-
-    @media(min-width: 1200px)
-      font-size: 32px
 
     @media(min-width: 1900px)
       font-size: 38px
@@ -47,22 +105,105 @@
     .red
       color: #F13724
 
+  &__price-block
+    align-items: center
+    display: flex
+    justify-content: space-between
+    margin-top: 10px
+    margin-bottom: 5px
+    padding-left: 15px
+    padding-right: 15px
+
+  &__small-price
+    color: #A5A5A5
+    white-space: nowrap
+
+    @media(min-width: 1900px)
+      font-size: 20px
+
+  &__buy-button
+    align-items: center
+    background-color: #F13724
+    border: 1px solid #F13724
+    color: #fff
+    cursor: pointer
+    display: flex
+    font-size: 14px
+    line-height: 18px
+    padding: 8px 15px
+    text-decoration: none
+    text-align: center
+    vertical-align: middle
+
+    @media(min-width: 1900px)
+      font-size: 20px
+
+  &__cart-icon
+    display: none
+    fill: #fff
+    height: 22px
+    margin-right: 10px
+    width: 22px
+
+    @media(min-width: 1200px)
+      display: inline-block
+
   &__info
     background-color: #3a3a3a
     flex-grow: 1
     padding: 15px
-    margin-bottom: 5px
 
     @media(min-width: 1900px)
       padding-top: 25px
 
+    & + .card__price
+      margin-top: 5px
+
+    &--glared
+      background-color: #272727
+
   &__preview
     color: #B2B2B2
+    font-size: 14px
     margin-bottom: 15px
 
     @media(min-width: 1900px)
       font-size: 19px
-      margin-bottom: 30px
+      margin-bottom: 20px
+
+    &--bordered
+      border-bottom: 1px solid #4b4b4b
+      padding-bottom: 15px
+      margin-bottom: 15px
+
+      @media(min-width: 1900px)
+        margin-bottom: 15px
+
+  &__option
+    align-items: center
+    display: flex
+    margin-bottom: 10px
+
+    &:last-child
+      margin-bottom: 0
+
+  &__option-icon
+    height: 50px
+    width: 50px
+
+  &__option-text
+    border-bottom: 1px solid #4b4b4b
+    font-size: 14px
+    flex-grow: 1
+    margin-left: 15px
+    padding-bottom: 10px
+
+    @media(min-width: 1900px)
+      font-size: 16px
+
+  &__option-title
+    color: #939393
+    display: block
 
   &__power-title,
   &__power-subtitle
@@ -81,6 +222,12 @@
 
     &:last-child
       margin-bottom: 0
+
+    & + .card__buttons
+      margin-top: 15px
+
+      @media(min-width: 1900px)
+        margin-bottom: 30px
 
   &__power-subtitle
     flex-grow: 1
@@ -116,6 +263,48 @@
 
     &.red
       background-color: #F13724
+
+  &__buttons
+    display: flex
+    justify-content: space-between
+    margin-bottom: 15px
+
+    &:last-child
+      margin-bottom: 0
+
+  &__button
+    align-items: center
+    background: none
+    border: 1px solid #fff
+    color: #fff
+    cursor: pointer
+    display: flex
+    justify-content: center
+    flex-grow: 1
+    font-size: 14px
+    line-height: 18px
+    padding: 8px 10px
+    text-decoration: none
+    text-align: center
+    vertical-align: middle
+
+    @media(min-width: 1900px)
+      font-size: 20px
+
+    &--config
+      margin-right: 7px
+
+    &--upgrade
+      margin-left: 7px
+
+  &__config-icon
+    display: none
+
+    @media(min-width: 1200px)
+      display: inline-block
+      height: 22px
+      margin-right: 10px
+      width: 22px
 
   &__price
     background-color: #000
