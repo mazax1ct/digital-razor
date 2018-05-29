@@ -1,0 +1,68 @@
+.scroll-menu-block
+  min-height: 55px
+  padding-top: 0
+  padding-bottom: 0
+
+  @media (min-width: 1200px)
+    padding-bottom: 0
+    padding-top: 0
+
+  @media (min-width: 1900px)
+    min-height: 80px
+    padding-top: 0
+    padding-bottom: 0
+
+  &__inner
+    background-color: #272727
+    min-height: 55px
+
+    @media (min-width: 1900px)
+      min-height: 80px
+
+    &.fixed
+      left: 0
+      position: fixed
+      top: 0
+      width: 100%
+      z-index: 100
+
+  .decorated-title
+    display: none
+    margin-bottom: 0
+
+    @media(min-width: 992px)
+      display: block
+
+.scroll-menu
+  @media(min-width: 992px)
+    align-items: center
+    display: flex
+    justify-content: space-between
+
+.sections-menu
+  display: flex
+  overflow-x: auto
+
+  @media(min-width: 1900px)
+    font-size: 20px
+
+  &__item
+    min-height: 55px
+    margin-right: 20px
+
+    @media(min-width: 1900px)
+      margin-right: 40px
+
+    &:last-child
+      margin-right: 0
+
+    &.is-active
+      border-bottom: 3px solid #E7212E
+
+  &__link
+    display: block
+    min-height: 55px
+    padding-top: 18px
+
+    &:hover
+      text-decoration: none
