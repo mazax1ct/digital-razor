@@ -26,6 +26,7 @@ var path = {
     html: "src/*.html",
     js: "src/js/*.js",
     style: "src/css/style.sass",
+    config: "src/css/config.sass",
     img: "src/images/**/*.*",
     fonts: "src/fonts/**/*.*"
   },
@@ -75,6 +76,20 @@ gulp.task("js:build", function() {
 gulp.task("style:build", function() {
   gulp
     .src(path.src.style)
+    .pipe(sass())
+    .pipe(csscomb())
+    .pipe(gcmq())
+    .pipe(
+      prefixer({
+        browsers: ["last 2 versions", "ie >= 10"],
+        cascade: false
+      })
+    )
+    .pipe(cleanCSS())
+    .pipe(gulp.dest(path.build.css))
+    .pipe(reload({ stream: true }));
+  gulp
+    .src(path.src.config)
     .pipe(sass())
     .pipe(csscomb())
     .pipe(gcmq())

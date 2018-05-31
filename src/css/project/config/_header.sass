@@ -1,0 +1,127 @@
+.header
+  min-height: 55px
+
+  @media(min-width: 1200px)
+    min-height: 70px
+    margin-bottom: 5px
+    padding-top: 5px
+
+  &__inner
+    align-items: center
+    background-color: #3E3E3E
+    display: flex
+    min-height: 55px
+    margin-left: auto
+    margin-right: auto
+    max-width: 1800px
+    position: relative
+    padding-left: 10px
+    padding-right: 10px
+
+    @media(min-width: 1200px)
+      min-height: 70px
+
+    &::before
+      background-color: #3E3E3E
+      border: 3px solid #272727
+      content: ''
+      height: 100%
+      left: 0
+      position: absolute
+      top: 0
+      width: 100%
+      z-index: 3
+
+      @media(min-width: 1200px)
+        border: none
+
+  &__back
+    align-items: center
+    display: inline-flex
+    font-size: 18px
+    font-weight: 700
+    min-height: 55px
+    position: relative
+    z-index: 4
+
+    @media(min-width: 400px)
+      font-size: 20px
+
+    @media(min-width: 1200px)
+      display: none
+
+  &__back-icon
+    margin-right: 10px
+    width: 25px
+
+  &__title
+    font-family: 'Russo One', Arial, sans-serif
+    font-size: 22px
+    line-height: 1
+    margin: 0
+    position: relative
+    z-index: 4
+
+    @media (max-width: 1199px)
+      display: none
+
+    @media (min-width: 1200px)
+      font-size: 30px
+
+    @media (min-width: 1900px)
+      font-size: 38px
+
+  &__title-red
+    background-color: #E7212E
+    display: inline-block
+    margin-top: 3px
+    margin-bottom: 3px
+    padding-top: 5px
+    padding-bottom: 3px
+    padding-left: 5px
+    padding-right: 5px
+
+  &__title-bordered
+    border-top: 2px solid currentColor
+    border-bottom: 2px solid currentColor
+    display: inline-block
+    margin-top: 3px
+    margin-bottom: 3px
+    padding-top: 3px
+
+.cart-icon
+  align-items: center
+  display: flex
+  flex-basis: 50px
+  justify-content: center
+  height: 50px
+  left: auto
+  min-width: 50px
+  position: absolute
+  right: 50px
+  top: 50%
+  transform: translateY(-50%)
+  width: 50px
+  z-index: 4
+
+  &__icon
+    fill: #fff
+    height: 22px
+    width: 22px
+
+  &__qnt
+    background-color: #D02228
+    border-radius: 50%
+    color: #fff
+    font-size: 12px
+    height: 15px
+    left: auto
+    min-width: 15px
+    position: absolute
+    right: 7px
+    top: 7px
+    text-align: center
+
+.blur
+  @media (min-width: 992px)
+    filter: blur(20px)

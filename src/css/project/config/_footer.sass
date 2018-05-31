@@ -1,0 +1,152 @@
+.footer
+  bottom: 0
+  left: 0
+  min-height: 50px
+  position: fixed
+  width: 100%
+  z-index: 1
+
+  @media(min-width: 1200px)
+    min-height: 70px
+    bottom: 5px
+
+  &__inner
+    align-items: center
+    background-color: #3E3E3E
+    display: flex
+    justify-content: space-between
+    min-height: 55px
+    margin-left: auto
+    margin-right: auto
+    max-width: 1800px
+    position: relative
+    padding-left: 10px
+    padding-right: 10px
+
+    @media(min-width: 1200px)
+      min-height: 70px
+
+  &__buttons
+    align-items: center
+    display: flex
+    flex-grow: 1
+    justify-content: space-between
+
+  &__buttons-inner
+    display: flex
+    flex-grow: 1
+
+    @media(min-width: 1200px)
+      flex-grow: 0
+      justify-content: space-between
+
+  &__buy-block
+    align-items: center
+    display: flex
+    flex-grow: 1
+    justify-content: flex-end
+
+  &__button
+    background: none
+    border: none
+    color: #fff
+    cursor: pointer
+    display: inline-block
+    font-family: 'Russo One', 'Roboto', Arial, sans-serif
+    font-size: 16px
+    line-height: 18px
+    min-height: 30px
+    padding: 0 8px
+    text-decoration: none
+    text-align: center
+    vertical-align: middle
+
+    @media(min-width: 1200px)
+      border: 1px solid #fff
+      min-height: 50px
+      min-width: 160px
+      margin-right: 5px
+
+    @media(min-width: 1900px)
+      font-size: 18px
+
+    &:hover
+      text-decoration: none
+
+    &.disabled,
+    &:disabled
+      cursor: default
+
+    &--red
+      background-color: #F13724
+
+      @media(min-width: 1200px)
+        border-color: #F13724
+
+  &__price
+    font-family: 'Russo One', 'Roboto', Arial, sans-serif
+    font-size: 13px
+    font-weight: 500
+    margin-right: 10px
+    white-space: nowrap
+
+    @media(min-width: 400px)
+      font-size: 18px
+      margin-right: 15px
+
+    @media(min-width: 1200px)
+      display: none
+
+.config-close
+  padding-top: 15px
+
+  @media(max-width: 1199px)
+    display: none
+
+.config-dialog,
+.config-save
+  border-right: 1px solid #4d4d4d
+
+  @media(min-width: 1200px)
+    border-right-color: inherit
+
+  &__icon
+    fill: #9f9f9f
+    height: 30px
+    width: 30px
+
+    @media(min-width: 1200px)
+      display: none
+
+  &__text
+    @media(max-width: 1199px)
+      display: none
+
+.config-buy
+  font-size: 13px
+  min-height: 40px
+  padding-left: 10px
+  padding-right: 10px
+  text-align: center
+
+  @media(max-width: 1199px)
+    align-items: center
+    display: flex
+
+  @media(min-width: 400px)
+    font-size: 16px
+    padding-left: 15px
+    padding-right: 15px
+
+  @media(min-width: 1200px)
+    margin-right: 0
+    padding-top: 15px
+
+  &__icon
+    fill: #fff
+    height: 16px
+    margin-right: 10px
+    width: 16px
+
+    @media(min-width: 1200px)
+      display: none

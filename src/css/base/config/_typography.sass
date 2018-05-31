@@ -1,0 +1,179 @@
+html
+  font-size: 14px
+
+  @media(min-width: 1200px)
+    font-size: 16px
+
+  @media(min-width: 1900px)
+    font-size: 18px
+
+body
+  color: #fff
+  font-family: 'Roboto', Arial, sans-serif
+  font-weight: 400
+  line-height: 1.375
+
+a
+  color: #fff
+  text-decoration: none
+  transition: color 0.3s
+
+  &:hover
+    text-decoration: underline
+
+h1,.h1,
+h2,.h2,
+h3,.h3,
+h4,.h4,
+h5,.h5,
+h6,.h6
+  font-family: 'Russo One', 'Roboto', 'Arial', sans-serif
+  font-weight: 500
+  margin-top: 0
+
+h1,.h1
+  font-size: 22px
+  margin-bottom: 15px
+
+  @media (min-width: 1200px)
+    font-size: 34px
+    margin-bottom: 25px
+
+  @media (min-width: 1900px)
+    font-size: 40px
+
+h2,.h2
+  font-size: 18px
+  margin-bottom: 15px
+  margin-top: 30px
+
+  @media (min-width: 1200px)
+    font-size: 28px
+    margin-bottom: 25px
+    margin-top: 50px
+
+  @media (min-width: 1900px)
+    font-size: 36px
+
+  &:first-child
+    margin-top: 0
+
+h3,.h3
+  font-size: 16px
+  margin-bottom: 15px
+  margin-top: 15px
+
+  @media (min-width: 1200px)
+    font-size: 24px
+    margin-top: 25px
+    margin-bottom: 25px
+
+  @media (min-width: 1900px)
+    font-size: 32px
+
+  &:first-child
+    margin-top: 0
+
+h4,.h4
+  font-size: 16px
+  font-weight: 500
+  margin-bottom: 15px
+  margin-top: 15px
+
+  @media (min-width: 1900px)
+    font-size: 18px
+    margin-top: 25px
+    margin-bottom: 25px
+
+  &:first-child
+    margin-top: 0
+
+.decorated-title
+  font-family: 'Russo One', Arial, sans-serif
+  font-size: 22px
+  line-height: 1
+  margin: 0
+
+  @media (min-width: 1200px)
+    font-size: 28px
+
+  @media (min-width: 1900px)
+    font-size: 38px
+
+  &__red
+    background-color: #E7212E
+    display: inline-block
+    margin-top: 3px
+    margin-bottom: 3px
+    padding-top: 5px
+    padding-bottom: 3px
+    padding-left: 5px
+    padding-right: 5px
+
+  &__bordered
+    border-top: 2px solid currentColor
+    border-bottom: 2px solid currentColor
+    display: inline-block
+    margin-top: 3px
+    margin-bottom: 3px
+    padding-top: 3px
+
+p,
+ol,
+ul
+  margin-top: 0
+  margin-bottom: 0
+
+ul,
+ol
+  list-style: none
+  padding-left: 0
+
+.table
+  border-collapse: collapse
+  border: 1px solid #4a4a4a
+  max-width: 100%
+  text-align: left
+  width: 100%
+
+  th,
+  td
+    border: 1px solid #4a4a4a
+    vertical-align: middle
+
+  th
+    padding: 10px
+
+  td
+    padding: 5px 10px
+
+  tbody
+    tr:nth-child(odd)
+      background-color: #272727
+
+    tr:nth-child(even)
+      background-color: #323232
+
+.table-responsive
+  min-height: .01%
+  overflow-x: auto
+
+img
+  height: auto
+  max-width: 100%
+  vertical-align: top
+
+.video
+	position: relative
+	padding-bottom: 56.25%
+	padding-top: 25px
+	height: 0
+  margin-top: 25px
+  margin-bottom: 25px
+
+.video iframe
+  position: absolute
+  left: 0
+  top: 0
+  height: 100%
+  width: 100%

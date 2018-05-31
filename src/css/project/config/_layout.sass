@@ -1,0 +1,60 @@
+html
+  box-sizing: border-box
+  height: 100%
+
+*,
+*::after,
+*::before
+  box-sizing: inherit
+
+body
+  background-color: #1d1d1d
+  height: 100%
+  min-height: 100%
+  min-width: 320px
+  overflow-wrap: break-word
+  position: relative
+
+  &.overflow
+    overflow: hidden
+
+    @media (min-width: 992px)
+      overflow: auto
+
+.blur
+  filter: blur(20px)
+
+  @media (min-width: 992px)
+    filter: none
+
+.wrapper
+  @media (min-width: 768px)
+    min-height: 100%
+    height: auto !important
+    height: 100%
+    margin-bottom: -500px
+
+    @media (min-width: 1920px)
+      margin-bottom: -600px
+
+  &::after
+    @media (min-width: 768px)
+      content: ""
+      display: block
+      height: 500px
+      width: 100%
+
+    @media (min-width: 1920px)
+      height: 600px
+
+.page-content
+  &--simple_page
+    padding-top: 70px
+    padding-bottom: 25px
+
+    @media (min-width: 768px)
+      padding-top: 150px
+      padding-bottom: 70px
+
+    @media (min-width: 992px)
+      padding-top: 180px

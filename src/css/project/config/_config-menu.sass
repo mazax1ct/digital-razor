@@ -1,0 +1,164 @@
+.config-menu-opener
+  display: block
+
+  @media(min-width: 1200px)
+    display: none
+
+.config-menu
+  display: none
+  height: 100%
+  left: 0
+  overflow-y: auto
+  position: fixed
+  padding-top: 60px
+  top: 0
+  text-align: right
+  width: 100%
+  z-index: 2
+
+  @media(min-width: 1200px)
+    display: block
+    height: auto
+    left: auto
+    margin-bottom: 5px
+    overflow: auto
+    position: static
+    padding-top: 0
+    top: auto
+    text-align: left
+
+  &.is-open
+    background-color: rgba(0,0,0,0.3)
+    display: block
+    filter: blur(0)
+
+  >
+    .config-menu__item
+      &:last-child
+        a
+          margin-bottom: 0
+
+  &__link
+    color: #888
+    display: block
+    padding-top: 12px
+    padding-bottom: 12px
+    padding-right: 40px
+
+    @media(min-width: 1200px)
+      background-color: #1f1f1f
+      border-left: 5px solid #333232
+      color: #fff
+      font-size: 14px
+      font-weight: 300
+      margin-bottom: 4px
+      padding-top: 9px
+      padding-bottom: 9px
+      padding-left: 10px
+      padding-right: 10px
+      transition: all 0.3s
+
+    @media(min-width: 1500px)
+      font-size: 16px
+
+    @media(min-width: 1900px)
+      font-size: 18px
+
+    &.is-active
+      color: #fff
+
+      @media(min-width: 1200px)
+        border-left-color: #D02228
+
+    &:hover
+      color: #fff
+
+      @media(min-width: 1200px)
+        border-left-color: #D02228
+        text-decoration: none
+
+  &__link-inner
+    @media(max-width: 1199px)
+      display: inline-block
+      min-width: 230px
+      position: relative
+      padding-left: 40px
+
+    .config-menu__cnt
+      @media(max-width: 1199px)
+        left: 0
+        position: absolute
+        top: 50%
+        transform: translateY(-50%)
+
+  &__root-link
+    color: #fff
+    display: block
+    font-size: 16px
+    font-weight: 700
+    padding-top: 12px
+    padding-bottom: 12px
+    padding-right: 40px
+    position: relative
+    text-transform: uppercase
+
+    &::after
+      @media(max-width: 1199px)
+        background: url("../images/icons/arrow_down.svg") no-repeat 0 0 transparent
+        content: ""
+        height: 8px
+        left: auto
+        position: absolute
+        right: 13px
+        top: 50%
+        transform: translateY(-50%)
+        width: 12px
+
+    @media(min-width: 1200px)
+      background-color: #3c3c3c
+      border-left: 5px solid #8f8f8f
+      font-size: 14px
+      margin-bottom: 4px
+      padding-top: 8px
+      padding-bottom: 8px
+      padding-left: 10px
+      padding-right: 10px
+      transition: all 0.3s
+      text-transform: none
+
+    @media(min-width: 1500px)
+      font-size: 16px
+
+    @media(min-width: 1900px)
+      font-size: 18px
+
+    &.is-active
+      @media(min-width: 1200px)
+        background-color: #E5262D
+        border-color: #f29396
+
+    &:hover
+      text-decoration: none
+
+      @media(min-width: 1200px)
+        background-color: #E5262D
+        border-color: #f29396
+
+    .config-menu__cnt
+      @media(max-width: 1199px)
+        display: none
+
+  &__cnt
+    display: inline-block
+    min-width: 30px
+
+    @media(min-width: 1200px)
+      font-size: 12px
+
+    @media(min-width: 1500px)
+      font-size: 14px
+      min-width: 40px
+
+    @media(min-width: 1900px)
+      font-size: inherit
+      min-width: 50px
