@@ -17,11 +17,11 @@
   </symbol>
   <symbol id="tile" viewBox="0 0 50 50">
     <g>
-    	<rect x="27" y="1" width="22" height="22"/>
-    	<rect x="1" y="1" width="22" height="22"/>
-    	<rect x="1" y="27" width="22" height="22"/>
-    	<rect x="27" y="27" width="22" height="22"/>
-    </g>
+  		<rect fill="none" stroke-width="4" stroke-miterlimit="10" x="28" y="2" width="20" height="20"/>
+  		<rect fill="none" stroke-width="4" stroke-miterlimit="10" x="2" y="2" width="20" height="20"/>
+  		<rect fill="none" stroke-width="4" stroke-miterlimit="10" x="2" y="28" width="20" height="20"/>
+  		<rect fill="none" stroke-width="4" stroke-miterlimit="10" x="28" y="28" width="20" height="20"/>
+  	</g>
   </symbol>
   <symbol id="list" viewBox="0 0 50 50">
     <g>

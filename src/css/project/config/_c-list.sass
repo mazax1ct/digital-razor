@@ -1,0 +1,118 @@
+* + .c-list
+  margin-top: 25px
+
+.c-list
+  @media(min-width: 992px)
+    padding-right: 15px
+
+  @media(min-width: 1600px)
+    padding-right: 30px
+
+.cl-item
+  position: relative
+  padding-left: 60px
+
+  @media(min-width: 992px)
+    margin-bottom: 10px
+
+  &:last-child
+    margin-bottom: 0
+
+  @media(min-width: 1600px)
+    padding-left: 80px
+
+  &__radio
+    display: none
+
+    &:checked ~ .cl-item__inner
+      @media(min-width: 992px)
+        background-color: #333
+
+    &:checked + .cl-item__inner .cl-item__label
+      @media(min-width: 992px)
+        border-bottom-color: transparent
+
+    &:checked + .cl-item__inner .cl-item__label::before
+      background-color: #ff0302
+
+  &__inner
+    align-items: center
+    display: flex
+    padding-right: 10px
+
+  &__label
+    display: block
+    flex-grow: 1
+    padding-top: 10px
+    padding-bottom: 10px
+
+    @media(min-width: 992px)
+      border-bottom: 1px solid #393b3a
+
+    @media(min-width: 1200px)
+      padding-top: 5px
+      padding-left: 10px
+      padding-right: 10px
+
+    &::before
+      background-color: #242424
+      border: 3px solid #fff
+      border-radius: 50%
+      content: ""
+      height: 20px
+      left: 20px
+      position: absolute
+      top: 10px
+      width: 20px
+
+  &__title
+    font-size: 16px
+    font-weight: 500
+
+    @media(min-width: 1200px)
+      font-weight: 500
+
+    @media(min-width: 1600px)
+      font-size: 20px
+      margin-bottom: 5px
+
+  &__text
+    color: #7A7A7A
+    display: none
+
+    @media(min-width: 992px)
+      display: block
+      font-weight: 300
+
+    @media(min-width: 1600px)
+      font-size: 18px
+
+  &__cnt
+    display: flex
+    font-size: 18px
+
+    @media(min-width: 992px)
+      align-items: flex-end
+      padding-bottom: 15px
+
+  &__cnt-button,
+  &__cnt-input
+    align-items: center
+    color: #8c8c8c
+    display: flex
+    font-weight: 300
+    justify-content: center
+    height: 30px
+    width: 30px
+
+    @media(min-width: 992px)
+      font-weight: 700
+
+    @media(min-width: 1600px)
+      font-size: 22px
+
+  &__cnt-input
+    border: none
+    background: none
+    padding: 0
+    text-align: center

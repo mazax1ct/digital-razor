@@ -1,0 +1,73 @@
+.tabs-menu
+  background-color: #404040
+  font-size: 18px
+  min-height: 55px
+  margin-bottom: 5px
+  position: relative
+
+  @media(min-width: 992px)
+    background-color: transparent
+    padding-left: 70px
+    padding-right: 15px
+
+  @media(min-width: 1600px)
+    padding-left: 90px
+    padding-right: 30px
+
+  &--text_right
+
+    @media(min-width: 992px)
+      display: flex
+      justify-content: flex-end
+
+    .tabs-menu__list
+      justify-content: flex-end
+
+      @media(min-width: 992px)
+        display: inline-flex
+
+  &__title
+    color: #a0a0a0
+    font-size: 12px
+    left: auto
+    position: absolute
+    padding-right: 15px
+    right: 0
+    top: 0
+    text-align: right
+
+    @media(min-width: 992px)
+      display: none
+
+  &__list
+    display: flex
+    overflow-x: auto
+    padding-left: 15px
+    padding-right: 15px
+
+    @media(min-width: 992px)
+      border-bottom: 1px solid #808080
+      padding-left: 0
+      padding-right: 0
+
+  &__item
+    display: flex
+    margin-right: 30px
+
+    &:last-child
+      margin-right: 0
+
+  &__link
+    align-items: center
+    border-bottom: 5px solid transparent
+    display: flex
+    min-height: 55px
+    padding-top: 5px
+    transition: border-bottom-color 0.3s
+
+    &.is-active
+      border-bottom-color: #D02228
+
+    &:hover
+      border-bottom-color: #D02228
+      text-decoration: none
