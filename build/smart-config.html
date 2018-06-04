@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+    <title>DIGITAL RAZOR</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="apple-touch-icon" sizes="120x120" href="images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="images/favicon/site.webmanifest">
+    <link rel="mask-icon" href="images/favicon/safari-pinned-tab.svg" color="#ffffff">
+    <link rel="shortcut icon" href="images/favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-config" content="images/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="stylesheet" href="css/config.css?v2"/>
+  </head>
+  <body>
+    <svg aria-hidden="true" style="width: 0px; height: 0px; overflow: hidden; position: absolute;" xmlns="http://www.w3.org/2000/svg">
+      <symbol id="back" viewBox="0 0 50 50">
+        <path d="M14.8,15.8V9.7L0.5,24l14.3,14.3v-6.1L6.6,24L14.8,15.8z M27,17.9V9.7L12.8,24L27,38.3v-8.4c10.2,0,17.4,3.3,22.5,10.4C47.5,30.1,41.3,19.9,27,17.9z"/>
+      </symbol>
+      <symbol id="dialog" viewBox="0 0 50 50">
+        <path d="M44.6,0.5H5.4c-2.7,0-4.9,2.2-4.9,4.9l0,44.1l9.8-9.8h34.3c2.7,0,4.9-2.2,4.9-4.9V5.4C49.5,2.7,47.3,0.5,44.6,0.5z M17.6,22.5h-4.9v-4.9h4.9V22.5z M27.5,22.5h-4.9v-4.9h4.9V22.5z M37.3,22.5h-4.9v-4.9h4.9V22.5z"/>
+      </symbol>
+      <symbol id="save" viewBox="0 0 50 50">
+        <path d="M38.6,0.5H5.9c-3,0-5.4,2.4-5.4,5.4c0,0,0,0,0,0v38.1c0,3,2.4,5.4,5.4,5.4c0,0,0,0,0,0h38.1c3,0,5.4-2.4,5.4-5.4V11.4L38.6,0.5z M25,44.1c-4.5,0-8.2-3.7-8.2-8.2s3.7-8.2,8.2-8.2s8.2,3.7,8.2,8.2C33.2,40.4,29.5,44,25,44.1C25,44.1,25,44.1,25,44.1z M33.2,16.8H5.9V5.9h27.2V16.8z"/>
+      </symbol>
+      <symbol id="cart" viewBox="0 0 50 50">
+        <path d="M27,0.5l-6.7,6.7h11.1L27,0.5z M38.1,2.7l-4.5,4.5h8.9L38.1,2.7z M4.7,5v4.5h5.1l5.8,17.4
+      		l-3.3,4.5h-0.1c-1,1.4-1.1,3.2-0.3,4.7c0.8,1.5,2.3,2.4,4,2.4h29v-4.5h-29c0,0,0,0,0-0.1l3.3-4.4h20.9c0.9,0.1,1.7-0.5,2-1.3
+      		l6.9-15.6c0.5-1.1,0-2.4-1.1-2.9c-0.3-0.1-0.6-0.2-0.9-0.2H14.5l-1-2.9L13,5H4.7z M15.9,40.6c-2.5,0-4.5,2-4.5,4.5
+      		c0,2.5,2,4.5,4.5,4.5s4.5-2,4.5-4.5C20.3,42.6,18.3,40.6,15.9,40.6z M40.4,40.6c-2.5,0-4.5,2-4.5,4.5c0,2.5,2,4.5,4.5,4.5
+      		c2.5,0,4.5-2,4.5-4.5C44.8,42.6,42.8,40.6,40.4,40.6z"/>
+      </symbol>
+      <symbol id="tile" viewBox="0 0 50 50">
+        <g>
+      		<rect fill="none" stroke-width="4" stroke-miterlimit="10" x="28" y="2" width="20" height="20"/>
+      		<rect fill="none" stroke-width="4" stroke-miterlimit="10" x="2" y="2" width="20" height="20"/>
+      		<rect fill="none" stroke-width="4" stroke-miterlimit="10" x="2" y="28" width="20" height="20"/>
+      		<rect fill="none" stroke-width="4" stroke-miterlimit="10" x="28" y="28" width="20" height="20"/>
+      	</g>
+      </symbol>
+      <symbol id="list" viewBox="0 0 50 50">
+        <g>
+      		<rect x="16.1" y="20.4" width="33.4" height="9.1"/>
+      		<rect x="16.1" y="5.5" width="33.4" height="9.1"/>
+      		<rect x="16.1" y="35.4" width="33.4" height="9.1"/>
+      		<rect x="0.5" y="20.4" width="9.1" height="9.1"/>
+      		<rect x="0.5" y="5.5" width="9.1" height="9.1"/>
+      		<rect x="0.5" y="35.4" width="9.1" height="9.1"/>
+      	</g>
+      </symbol>
+    </svg>
+    <header class="header">
+      <div class="header__inner">
+        <a class="header__back" href="#"><img class="header__back-icon" src="images/icons/back.svg" alt="Назад"> Performance серия</a>
+        <h1 class="header__title decorated-title"><span class="decorated-title__red">СМАРТ</span> <span class="decorated-title__bordered">КОНФИГУРАТОР</span></h1>
+        <button class="js-config-menu-opener menu-opener config-menu-opener" type="button" title="Меню"><span></span></button>
+        <button class="js-menu-opener menu-opener" type="button" title="Меню"><span></span></button>
+        <div class="main-menu">
+          <ul class="main-menu__list">
+            <li class="main-menu__item root">
+              <a class="main-menu__link root-link" href="#">Игровые компьютеры</a>
+              <div class="main-menu__dropdown">
+                <p class="main-menu__dropdown-title">ИГРОВЫЕ СЕРИИ</p>
+                <a class="main-menu__dropdown-link" href="#">ProGaming - серия</a>
+                <a class="main-menu__dropdown-link" href="#">Performance - серия</a>
+                <a class="main-menu__dropdown-link" href="#">Performance X - серия</a>
+                <p class="main-menu__dropdown-title">СПЕЦИАЛЬНЫЕ СЕРИИ</p>
+                <a class="main-menu__dropdown-link" href="#">Powered by ASUS</a>
+                <a class="main-menu__dropdown-link" href="#">Powered by AMD</a>
+              </div>
+            </li>
+            <li class="main-menu__item">
+              <a class="main-menu__link" href="#">Рабочие станции</a>
+            </li>
+            <li class="main-menu__item">
+              <a class="main-menu__link" href="#">Моноблоки</a>
+            </li>
+            <li class="main-menu__item">
+              <a class="main-menu__link" href="#">Аксессуары</a>
+            </li>
+          </ul>
+        </div>
+        <a class="cart-icon" href="#" title="Корзина"><span class="cart-icon__qnt">0</span><svg class="cart-icon__icon" aria-hidden="true"><use xlink:href="images/icons/sprite.svg#cart"/></svg></a>
+      </div>
+    </header>
+
+    <div class="config config--no_title">
+      <div class="config__content">
+        <div class="config__title-block config__title-block--for_desktop">
+          <h2 class="config__title">КОМПОНЕНТЫ</h2>
+        </div>
+        <div class="config__content-inner">
+          <div class="config__content-left">
+            <div class="config__content-left-inner">
+              <div class="config__subtitle-block">
+                <h3 class="config__subtitle">Процессор:</h3>
+              </div>
+              <div class="tabs-menu tabs-menu--small_indents">
+                <ul class="tabs-menu__list">
+                  <li class="tabs-menu__item"><a class="tabs-menu__link is-active" href="#">INTEL</a></li>
+                  <li class="tabs-menu__item"><a class="tabs-menu__link" href="#">AMD Ryzen</a></li>
+                </ul>
+              </div>
+              <div class="c-list2">
+                <div class="c-list2__row">
+                  <div class="c-list2__item">
+                    <div class="cl-item2">
+                      <input class="cl-item2__radio" id="1" type="radio" name="cl-item2" value="1" checked>
+                      <label class="cl-item2__label" for="1">
+                        <p class="cl-item2__title">i3 8100</p>
+                        <p>Intel® Core<br> 4-х ядерный</p>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="c-list2__item">
+                    <div class="cl-item2">
+                      <input class="cl-item2__radio" id="2" type="radio" name="cl-item2" value="2">
+                      <label class="cl-item2__label" for="2">
+                        <p class="cl-item2__title">i5 8400</p>
+                        <p>Intel® Core<br> 4-х ядерный</p>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="c-list2__item">
+                    <div class="cl-item2">
+                      <input class="cl-item2__radio" id="3" type="radio" name="cl-item2" value="3">
+                      <label class="cl-item2__label" for="3">
+                        <p class="cl-item2__title">i5 8600</p>
+                        <p>Intel® Core<br> 4-х ядерный</p>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="c-list2__item">
+                    <div class="cl-item2">
+                      <input class="cl-item2__radio" id="4" type="radio" name="cl-item2" value="4">
+                      <label class="cl-item2__label" for="4">
+                        <p class="cl-item2__title">i7 8700</p>
+                        <p>Intel® Core<br> 6-ти ядерный</p>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="config__subtitle-block">
+                <h3 class="config__subtitle">Видеокарта:</h3>
+              </div>
+              <div class="tabs-menu tabs-menu--small_indents">
+                <ul class="tabs-menu__list">
+                  <li class="tabs-menu__item"><a class="tabs-menu__link is-active" href="#">NVIDIA</a></li>
+                  <li class="tabs-menu__item"><a class="tabs-menu__link" href="#">AMD VEGA</a></li>
+                </ul>
+              </div>
+              <div class="c-list2">
+                <div class="c-list2__row">
+                  <div class="c-list2__item">
+                    <div class="cl-item2">
+                      <input class="cl-item2__radio" id="5" type="radio" name="cl-item2_" value="5">
+                      <label class="cl-item2__label" for="5">
+                        <p class="cl-item2__title">GTX 1050</p>
+                        <p>NVIDIA GeForce GTX<br> 2Gb</p>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="c-list2__item">
+                    <div class="cl-item2">
+                      <input class="cl-item2__radio" id="6" type="radio" name="cl-item2_" value="6">
+                      <label class="cl-item2__label" for="6">
+                        <p class="cl-item2__title">GTX 1050ti</p>
+                        <p>NVIDIA GeForce GTX<br> 2Gb</p>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="c-list2__item">
+                    <div class="cl-item2">
+                      <input class="cl-item2__radio" id="7" type="radio" name="cl-item2_" value="7">
+                      <label class="cl-item2__label" for="7">
+                        <p class="cl-item2__title">GTX 1060</p>
+                        <p>NVIDIA GeForce GTX<br> 2Gb</p>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="c-list2__item">
+                    <div class="cl-item2">
+                      <input class="cl-item2__radio" id="8" type="radio" name="cl-item2_" value="8">
+                      <label class="cl-item2__label" for="8">
+                        <p class="cl-item2__title">GTX 1070</p>
+                        <p>NVIDIA GeForce GTX<br> 2Gb</p>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="c-list2__item">
+                    <div class="cl-item2">
+                      <input class="cl-item2__radio" id="9" type="radio" name="cl-item2_" value="9">
+                      <label class="cl-item2__label" for="9">
+                        <p class="cl-item2__title">GTX 1070Ti</p>
+                        <p>NVIDIA GeForce GTX<br> 2Gb</p>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="c-list2__item">
+                    <div class="cl-item2">
+                      <input class="cl-item2__radio" id="10" type="radio" name="cl-item2_" value="10">
+                      <label class="cl-item2__label" for="10">
+                        <p class="cl-item2__title">GTX 1080</p>
+                        <p>NVIDIA GeForce GTX<br> 4Gb</p>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="config__subtitle-block">
+                <h3 class="config__subtitle">Оперативная память:</h3>
+              </div>
+              <div class="tabs-menu tabs-menu--small_indents">
+                <ul class="tabs-menu__list">
+                  <li class="tabs-menu__item"><a class="tabs-menu__link is-active" href="#">Стандарт</a></li>
+                  <li class="tabs-menu__item"><a class="tabs-menu__link" href="#">Высокочастотная</a></li>
+                  <li class="tabs-menu__item"><a class="tabs-menu__link" href="#">RGB</a></li>
+                </ul>
+              </div>
+              <div class="c-list2">
+                <div class="c-list2__row">
+                  <div class="c-list2__item">
+                    <div class="cl-item2">
+                      <input class="cl-item2__radio" id="11" type="radio" name="cl-item2__" value="11" checked>
+                      <label class="cl-item2__label" for="11">
+                        <p class="cl-item2__title">8GB</p>
+                        <p>DDR4<br> 2400Mhz</p>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="c-list2__item">
+                    <div class="cl-item2">
+                      <input class="cl-item2__radio" id="12" type="radio" name="cl-item2__" value="12">
+                      <label class="cl-item2__label" for="12">
+                        <p class="cl-item2__title">16GB</p>
+                        <p>DDR4<br> 2400Mhz</p>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="c-list2__item">
+                    <div class="cl-item2">
+                      <input class="cl-item2__radio" id="13" type="radio" name="cl-item2__" value="13">
+                      <label class="cl-item2__label" for="13">
+                        <p class="cl-item2__title">32GB</p>
+                        <p>DDR4<br> 2400Mhz</p>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="config__content-right">
+            <div class="config__content-right-inner">
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="config__sidebar">
+        <ul class="config-menu">
+          <li class="config-menu__item">
+            <a class="config-menu__root-link is-active" href="#"><span class="config-menu__cnt">01.</span>Платформа игрового ПК</a>
+            <ul class="config__submenu">
+              <li class="config-menu__item"><a class="config-menu__link is-active" href="#"><span class="config-menu__link-inner"><span class="config-menu__cnt">1.1</span>Основные компоненты</span></a></li>
+              <li class="config-menu__item"><a class="config-menu__link" href="#"><span class="config-menu__link-inner"><span class="config-menu__cnt">1.2</span>Система хранения</span></a></li>
+              <li class="config-menu__item"><a class="config-menu__link" href="#"><span class="config-menu__link-inner"><span class="config-menu__cnt">1.3</span>Система охлаждения</span></a></li>
+              <li class="config-menu__item"><a class="config-menu__link" href="#"><span class="config-menu__link-inner"><span class="config-menu__cnt">1.4</span>Программное обеспечение</span></a></li>
+              <li class="config-menu__item"><a class="config-menu__link" href="#"><span class="config-menu__link-inner"><span class="config-menu__cnt">1.5</span>Гарантия и сервис</span></a></li>
+            </ul>
+          </li>
+          <li class="config-menu__item"><a class="config-menu__root-link" href="#"><span class="config-menu__cnt">02.</span>Дизайн игрового ПК</a></li>
+          <li class="config-menu__item"><a class="config-menu__root-link" href="#"><span class="config-menu__cnt">03.</span>Подобрать аксессуары</a></li>
+          <li class="config-menu__item"><a class="config-menu__root-link" href="#"><span class="config-menu__cnt">04.</span>Итоговая конфигурация</a></li>
+        </ul>
+        <div class="config__price-block">
+          <p class="config__price">Цена: 64 000 руб.</p>
+          <p class="config__price-per-month">3500 руб. / мес.</p>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="footer__inner">
+        <a class="footer__button config-close" href="#" title="Закрыть конфигуратор">ЗАКРЫТЬ</a>
+        <div class="footer__buttons">
+          <button class="footer__button config-dialog" type="button" title="Консультант"><svg class="config-dialog__icon" aria-hidden="true"><use xlink:href="#dialog"/></svg><span class="config-dialog__text">КОНСУЛЬТАНТ</span></button>
+          <div class="footer__buttons-inner">
+            <button class="footer__button config-save" type="button" title="Сохранить"><svg class="config-save__icon" aria-hidden="true"><use xlink:href="#save"/></svg><span class="config-save__text">СОХРАНИТЬ</span></button>
+            <div class="footer__buy-block">
+              <p class="footer__price">100 000 руб.</p>
+              <a class="footer__button footer__button--red config-buy" href="#" title="Купить"><svg class="config-buy__icon" aria-hidden="true"><use xlink:href="#cart"/></svg>КУПИТЬ</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/config.js?v2"></script>
+  </body>
+</html>

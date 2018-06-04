@@ -15,10 +15,27 @@
     height: calc(100% - 80px)
     padding-top: 80px
 
-  &__content
+  &--no_title
+    @media(min-width: 992px)
+      height: calc(100% - 55px)
+
     @media(min-width: 1200px)
+      height: calc(100% - 80px)
+
+    .config__content-inner
+      @media(min-width: 992px)
+        padding-top: 0
+
+      @media(min-width: 1200px)
+        padding-top: 5px
+
+  &__content
+    @media(min-width: 992px)
       display: flex
       flex-direction: column
+      width: 100%
+
+    @media(min-width: 1200px)
       padding-right: 5px
       width: 81.38%
 
@@ -84,6 +101,12 @@
       padding: 5px
       position: relative
 
+    &--for_desktop
+      display: none
+
+      @media(min-width: 1200px)
+        display: flex
+
     &::after
       @media(min-width: 1200px)
         background-color: #404040
@@ -97,7 +120,7 @@
         width: 50%
         z-index: 1
 
-    &::before
+    //&::before
       @media(min-width: 1200px)
         background-color: #242424
         content: ""
@@ -199,3 +222,55 @@
 
     @media(min-width: 1900px)
       font-size: 18px
+
+  &__subtitle-block
+    align-items: center
+    display: flex
+    min-height: 50px
+    padding-left: 15px
+    padding-right: 15px
+    position: relative
+
+    @media(max-width: 991px)
+      background-color: #050505
+      text-transform: uppercase
+
+    @media(min-width: 1200px)
+      padding-left: 35px
+
+    &::after
+      @media(min-width: 992px)
+        content: ''
+        width: 100%
+        height: 100%
+        background-color: #404040
+        position: absolute
+        top: 0
+        left: -36%
+        z-index: 1
+        transform: skew(-54deg)
+
+    &::before
+      @media(min-width: 992px)
+        background-color: #404040
+        content: ''
+        height: 5px
+        left: 0
+        position: absolute
+        top: 0
+        width: 100%
+        z-index: 1
+
+  &__subtitle
+    font-size: 16px
+    font-weight: 400
+    margin-bottom: 0
+    margin-top: 0
+    position: relative
+    z-index: 2
+
+    @media(min-width: 1200px)
+      font-size: 24px
+
+    @media(min-width: 1900px)
+      font-size: 24px
