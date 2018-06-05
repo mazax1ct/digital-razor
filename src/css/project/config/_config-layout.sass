@@ -59,21 +59,27 @@
 
     @media(min-width: 992px)
       margin-right: 5px
-      overflow: auto
+      overflow-y: auto
       width: 50%
 
   &__content-left-inner
     padding-bottom: 25px
 
+    @media(min-width: 992px)
+      min-height: 100%
+
   &__content-right
     background-color: #242424
 
     @media(min-width: 992px)
-      overflow: auto
+      overflow-y: auto
       width: 50%
 
   &__content-right-inner
     padding-bottom: 25px
+
+    @media(min-width: 992px)
+      min-height: 100%
 
   &__content-full
     background-color: #242424

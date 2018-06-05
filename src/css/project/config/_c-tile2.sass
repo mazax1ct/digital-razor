@@ -1,23 +1,21 @@
-.c-tile
+.c-tile2
   padding-left: 5px
   padding-right: 5px
-  padding-top: 5px
+  padding-top: 15px
 
   @media(min-width: 1200px)
     padding-left: 10px
     padding-right: 10px
+    padding-top: 20px
 
   @media(min-width: 1600px)
     padding-left: 25px
     padding-right: 25px
+    padding-top: 40px
 
   &__row
     display: flex
     flex-wrap: wrap
-
-    @media(min-width: 1200px)
-      margin-left: -5px
-      margin-right: -5px
 
   &__item
     padding-left: 10px
@@ -28,32 +26,28 @@
     @media(min-width: 768px)
       width: 25%
 
-.ct-item
+.ct-item2
   cursor: pointer
   display: block
 
-  @media(min-width: 992px)
-    margin-bottom: 10px
-
   &__image
-    border: 1px solid #707070
-    margin-bottom: 15px
+    margin-bottom: 10px
 
   &__radio
     display: none
 
-    &:checked ~ .ct-item__title::before
+    &:checked ~ .ct-item2__title::before
       background-color: #ff0302
 
   &__title
     font-size: 14px
     font-weight: 500
-    padding-left: 25px
+    padding-left: 30px
     position: relative
 
     @media(min-width: 1600px)
       font-size: 18px
-      padding-left: 45px
+      padding-left: 35px
 
     &::before
       background-color: #242424

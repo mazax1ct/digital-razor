@@ -1,0 +1,32 @@
+.series-title
+  bottom: 0
+  color: #747474
+  left: auto
+  position: absolute
+  padding-left: 15px
+  padding-right: 15px
+  padding-bottom: 15px
+  right: 0
+  top: auto
+  text-align: right
+  z-index: 1
+
+  @media(max-width: 991px)
+    display: none
+
+  @media(min-width: 1600px)
+    font-size: 20px
+
+.glare
+  overflow: hidden
+
+  &::before
+    @media(min-width: 992px)
+      background-color: #1a1a1a
+      content: ''
+      height: 200%
+      left: 0
+      position: absolute
+      top: 0
+      transform: skewY(-45deg)
+      width: 200%
