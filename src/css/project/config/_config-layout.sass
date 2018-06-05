@@ -74,7 +74,6 @@
 
   &__content-right-inner
     padding-bottom: 25px
-    padding-top: 25px
 
   &__content-full
     background-color: #242424
@@ -82,9 +81,6 @@
 
     @media(min-width: 992px)
       overflow: auto
-
-  &__content-full-inner
-    padding-bottom: 25px
 
   &__title-block
     align-items: center
@@ -201,6 +197,7 @@
       flex-direction: column
       justify-content: flex-end
       height: 21.88%
+      min-height: 120px
 
     @media(min-width: 1300px)
       padding-left: 10px
@@ -226,6 +223,7 @@
   &__subtitle-block
     align-items: center
     display: flex
+    justify-content: space-between
     min-height: 50px
     padding-left: 15px
     padding-right: 15px
@@ -261,6 +259,9 @@
         width: 100%
         z-index: 1
 
+    .config__views-block
+      margin-right: 0
+
   &__subtitle
     font-size: 16px
     font-weight: 400
@@ -270,7 +271,7 @@
     z-index: 2
 
     @media(min-width: 1200px)
-      font-size: 24px
+      font-size: 18px
 
     @media(min-width: 1900px)
       font-size: 24px

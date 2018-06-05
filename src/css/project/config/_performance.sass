@@ -1,0 +1,108 @@
+.performance-block
+  padding-bottom: 0
+
+.performance-title
+  @media(min-width: 992px)
+    display: none
+
+  &__toggle
+    background: none
+    border: none
+    cursor: pointer
+    height: 50px
+    left: auto
+    padding: 10px 0 0
+    position: absolute
+    right: 15px
+    text-align: center
+    top: 0
+    width: 50px
+
+    &.is-open
+      .performance-title__toggle-img
+        transform: rotate(180deg)
+
+  &__toggle-img
+    height: 8px
+    width: 12px
+
+.performance
+  padding-bottom: 5px
+
+  @media(min-width: 992px)
+    display: block !important
+    padding-top: 25px
+    padding-bottom: 20px
+
+  &__image
+    margin-bottom: 10px
+    text-align: center
+
+    @media(max-width: 991px)
+      display: none
+
+    img
+      max-width: 50%
+
+  &__subtitle
+    font-size: 18px
+    font-weight: 500
+    margin-bottom: 0
+    margin-top: 0
+    padding-left: 15px
+    padding-right: 15px
+
+    @media(max-width: 991px)
+      display: none
+
+    @media(min-width: 1600px)
+      font-size: 21px
+
+  &__tabs
+    margin-bottom: 20px
+
+    @media(max-width: 991px)
+      display: none
+
+  &__bars
+    margin-top: 10px
+    padding-left: 15px
+    padding-right: 15px
+
+.performance-bar
+  align-items: center
+  background-color: #424242
+  color: #fff
+  display: flex
+  justify-content: space-between
+  font-size: 12px
+  height: 30px
+  margin-bottom: 5px
+  position: relative
+  padding-left: 15px
+  padding-right: 15px
+
+  @media(min-width: 992px)
+    font-size: 14px
+
+  @media(min-width: 1200px)
+    font-size: 17px
+    height: 38px
+    margin-bottom: 10px
+
+  &:last-child
+    margin: 0
+
+  &__title
+    position: relative
+    z-index: 1
+
+  &__bar
+    height: 100%
+    left: 0
+    position: absolute
+    top: 0
+
+  &__value
+    position: relative
+    z-index: 1

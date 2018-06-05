@@ -7,12 +7,12 @@
 
   @media(min-width: 992px)
     background-color: transparent
-    font-size: 18px
-    padding-left: 70px
+    padding-left: 60px
     padding-right: 15px
 
   @media(min-width: 1600px)
-    padding-left: 90px
+    font-size: 18px
+    padding-left: 80px
     padding-right: 30px
 
   &--text_right
@@ -25,6 +25,12 @@
 
       @media(min-width: 992px)
         display: inline-flex
+
+    &.tabs-menu--small_indents
+      .tabs-menu__list
+        @media(min-width: 992px)
+          display: flex
+          width: 100%
 
   &--small_indents
     padding-left: 10px
@@ -41,6 +47,7 @@
   &__title
     color: #a0a0a0
     font-size: 12px
+    font-weight: 300
     left: auto
     position: absolute
     padding-right: 15px
@@ -53,6 +60,7 @@
 
   &__list
     display: flex
+    font-weight: 500
     overflow-x: auto
     padding-left: 15px
     padding-right: 15px

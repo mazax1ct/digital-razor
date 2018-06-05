@@ -31,7 +31,67 @@
           <h2 class="config__title">КОМПОНЕНТЫ</h2>
         </div>
         <div class="config__content-inner">
-          <div class="config__content-left">
+          <div class="config__content-right order-lg-2">
+            <div class="config__content-right-inner performance-block">
+              <div class="config__subtitle-block performance-title">
+                <h3 class="config__subtitle">ПРОИЗВОДИТЕЛЬНОСТЬ:</h3>
+                <button class="js-performance-toggler performance-title__toggle is-open" type="button"><img class="performance-title__toggle-img" src="images/icons/arrow_down.svg"></button>
+              </div>
+              <div class="performance">
+                <div class="performance__image"><img src="images/content/img14.png" alt=""></div>
+                <h3 class="performance__subtitle">Оценка  производительности:</h3>
+                <div class="performance__tabs tabs-menu tabs-menu--text_right tabs-menu--small_indents">
+                  <ul class="tabs-menu__list">
+                    <li class="tabs-menu__item"><a class="tabs-menu__link is-active" href="#">Игры</a></li>
+                    <li class="tabs-menu__item"><a class="tabs-menu__link" href="#">Создание контента</a></li>
+                  </ul>
+                </div>
+                <div class="performance__bars">
+                  <div class="performance-bar" data-game-id="1516" data-test-name="GTA5 (FullHD ULTRA)">
+                    <div class="performance-bar__title">GTA5 (FullHD ULTRA)</div>
+                    <div class="performance-bar__bar" data-width="27" style="background-color: rgb(229, 38, 45); width: 30%;"></div>
+                    <div class="performance-bar__value" data-fps="38"><span>43</span> FPS</div>
+                  </div>
+                  <div class="performance-bar" data-game-id="1517" data-test-name="Witcher 3 (FullHD ULTRA)">
+                    <div class="performance-bar__title">Witcher 3 (FullHD ULTRA)</div>
+                    <div class="performance-bar__bar" data-width="31" style="background-color: rgb(229, 38, 45); width: 36%;"></div>
+                    <div class="performance-bar__value" data-fps="45"><span>52</span> FPS</div>
+                  </div>
+                  <div class="performance-bar" data-game-id="1530" data-test-name="Battlefield 1 (FullHD ULTRA)">
+                    <div class="performance-bar__title">Battlefield 1 (FullHD ULTRA)</div>
+                    <div class="performance-bar__bar" data-width="33" style="background-color: rgb(229, 38, 45); width: 36%;"></div>
+                    <div class="performance-bar__value" data-fps="63"><span>70</span> FPS</div>
+                  </div>
+                  <div class="performance-bar" data-game-id="1541" data-test-name="Overwatch (FullHD ULTRA)">
+                    <div class="performance-bar__title">Overwatch (FullHD ULTRA)</div>
+                    <div class="performance-bar__bar" data-width="34" style="background-color: rgb(229, 38, 45); width: 38%;"></div>
+                    <div class="performance-bar__value" data-fps="63"><span>72</span> FPS</div>
+                  </div>
+                  <div class="performance-bar" data-game-id="1547" data-test-name="CS:GO (FullHD ULTRA)">
+                    <div class="performance-bar__title">CS:GO (FullHD ULTRA)</div>
+                    <div class="performance-bar__bar" data-width="21" style="background-color: rgb(229, 38, 45); width: 24%;"></div>
+                    <div class="performance-bar__value" data-fps="100"><span>110</span> FPS</div>
+                  </div>
+                  <div class="performance-bar" data-game-id="1662" data-test-name="PUBG (FullHD ULTRA)">
+                    <div class="performance-bar__title">PUBG (FullHD ULTRA)</div>
+                    <div class="performance-bar__bar" data-width="23" style="background-color: rgb(229, 38, 45); width: 30%;"></div>
+                    <div class="performance-bar__value" data-fps="30"><span>38</span> FPS</div>
+                  </div>
+                  <div class="performance-bar" data-game-id="1748" data-test-name="BattleFront 2 (FullHD ULTRA)">
+                    <div class="performance-bar__title">BattleFront 2 (FullHD ULTRA)</div>
+                    <div class="performance-bar__bar" data-width="20" style="background-color: rgb(229, 38, 45); width: 25%;"></div>
+                    <div class="performance-bar__value" data-fps="40"><span>50</span> FPS</div>
+                  </div>
+                  <div class="performance-bar" data-game-id="1750" data-test-name="Far Cry 5 (FullHD ULTRA)">
+                    <div class="performance-bar__title">Far Cry 5 (FullHD ULTRA)</div>
+                    <div class="performance-bar__bar" data-width="21" style="background-color: rgb(229, 38, 45); width: 26%;"></div>
+                    <div class="performance-bar__value" data-fps="32"><span>40</span> FPS</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="config__content-left order-lg-1">
             <div class="config__content-left-inner">
               <div class="config__subtitle-block">
                 <h3 class="config__subtitle">Процессор:</h3>
@@ -151,6 +211,10 @@
               </div>
               <div class="config__subtitle-block">
                 <h3 class="config__subtitle">Оперативная память:</h3>
+                <div class="config__views-block">
+                  <a class="config__view is-active" href="config-tile.html" title="Плиткой"><svg class="config__view-icon config__view-icon--tile" aria-hidden="true"><use xlink:href="#tile"/></svg></a>
+                  <a class="config__view" href="config.html" title="Списком"><svg class="config__view-icon config__view-icon--list" aria-hidden="true"><use xlink:href="#list"/></svg></a>
+                </div>
               </div>
               <div class="tabs-menu tabs-menu--small_indents">
                 <ul class="tabs-menu__list">
@@ -192,11 +256,6 @@
               </div>
             </div>
           </div>
-          <div class="config__content-right">
-            <div class="config__content-right-inner">
-              
-            </div>
-          </div>
         </div>
       </div>
       <div class="config__sidebar">
@@ -208,12 +267,13 @@
               <li class="config-menu__item"><a class="config-menu__link" href="#"><span class="config-menu__link-inner"><span class="config-menu__cnt">1.2</span>Система хранения</span></a></li>
               <li class="config-menu__item"><a class="config-menu__link" href="#"><span class="config-menu__link-inner"><span class="config-menu__cnt">1.3</span>Система охлаждения</span></a></li>
               <li class="config-menu__item"><a class="config-menu__link" href="#"><span class="config-menu__link-inner"><span class="config-menu__cnt">1.4</span>Программное обеспечение</span></a></li>
-              <li class="config-menu__item"><a class="config-menu__link" href="#"><span class="config-menu__link-inner"><span class="config-menu__cnt">1.5</span>Гарантия и сервис</span></a></li>
+              <li class="config-menu__item"><a class="config-menu__link" href="#"><span class="config-menu__link-inner"><span class="config-menu__cnt">1.5</span>Корпус</span></a></li>
+              <li class="config-menu__item"><a class="config-menu__link" href="#"><span class="config-menu__link-inner"><span class="config-menu__cnt">1.6</span>Гарантия и сервис</span></a></li>
             </ul>
           </li>
           <li class="config-menu__item"><a class="config-menu__root-link" href="#"><span class="config-menu__cnt">02.</span>Дизайн игрового ПК</a></li>
           <li class="config-menu__item"><a class="config-menu__root-link" href="#"><span class="config-menu__cnt">03.</span>Подобрать аксессуары</a></li>
-          <li class="config-menu__item"><a class="config-menu__root-link" href="#"><span class="config-menu__cnt">04.</span>Итоговая конфигурация</a></li>
+          <li class="config-menu__item"><a class="config-menu__root-link" href="config-result.html"><span class="config-menu__cnt">04.</span>Итоговая конфигурация</a></li>
         </ul>
         <div class="config__price-block">
           <p class="config__price">Цена: 64 000 руб.</p>

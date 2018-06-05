@@ -18,4 +18,9 @@ $(document).ready(function() {
     $(".config-menu").toggleClass("is-open");
     return false;
   });
+
+  $('.js-performance-toggler').click(function() {
+    $(this).toggleClass("is-open");
+    $('.performance').slideToggle();
+  });
 });
