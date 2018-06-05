@@ -1,0 +1,83 @@
+.paint-tabs
+  @media(min-width: 992px)
+    display: none
+
+.paint-title-block
+  @media(max-width: 991px)
+    background: none
+
+.paint-title
+  @media(max-width: 991px)
+    color: #929292
+    font-family: 'Roboto', Arial, sans-serif
+    font-size: 12px
+    text-transform: none
+
+.paint-block
+  @media(min-width: 992px)
+    padding-top: 20px
+    padding-bottom: 10px
+
+.paint
+  display: flex
+  font-size: 12px
+  height: 100%
+  max-width: 140px
+  margin-bottom: 10px
+  text-align: center
+  width: 100%
+
+  @media(min-width: 1600px)
+    font-size: 14px
+
+  &__radio
+    display: none
+
+    &:checked + .paint__label .paint__image::after
+      background-color: #e5262d
+
+    &:checked + .paint__label .paint__image
+      border-bottom-color: #e5262d
+
+  &__label
+    cursor: pointer
+    display: block
+
+  &__image
+    background-color: #141414
+    border: 1px solid #707070
+    border-bottom: 2px solid #bbb
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16)
+    margin-bottom: 10px
+    overflow: hidden
+    position: relative
+
+    &::after
+      background-color: #bbb
+      bottom: -1px
+      content: ''
+      display: block
+      height: 5px
+      left: auto
+      position: absolute
+      right: -4px
+      transform: skew(-54deg)
+      width: 50%
+      z-index: 2
+
+    &::before
+      background-color: rgba(38, 38, 38, 0.2)
+      bottom: 0
+      content: ''
+      display: block
+      height: 0
+      left: auto
+      padding-bottom: 100%
+      position: absolute
+      right: -26px
+      transform: skew(-20deg)
+      width: 60px
+      z-index: 1
+
+  &__title
+    margin-bottom: 0
