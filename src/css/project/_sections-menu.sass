@@ -4,6 +4,7 @@
   padding-bottom: 0
 
   @media (min-width: 1200px)
+    min-height: 80px
     padding-bottom: 0
     padding-top: 0
 
@@ -16,10 +17,11 @@
     background-color: #272727
     min-height: 55px
 
-    @media (min-width: 1900px)
+    @media (min-width: 1200px)
       min-height: 80px
 
     &.fixed
+      box-shadow: 0 5px 5px rgba(0,0,0,0.8)
       left: 0
       position: fixed
       top: 0
@@ -38,6 +40,9 @@
     align-items: center
     display: flex
     justify-content: space-between
+
+  @media(min-width: 1200px)
+    min-height: 80px
 
 .sections-menu
   display: flex
@@ -60,9 +65,9 @@
       border-bottom: 3px solid #E7212E
 
   &__link
-    display: block
+    align-items: center
+    display: flex
     min-height: 55px
-    padding-top: 18px
 
     &:hover
       text-decoration: none

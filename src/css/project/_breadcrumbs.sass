@@ -1,0 +1,41 @@
+.breadcrumbs-block
+  min-height: 55px
+
+  @media (min-width: 1200px)
+    min-height: 80px
+    padding-bottom: 0
+    padding-top: 0
+
+  @media (min-width: 1900px)
+    min-height: 80px
+    padding-top: 0
+    padding-bottom: 0
+
+  &__inner
+    min-height: 55px
+
+    @media(min-width: 992px)
+      align-items: center
+      display: flex
+      justify-content: space-between
+
+    @media (min-width: 1200px)
+      min-height: 80px
+
+  .decorated-title
+    margin-bottom: 10px
+
+    @media(min-width: 992px)
+      margin-bottom: 0
+
+.breadcrumbs
+  &__separator
+    margin-right: 5px
+    margin-left: 5px
+
+    @media(min-width: 1900px)
+      margin-left: 10px
+      margin-right: 10px
+
+  @media(min-width: 1900px)
+    font-size: 20px

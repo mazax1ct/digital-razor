@@ -1,19 +1,30 @@
 .tabs-menu
   background-color: #404040
   font-size: 16px
-  min-height: 55px
+  min-height: 35px
   margin-bottom: 5px
   position: relative
 
+  &--tall
+    min-height: 55px
+
+    .tabs-menu__link
+      min-height: 55px
+
   @media(min-width: 992px)
     background-color: transparent
-    padding-left: 60px
-    padding-right: 15px
 
   @media(min-width: 1600px)
     font-size: 18px
-    padding-left: 80px
-    padding-right: 30px
+
+  &--text_left
+    @media(min-width: 992px)
+      display: flex
+      justify-content: flex-start
+
+    .tabs-menu__list
+      @media(min-width: 992px)
+        display: inline-flex
 
   &--text_right
     @media(min-width: 992px)
@@ -21,16 +32,8 @@
       justify-content: flex-end
 
     .tabs-menu__list
-      justify-content: flex-end
-
       @media(min-width: 992px)
         display: inline-flex
-
-    &.tabs-menu--small_indents
-      .tabs-menu__list
-        @media(min-width: 992px)
-          display: flex
-          width: 100%
 
   &--small_indents
     padding-left: 10px
@@ -42,6 +45,18 @@
 
     @media(min-width: 1600px)
       padding-left: 30px
+      padding-right: 30px
+
+  &--right_big_indent
+    padding-left: 10px
+    padding-right: 10px
+
+    @media(min-width: 992px)
+      padding-left: 60px
+      padding-right: 15px
+
+    @media(min-width: 1600px)
+      padding-left: 80px
       padding-right: 30px
 
   &__title
@@ -70,6 +85,30 @@
       padding-left: 0
       padding-right: 0
 
+    &--secondary
+      font-weight: 400
+
+      .tabs-menu__item
+        margin-right: 0
+
+        &--section_indent
+          @media(min-width: 992px)
+            margin-right: 50px
+
+          @media(min-width: 1900px)
+            margin-right: 70px
+
+      .tabs-menu__link
+        color: #888
+        padding-left: 8px
+        padding-right: 8px
+        transition: color 0.3s
+
+        &.is-active,
+        &:hover
+          color: #D02228
+          border-bottom-color: transparent
+
   &__item
     display: flex
     margin-right: 30px
@@ -77,18 +116,30 @@
     &:last-child
       margin-right: 0
 
+    &--section_indent
+      @media(min-width: 992px)
+        margin-right: 50px
+
+      @media(min-width: 1900px)
+        margin-right: 70px
+
   &__link
     align-items: center
     border-bottom: 5px solid transparent
     display: flex
-    min-height: 55px
     padding-top: 5px
     transition: border-bottom-color 0.3s
     white-space: nowrap
 
-    &.is-active
-      border-bottom-color: #D02228
-
+    &.is-active,
     &:hover
       border-bottom-color: #D02228
       text-decoration: none
+
+.page-content
+  .tabs-menu
+    li
+      margin-bottom: 0
+
+  .tabs-menu__list
+    margin-bottom: 0
