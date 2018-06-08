@@ -1,0 +1,54 @@
+.price-bar
+  align-items: center
+  display: flex
+  justify-content: flex-end
+
+  @media(max-width: 991px)
+    background-color: #272727
+    box-shadow: 0 -5px 5px rgba(0,0,0,0.8)
+    bottom: 0
+    left: 0
+    min-height: 55px
+    position: fixed
+    padding-left: 10px
+    padding-right: 10px
+    top: auto
+    width: 100%
+    z-index: 1
+
+  &__price
+    font-family: 'Russo One', 'Roboto', Arial, sans-serif
+    font-size: 18px
+    font-weight: 400
+    margin-right: 15px
+
+    @media(min-width: 1200px)
+      font-size: 30px
+
+    @media(min-width: 1900px)
+      font-size: 38px
+      margin-right: 25px
+
+  &__button
+    background-color: #F13724
+    border: 1px solid #F13724
+    color: #fff
+    cursor: pointer
+    display: inline-block
+    font-family: 'Russo One', 'Roboto', Arial, sans-serif
+    font-size: 16px
+    font-weight: 400
+    line-height: 18px
+    min-height: 40px
+    min-width: 120px
+    padding: 10px
+    text-decoration: none
+    text-align: center
+    vertical-align: middle
+
+    @media(min-width: 1900px)
+      min-width: 165px
+      min-height: 50px
+
+    &:hover
+      text-decoration: none
