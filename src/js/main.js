@@ -44,7 +44,27 @@ $(document).ready(function() {
     $('.js-main-banner').slick({
       adaptiveHeight: true,
       arrows: false,
-      dots: true
+      dots: false
+    });
+  }
+
+  //баннер в деталке каталога
+  if ($(".js-catalog-banner").length) {
+    $('.js-catalog-banner').slick({
+      adaptiveHeight: true,
+      mobileFirst: true,
+      arrows: false,
+      dots: false,
+      responsive: [
+        {
+          breakpoint: 991,
+          settings: {
+            arrows: true,
+            prevArrow: '<button class="slick-prev" aria-label="Назад" type="button"><svg class="slick-arrow" aria-hidden="true"><use xlink:href="#slider_arrow_left"/></svg></button>',
+            nextArrow: '<button class="slick-next" aria-label="Вперед" type="button"><svg class="slick-arrow" aria-hidden="true"><use xlink:href="#slider_arrow_right"/></svg></button>',
+          }
+        }
+      ]
     });
   }
 });

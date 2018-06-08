@@ -52,8 +52,10 @@
     font-size: 20px
 
   &__item
+    border-bottom: 3px solid transparent
     min-height: 55px
     margin-right: 20px
+    transition: border-bottom-color 0.3s
 
     @media(min-width: 1900px)
       margin-right: 40px
@@ -61,13 +63,17 @@
     &:last-child
       margin-right: 0
 
+    &:hover,
     &.is-active
-      border-bottom: 3px solid #E7212E
+      border-bottom-color: #E7212E
 
   &__link
     align-items: center
     display: flex
     min-height: 55px
+
+    @media(min-width: 1200px)
+      min-height: 80px
 
     &:hover
       text-decoration: none

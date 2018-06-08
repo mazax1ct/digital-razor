@@ -115,6 +115,9 @@ h4,.h4
 .main-banner + .title-block
   margin-top: -20px
 
+.catalog-banner + .title-block
+  margin-top: 0
+
 .decorated-title
   font-family: 'Russo One', Arial, sans-serif
   font-size: 22px
@@ -206,13 +209,11 @@ ol
     th,
     td
       border: 1px solid #4a4a4a
+      padding: 10px
       vertical-align: middle
 
-    th
-      padding: 10px
-
-    td
-      padding: 5px 10px
+      @media(min-width: 1500px)
+        padding: 15px
 
     tbody
       tr:nth-child(odd)
