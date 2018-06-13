@@ -19,7 +19,7 @@
     <meta name="msapplication-config" content="images/favicon/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
 
-    <link rel="stylesheet" href="css/config.css?v2"/>
+    <link rel="stylesheet" href="css/config.css?v3"/>
   </head>
   <body>
     <svg aria-hidden="true" style="width: 0px; height: 0px; overflow: hidden; position: absolute;" xmlns="http://www.w3.org/2000/svg">
@@ -163,7 +163,11 @@
       <div class="footer__inner">
         <a class="footer__button config-close" href="#" title="Закрыть конфигуратор">ЗАКРЫТЬ</a>
         <div class="footer__buttons">
-          <button class="footer__button config-dialog" type="button" title="Консультант"><svg class="config-dialog__icon" aria-hidden="true"><use xlink:href="#dialog"/></svg><span class="config-dialog__text">КОНСУЛЬТАНТ</span></button>
+          <div class="footer__admin-buttons">
+            <button class="footer__button config-dialog" type="button" title="Консультант"><svg class="config-dialog__icon" aria-hidden="true"><use xlink:href="#dialog"/></svg><span class="config-dialog__text">КОНСУЛЬТАНТ</span></button>
+            <a class="footer__button config-admin" href="#" title="АДМИН">АДМИН</a>
+            <a class="footer__button config-admin" href="#" title="PREORDER">PREORDER</a>
+          </div>
           <div class="footer__buttons-inner">
             <button class="footer__button config-save" type="button" title="Сохранить"><svg class="config-save__icon" aria-hidden="true"><use xlink:href="#save"/></svg><span class="config-save__text">СОХРАНИТЬ</span></button>
             <div class="footer__buy-block">
@@ -176,7 +180,7 @@
     </footer>
 
     <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
-    <script type="text/javascript" src="js/config.js?v2"></script>
+    <script type="text/javascript" src="js/config.js?v3"></script>
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.2/croppie.min.js"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.2/croppie.min.css" type="text/css" rel="stylesheet">

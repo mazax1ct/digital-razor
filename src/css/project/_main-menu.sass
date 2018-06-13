@@ -57,6 +57,20 @@
     align-items: center
     display: flex
 
+  &.is-open
+
+    &::before
+      @media(min-width: 768px) and (max-width: 991px)
+        background-color: #3e3e3e
+        bottom: 0
+        content: ''
+        left: auto
+        max-width: 320px
+        position: fixed
+        right: 0
+        top: 0
+        width: 100%
+
 .main-menu
   align-items: stretch
   display: none
@@ -66,6 +80,7 @@
   position: fixed
   padding-top: 60px
   top: 0
+  text-align: right
   width: 100%
   z-index: 1
 
@@ -77,6 +92,7 @@
     @media(min-width: 992px)
       background: none
       display: flex
+      min-height: auto
       padding-top: 0
 
   @media(min-width: 768px)
@@ -89,6 +105,7 @@
     position: static
     padding-top: 0
     top: auto
+    text-align: left
 
   @media(min-width: 1200px)
     font-size: 18px
@@ -132,7 +149,7 @@
   &__link
     color: #fff
     display: block
-    padding: 10px 28px
+    padding: 12px 40px
 
     @media(min-width: 992px)
       align-items: center
@@ -168,10 +185,7 @@
     color: #939393
     font-size: 14px
     margin-bottom: 0
-    padding-top: 7px
-    padding-bottom: 7px
-    padding-left: 56px
-    padding-right: 14px
+    padding: 12px 40px
 
     @media(min-width: 992px)
       font-size: 18px
@@ -183,10 +197,7 @@
 
   &__dropdown-link
     display: block
-    padding-top: 7px
-    padding-bottom: 7px
-    padding-left: 56px
-    padding-right: 14px
+    padding: 12px 40px
 
     @media(min-width: 992px)
       border-left: 2px solid transparent

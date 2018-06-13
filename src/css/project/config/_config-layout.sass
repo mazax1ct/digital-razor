@@ -47,7 +47,14 @@
       padding-top: 5px
 
   &__intro
+    align-items: center
+    display: flex
+    flex-direction: column
+    justify-content: center
+    height: calc(100vh - 120px)
+    min-height: 320px
     margin-bottom: 15px
+    position: relative
 
     @media(min-width: 992px)
       display: none
@@ -169,6 +176,21 @@
       flex-direction: column
       height: 100%
       width: 18.62%
+
+    &.is-open
+      &::before
+        @media(min-width: 768px) and (max-width: 1199px)
+          background-color: #242424
+          bottom: 0
+          content: ''
+          height: 100%
+          left: auto
+          max-width: 320px
+          position: fixed
+          right: 0
+          top: 0
+          width: 100%
+          z-index: 4
 
   &__price-block
     background-color: #1a1a1a

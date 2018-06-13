@@ -32,6 +32,10 @@
     flex-grow: 1
     justify-content: space-between
 
+  &__admin-buttons
+    align-items: center
+    display: flex
+
   &__buttons-inner
     display: flex
     flex-grow: 1
@@ -97,11 +101,16 @@
     @media(min-width: 1200px)
       display: none
 
-.config-close
+.config-close,
+.config-admin
   padding-top: 15px
 
   @media(max-width: 1199px)
     display: none
+
+.config-admin
+  @media(min-width: 1200px)
+    border-color: #FF00EE
 
 .config-dialog,
 .config-save

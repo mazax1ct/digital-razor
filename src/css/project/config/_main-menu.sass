@@ -62,6 +62,7 @@
   position: fixed
   padding-top: 60px
   top: 0
+  text-align: right
   width: 100%
   z-index: 2
 
@@ -74,9 +75,22 @@
     filter: blur(0)
 
   &__list
+    min-height: 100%
     margin-left: auto
     margin-right: auto
     max-width: 1800px
+    position: relative
+
+    &::before
+      background-color: #242424
+      bottom: 0
+      content: ''
+      left: auto
+      max-width: 320px
+      position: absolute
+      right: 0
+      top: -15px
+      width: 100%
 
   &__item
     margin-bottom: 0
@@ -106,7 +120,7 @@
   &__link
     color: #fff
     display: block
-    padding: 10px 28px
+    padding: 12px 40px
 
     &:hover
       border-bottom-color: #D02228
@@ -116,17 +130,11 @@
     color: #939393
     font-size: 14px
     margin-bottom: 0
-    padding-top: 7px
-    padding-bottom: 7px
-    padding-left: 56px
-    padding-right: 14px
+    padding: 12px 40px
 
   &__dropdown-link
     display: block
-    padding-top: 7px
-    padding-bottom: 7px
-    padding-left: 56px
-    padding-right: 14px
+    padding: 12px 40px
 
     &:hover
       border-left-color: #D02228

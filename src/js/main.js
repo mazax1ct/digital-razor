@@ -11,6 +11,7 @@ $(document).ready(function() {
     $(".page-content").toggleClass("blur");
     $(".footer").toggleClass("blur");
     $(".main-menu").toggleClass("is-open");
+    $(".main-menu-block").toggleClass("is-open");
     return false;
   });
 
@@ -44,7 +45,7 @@ $(document).ready(function() {
     $('.js-main-banner').slick({
       adaptiveHeight: true,
       arrows: false,
-      dots: false
+      dots: true
     });
   }
 

@@ -43,6 +43,7 @@ $(document).ready(function() {
     $(".config__content").toggleClass("blur");
     $(".footer").toggleClass("blur");
     $(".config-menu").toggleClass("is-open");
+    $(".config__sidebar").toggleClass("is-open");
     return false;
   });
 
@@ -50,6 +51,13 @@ $(document).ready(function() {
   $('.js-performance-toggler').click(function() {
     $(this).toggleClass("is-open");
     $('.performance').slideToggle();
+  });
+
+  $('.js-config-scroll').click(function() {
+    var topOffset = $('.config__intro').outerHeight(true);
+    $("html, body").animate({
+        scrollTop: topOffset
+    }, 500);
   });
 
   // канвас и иже с ним
