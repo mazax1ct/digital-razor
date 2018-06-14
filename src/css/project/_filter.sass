@@ -1,0 +1,65 @@
+.filter
+  font-size: 16px
+
+  @media(min-width: 992px)
+    display: flex
+    justify-content: flex-end
+
+  @media(min-width: 1600px)
+    font-size: 18px
+
+  &__inner
+    display: flex
+    flex-wrap: wrap
+    font-size: 16px
+    min-height: 35px
+    margin-bottom: 5px
+
+    @media(min-width: 992px)
+      border-bottom: 1px solid #808080
+      display: inline-flex
+      justify-content: flex-end
+
+  &__list
+    border-bottom: 1px solid #808080
+    display: flex
+    font-weight: 400
+    margin-bottom: 5px !important
+    overflow-x: auto
+    width: 50%
+
+    &:nth-child(2n+1)
+      margin-right: 5px
+      width: calc(50% - 5px)
+
+      @media(min-width: 992px)
+        margin-right: 40px
+        width: auto
+
+    @media(min-width: 992px)
+      border-bottom: none
+      display: inline-flex
+      margin-bottom: 0 !important
+      margin-right: 40px
+      width: auto
+
+    &:last-child
+      @media(min-width: 992px)
+        margin-right: 0
+
+  &__item
+    display: flex
+    margin-bottom: 0 !important
+
+  &__link
+    align-items: center
+    color: #888
+    display: flex
+    padding: 8px
+    transition: border-bottom-color 0.3s, color 0.3s
+    white-space: nowrap
+
+    &.is-active,
+    &:hover
+      color: #D02228
+      text-decoration: none

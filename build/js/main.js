@@ -55,11 +55,12 @@ $(document).ready(function() {
       adaptiveHeight: true,
       mobileFirst: true,
       arrows: false,
-      dots: false,
+      dots: true,
       responsive: [
         {
           breakpoint: 991,
           settings: {
+            dots: false,
             arrows: true,
             prevArrow: '<button class="slick-prev" aria-label="Назад" type="button"><svg class="slick-arrow" aria-hidden="true"><use xlink:href="#slider_arrow_left"/></svg></button>',
             nextArrow: '<button class="slick-next" aria-label="Вперед" type="button"><svg class="slick-arrow" aria-hidden="true"><use xlink:href="#slider_arrow_right"/></svg></button>',
