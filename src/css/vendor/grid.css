@@ -80,7 +80,13 @@ html {
   margin-left: auto;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1300px) {
+  .container-fluid {
+    width: 90%;
+  }
+}
+
+@media (min-width: 1500px) {
   .container-fluid {
     width: 81.25%;
   }
