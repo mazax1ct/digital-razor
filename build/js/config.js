@@ -53,11 +53,31 @@ $(document).ready(function() {
     $('.performance').slideToggle();
   });
 
+  // скролл к началу конфига
   $('.js-config-scroll').click(function() {
     var topOffset = $('.config__intro').outerHeight(true);
     $("html, body").animate({
         scrollTop: topOffset
     }, 500);
+  });
+
+  // переключение вида списков конфига
+  $('.js-config-view').click(function() {
+    var className = $(this).attr('data-class');
+    $('.js-config-view').removeClass('is-active');
+    $('.js-config-view[data-class=' + className + ']').addClass('is-active');
+    if(className === 'list') {
+      $('body').removeClass('tile').addClass('list');
+    } else if(className === 'tile') {
+      $('body').removeClass('list').addClass('tile');
+    }
+    return false;
+  });
+
+  // переключение описания при выборе элемента в конфиге
+  $('.js-config-element').click(function() {
+    $('.component--config_description').removeClass('is-active');
+    $('.component--config_description[data-description=' + $(this).attr('for') + ']').addClass('is-active');
   });
 
   // канвас и иже с ним

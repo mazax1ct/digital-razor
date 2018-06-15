@@ -21,56 +21,154 @@
 
     //= template/config/style.html
   </head>
-  <body>
+  <body class="list">
     //= template/config/sprite.html
     //= template/config/header.html
 
-    <div class="config">
-      <div class="config__content">
-        <div class="config__intro">
-          <div class="config-intro">
-            <div class="config-intro__image"><img src="images/content/img11.png" alt="Performance серия"></div>
-            <div class="config-intro__text">
-              <p>Краткий текст описания супер игрового компьютера конфигуратор которого мы видим на этой странице</p>
-            </div>
-            <a class="js-config-scroll config-intro__slide" href="#"></a>
+    <form class="config" method="post" action="/">
+      <div class="config__intro">
+        <div class="config-intro">
+          <div class="config-intro__image"><img src="images/content/img11.png" alt="Performance серия"></div>
+          <div class="config-intro__text">
+            <p>Краткий текст описания супер игрового компьютера конфигуратор которого мы видим на этой странице</p>
           </div>
+          <a class="js-config-scroll config-intro__slide" href="#"></a>
         </div>
+      </div>
+      <div class="config__content">
         <div class="config__title-block">
           <h2 class="config__title">ВИДЕОКАРТА:</h2>
           <div class="config__views-block">
-            <a class="config__view" href="config-tile.html" title="Плиткой"><svg class="config__view-icon config__view-icon--tile" aria-hidden="true"><use xlink:href="#tile"/></svg></a>
-            <a class="config__view is-active" href="config.html" title="Списком"><svg class="config__view-icon config__view-icon--list" aria-hidden="true"><use xlink:href="#list"/></svg></a>
+            <a class="js-config-view config__view" href="#" data-class="tile" title="Плиткой"><svg class="config__view-icon config__view-icon--tile" aria-hidden="true"><use xlink:href="#tile"/></svg></a>
+            <a class="js-config-view config__view is-active" href="#" data-class="list" title="Списком"><svg class="config__view-icon config__view-icon--list" aria-hidden="true"><use xlink:href="#list"/></svg></a>
           </div>
         </div>
         <div class="config__content-inner">
-          <div class="config__content-block">
+          <div class="config__content-block config__content-block--list">
             <div class="config__content-block-inner">
-              <div class="tabs-menu tabs-menu--tall tabs-menu--right_big_indent">
-                <p class="tabs-menu__title">производитель</p>
-                <ul class="tabs-menu__list">
-                  <li class="tabs-menu__item"><a class="tabs-menu__link is-active" href="#">ASUS</a></li>
-                  <li class="tabs-menu__item"><a class="tabs-menu__link" href="#">MSI</a></li>
-                  <li class="tabs-menu__item"><a class="tabs-menu__link" href="#">GIGABYTE</a></li>
-                  <li class="tabs-menu__item"><a class="tabs-menu__link" href="#">KFA2</a></li>
-                </ul>
+              <div class="config-section is-active">
+                <div class="tabs-menu tabs-menu--tall tabs-menu--right_big_indent">
+                  <p class="tabs-menu__title">производитель</p>
+                  <ul class="tabs-menu__list">
+                    <li class="tabs-menu__item"><a class="tabs-menu__link is-active" href="#">ASUS</a></li>
+                    <li class="tabs-menu__item"><a class="tabs-menu__link" href="#">MSI</a></li>
+                    <li class="tabs-menu__item"><a class="tabs-menu__link" href="#">GIGABYTE</a></li>
+                    <li class="tabs-menu__item"><a class="tabs-menu__link" href="#">KFA2</a></li>
+                  </ul>
+                </div>
+                <div class="tabs-menu tabs-menu--tall tabs-menu--small_indents tabs-menu--text_right">
+                  <p class="tabs-menu__title">серия</p>
+                  <ul class="tabs-menu__list">
+                    <li class="tabs-menu__item"><a class="tabs-menu__link is-active" href="#">STRIX</a></li>
+                    <li class="tabs-menu__item"><a class="tabs-menu__link" href="#">TURBO</a></li>
+                    <li class="tabs-menu__item"><a class="tabs-menu__link" href="#">DUAL</a></li>
+                    <li class="tabs-menu__item"><a class="tabs-menu__link" href="#">FE</a></li>
+                  </ul>
+                </div>
+                <div class="c-list">
+                  <div class="c-list__container">
+                    <div class="c-list__row">
+                      <div class="c-list__item cl-item">
+                        <input class="cl-item__radio" id="1" type="radio" name="cl-item" value="1" checked>
+                        <div class="cl-item__inner">
+                          <label class="js-config-element cl-item__label" for="1">
+                            <img class="cl-item__image" src="images/content/img13.png" alt="ASUS STRIX GTX 1060 6GB">
+                            <p class="cl-item__title">ASUS STRIX GTX 1060 6GB</p>
+                            <p class="cl-item__text">Кулер для процессора, радиатор из алюминия и меди, размеры вентилятора (ШхВxГ) 140x140x26 мм, количество</p>
+                          </label>
+                          <div class="cl-item__cnt">
+                            <a class="cl-item__cnt-button" href="#" title="Уменьшить">-</a>
+                            <input class="cl-item__cnt-input" type="text" value="1">
+                            <a class="cl-item__cnt-button" href="#" title="Увеличить">+</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="c-list__item cl-item">
+                        <input class="cl-item__radio" id="2" type="radio" name="cl-item" value="2">
+                        <div class="cl-item__inner">
+                          <label class="js-config-element cl-item__label" for="2">
+                            <img class="cl-item__image" src="images/content/img6.png" alt="ASUS STRIX GTX 1070 8GB">
+                            <p class="cl-item__title">ASUS STRIX GTX 1070 8GB</p>
+                            <p class="cl-item__text">Кулер для процессора, радиатор из алюминия и меди, размеры вентилятора (ШхВxГ) 140x140x26 мм, количество</p>
+                          </label>
+                          <div class="cl-item__cnt">
+                            <a class="cl-item__cnt-button" href="#" title="Уменьшить">-</a>
+                            <input class="cl-item__cnt-input" type="text" value="1">
+                            <a class="cl-item__cnt-button" href="#" title="Увеличить">+</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="c-list__item cl-item">
+                        <input class="cl-item__radio" id="3" type="radio" name="cl-item" value="3">
+                        <div class="cl-item__inner">
+                          <label class="js-config-element cl-item__label" for="3">
+                            <img class="cl-item__image" src="images/content/img13.png" alt="ASUS STRIX GTX 1070Ti 8GB">
+                            <p class="cl-item__title">ASUS STRIX GTX 1070Ti 8GB</p>
+                            <p class="cl-item__text">Кулер для процессора, радиатор из алюминия и меди, размеры вентилятора (ШхВxГ) 140x140x26 мм, количество</p>
+                          </label>
+                          <div class="cl-item__cnt">
+                            <a class="cl-item__cnt-button" href="#" title="Уменьшить">-</a>
+                            <input class="cl-item__cnt-input" type="text" value="1">
+                            <a class="cl-item__cnt-button" href="#" title="Увеличить">+</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="c-list__item cl-item">
+                        <input class="cl-item__radio" id="4" type="radio" name="cl-item" value="4">
+                        <div class="cl-item__inner">
+                          <label class="js-config-element cl-item__label" for="4">
+                            <img class="cl-item__image" src="images/content/img13.png" alt="ASUS STRIX GTX 1080 8GB">
+                            <p class="cl-item__title">ASUS STRIX GTX 1080 8GB</p>
+                            <p class="cl-item__text">Кулер для процессора, радиатор из алюминия и меди, размеры вентилятора (ШхВxГ) 140x140x26 мм, количество</p>
+                          </label>
+                          <div class="cl-item__cnt">
+                            <a class="cl-item__cnt-button" href="#" title="Уменьшить">-</a>
+                            <input class="cl-item__cnt-input" type="text" value="1">
+                            <a class="cl-item__cnt-button" href="#" title="Увеличить">+</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="c-list__item cl-item">
+                        <input class="cl-item__radio" id="5" type="radio" name="cl-item" value="5">
+                        <div class="cl-item__inner">
+                          <label class="js-config-element cl-item__label" for="5">
+                            <img class="cl-item__image" src="images/content/img13.png" alt="ASUS STRIX GTX 1080Ti 11GB">
+                            <p class="cl-item__title">ASUS STRIX GTX 1080Ti 11GB</p>
+                            <p class="cl-item__text">Кулер для процессора, радиатор из алюминия и меди, размеры вентилятора (ШхВxГ) 140x140x26 мм, количество</p>
+                          </label>
+                          <div class="cl-item__cnt">
+                            <a class="cl-item__cnt-button" href="#" title="Уменьшить">-</a>
+                            <input class="cl-item__cnt-input" type="text" value="1">
+                            <a class="cl-item__cnt-button" href="#" title="Увеличить">+</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div class="tabs-menu tabs-menu--tall tabs-menu--small_indents tabs-menu--text_right">
-                <p class="tabs-menu__title">серия</p>
-                <ul class="tabs-menu__list">
-                  <li class="tabs-menu__item"><a class="tabs-menu__link is-active" href="#">STRIX</a></li>
-                  <li class="tabs-menu__item"><a class="tabs-menu__link" href="#">TURBO</a></li>
-                  <li class="tabs-menu__item"><a class="tabs-menu__link" href="#">DUAL</a></li>
-                  <li class="tabs-menu__item"><a class="tabs-menu__link" href="#">FE</a></li>
-                </ul>
-              </div>
-              <div class="c-list">
-                <form action="/">
+              <div class="config-section">
+                <div class="config__title-block config__title-block--duplicate">
+                  <h2 class="config__title">ОПЕРАТИВНАЯ ПАМЯТЬ:</h2>
+                  <div class="config__views-block">
+                    <a class="js-config-view config__view" href="#" data-class="tile" title="Плиткой"><svg class="config__view-icon config__view-icon--tile" aria-hidden="true"><use xlink:href="#tile"/></svg></a>
+                    <a class="js-config-view config__view is-active" href="#" data-class="list" title="Списком"><svg class="config__view-icon config__view-icon--list" aria-hidden="true"><use xlink:href="#list"/></svg></a>
+                  </div>
+                </div>
+                <div class="tabs-menu tabs-menu--tall tabs-menu--right_big_indent">
+                  <p class="tabs-menu__title">производитель</p>
+                  <ul class="tabs-menu__list">
+                    <li class="tabs-menu__item"><a class="tabs-menu__link is-active" href="#">KINGSTON</a></li>
+                    <li class="tabs-menu__item"><a class="tabs-menu__link" href="#">CORSAIR</a></li>
+                    <li class="tabs-menu__item"><a class="tabs-menu__link" href="#">XPG</a></li>
+                  </ul>
+                </div>
+                <div class="c-list">
                   <div class="c-list__item cl-item">
-                    <input class="cl-item__radio" id="1" type="radio" name="cl-item" value="1" checked>
+                    <input class="cl-item__radio" id="1_" type="radio" name="cl-item_" value="1_" checked>
                     <div class="cl-item__inner">
-                      <label class="cl-item__label" for="1">
-                        <p class="cl-item__title">ASUS STRIX GTX 1060 6GB</p>
+                      <label class="js-config-element cl-item__label" for="1_">
+                        <p class="cl-item__title">16GB (2x8Gb) DDR4 2400Mhz Corsair Vengeance</p>
                         <p class="cl-item__text">Кулер для процессора, радиатор из алюминия и меди, размеры вентилятора (ШхВxГ) 140x140x26 мм, количество</p>
                       </label>
                       <div class="cl-item__cnt">
@@ -81,10 +179,10 @@
                     </div>
                   </div>
                   <div class="c-list__item cl-item">
-                    <input class="cl-item__radio" id="2" type="radio" name="cl-item" value="2">
+                    <input class="cl-item__radio" id="2_" type="radio" name="cl-item_" value="2_">
                     <div class="cl-item__inner">
-                      <label class="cl-item__label" for="2">
-                        <p class="cl-item__title">ASUS STRIX GTX 1070 8GB</p>
+                      <label class="js-config-element cl-item__label" for="2_">
+                        <p class="cl-item__title">16GB (2x8Gb) DDR4 2666Mhz Corsair Vengeance</p>
                         <p class="cl-item__text">Кулер для процессора, радиатор из алюминия и меди, размеры вентилятора (ШхВxГ) 140x140x26 мм, количество</p>
                       </label>
                       <div class="cl-item__cnt">
@@ -95,10 +193,10 @@
                     </div>
                   </div>
                   <div class="c-list__item cl-item">
-                    <input class="cl-item__radio" id="3" type="radio" name="cl-item" value="3">
+                    <input class="cl-item__radio" id="3_" type="radio" name="cl-item_" value="3_">
                     <div class="cl-item__inner">
-                      <label class="cl-item__label" for="3">
-                        <p class="cl-item__title">ASUS STRIX GTX 1070Ti 8GB</p>
+                      <label class="js-config-element cl-item__label" for="3_">
+                        <p class="cl-item__title">16GB (2x8Gb) DDR4 3200Mhz Corsair Vengeance</p>
                         <p class="cl-item__text">Кулер для процессора, радиатор из алюминия и меди, размеры вентилятора (ШхВxГ) 140x140x26 мм, количество</p>
                       </label>
                       <div class="cl-item__cnt">
@@ -109,10 +207,10 @@
                     </div>
                   </div>
                   <div class="c-list__item cl-item">
-                    <input class="cl-item__radio" id="4" type="radio" name="cl-item" value="4">
+                    <input class="cl-item__radio" id="4_" type="radio" name="cl-item_" value="4_">
                     <div class="cl-item__inner">
-                      <label class="cl-item__label" for="4">
-                        <p class="cl-item__title">ASUS STRIX GTX 1080 8GB</p>
+                      <label class="js-config-element cl-item__label" for="4_">
+                        <p class="cl-item__title">16GB (2x8Gb) DDR4 3600Mhz Corsair Vengeance</p>
                         <p class="cl-item__text">Кулер для процессора, радиатор из алюминия и меди, размеры вентилятора (ШхВxГ) 140x140x26 мм, количество</p>
                       </label>
                       <div class="cl-item__cnt">
@@ -122,27 +220,13 @@
                       </div>
                     </div>
                   </div>
-                  <div class="c-list__item cl-item">
-                    <input class="cl-item__radio" id="5" type="radio" name="cl-item" value="5">
-                    <div class="cl-item__inner">
-                      <label class="cl-item__label" for="5">
-                        <p class="cl-item__title">ASUS STRIX GTX 1080Ti 11GB</p>
-                        <p class="cl-item__text">Кулер для процессора, радиатор из алюминия и меди, размеры вентилятора (ШхВxГ) 140x140x26 мм, количество</p>
-                      </label>
-                      <div class="cl-item__cnt">
-                        <a class="cl-item__cnt-button" href="#" title="Уменьшить">-</a>
-                        <input class="cl-item__cnt-input" type="text" value="1">
-                        <a class="cl-item__cnt-button" href="#" title="Увеличить">+</a>
-                      </div>
-                    </div>
-                  </div>
-                </form>
+                </div>
               </div>
             </div>
           </div>
-          <div class="config__content-block">
+          <div class="config__content-block config__content-block--description">
             <div class="config__content-block-inner">
-              <div class="component">
+              <div class="component component--config_description is-active" data-description="1">
                 <div class="component__image"><img src="images/content/img12.png" alt=""></div>
                 <div class="component__features">
                   <div class="component__features-row">
@@ -201,6 +285,40 @@
                   <p>Вот уже более десятка лет компания ASUS является лидером среди производителей материнских плат с общим числом проданных устройств, превышающим 500 миллионов. В широкой продуктовой линейке любой пользователь сможет найти оптимальную модель и собрать на ее основе нужный ему компьютер как для серьезной работы, так и для игр и любых других целей. Выбирайте ASUS – будьте в лидерах!</p>
                 </div>
               </div>
+              <div class="component component--config_description" data-description="2">
+                <div class="component__image"><img src="images/content/img14.png" alt=""></div>
+                <div class="component__features">
+                  <div class="component__features-row">
+                    <div class="component__features-col">
+                      <div class="component__feature">
+                        <p class="component__feature-title">DDR4</p>
+                        <p> Тип памяти</p>
+                      </div>
+                    </div>
+                    <div class="component__features-col">
+                      <div class="component__feature">
+                        <p class="component__feature-title">4</p>
+                        <p>Количество<br> ядер ЦП</p>
+                      </div>
+                    </div>
+                    <div class="component__features-col">
+                      <div class="component__feature">
+                        <p class="component__feature-title">16GB</p>
+                        <p>Общий объем</p>
+                      </div>
+                    </div>
+                    <div class="component__features-col">
+                      <div class="component__feature">
+                        <p class="component__feature-title">2800</p>
+                        <p>МГц частота</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="component__text">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio inventore totam eaque impedit quam reiciendis tempora, porro et tenetur ab, consequuntur magnam doloremque nemo quibusdam deleniti, hic beatae obcaecati libero.</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -232,7 +350,7 @@
           <p class="config__price-per-month">3500 руб. / мес.</p>
         </div>
       </div>
-    </div>
+    </form>
 
     //= template/config/footer.html
 

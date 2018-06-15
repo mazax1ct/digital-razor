@@ -30,6 +30,19 @@
       @media(min-width: 992px)
         padding-top: 5px
 
+  &__intro
+    align-items: center
+    display: flex
+    flex-direction: column
+    justify-content: center
+    height: calc(100vh - 110px)
+    min-height: 320px
+    margin-bottom: 15px
+    position: relative
+
+    @media(min-width: 992px)
+      display: none
+
   &__content
     @media(min-width: 992px)
       display: flex
@@ -46,19 +59,6 @@
       height: calc(100% - 60px)
       padding-top: 5px
 
-  &__intro
-    align-items: center
-    display: flex
-    flex-direction: column
-    justify-content: center
-    height: calc(100vh - 110px)
-    min-height: 320px
-    margin-bottom: 15px
-    position: relative
-
-    @media(min-width: 992px)
-      display: none
-
   &__content-block
     background-color: #242424
 
@@ -66,6 +66,12 @@
       margin-right: 5px
       overflow-y: auto
       width: 50%
+
+    &--description
+      display: none
+
+      @media(min-width: 992px)
+        display: block
 
     &--full
       @media(min-width: 992px)
@@ -109,6 +115,10 @@
 
       @media(min-width: 992px)
         display: flex
+
+    &--duplicate
+      @media(min-width: 992px)
+        display: none
 
     &::after
       @media(min-width: 992px)
@@ -286,3 +296,19 @@
 
     @media(min-width: 1900px)
       font-size: 24px
+
+.tile
+  .config
+    &__content-block--list
+      margin-right: 0
+      width: 100%
+
+    &__content-block--description
+      display: none
+
+.config-section
+  @media(min-width: 992px)
+    display: none
+
+  &.is-active
+    display: block
