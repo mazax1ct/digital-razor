@@ -25,7 +25,7 @@
     //= template/config/sprite.html
     //= template/config/header-smart.html
 
-    <div class="config config--no_title">
+    <form class="config config--no_title" method="post" action="/">
       <div class="config__content">
         <div class="config__title-block config__title-block--for_desktop">
           <h2 class="config__title">КОМПОНЕНТЫ</h2>
@@ -33,60 +33,74 @@
         <div class="config__content-inner">
           <div class="config__content-block">
             <div class="config__content-block-inner">
-              <div class="config__subtitle-block">
-                <h3 class="config__subtitle">Корпус</h3>
-              </div>
-              <div class="tabs-menu tabs-menu--tall tabs-menu--small_indents">
-                <ul class="tabs-menu__list">
-                  <li class="tabs-menu__item"><a class="tabs-menu__link is-active" href="#">Corsair</a></li>
-                  <li class="tabs-menu__item"><a class="tabs-menu__link" href="#">Cooler Master</a></li>
-                  <li class="tabs-menu__item"><a class="tabs-menu__link" href="#">NZXT</a></li>
-                  <li class="tabs-menu__item"><a class="tabs-menu__link" href="#">Fractal</a></li>
-                </ul>
-              </div>
-              <form action="/">
-                <div class="c-tile2">
-                  <div class="container">
-                    <div class="row">
-                      <div class="col-6 col-sm-3 c-tile2__item">
-                        <label class="ct-item2" for="1">
-                          <input class="ct-item2__radio" id="1" name="ct2-item" type="radio" value="1" checked>
-                          <img class="ct-item2__image" src="images/content/img16.png" alt="CM MAKER 5">
-                          <p class="ct-item2__title">CM MAKER 5</p>
-                        </label>
+              <div class="smart-config-section tile">
+                <div class="config__subtitle-block">
+                  <h3 class="config__subtitle">Корпус</h3>
+                  <div class="config__views-block">
+                    <a class="js-smart-config-view config__view is-active" href="#" data-class="tile" title="Плиткой"><svg class="config__view-icon config__view-icon--tile" aria-hidden="true"><use xlink:href="#tile"/></svg></a>
+                    <a class="js-smart-config-view config__view" href="#" data-class="list" title="Списком"><svg class="config__view-icon config__view-icon--list" aria-hidden="true"><use xlink:href="#list"/></svg></a>
+                  </div>
+                </div>
+                <div class="tabs-menu tabs-menu--tall tabs-menu--small_indents">
+                  <ul class="tabs-menu__list">
+                    <li class="tabs-menu__item"><a class="tabs-menu__link is-active" href="#">Corsair</a></li>
+                    <li class="tabs-menu__item"><a class="tabs-menu__link" href="#">Cooler Master</a></li>
+                    <li class="tabs-menu__item"><a class="tabs-menu__link" href="#">NZXT</a></li>
+                    <li class="tabs-menu__item"><a class="tabs-menu__link" href="#">Fractal</a></li>
+                  </ul>
+                </div>
+                <div class="c-list2">
+                  <div class="c-list2__container">
+                    <div class="c-list2__row">
+                      <div class="c-list2__item">
+                        <div class="cl-item2">
+                          <input class="cl-item2__radio" id="1" type="radio" name="cl-item2" value="1" checked>
+                          <label class="cl-item2__label" for="1">
+                            <img class="cl-item2__image" src="images/content/img16.png" alt="CM MAKER 5">
+                            <p class="cl-item2__title">CM MAKER 5</p>
+                          </label>
+                        </div>
                       </div>
-                      <div class="col-6 col-sm-3 c-tile2__item">
-                        <label class="ct-item2" for="2">
-                          <input class="ct-item2__radio" id="2" name="ct2-item" type="radio" value="2">
-                          <img class="ct-item2__image" src="images/content/img16.png" alt="CM MAKER 5">
-                          <p class="ct-item2__title">CM MAKER 5</p>
-                        </label>
+                      <div class="c-list2__item">
+                        <div class="cl-item2">
+                          <input class="cl-item2__radio" id="2" type="radio" name="cl-item2" value="2">
+                          <label class="cl-item2__label" for="2">
+                            <img class="cl-item2__image" src="images/content/img16.png" alt="CM MAKER 5">
+                            <p class="cl-item2__title">CM MAKER 5</p>
+                          </label>
+                        </div>
                       </div>
-                      <div class="col-6 col-sm-3 c-tile2__item">
-                        <label class="ct-item2" for="3">
-                          <input class="ct-item2__radio" id="3" name="ct2-item" type="radio" value="3">
-                          <img class="ct-item2__image" src="images/content/img16.png" alt="CM MAKER 5">
-                          <p class="ct-item2__title">CM MAKER 5</p>
-                        </label>
+                      <div class="c-list2__item">
+                        <div class="cl-item2">
+                          <input class="cl-item2__radio" id="3" type="radio" name="cl-item2" value="3">
+                          <label class="cl-item2__label" for="3">
+                            <img class="cl-item2__image" src="images/content/img16.png" alt="CM MAKER 5">
+                            <p class="cl-item2__title">CM MAKER 5</p>
+                          </label>
+                        </div>
                       </div>
-                      <div class="col-6 col-sm-3 c-tile2__item">
-                        <label class="ct-item2" for="4">
-                          <input class="ct-item2__radio" id="4" name="ct2-item" type="radio" value="4">
-                          <img class="ct-item2__image" src="images/content/img16.png" alt="CM MAKER 5">
-                          <p class="ct-item2__title">CM MAKER 5</p>
-                        </label>
+                      <div class="c-list2__item">
+                        <div class="cl-item2">
+                          <input class="cl-item2__radio" id="4" type="radio" name="cl-item2" value="4">
+                          <label class="cl-item2__label" for="4">
+                            <img class="cl-item2__image" src="images/content/img16.png" alt="CM MAKER 5">
+                            <p class="cl-item2__title">CM MAKER 5</p>
+                          </label>
+                        </div>
                       </div>
-                      <div class="col-6 col-sm-3 c-tile2__item">
-                        <label class="ct-item2" for="5">
-                          <input class="ct-item2__radio" id="5" name="ct2-item" type="radio" value="5">
-                          <img class="ct-item2__image" src="images/content/img16.png" alt="CM MAKER 5">
-                          <p class="ct-item2__title">CM MAKER 5</p>
-                        </label>
+                      <div class="c-list2__item">
+                        <div class="cl-item2">
+                          <input class="cl-item2__radio" id="5" type="radio" name="cl-item2" value="5">
+                          <label class="cl-item2__label" for="5">
+                            <img class="cl-item2__image" src="images/content/img16.png" alt="CM MAKER 5">
+                            <p class="cl-item2__title">CM MAKER 5</p>
+                          </label>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </form>
+              </div>
             </div>
           </div>
           <div class="config__content-block">
@@ -121,7 +135,7 @@
           <p class="config__price-per-month">3500 руб. / мес.</p>
         </div>
       </div>
-    </div>
+    </form>
 
     //= template/config/footer.html
 

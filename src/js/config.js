@@ -80,6 +80,19 @@ $(document).ready(function() {
     $('.component--config_description[data-description=' + $(this).attr('for') + ']').addClass('is-active');
   });
 
+  // переключение вида списков смарт-конфига
+  $('.js-smart-config-view').click(function() {
+    var className = $(this).attr('data-class');
+    $(this).closest('.config__views-block').find('.js-smart-config-view').removeClass('is-active');
+    $(this).closest('.config__views-block').find('.js-smart-config-view[data-class=' + className + ']').addClass('is-active');
+    if(className === 'list') {
+      $(this).closest('.smart-config-section').removeClass('tile').addClass('list');
+    } else if(className === 'tile') {
+      $(this).closest('.smart-config-section').removeClass('list').addClass('tile');
+    }
+    return false;
+  });
+
   // канвас и иже с ним
   window.BASE_IMAGES = {};
   //Get all markered images

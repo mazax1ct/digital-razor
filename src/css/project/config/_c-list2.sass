@@ -1,85 +1,184 @@
 .c-list2
-  padding-top: 20px
-  padding-left: 15px
-  padding-right: 15px
+  &__container
+    width: 100%
+    padding-right: 10px
+    padding-left: 10px
+    margin-right: auto
+    margin-left: auto
 
-  @media(min-width: 992px)
-    padding-left: 5px
-    padding-right: 5px
-
-  @media(min-width: 1600px)
-    padding-top: 30px
-    padding-left: 20px
-    padding-right: 20px
+  &__row
+    display: flex
+    flex-wrap: wrap
+    margin-right: -10px
+    margin-left: -10px
 
   &__item
-    display: flex
-    margin-bottom: 20px
-
-.cl-item2
-  color: #d0d0d0
-  display: flex
-  font-size: 9px
-  height: 100%
-  max-width: 140px
-  text-align: right
-  width: 100%
-
-  &__radio
-    display: none
-
-    &:checked + .cl-item2__label
-      background-color: #505050
-      color: #fff
-
-    &:checked + .cl-item2__label::before,
-    &:checked + .cl-item2__label::after
-      background-color: #e5262d
-
-  &__label
-    background-color: #141414
-    border: 1px solid #707070
-    box-shadow: 0 3px 6px rgba(0,0,0,0.16)
-    cursor: pointer
-    display: flex
-    flex-direction: column
-    height: 100%
-    overflow: hidden
-    padding: 5px 5px 10px
     position: relative
     width: 100%
+    min-height: 1px
+    padding-right: 10px
+    padding-left: 10px
+    flex: 0 0 50%
+    max-width: 50%
+    margin-bottom: 20px
 
-    &::after
-      background-color: #bbb
-      bottom: 0
-      content: ''
-      display: block
-      height: 5px
-      left: auto
-      position: absolute
-      right: -2px
-      transform: skew(-54deg)
-      width: 50%
-      z-index: 2
+    @media(min-width: 768px)
+      flex: 0 0 25%
+      max-width: 25%
 
-    &::before
-      background-color: #bbb
-      bottom: 0
-      content: ''
-      display: block
-      height: 2px
-      left: 0
-      position: absolute
+.list
+  .c-list2
+    padding-top: 20px
+    padding-left: 15px
+    padding-right: 15px
+
+    @media(min-width: 992px)
+      padding-left: 5px
+      padding-right: 5px
+
+    @media(min-width: 1600px)
+      padding-top: 30px
+      padding-left: 20px
+      padding-right: 20px
+
+    &__item
+      display: flex
+      margin-bottom: 20px
+
+  .cl-item2
+    color: #d0d0d0
+    display: flex
+    font-size: 9px
+    height: 100%
+    min-height: 60px
+    max-width: 140px
+    text-align: right
+    width: 100%
+
+    &__radio
+      display: none
+
+      &:checked + .cl-item2__label
+        background-color: #505050
+        color: #fff
+
+      &:checked + .cl-item2__label::before,
+      &:checked + .cl-item2__label::after
+        background-color: #e5262d
+
+    &__label
+      background-color: #141414
+      border: 1px solid #707070
+      box-shadow: 0 3px 6px rgba(0,0,0,0.16)
+      cursor: pointer
+      display: flex
+      flex-direction: column
+      height: 100%
+      overflow: hidden
+      padding: 5px 5px 10px
+      position: relative
       width: 100%
-      z-index: 2
 
-  &__title
-    font-family: 'Russo One', 'Roboto', Arial, sans-serif
-    font-size: 18px
-    font-weight: 400
-    line-height: 1
-    margin-bottom: 0
-    white-space: nowrap
+      &::after
+        background-color: #bbb
+        bottom: 0
+        content: ''
+        display: block
+        height: 5px
+        left: auto
+        position: absolute
+        right: -2px
+        transform: skew(-54deg)
+        width: 50%
+        z-index: 2
 
-    @media(min-width: 992px) and (max-width: 1499px)
-      font-size: 15px
+      &::before
+        background-color: #bbb
+        bottom: 0
+        content: ''
+        display: block
+        height: 2px
+        left: 0
+        position: absolute
+        width: 100%
+        z-index: 2
+
+    &__image
+      display: none
+
+    &__title
+      font-family: 'Russo One', 'Roboto', Arial, sans-serif
+      font-size: 18px
+      font-weight: 400
+      line-height: 1
+      margin-bottom: 0
+      white-space: nowrap
+
+      @media(min-width: 992px) and (max-width: 1499px)
+        font-size: 15px
+
+      @media(min-width: 1900px)
+        font-size: 23px
+        margin-bottom: 5px
+
+.tile
+  .c-list2
+    padding-top: 20px
+    padding-left: 15px
+    padding-right: 15px
+
+    @media(min-width: 992px)
+      padding-left: 5px
+      padding-right: 5px
+
+    @media(min-width: 1600px)
+      padding-top: 30px
+      padding-left: 20px
+      padding-right: 20px
+
+    &__item
+      display: flex
+      margin-bottom: 20px
+
+  .cl-item2
+    &__label
+      cursor: pointer
+      display: block
+
+    &__image
+      border: 1px solid #707070
+      margin-bottom: 10px
+
+    &__radio
+      display: none
+
+      &:checked ~ .cl-item2__label .cl-item2__title::before
+        background-color: #ff0302
+
+    &__title
+      font-size: 14px
+      font-weight: 500
+      padding-left: 30px
+      position: relative
+
+      @media(min-width: 1600px)
+        font-size: 18px
+        padding-left: 35px
+
+      &::before
+        background-color: #242424
+        border: 3px solid #fff
+        border-radius: 50%
+        content: ""
+        height: 16px
+        left: 0
+        position: absolute
+        top: 0
+        width: 16px
+
+        @media(min-width: 1600px)
+          height: 20px
+          width: 20px
+
+    &__text
+      display: none
