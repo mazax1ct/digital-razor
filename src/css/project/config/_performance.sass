@@ -1,5 +1,12 @@
 .performance-block
-  padding-bottom: 0
+  @media(max-width: 991px)
+    background-color: #242424
+    left: 0
+    padding-bottom: 0
+    position: fixed
+    top: 55px
+    width: 100%
+    z-index: 3
 
 .performance-title
   @media(min-width: 992px)
@@ -27,6 +34,7 @@
     width: 12px
 
 .performance
+  display: none
   padding-bottom: 5px
 
   @media(min-width: 992px)

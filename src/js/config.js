@@ -49,7 +49,7 @@ $(document).ready(function() {
 
   //открытие/закрытие блока с графиками производительности
   $('.js-performance-toggler').click(function() {
-    $(this).toggleClass("is-open");
+    $('.performance-title__toggle').toggleClass("is-open");
     $('.performance').slideToggle();
   });
 
