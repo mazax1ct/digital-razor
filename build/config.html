@@ -21,7 +21,7 @@
 
     <link rel="stylesheet" href="css/config.css?v4"/>
   </head>
-  <body class="list">
+  <body class="config-page list">
     <svg aria-hidden="true" style="width: 0px; height: 0px; overflow: hidden; position: absolute;" xmlns="http://www.w3.org/2000/svg">
       <symbol id="back" viewBox="0 0 50 50">
         <path d="M14.8,15.8V9.7L0.5,24l14.3,14.3v-6.1L6.6,24L14.8,15.8z M27,17.9V9.7L12.8,24L27,38.3v-8.4c10.2,0,17.4,3.3,22.5,10.4C47.5,30.1,41.3,19.9,27,17.9z"/>
@@ -455,6 +455,87 @@
           <li class="config-menu__item"><a class="config-menu__root-link" href="#"><span class="config-menu__cnt">04.</span>Подобрать аксессуары</a></li>
           <li class="config-menu__item"><a class="config-menu__root-link" href="#"><span class="config-menu__cnt">05.</span>Итоговая конфигурация</a></li>
         </ul>
+        <div class="save-block">
+          <div class="save-block__inner">
+            <p>Сохраните Вашу конфигурацию, что бы не потерять информацию или вернуться к ней позднее.</p>
+            <p>Ссылка на конфигурацию придет к Вам на электронную почту, а так же все Ваши сохраненные конфигурации будут доступны в личном кабинете.</p>
+            <div class="save-form">
+              <label class="save-form__label" for="email">
+                <input id="email" class="input error" name="email" type="text" value="" placeholder="E-mail">
+              </label>
+              <label class="save-form__label" for="message">
+                <textarea id="message" class="save-form__textarea textarea" name="message" placeholder="Ваш вопрос или комментарий"></textarea>
+              </label>
+              <button class="save-form__button button" type="button">Сохранить в PDF</button>
+              <button class="save-form__button button button--red" type="button">Отправить на почту</button>
+            </div>
+          </div>
+        </div>
+        <div class="consult-block">
+          <div class="consult-block__inner">
+            <p>Нужна консультация или возник вопрос по оплате и доставке?</p>
+            <div class="consult-form">
+              <label class="consult-form__label" for="name">
+                <input id="name" class="input" name="name" type="text" value="" placeholder="Имя">
+              </label>
+              <label class="consult-form__label" for="phone">
+                <input id="phone" class="input" name="phone" type="text" value="" placeholder="Телефон">
+              </label>
+              <label class="consult-form__label" for="email">
+                <input id="email" class="input" name="email" type="text" value="" placeholder="E-mail">
+              </label>
+              <label class="consult-form__label" for="message">
+                <textarea id="message" class="save-form__textarea textarea" name="message" placeholder="Ваш вопрос"></textarea>
+              </label>
+              <p>Укажите удобный для вас способ ответа:</p>
+              <div class="consult-form__radios">
+                <div class="consult-form__radio">
+                  <label class="radio-label" for="e-mail">
+                    <input class="radio-label__input" id="e-mail" type="radio" name="consult-form" value="email" checked>
+                    <span class="radio-label__icon"></span>
+                    E-mail
+                  </label>
+                </div>
+                <div class="consult-form__radio">
+                  <label class="radio-label" for="telephone">
+                    <input class="radio-label__input" id="telephone" type="radio" name="consult-form" value="telephone">
+                    <span class="radio-label__icon"></span>
+                    Телефон
+                  </label>
+                </div>
+                <div class="consult-form__radio">
+                  <label class="radio-label" for="whatsup">
+                    <input class="radio-label__input" id="whatsup" type="radio" name="consult-form" value="whatsup">
+                    <span class="radio-label__icon"></span>
+                    WhatsUp
+                  </label>
+                </div>
+                <div class="consult-form__radio">
+                  <label class="radio-label" for="vk">
+                    <input class="radio-label__input" id="vk" type="radio" name="consult-form" value="vk">
+                    <span class="radio-label__icon"></span>
+                    Vkontakte
+                  </label>
+                </div>
+                <div class="consult-form__radio">
+                  <label class="radio-label" for="tg">
+                    <input class="radio-label__input" id="tg" type="radio" name="consult-form" value="tg">
+                    <span class="radio-label__icon"></span>
+                    Telegram
+                  </label>
+                </div>
+                <div class="consult-form__radio">
+                  <label class="radio-label" for="viber">
+                    <input class="radio-label__input" id="viber" type="radio" name="consult-form" value="viber">
+                    <span class="radio-label__icon"></span>
+                    Viber
+                  </label>
+                </div>
+              </div>
+              <button class="consult-form__button button button--red" type="button">Отправить</button>
+            </div>
+          </div>
+        </div>
         <div class="config__price-block">
           <p class="config__price">Цена: 64 000 руб.</p>
           <p class="config__price-per-month">3500 руб. / мес.</p>
@@ -467,12 +548,12 @@
         <a class="footer__button config-close" href="#" title="Закрыть конфигуратор">ЗАКРЫТЬ</a>
         <div class="footer__buttons">
           <div class="footer__admin-buttons">
-            <button class="footer__button config-dialog" type="button" title="Консультант"><svg class="config-dialog__icon" aria-hidden="true"><use xlink:href="#dialog"/></svg><span class="config-dialog__text">КОНСУЛЬТАНТ</span></button>
+            <button class="js-config-consult footer__button config-dialog" type="button" title="Консультант"><svg class="config-dialog__icon" aria-hidden="true"><use xlink:href="#dialog"/></svg><span class="config-dialog__text">КОНСУЛЬТАНТ</span></button>
             <a class="footer__button config-admin" href="#" title="АДМИН">АДМИН</a>
             <a class="footer__button config-admin" href="#" title="PREORDER">PREORDER</a>
           </div>
           <div class="footer__buttons-inner">
-            <button class="footer__button config-save" type="button" title="Сохранить"><svg class="config-save__icon" aria-hidden="true"><use xlink:href="#save"/></svg><span class="config-save__text">СОХРАНИТЬ</span></button>
+            <button class="js-config-save footer__button config-save" type="button" title="Сохранить"><svg class="config-save__icon" aria-hidden="true"><use xlink:href="#save"/></svg><span class="config-save__text">СОХРАНИТЬ</span></button>
             <div class="footer__buy-block">
               <p class="footer__price">100 000 руб.</p>
               <a class="footer__button footer__button--red config-buy" href="#" title="Купить"><svg class="config-buy__icon" aria-hidden="true"><use xlink:href="#cart"/></svg>КУПИТЬ</a>

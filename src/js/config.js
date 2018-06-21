@@ -38,12 +38,19 @@ $(document).ready(function() {
 
   //открытие/закрытие меню конфигуратора
   $(".js-config-menu-opener").click(function() {
+    if($(this).hasClass('is-active')){
+      $('body').removeClass('overflow');
+    }else{
+      $('body').addClass('overflow');
+    }
     $(this).toggleClass("is-active");
-    $("body").toggleClass("overflow");
     $(".config__content").toggleClass("blur");
+    $(".config__intro").toggleClass("blur");
     $(".footer").toggleClass("blur");
     $(".config-menu").toggleClass("is-open");
     $(".config__sidebar").toggleClass("is-open");
+    $('.save-block').removeClass('is-open');
+    $('.consult-block').removeClass('is-open');
     return false;
   });
 
@@ -90,6 +97,46 @@ $(document).ready(function() {
     } else if(className === 'tile') {
       $(this).closest('.smart-config-section').removeClass('list').addClass('tile');
     }
+    return false;
+  });
+
+  // попап сохранение конфига
+  $('.js-config-save').click(function() {
+    if($(this).hasClass('open')) {
+      $("body").removeClass("overflow"); //возвращаем прокрутку
+      $('.save-block').removeClass('is-open'); //закрываем попап
+      $(this).removeClass('open');
+    } else {
+      $(this).addClass('open');
+      $("body").addClass("overflow"); // убираем прокрутку
+      $('.consult-block').removeClass('is-open'); // скрываем попап консультаций
+      $('.js-config-consult').removeClass('open'); //снимаем отметку открытого попапа консультаций
+      $('.save-block').addClass('is-open'); //открываем попап
+    }
+    if($('body').width()>1199){ // жесткий кастыль
+      $('.config-menu').addClass('not-greed'); // добавляем класс на блок меню для фикса высоты
+    }
+    $('.config-menu__root-link').removeClass('is-active'); //убрать
+    return false;
+  });
+
+  // попап консультации
+  $('.js-config-consult').click(function() {
+    if($(this).hasClass('open')) {
+      $("body").removeClass("overflow"); //возвращаем прокрутку
+      $('.consult-block').removeClass('is-open'); //закрываем попап
+      $(this).removeClass('open');
+    } else {
+      $(this).addClass('open');
+      $("body").addClass("overflow"); // убираем прокрутку
+      $('.save-block').removeClass('is-open'); // скрываем попап сохранения
+      $('.js-config-save').removeClass('open'); //снимаем отметку открытого попапа сохранения
+      $('.consult-block').addClass('is-open'); //открываем попап
+    }
+    if($('body').width()>1199){ // жесткий кастыль
+      $('.config-menu').addClass('not-greed'); // добавляем класс на блок меню для фикса высоты
+    }
+    $('.config-menu__root-link').removeClass('is-active'); //убрать
     return false;
   });
 

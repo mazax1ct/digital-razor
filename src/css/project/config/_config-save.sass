@@ -1,0 +1,56 @@
+.save-block
+  background-color: #1D1D1D
+  display: none
+  color: #bebebe
+  height: 100%
+  left: 0
+  overflow-y: auto
+  padding: 15px
+  position: fixed
+  top: 55px
+  width: 100%
+  z-index: 3
+
+  @media(min-width: 1200px)
+    font-size: 14px
+    margin-bottom: 5px
+    max-height: 460px
+    position: static
+
+  &__inner
+    display: flex
+    flex-direction: column
+    justify-content: center
+    min-height: 100%
+    max-width: 400px
+    margin-left: auto
+    margin-right: auto
+    padding-bottom: 120px
+
+    @media(min-width: 1200px)
+      display: block
+      height: auto
+      padding-bottom: 10px
+
+  &.is-open
+    display: block
+
+  p
+    margin-bottom: 15px
+
+.save-form
+  &__label
+    display: block
+    margin-bottom: 10px
+
+  &__textarea
+    @media(min-width: 1200px)
+      height: 100px
+
+    @media(min-width: 1900px)
+      height: 185px
+
+  &__button
+    display: block
+    margin-bottom: 5px
+    width: 100%
