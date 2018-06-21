@@ -49,7 +49,9 @@ $(document).ready(function() {
     $(".footer").toggleClass("blur");
     $(".config-menu").toggleClass("is-open");
     $(".config__sidebar").toggleClass("is-open");
+    $('.js-config-save').removeClass('open');
     $('.save-block').removeClass('is-open');
+    $('.js-config-consult').removeClass('open');
     $('.consult-block').removeClass('is-open');
     return false;
   });
