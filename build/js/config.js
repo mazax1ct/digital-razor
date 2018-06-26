@@ -142,6 +142,12 @@ $(document).ready(function() {
     return false;
   });
 
+  //аккордион описания
+  $('.js-accordion').click( function() {
+    $(this).prev('.cl-item__text-inner').toggleClass('is-open');
+    return false;
+  });
+
   // канвас и иже с ним
   window.BASE_IMAGES = {};
   //Get all markered images
