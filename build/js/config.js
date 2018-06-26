@@ -122,6 +122,12 @@ $(document).ready(function() {
     return false;
   });
 
+  $('.js-save-close').click(function() {
+    $("body").removeClass("overflow"); //возвращаем прокрутку
+    $('.save-block').removeClass('is-open'); //закрываем попап
+    $('.js-config-save').removeClass('open'); //убираем отметку открытия попапа
+  });
+
   // попап консультации
   $('.js-config-consult').click(function() {
     if($(this).hasClass('open')) {
@@ -142,10 +148,17 @@ $(document).ready(function() {
     return false;
   });
 
+<<<<<<< HEAD
   //аккордион описания
   $('.js-accordion').click( function() {
     $(this).prev('.cl-item__text-inner').toggleClass('is-open');
     return false;
+=======
+  $('.js-consult-close').click(function() {
+    $("body").removeClass("overflow"); //возвращаем прокрутку
+    $('.consult-block').removeClass('is-open'); //закрываем попап
+    $('.js-config-consult').removeClass('open'); //убираем отметку открытия попапа
+>>>>>>> 45d4fd7d4c3d652674bcbde4aa20bfb07a851ee4
   });
 
   // канвас и иже с ним

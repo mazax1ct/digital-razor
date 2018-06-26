@@ -122,6 +122,12 @@ $(document).ready(function() {
     return false;
   });
 
+  $('.js-save-close').click(function() {
+    $("body").removeClass("overflow"); //возвращаем прокрутку
+    $('.save-block').removeClass('is-open'); //закрываем попап
+    $('.js-config-save').removeClass('open'); //убираем отметку открытия попапа
+  });
+
   // попап консультации
   $('.js-config-consult').click(function() {
     if($(this).hasClass('open')) {
