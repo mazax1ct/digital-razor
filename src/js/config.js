@@ -122,6 +122,12 @@ $(document).ready(function() {
     return false;
   });
 
+  $('.js-save-close').click(function() {
+    $("body").removeClass("overflow"); //возвращаем прокрутку
+    $('.save-block').removeClass('is-open'); //закрываем попап
+    $('.js-config-save').removeClass('open'); //убираем отметку открытия попапа
+  });
+
   // попап консультации
   $('.js-config-consult').click(function() {
     if($(this).hasClass('open')) {
@@ -140,6 +146,12 @@ $(document).ready(function() {
     }
     $('.config-menu__root-link').removeClass('is-active'); //убрать
     return false;
+  });
+
+  $('.js-consult-close').click(function() {
+    $("body").removeClass("overflow"); //возвращаем прокрутку
+    $('.consult-block').removeClass('is-open'); //закрываем попап
+    $('.js-config-consult').removeClass('open'); //убираем отметку открытия попапа
   });
 
   // канвас и иже с ним
