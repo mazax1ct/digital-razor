@@ -148,6 +148,12 @@ $(document).ready(function() {
     return false;
   });
 
+  $('.js-consult-close').click(function() {
+    $("body").removeClass("overflow"); //возвращаем прокрутку
+    $('.consult-block').removeClass('is-open'); //закрываем попап
+    $('.js-config-consult').removeClass('open'); //убираем отметку открытия попапа
+  });
+
   //аккордион описания
   $('.js-accordion').click( function() {
     $(this).prev('.cl-item__text-inner').toggleClass('is-open');
