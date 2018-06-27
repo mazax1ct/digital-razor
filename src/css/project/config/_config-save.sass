@@ -1,7 +1,7 @@
 .save-block
   background-color: #1D1D1D
   display: none
-  color: #bebebe
+  color: #c7c7c7
   height: 100%
   left: 0
   overflow-y: auto
@@ -25,10 +25,10 @@
     height: 50px
     left: auto
     padding: 0
-    position: absolute
-    right: 0
+    position: fixed
+    right: 15px
     text-align: center
-    top: 0
+    top: 5px
     width: 50px
     z-index: 2
 
@@ -38,7 +38,7 @@
     span
       background-color: #fff
       display: inline-block
-      height: 3px
+      height: 6px
       position: relative
       transform: rotate(45deg)
       vertical-align: middle
@@ -47,7 +47,7 @@
       &::before
         background-color: #fff
         content: ""
-        height: 3px
+        height: 6px
         left: 0
         position: absolute
         top: 0
@@ -59,16 +59,100 @@
     flex-direction: column
     justify-content: center
     min-height: 100%
-    max-width: 400px
+    max-width: 620px
     margin-left: auto
     margin-right: auto
     padding-bottom: 120px
 
+    @media(min-width: 1200px)
+      flex-direction: row
+      margin-left: auto
+      margin-right: auto
+      max-width: 1800px
+      padding-top: 30px
+      padding-bottom: 30px
+
+    @media(min-width: 1900px)
+      padding-top: 60px
+      padding-bottom: 60px
+
+  &__description
+    display: none
+
+    @media(min-width: 1200px)
+      border-right: 1px solid #474747
+      display: block
+      padding-left: 50px
+      padding-right: 50px
+      width: 50%
+
+    @media(min-width: 1900px)
+      font-size: 20px
+      padding-left: 90px
+      padding-right: 90px
+
+  &__description-title
+    color: #fff
+    font-size: 30px
+    font-weight: 700
+
+    @media(min-width: 1900px)
+      font-size: 40px
+
+  &__description-price
+    color: #fff
+    font-size: 20px
+    font-weight: 500
+
+    @media(min-width: 1900px)
+      font-size: 24px
+
+  &__description-subtitle
+    margin-bottom: 15px
+    margin-top: 15px
+
+    @media(min-width: 1900px)
+      margin-bottom: 25px
+      margin-top: 25px
+
+  &__form-block
+    color: #888
+
+    @media(min-width: 1200px)
+      display: flex
+      flex-direction: column
+      justify-content: center
+      padding-left: 50px
+      padding-right: 50px
+      width: 50%
+
+    @media(min-width: 1900px)
+      padding-left: 90px
+      padding-right: 90px
+
+    p
+      margin-bottom: 15px
+
+      @media(min-width: 1900px)
+        margin-bottom: 30px
+
+  &__form
+    max-width: 620px
+    margin-left: auto
+    margin-right: auto
+
+    @media(min-width: 1900px)
+      font-size: 24px
+
+  &__form-logo
+    display: none
+
+    @media(min-width: 1200px)
+      display: block
+      text-align: center
+
   &.is-open
     display: block
-
-  p
-    margin-bottom: 15px
 
 .save-form
   &__label
@@ -82,7 +166,19 @@
     @media(min-width: 1900px)
       height: 185px
 
+  &__buttons
+    @media(min-width: 480px)
+      display: flex
+
   &__button
     display: block
     margin-bottom: 5px
     width: 100%
+
+    &:first-child
+      @media(min-width: 480px)
+        margin-right: 5px
+
+    &:last-child
+      @media(min-width: 480px)
+        margin-left: 5px
