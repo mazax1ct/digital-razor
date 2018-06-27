@@ -115,9 +115,9 @@ $(document).ready(function() {
       $('.js-config-consult').removeClass('open'); //снимаем отметку открытого попапа консультаций
       $('.save-block').addClass('is-open'); //открываем попап
     }
-    if($('body').width()>1199){ // жесткий кастыль
+    /*if($('body').width()>1199){ // жесткий кастыль
       $('.config-menu').addClass('not-greed'); // добавляем класс на блок меню для фикса высоты
-    }
+    }*/
     $('.config-menu__root-link').removeClass('is-active'); //убрать
     return false;
   });
@@ -141,9 +141,9 @@ $(document).ready(function() {
       $('.js-config-save').removeClass('open'); //снимаем отметку открытого попапа сохранения
       $('.consult-block').addClass('is-open'); //открываем попап
     }
-    if($('body').width()>1199){ // жесткий кастыль
+    /*if($('body').width()>1199){ // жесткий кастыль
       $('.config-menu').addClass('not-greed'); // добавляем класс на блок меню для фикса высоты
-    }
+    }*/
     $('.config-menu__root-link').removeClass('is-active'); //убрать
     return false;
   });
