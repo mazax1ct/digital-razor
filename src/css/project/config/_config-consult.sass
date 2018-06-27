@@ -25,10 +25,10 @@
     height: 50px
     left: auto
     padding: 0
-    position: absolute
-    right: 0
+    position: fixed
+    right: 20px
     text-align: center
-    top: 0
+    top: 5px
     width: 50px
     z-index: 2
 
@@ -38,7 +38,7 @@
     span
       background-color: #fff
       display: inline-block
-      height: 3px
+      height: 6px
       position: relative
       transform: rotate(45deg)
       vertical-align: middle
@@ -47,7 +47,7 @@
       &::before
         background-color: #fff
         content: ""
-        height: 3px
+        height: 6px
         left: 0
         position: absolute
         top: 0
@@ -63,6 +63,14 @@
     margin-left: auto
     margin-right: auto
     padding-bottom: 120px
+
+    @media(min-width: 1200px)
+      padding-bottom: 30px
+      padding-top: 30px
+
+    @media(min-width: 1900px)
+      padding-bottom: 60px
+      padding-top: 60px
 
   &.is-open
     display: block

@@ -35,6 +35,10 @@
       &:checked + .cl-item__inner .cl-item__label::before
         background-color: #ff0302
 
+      &:checked + .cl-item__inner .cl-item__label .cl-item__text .cl-item__text-inner
+        max-height: 250px
+        transition: max-height 0.5s ease-in
+
     &__inner
       align-items: center
       display: flex

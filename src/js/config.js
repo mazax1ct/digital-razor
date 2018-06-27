@@ -143,16 +143,23 @@ $(document).ready(function() {
       $("body").removeClass("overflow"); //возвращаем прокрутку
       $('.consult-block').removeClass('is-open'); //закрываем попап
       $(this).removeClass('open');
+      if($('body').width() > 1199){ // жесткий кастыль
+        $(".header").removeClass("blur");
+        $(".config").removeClass("blur");
+        $(".footer").removeClass("blur");
+      }
     } else {
       $(this).addClass('open');
       $("body").addClass("overflow"); // убираем прокрутку
       $('.save-block').removeClass('is-open'); // скрываем попап сохранения
       $('.js-config-save').removeClass('open'); //снимаем отметку открытого попапа сохранения
       $('.consult-block').addClass('is-open'); //открываем попап
+      if($('body').width() > 1199){ // жесткий кастыль
+        $(".header").addClass("blur");
+        $(".config").addClass("blur");
+        $(".footer").addClass("blur");
+      }
     }
-    /*if($('body').width()>1199){ // жесткий кастыль
-      $('.config-menu').addClass('not-greed'); // добавляем класс на блок меню для фикса высоты
-    }*/
     $('.config-menu__root-link').removeClass('is-active'); //убрать
     return false;
   });
@@ -161,13 +168,16 @@ $(document).ready(function() {
     $("body").removeClass("overflow"); //возвращаем прокрутку
     $('.consult-block').removeClass('is-open'); //закрываем попап
     $('.js-config-consult').removeClass('open'); //убираем отметку открытия попапа
+    $(".header").removeClass("blur");
+    $(".config").removeClass("blur");
+    $(".footer").removeClass("blur");
   });
 
   //аккордион описания
-  $('.js-accordion').click( function() {
+  /*$('.js-accordion').click( function() {
     $(this).prev('.cl-item__text-inner').toggleClass('is-open');
     return false;
-  });
+  });*/
 
   // канвас и иже с ним
   window.BASE_IMAGES = {};
