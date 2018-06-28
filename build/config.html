@@ -500,14 +500,13 @@
           <li class="config-menu__item"><a class="config-menu__root-link" href="#"><span class="config-menu__cnt">04.</span>Подобрать аксессуары</a></li>
           <li class="config-menu__item"><a class="config-menu__root-link" href="#"><span class="config-menu__cnt">05.</span>Итоговая конфигурация</a></li>
         </ul>
+        <div class="config__stub"></div>
       </div>
     </form>
 
-    <div class="config__stub"></div>
-    
     <div class="save-block">
-      <button class="js-save-close save-block__close" type="button" title="Закрыть"><span></span></button>
       <div class="save-block__inner">
+        <button class="js-save-close save-block__close" type="button" title="Закрыть"><span></span></button>
         <div class="save-block__description">
           <p class="save-block__description-title">ID конфигурации: #123456</p>
           <p class="save-block__description-price">Цена: 64 000 руб. (на 26.06.2018)</p>
@@ -564,76 +563,73 @@
     </div>
     
     <div class="consult-block">
-      <button class="js-consult-close consult-block__close" type="button"><span></span></button>
       <div class="consult-block__inner">
-        <p>Нужна консультация или возник вопрос по оплате и доставке?</p>
-        <div class="consult-form">
-          <label class="consult-form__label" for="name">
-            <input id="name" class="input" name="name" type="text" value="" placeholder="Имя">
-          </label>
-          <label class="consult-form__label" for="phone">
-            <input id="phone" class="input" name="phone" type="text" value="" placeholder="Телефон">
-          </label>
-          <label class="consult-form__label" for="email">
-            <input id="email" class="input" name="email" type="text" value="" placeholder="E-mail">
-          </label>
-          <label class="consult-form__label" for="message">
-            <textarea id="message" class="save-form__textarea textarea" name="message" placeholder="Ваш вопрос"></textarea>
-          </label>
-          <p>Укажите удобный для вас способ ответа:</p>
-          <div class="consult-form__radios">
-            <div class="consult-form__radio">
-              <label class="radio-label" for="e-mail">
-                <input class="radio-label__input" id="e-mail" type="radio" name="consult-form" value="email" checked>
-                <span class="radio-label__icon"></span>
-                E-mail
-              </label>
+        <button class="js-consult-close consult-block__close" type="button"><span></span></button>
+        <div class="consult-block__form">
+          <p>Нужна консультация или возник вопрос по оплате и доставке?</p>
+          <div class="consult-form">
+            <label class="consult-form__label" for="name">
+              <input id="name" class="input" name="name" type="text" value="" placeholder="Имя">
+            </label>
+            <label class="consult-form__label" for="phone">
+              <input id="phone" class="input" name="phone" type="text" value="" placeholder="Телефон">
+            </label>
+            <label class="consult-form__label" for="email">
+              <input id="email" class="input" name="email" type="text" value="" placeholder="E-mail">
+            </label>
+            <label class="consult-form__label" for="message">
+              <textarea id="message" class="save-form__textarea textarea" name="message" placeholder="Ваш вопрос"></textarea>
+            </label>
+            <p>Укажите удобный для вас способ ответа:</p>
+            <div class="consult-form__radios">
+              <div class="consult-form__radio">
+                <label class="radio-label" for="e-mail">
+                  <input class="radio-label__input" id="e-mail" type="radio" name="consult-form" value="email" checked>
+                  <span class="radio-label__icon"></span>
+                  E-mail
+                </label>
+              </div>
+              <div class="consult-form__radio">
+                <label class="radio-label" for="telephone">
+                  <input class="radio-label__input" id="telephone" type="radio" name="consult-form" value="telephone">
+                  <span class="radio-label__icon"></span>
+                  Телефон
+                </label>
+              </div>
+              <div class="consult-form__radio">
+                <label class="radio-label" for="whatsup">
+                  <input class="radio-label__input" id="whatsup" type="radio" name="consult-form" value="whatsup">
+                  <span class="radio-label__icon"></span>
+                  WhatsUp
+                </label>
+              </div>
+              <div class="consult-form__radio">
+                <label class="radio-label" for="vk">
+                  <input class="radio-label__input" id="vk" type="radio" name="consult-form" value="vk">
+                  <span class="radio-label__icon"></span>
+                  Vkontakte
+                </label>
+              </div>
+              <div class="consult-form__radio">
+                <label class="radio-label" for="tg">
+                  <input class="radio-label__input" id="tg" type="radio" name="consult-form" value="tg">
+                  <span class="radio-label__icon"></span>
+                  Telegram
+                </label>
+              </div>
+              <div class="consult-form__radio">
+                <label class="radio-label" for="viber">
+                  <input class="radio-label__input" id="viber" type="radio" name="consult-form" value="viber">
+                  <span class="radio-label__icon"></span>
+                  Viber
+                </label>
+              </div>
             </div>
-            <div class="consult-form__radio">
-              <label class="radio-label" for="telephone">
-                <input class="radio-label__input" id="telephone" type="radio" name="consult-form" value="telephone">
-                <span class="radio-label__icon"></span>
-                Телефон
-              </label>
-            </div>
-            <div class="consult-form__radio">
-              <label class="radio-label" for="whatsup">
-                <input class="radio-label__input" id="whatsup" type="radio" name="consult-form" value="whatsup">
-                <span class="radio-label__icon"></span>
-                WhatsUp
-              </label>
-            </div>
-            <div class="consult-form__radio">
-              <label class="radio-label" for="vk">
-                <input class="radio-label__input" id="vk" type="radio" name="consult-form" value="vk">
-                <span class="radio-label__icon"></span>
-                Vkontakte
-              </label>
-            </div>
-            <div class="consult-form__radio">
-              <label class="radio-label" for="tg">
-                <input class="radio-label__input" id="tg" type="radio" name="consult-form" value="tg">
-                <span class="radio-label__icon"></span>
-                Telegram
-              </label>
-            </div>
-            <div class="consult-form__radio">
-              <label class="radio-label" for="viber">
-                <input class="radio-label__input" id="viber" type="radio" name="consult-form" value="viber">
-                <span class="radio-label__icon"></span>
-                Viber
-              </label>
-            </div>
+            <button class="consult-form__button button button--red" type="button">Отправить</button>
           </div>
-          <button class="consult-form__button button button--red" type="button">Отправить</button>
         </div>
       </div>
     </div>
-    
-    <!--<div class="config__price-block">
-      <p class="config__price">Цена: 64 000 руб.</p>
-      <p class="config__price-per-month">3500 руб. / мес.</p>
-    </div>-->
 
     <footer class="footer">
       <div class="footer__inner">
