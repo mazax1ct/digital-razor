@@ -162,7 +162,6 @@ $(document).ready(function() {
         $(".config").addClass("blur");
       }
     }
-    $('.config-menu__root-link').removeClass('is-active'); //убрать
     return false;
   });
 
