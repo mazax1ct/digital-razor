@@ -28,11 +28,23 @@ function CanvasStretchImage(srcImgElem, points, ctx) {
 $(document).ready(function() {
   //открытие/закрытие главного меню
   $(".js-menu-opener").click(function() {
-    $(this).toggleClass("is-active");
-    $("body").toggleClass("overflow");
-    $(".config").toggleClass("blur");
-    $(".footer").toggleClass("blur");
-    $(".main-menu").toggleClass("is-open");
+    if($(this).hasClass("is-active")){
+      $(this).removeClass("is-active");
+      $("body").removeClass("overflow");
+      $(".config").removeClass("blur");
+      $(".main-menu").removeClass("is-open");
+      $(".footer").removeClass("blur");
+    }else{
+      $(this).addClass("is-active");
+      $("body").addClass("overflow");
+      $(".config").addClass("blur");
+      $(".main-menu").addClass("is-open");
+      $(".footer").addClass("blur");
+    }
+    $('.js-config-save').removeClass('open');
+    $('.save-block').removeClass('is-open');
+    $('.js-config-consult').removeClass('open');
+    $('.consult-block').removeClass('is-open');
     return false;
   });
 
@@ -109,17 +121,13 @@ $(document).ready(function() {
       $('.save-block').removeClass('is-open'); //закрываем попап
       $(this).removeClass('open');
       if($('body').width() > 1199){ // жесткий кастыль
-        //$(".header").removeClass("blur");
         $(".config").removeClass("blur");
-        //$(".footer").removeClass("blur");
       }
     } else {
       $(this).addClass('open');
       $("body").addClass("overflow"); // убираем прокрутку
       if($('body').width() > 1199){ // жесткий кастыль
-        //$(".header").addClass("blur");
         $(".config").addClass("blur");
-        //$(".footer").addClass("blur");
       }
       $('.consult-block').removeClass('is-open'); // скрываем попап консультаций
       $('.js-config-consult').removeClass('open'); //снимаем отметку открытого попапа консультаций
@@ -132,9 +140,7 @@ $(document).ready(function() {
     $("body").removeClass("overflow"); //возвращаем прокрутку
     $('.save-block').removeClass('is-open'); //закрываем попап
     $('.js-config-save').removeClass('open'); //убираем отметку открытия попапа
-    //$(".header").removeClass("blur");
     $(".config").removeClass("blur");
-    //$(".footer").removeClass("blur");
   });
 
   // попап консультации
@@ -144,9 +150,7 @@ $(document).ready(function() {
       $('.consult-block').removeClass('is-open'); //закрываем попап
       $(this).removeClass('open');
       if($('body').width() > 1199){ // жесткий кастыль
-        //$(".header").removeClass("blur");
         $(".config").removeClass("blur");
-        //$(".footer").removeClass("blur");
       }
     } else {
       $(this).addClass('open');
@@ -155,9 +159,7 @@ $(document).ready(function() {
       $('.js-config-save').removeClass('open'); //снимаем отметку открытого попапа сохранения
       $('.consult-block').addClass('is-open'); //открываем попап
       if($('body').width() > 1199){ // жесткий кастыль
-        //$(".header").addClass("blur");
         $(".config").addClass("blur");
-        //$(".footer").addClass("blur");
       }
     }
     $('.config-menu__root-link').removeClass('is-active'); //убрать
@@ -168,9 +170,7 @@ $(document).ready(function() {
     $("body").removeClass("overflow"); //возвращаем прокрутку
     $('.consult-block').removeClass('is-open'); //закрываем попап
     $('.js-config-consult').removeClass('open'); //убираем отметку открытия попапа
-    //$(".header").removeClass("blur");
     $(".config").removeClass("blur");
-    //$(".footer").removeClass("blur");
   });
 
   //аккордион описания
