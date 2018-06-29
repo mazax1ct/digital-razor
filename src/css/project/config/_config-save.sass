@@ -16,19 +16,11 @@
   @media(min-width: 1200px)
     background: none
     font-size: 14px
+    overflow: hidden
     height: calc(100% - 150px)
     padding: 0
     top: 75px
     z-index: 100
-
-  &::-webkit-scrollbar
-    width: 5px
-
-  &::-webkit-scrollbar-track
-    background: #363636
-
-  &::-webkit-scrollbar-thumb
-    background: #7a7a7a
 
   &__close
     background-color: transparent
@@ -96,8 +88,9 @@
     display: none
 
     @media(min-width: 1200px)
-      border-right: 1px solid #474747
+      border-right: 1px solid #363636
       display: block
+      overflow-y: auto
       padding-left: 50px
       padding-right: 50px
       width: 50%
@@ -106,6 +99,15 @@
       font-size: 20px
       padding-left: 90px
       padding-right: 90px
+
+    &::-webkit-scrollbar
+      width: 4px
+
+    &::-webkit-scrollbar-track
+      background: #363636
+
+    &::-webkit-scrollbar-thumb
+      background: #7a7a7a
 
   &__description-title
     color: #fff

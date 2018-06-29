@@ -30,7 +30,7 @@ $(function() {
       $(".tabs-menu__list").addClass('webkit-scroll');
       $(".config__content-block").addClass('webkit-scroll');
       $(".config__sidebar").addClass('webkit-scroll');
-      $(".save-block").addClass('webkit-scroll');
+      $(".save-block__description").addClass('webkit-scroll');
       $(".consult-block").addClass('webkit-scroll');
     }
 });
