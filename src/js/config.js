@@ -1,3 +1,29 @@
+$(function() {
+    var isWebKit = 'WebkitAppearance' in document.documentElement.style;
+
+    if (/iPad/i.test(navigator.userAgent) !== true && /iPhone/i.test(navigator.userAgent) !== true && /Android/i.test(navigator.userAgent) !== true && !Modernizr.touchevents && isWebKit !== true) {
+      $(window).on("load",function(){
+        $(".config__content-block").mCustomScrollbar({
+          scrollInertia: 0
+        });
+        $(".tabs-menu__list").mCustomScrollbar({
+          scrollInertia: 0,
+          axis:"x",
+          scrollbarPosition: 'outside'
+        });
+        $(".config__sidebar").mCustomScrollbar({
+          scrollInertia: 0
+        });
+        $(".save-block").mCustomScrollbar({
+          scrollInertia: 0
+        });
+        $(".consult-block").mCustomScrollbar({
+          scrollInertia: 0
+        });
+      });
+    }
+});
+
 function CanvasStretchImage(srcImgElem, points, ctx) {
   var yTopStart = points[0][1];
   var yTopEnd = points[1][1];
