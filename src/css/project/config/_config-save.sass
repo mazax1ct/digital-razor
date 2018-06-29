@@ -24,9 +24,6 @@
   &::-webkit-scrollbar
     width: 5px
 
-    &:horizontal
-      height: 4px
-
   &::-webkit-scrollbar-track
     background: #363636
 
@@ -83,6 +80,7 @@
     @media(min-width: 1200px)
       background-color: rgba(29, 29, 29, 0.9)
       flex-direction: row
+      height: 100%
       margin-left: auto
       margin-right: auto
       max-width: 1800px
@@ -138,6 +136,9 @@
     color: #888
 
     @media(min-width: 1200px)
+      display: flex
+      flex-direction: column
+      justify-content: center
       padding-left: 50px
       padding-right: 50px
       width: 50%
@@ -163,9 +164,12 @@
   &__form-logo
     display: none
 
-    @media(min-width: 1200px)
+    @media(min-width: 1200px) and (min-height: 700px)
       display: block
       text-align: center
+
+    img
+      max-width: 50%
 
   &.is-open
     display: block

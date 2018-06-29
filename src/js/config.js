@@ -18,8 +18,9 @@ $(function() {
         $(".config__sidebar").mCustomScrollbar({
           scrollInertia: 0
         });
-        $(".save-block").mCustomScrollbar({
-          scrollInertia: 0
+        $(".save-block__description").mCustomScrollbar({
+          scrollInertia: 0,
+          scrollbarPosition: 'outside'
         });
         $(".consult-block").mCustomScrollbar({
           scrollInertia: 0
