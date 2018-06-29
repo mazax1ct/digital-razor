@@ -22,7 +22,7 @@ $(function() {
           scrollInertia: 0,
           scrollbarPosition: 'outside'
         });
-        $(".consult-block").mCustomScrollbar({
+        $(".consult-block__inner").mCustomScrollbar({
           scrollInertia: 0
         });
       });
@@ -31,7 +31,7 @@ $(function() {
       $(".config__content-block").addClass('webkit-scroll');
       $(".config__sidebar").addClass('webkit-scroll');
       $(".save-block__description").addClass('webkit-scroll');
-      $(".consult-block").addClass('webkit-scroll');
+      $(".consult-block__inner").addClass('webkit-scroll');
     }
 });
 
