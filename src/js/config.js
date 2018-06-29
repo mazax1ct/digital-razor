@@ -1,7 +1,11 @@
+function isTouchDevice(){
+    return true == ("ontouchstart" in window || window.DocumentTouch && document instanceof DocumentTouch);
+}
+
 $(function() {
     var isWebKit = 'WebkitAppearance' in document.documentElement.style;
 
-    if (/iPad/i.test(navigator.userAgent) !== true && /iPhone/i.test(navigator.userAgent) !== true && /Android/i.test(navigator.userAgent) !== true && !Modernizr.touchevents && isWebKit !== true) {
+    if (/iPad/i.test(navigator.userAgent) !== true && /iPhone/i.test(navigator.userAgent) !== true && /Android/i.test(navigator.userAgent) !== true && isTouchDevice() !==true && isWebKit !== true) {
       $(window).on("load",function(){
         $(".config__content-block").mCustomScrollbar({
           scrollInertia: 0
@@ -21,6 +25,12 @@ $(function() {
           scrollInertia: 0
         });
       });
+    } else if(isWebKit === true) {
+      $(".tabs-menu__list").addClass('webkit-scroll');
+      $(".config__content-block").addClass('webkit-scroll');
+      $(".config__sidebar").addClass('webkit-scroll');
+      $(".save-block").addClass('webkit-scroll');
+      $(".consult-block").addClass('webkit-scroll');
     }
 });
 
