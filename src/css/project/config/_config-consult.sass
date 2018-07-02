@@ -13,14 +13,18 @@
   width: 100%
   z-index: 3
 
-  @media(min-width: 1200px)
+  @media(min-width: 1200px) and (min-height: 650px)
     background: none
     font-size: 14px
-    overflow-y: hidden
-    height: calc(100% - 150px)
+    overflow: hidden
+    height: calc(100% - 120px)
     padding: 0
-    top: 75px
+    top: 60px
     z-index: 100
+
+  @media(min-width: 1600px) and (min-height: 850px)
+    height: calc(100% - 150px)
+    top: 75px
 
   &__close
     background-color: transparent
@@ -37,7 +41,7 @@
     width: 50px
     z-index: 2
 
-    @media(min-width: 1200px)
+    @media(min-width: 1200px) and (min-height: 650px)
       display: block
 
     span
@@ -69,7 +73,7 @@
     margin-right: auto
     padding-bottom: 120px
 
-    @media(min-width: 1200px)
+    @media(min-width: 1200px) and (min-height: 650px)
       background-color: rgba(29, 29, 29, 0.9)
       height: 100%
       margin-left: auto
@@ -80,12 +84,12 @@
       padding-bottom: 30px
       position: relative
 
-    @media(min-width: 1900px)
+    @media(min-width: 1900px) and (min-height: 850px)
       padding-top: 60px
       padding-bottom: 60px
 
     .mCSB_container
-      @media(min-width: 1200px)
+      @media(min-width: 1200px) and (min-height: 650px)
         display: flex
         flex-direction: column
         justify-content: center
@@ -95,6 +99,9 @@
     max-width: 620px
     margin-left: auto
     margin-right: auto
+
+    @media(min-width: 1900px)
+      font-size: 20px
 
   &.is-open
     display: block
@@ -108,16 +115,19 @@
     margin-bottom: 10px
 
   &__textarea
-    @media(min-width: 1200px)
+    @media(min-width: 1200px) and (min-height: 650px)
       height: 100px
 
-    @media(min-width: 1900px)
+    @media(min-width: 1900px) and (min-height: 850px)
       height: 185px
 
   &__radios
     display: flex
     flex-wrap: wrap
-    margin-bottom: 30px
+    margin-bottom: 5px
+
+    @media(min-height: 850px)
+      margin-bottom: 30px
 
   &__radio
     margin-bottom: 10px

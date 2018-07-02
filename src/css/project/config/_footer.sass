@@ -6,9 +6,11 @@
   width: 100%
   z-index: 3
 
-  @media(min-width: 1200px)
-    min-height: 70px
+  @media(min-width: 1200px) and (min-height: 650px)
     bottom: 5px
+
+  @media(min-width: 1600px) and (min-height: 850px)
+    min-height: 70px
 
   &__inner
     align-items: center
@@ -23,7 +25,7 @@
     padding-left: 10px
     padding-right: 10px
 
-    @media(min-width: 1200px)
+    @media(min-width: 1600px) and (min-height: 850px)
       min-height: 70px
 
   &__buttons
@@ -67,12 +69,16 @@
 
     @media(min-width: 1200px)
       border: 1px solid #fff
-      min-height: 50px
+      min-height: 40px
       min-width: 160px
       margin-right: 5px
 
-    @media(min-width: 1900px)
+    @media(min-width: 1600px) and (min-height: 850px)
       font-size: 18px
+      min-height: 50px
+
+    @media(min-width: 1600px) and (min-height: 850px)
+      min-height: 50px
 
     &:hover
       text-decoration: none
@@ -98,6 +104,7 @@
     font-family: 'Russo One', 'Roboto', Arial, sans-serif
     font-size: 13px
     font-weight: 500
+    line-height: 1
     white-space: nowrap
 
     @media(min-width: 400px)
@@ -116,10 +123,13 @@
 
 .config-close,
 .config-admin
-  padding-top: 15px
+  padding-top: 10px
 
   @media(max-width: 1199px)
     display: none
+
+  @media(min-width: 1600px) and (min-height: 850px)
+    padding-top: 15px
 
 .config-admin
   @media(min-width: 1200px)
@@ -168,6 +178,9 @@
 
   @media(min-width: 1200px)
     margin-right: 0
+    padding-top: 10px
+
+  @media(min-width: 1600px) and (min-height: 850px)
     padding-top: 15px
 
   &__icon
