@@ -3,31 +3,32 @@
   margin-right: auto
   max-width: 1800px
   padding-top: 60px
-  padding-bottom: 55px
+  padding-bottom: 60px
 
-  @media(min-width: 992px)
+  @media (min-width: 1200px) and (min-height: 650px)
     display: flex
-    height: calc(100% - 60px)
+    height: calc(100% - 65px)
     min-height: 320px
     padding-bottom: 0
+    padding-top: 65px
 
-  @media(min-width: 1200px)
+  @media(min-width: 1600px) and (min-height: 850px)
     height: calc(100% - 80px)
     padding-top: 80px
 
   &--no_title
     padding-top: 55px
 
-    @media(min-width: 992px)
+    @media (min-width: 1200px) and (min-height: 650px)
       height: calc(100% - 60px)
       padding-top: 60px
 
-    @media(min-width: 1200px)
+    @media(min-width: 1600px) and (min-height: 850px)
       height: calc(100% - 80px)
       padding-top: 80px
 
     .config__content-inner
-      @media(min-width: 992px)
+      @media (min-width: 1200px) and (min-height: 650px)
         padding-top: 5px
 
   &__intro
@@ -40,37 +41,45 @@
     margin-bottom: 15px
     position: relative
 
-    @media(min-width: 992px)
+    @media (min-width: 1200px) and (min-height: 650px)
       display: none
 
   &__content
-    @media(min-width: 992px)
+    @media (min-width: 1200px) and (min-height: 650px)
       display: flex
       flex-direction: column
-      width: 100%
-
-    @media(min-width: 1200px)
       padding-right: 5px
       width: 81.38%
 
   &__content-inner
-    @media(min-width: 992px)
+    @media (min-width: 1200px) and (min-height: 650px)
       display: flex
-      height: calc(100% - 60px)
+      height: calc(100% - 55px)
       padding-top: 5px
 
   &__content-block
     background-color: #242424
 
-    @media(min-width: 992px)
-      margin-right: 5px
+    @media (min-width: 1200px) and (min-height: 650px)
       overflow-y: auto
+
+    @media(min-width: 1600px) and (min-height: 850px)
+      margin-right: 5px
       width: 50%
+
+    &--list
+      @media(min-width: 992px)
+        margin-right: 0
+        width: 100%
+
+      @media(min-width: 1600px) and (min-height: 850px)
+        margin-right: 5px
+        width: 50%
 
     &--description
       display: none
 
-      @media(min-width: 992px)
+      @media(min-width: 1600px) and (min-height: 850px)
         display: block
 
     &--full
@@ -94,7 +103,7 @@
         margin-right: 5px
 
   &__content-block-inner
-    padding-bottom: 25px
+    //padding-bottom: 25px
 
     @media(min-width: 992px)
       min-height: 100%
@@ -107,9 +116,8 @@
     min-height: 55px
     padding: 12px 15px
 
-    @media(min-width: 992px)
+    @media (min-width: 1200px) and (min-height: 650px)
       background-color: #242424
-      min-height: 60px
       overflow: hidden
       padding: 5px 15px
       position: relative
@@ -117,15 +125,15 @@
     &--for_desktop
       display: none
 
-      @media(min-width: 992px)
+      @media (min-width: 1200px) and (min-height: 650px)
         display: flex
 
     &--duplicate
-      @media(min-width: 992px)
+      @media (min-width: 1200px) and (min-height: 650px)
         display: none
 
     &::after
-      @media(min-width: 992px)
+      @media (min-width: 1200px) and (min-height: 650px)
         background-color: #404040
         content: ""
         height: calc(100% - 10px)
@@ -149,7 +157,10 @@
     @media(min-width: 768px)
       font-size: 20px
 
-    @media(min-width: 1200px)
+    @media (min-width: 1200px) and (min-height: 650px)
+      padding-left: 15px
+
+    @media (min-width: 1600px) and (min-height: 850px)
       font-size: 24px
       padding-left: 15px
 
@@ -185,7 +196,7 @@
       stroke: #fff
 
   &__sidebar
-    @media(min-width: 1200px)
+    @media(min-width: 1200px) and (min-height: 650px)
       background-color: #1a1a1a
       overflow-y: auto
       width: 18.62%

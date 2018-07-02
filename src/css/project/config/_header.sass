@@ -6,9 +6,11 @@
   width: 100%
   z-index: 10
 
-  @media(min-width: 1200px)
-    min-height: 70px
+  @media(min-width: 1200px) and (min-height: 650px)
     padding-top: 5px
+
+  @media(min-width: 1600px) and (min-height: 850px)
+    min-height: 70px
 
   &__inner
     align-items: center
@@ -22,9 +24,11 @@
     padding-left: 10px
     padding-right: 10px
 
-    @media(min-width: 1200px)
-      min-height: 70px
+    @media(min-width: 1200px) and (min-height: 650px)
       padding-left: 30px
+
+    @media(min-width: 1600px) and (min-height: 850px)
+      min-height: 70px
 
     &::before
       background-color: #3E3E3E
@@ -37,7 +41,7 @@
       width: 100%
       z-index: 4
 
-      @media(min-width: 1200px)
+      @media(min-width: 1200px) and (min-height: 650px)
         border: none
 
   &__back
@@ -52,7 +56,7 @@
     @media(min-width: 400px)
       font-size: 20px
 
-    @media(min-width: 1200px)
+    @media(min-width: 1200px) and (min-height: 650px)
       display: none
 
   &__back-icon
@@ -60,20 +64,18 @@
     width: 25px
 
   &__title
+    display: none
     font-family: 'Russo One', Arial, sans-serif
-    font-size: 22px
+    font-size: 24px
     line-height: 1
     margin: 0
     position: relative
     z-index: 4
 
-    @media (max-width: 1199px)
-      display: none
+    @media (min-width: 1200px) and (min-height: 650px)
+      display: block
 
-    @media (min-width: 1200px)
-      font-size: 30px
-
-    @media (min-width: 1900px)
+    @media(min-width: 1600px) and (min-height: 850px)
       font-size: 38px
 
   &__title-red

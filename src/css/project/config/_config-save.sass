@@ -13,14 +13,19 @@
   width: 100%
   z-index: 3
 
-  @media(min-width: 1200px)
+  @media(min-width: 1200px) and (min-height: 650px)
     background: none
     font-size: 14px
     overflow: hidden
-    height: calc(100% - 150px)
+    height: calc(100% - 120px)
     padding: 0
-    top: 75px
+    top: 60px
     z-index: 100
+
+  @media(min-width: 1600px) and (min-height: 850px)
+    height: calc(100% - 150px)
+    top: 75px
+
 
   &__close
     background-color: transparent
@@ -37,7 +42,7 @@
     width: 50px
     z-index: 2
 
-    @media(min-width: 1200px)
+    @media(min-width: 1200px) and (min-height: 650px)
       display: block
 
     span
@@ -69,7 +74,7 @@
     margin-right: auto
     padding-bottom: 120px
 
-    @media(min-width: 1200px)
+    @media(min-width: 1200px) and (min-height: 650px)
       background-color: rgba(29, 29, 29, 0.9)
       flex-direction: row
       height: 100%
@@ -80,14 +85,10 @@
       padding-bottom: 30px
       position: relative
 
-    @media(min-width: 1900px)
-      padding-top: 60px
-      padding-bottom: 60px
-
   &__description
     display: none
 
-    @media(min-width: 1200px)
+    @media(min-width: 1200px) and (min-height: 650px)
       border-right: 1px solid #363636
       display: block
       overflow-y: auto
@@ -96,7 +97,6 @@
       width: 50%
 
     @media(min-width: 1900px)
-      font-size: 20px
       padding-left: 90px
       padding-right: 90px
 
@@ -112,23 +112,18 @@
     color: #fff
     font-size: 20px
     font-weight: 500
-    margin-bottom: 50px
 
     @media(min-width: 1900px)
       font-size: 24px
 
   &__description-subtitle
-    margin-bottom: 15px
-    margin-top: 15px
-
-    @media(min-width: 1900px)
-      margin-bottom: 25px
-      margin-top: 25px
+    margin-bottom: 10px
+    margin-top: 10px
 
   &__form-block
     color: #888
 
-    @media(min-width: 1200px)
+    @media(min-width: 1200px) and (min-height: 650px)
       display: flex
       flex-direction: column
       justify-content: center
@@ -141,10 +136,7 @@
       padding-right: 90px
 
     p
-      margin-bottom: 15px
-
-      @media(min-width: 1900px)
-        margin-bottom: 30px
+      margin-bottom: 10px
 
   &__form
     max-width: 620px
@@ -152,12 +144,12 @@
     margin-right: auto
 
     @media(min-width: 1900px)
-      font-size: 24px
+      font-size: 20px
 
   &__form-logo
     display: none
 
-    @media(min-width: 1200px) and (min-height: 700px)
+    @media(min-width: 1200px) and (min-height: 650px)
       display: block
       text-align: center
 
@@ -173,7 +165,7 @@
     margin-bottom: 10px
 
   &__textarea
-    @media(min-width: 1200px)
+    @media(min-width: 1200px) and (min-height: 650px)
       height: 100px
 
     @media(min-width: 1900px)
