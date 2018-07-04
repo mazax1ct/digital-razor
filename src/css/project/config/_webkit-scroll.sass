@@ -3,21 +3,22 @@
 .config__sidebar,
 .save-block__description,
 .consult-block__inner
-  &::-webkit-scrollbar
-    height: 4px
-    width: 5px
+  @media (min-width: 1200px) and (min-height: 650px)
+    &::-webkit-scrollbar
+      height: 4px
+      width: 5px
 
-  &::-webkit-scrollbar-track
-    background: #363636
+    &::-webkit-scrollbar-track
+      background: #363636
 
-  &::-webkit-scrollbar-thumb
-    background: #7a7a7a
+    &::-webkit-scrollbar-thumb
+      background: #7a7a7a
 
-  &::-webkit-scrollbar:horizontal
-    height: 4px
+    &::-webkit-scrollbar:horizontal
+      height: 4px
 
-  &::-webkit-scrollbar-track:horizontal
-    background: #363636
+    &::-webkit-scrollbar-track:horizontal
+      background: #363636
 
-  &::-webkit-scrollbar-thumb:horizontal
-    background: #7a7a7a
+    &::-webkit-scrollbar-thumb:horizontal
+      background: #7a7a7a
