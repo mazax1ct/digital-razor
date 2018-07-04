@@ -13,7 +13,8 @@ $(function() {
       $(".tabs-menu__list").mCustomScrollbar({
         scrollInertia: 0,
         axis:"x",
-        scrollbarPosition: 'outside'
+        scrollbarPosition: 'outside',
+        alwaysShowScrollbar: 1
       });
       $(".config__sidebar").mCustomScrollbar({
         scrollInertia: 0
