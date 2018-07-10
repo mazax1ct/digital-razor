@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+    <title>DIGITAL RAZOR</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="apple-touch-icon" sizes="120x120" href="images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="images/favicon/site.webmanifest">
+    <link rel="mask-icon" href="images/favicon/safari-pinned-tab.svg" color="#ffffff">
+    <link rel="shortcut icon" href="images/favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-config" content="images/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    //= template/config/style.html
+  </head>
+  <body>
+    //= template/config/sprite.html
+    //= template/cart/header.html
+
+    <div class="config config--cart">
+      <div class="config__content">
+        <div class="config__title-block">
+          <h2 class="config__title">Ваш заказ:</h2>
+        </div>
+        <div class="config__content-inner">
+          <div class="config__content-block config__content-block--cart">
+            <form class="form-horizontal" action="/personal/order/" method="POST" name="ORDER_FORM" id="ORDER_FORM" enctype="multipart/form-data" target="formTarget_0.8933063248012104">
+              <input name="sessid" id="sessid" value="e27e1000841824d2a908439fc5867af5" type="hidden">
+              <div id="order_form_content">
+                <div data-id="1" class="order-form-steps-block" style="display: block;">
+                  <h2 style="display: none">Контактная информация</h2>
+                  <div class="person_type">
+                    <hr>
+                    <div class="row">
+                      <div class="col col-sm-6">
+                        <div style="border-bottom: none;" class="cnf-var-wrap">
+                          <div class=" cnf-var-left">
+                            <label class="red-checkbox" for="PERSON_TYPE_1" onclick="submitForm()">
+                              <input class="person_type_radio" id="PERSON_TYPE_1" name="PERSON_TYPE" value="1" checked="checked" onclick="submitForm()" type="radio">
+                              <i></i>
+                            </label>
+                          </div>
+                          <label for="PERSON_TYPE_1" onclick="submitForm()" class="cnf-var-right">
+                            <b class="name">Физическое лицо</b>
+                          </label>
+                        </div>
+                      </div>
+    		              <div class="col col-sm-6">
+                        <div style="border-bottom: none;" class="cnf-var-wrap">
+                          <div class=" cnf-var-left">
+                            <label class="red-checkbox" for="PERSON_TYPE_2" onclick="submitForm()">
+                              <input class="person_type_radio" id="PERSON_TYPE_2" name="PERSON_TYPE" value="2" onclick="submitForm()" type="radio">
+                              <i></i>
+                            </label>
+                          </div>
+                          <label for="PERSON_TYPE_2" onclick="submitForm()" class="cnf-var-right">
+                            <b class="name">Юридическое лицо</b>
+                          </label>
+                        </div>
+                      </div>
+                      <input name="PERSON_TYPE_OLD" value="1" type="hidden">
+                    </div>
+                    <hr>
+                  </div>
+                  <div class="row">
+                    <div class="col col-md-6 col-xs-12 col-sm-12">
+                      <div class="form-group">
+                        <div class="col-sm-12">
+                          Фамилия<span class="bx_sof_req">*</span><br>
+                          <input class="form-control ORDER_PROP_SECOND_NAME" maxlength="250" size="" value="Смирнов " name="ORDER_PROP_35" id="ORDER_PROP_35" type="text">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <div class="col-sm-12">
+                          Имя<span class="bx_sof_req">*</span><br>
+                          <input class="form-control ORDER_PROP_NAME" maxlength="250" size="" value="" name="ORDER_PROP_37" id="ORDER_PROP_37" type="text">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <div class="col-sm-12">
+                          Отчество<span class="bx_sof_req">*</span><br>
+                          <input class="form-control ORDER_PROP_LAST_NAME" maxlength="250" size="" value="Владимир" name="ORDER_PROP_36" id="ORDER_PROP_36" type="text">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col col-md-6 col-xs-12 col-sm-12">
+                      <div class="form-group">
+                        <div class="col-sm-12">
+                          E-Mail<span class="bx_sof_req">*</span><br>
+                          <input class="form-control ORDER_PROP_EMAIL" maxlength="250" size="" value="vova@giveandget.ru" name="ORDER_PROP_2" id="ORDER_PROP_2" type="text">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <div class="col-sm-12">
+                          Телефон<span class="bx_sof_req">*</span><br>
+                          <input class="form-control user-phone ORDER_PROP_PHONE" maxlength="250" size="" value="89117031099" name="ORDER_PROP_3" id="ORDER_PROP_3" type="text">
+                        </div>
+                      </div>
+                      <div class="LOCATION_WRAP" style="display: none">
+                        <div class="form-group">
+                          <div class="col-sm-12">
+                            <div id="LOCATION_ORDER_PROP_5">
+                              <select class="form-control countryMainSelect" id="COUNTRYORDER_PROP_5" name="COUNTRYORDER_PROP_5" onchange="getLocation(this.value, '', '', {'COUNTRY_INPUT_NAME':'COUNTRY','REGION_INPUT_NAME':'REGION','CITY_INPUT_NAME':'ORDER_PROP_5','CITY_OUT_LOCATION':'Y','ALLOW_EMPTY_CITY':'Y','ONCITYCHANGE':'submitForm()'}, 'dg')" type="location">
+                                <option>(выберите страну)</option>
+    	                          <option value="3882">Беларусь</option>
+    				                    <option value="5172">Казахстан</option>
+    				                    <option value="8292" selected="selected">Россия</option>
+    				                  </select>
+                              <select class="regionyMainSelect form-control" name="REGIONORDER_PROP_5" onchange="getLocation(8292, this.value, '', {'COUNTRY_INPUT_NAME':'COUNTRY','REGION_INPUT_NAME':'REGION','CITY_INPUT_NAME':'ORDER_PROP_5','CITY_OUT_LOCATION':'Y','ALLOW_EMPTY_CITY':'Y','ONCITYCHANGE':'submitForm()'}, 'dg')" type="location">
+                                <option>(выберите регион)</option>
+                					      <option value="8293">Адыгея Респ</option>
+                								<option value="8325">Алтай Респ</option>
+                								<option value="8478">Алтайский край</option>
+                								<option value="8583">Амурская обл</option>
+                								<option value="8594">Архангельская обл</option>
+                								<option value="8608">Астраханская обл</option>
+                								<option value="8296">Башкортостан Респ</option>
+                								<option value="8615">Белгородская обл</option>
+                								<option value="8627">Брянская обл</option>
+                								<option value="8318">Бурятия Респ</option>
+                								<option value="8644">Владимирская обл</option>
+                								<option value="8668">Волгоградская обл</option>
+                								<option value="8688">Вологодская обл</option>
+                								<option value="8704">Воронежская обл</option>
+                								<option value="8327">Дагестан Респ</option>
+                								<option value="9474">Еврейская Аобл</option>
+                								<option value="9450">Забайкальский край</option>
+                								<option value="8721">Ивановская обл</option>
+                								<option value="8338">Ингушетия Респ</option>
+                								<option value="8739">Иркутская обл</option>
+                								<option value="8343">Кабардино-Балкарская Респ</option>
+                								<option value="8763">Калининградская обл</option>
+                								<option value="8352">Калмыкия Респ</option>
+                								<option value="8786">Калужская обл</option>
+                								<option value="8811">Камчатский край</option>
+                								<option value="8356">Карачаево-Черкесская Респ</option>
+                								<option value="8361">Карелия Респ</option>
+                								<option value="8815">Кемеровская обл</option>
+                								<option value="8836">Кировская обл</option>
+                								<option value="8375">Коми Респ</option>
+                								<option value="8855">Костромская обл</option>
+                								<option value="8491">Краснодарский край</option>
+                								<option value="8518">Красноярский край</option>
+                								<option value="9510">Крым Респ</option>
+                								<option value="8868">Курганская обл</option>
+                								<option value="8878">Курская обл</option>
+                								<option value="8889" selected="selected">Ленинградская обл</option>
+                								<option value="8931">Липецкая обл</option>
+                								<option value="8940">Магаданская обл</option>
+                								<option value="8386">Марий Эл Респ</option>
+                								<option value="8391">Мордовия Респ</option>
+                								<option value="8943">Московская обл</option>
+                								<option value="9033">Мурманская обл</option>
+                								<option value="9477">Ненецкий АО</option>
+                								<option value="9053">Нижегородская обл</option>
+                								<option value="9082">Новгородская обл</option>
+                								<option value="9094">Новосибирская обл</option>
+                								<option value="9110">Омская обл</option>
+                								<option value="9117">Оренбургская обл</option>
+                								<option value="9130">Орловская обл</option>
+                								<option value="9138">Пензенская обл</option>
+                								<option value="9152">Пермский край</option>
+                								<option value="8542">Приморский край</option>
+                								<option value="9178">Псковская обл</option>
+                								<option value="9194">Ростовская обл</option>
+                								<option value="9218">Рязанская обл</option>
+                								<option value="9231">Самарская обл</option>
+                								<option value="9243">Саратовская обл</option>
+                								<option value="8399">Саха /Якутия/ Респ</option>
+                								<option value="9265">Сахалинская обл</option>
+                								<option value="9281">Свердловская обл</option>
+                								<option value="8413">Северная Осетия - Алания Респ</option>
+                								<option value="9330">Смоленская обл</option>
+                								<option value="8555">Ставропольский край</option>
+                								<option value="9346">Тамбовская обл</option>
+                								<option value="8420">Татарстан Респ</option>
+                								<option value="9355">Тверская обл</option>
+                								<option value="9379">Томская обл</option>
+                								<option value="9386">Тульская обл</option>
+                								<option value="8443">Тыва Респ</option>
+                								<option value="9406">Тюменская обл</option>
+                								<option value="8449">Удмуртская Респ</option>
+                								<option value="9412">Ульяновская обл</option>
+                								<option value="8575">Хабаровский край</option>
+                								<option value="8456">Хакасия Респ</option>
+                								<option value="9479">Ханты-Мансийский Автономный округ - Югра АО</option>
+                								<option value="9419">Челябинская обл</option>
+                								<option value="8462">Чеченская Респ</option>
+                								<option value="8468">Чувашская Респ</option>
+                								<option value="9496">Чукотский АО</option>
+                								<option value="9500">Ямало-Ненецкий АО</option>
+                								<option value="9461">Ярославская обл</option>
+                						  </select>
+                          		<select class="form-control cityMainSelect" id="ORDER_PROP_5" name="ORDER_PROP_5" onchange="submitForm()" type="location">
+                          		  <option>(выберите город)</option>
+                                <option value="0"></option>
+                          			<option value="8889">(другой)</option>
+                          			<option value="8901">Бокситогорск</option>
+                          			<option value="8903">Волосово</option>
+                          			<option value="8904">Волхов</option>
+                          			<option value="8907">Всеволожск</option>
+                          			<option value="8909">Выборг</option>
+                          			<option value="8910">Высоцк</option>
+                          			<option value="8914">Гатчина</option>
+                          			<option value="8892">Зеленогорск</option>
+                          			<option value="8917">Ивангород</option>
+                          			<option value="8911">Каменногорск</option>
+                          			<option value="8916">Кингисепп</option>
+                          			<option value="8918">Кириши</option>
+                          			<option value="8919">Кировск</option>
+                          			<option value="8899">Колпино</option>
+                          			<option value="8915">Коммунар</option>
+                          			<option value="8891">Красное Село</option>
+                          			<option value="8894">Кронштадт</option>
+                          			<option value="8922">Лодейное Поле</option>
+                          			<option value="8893">Ломоносов</option>
+                          			<option value="8923">Луга</option>
+                          			<option value="8930">Любань</option>
+                          			<option value="8929">Никольское</option>
+                          			<option value="8905">Новая Ладога</option>
+                          			<option value="8920">Отрадное</option>
+                          			<option value="8895">Павловск</option>
+                          			<option value="8896">Петергоф</option>
+                          			<option value="8902">Пикалево</option>
+                          			<option value="8924">Подпорожье</option>
+                          			<option value="8912">Приморск</option>
+                          			<option value="8925">Приозерск</option>
+                          			<option value="8898">Пушкин</option>
+                          			<option value="8890" selected="selected">Санкт-Петербург</option>
+                          			<option value="8913">Светогорск</option>
+                          			<option value="8908">Сертолово</option>
+                          			<option value="8897">Сестрорецк</option>
+                          			<option value="8926">Сланцы</option>
+                          			<option value="8900">Сосновый Бор</option>
+                          			<option value="8906">Сясьстрой</option>
+                          			<option value="8927">Тихвин</option>
+                          			<option value="8928">Тосно</option>
+                          			<option value="8921">Шлиссельбург</option>
+                          	  </select>
+                            </div>
+                            <div id="wait_container_ORDER_PROP_5" style="display: none;"></div>
+                            <script>
+                            	function newlocation(orderPropId)
+                            	{
+                            		var select = document.getElementById("LOCATION_ORDER_PROP_" + orderPropId);
+
+                            		arSelect = select.getElementsByTagName("select");
+                            		if (arSelect.length > 0)
+                            		{
+                            			for (var i in arSelect)
+                            			{
+                            				var elem = arSelect[i];
+                            				elem.disabled = false;
+                            			}
+                            		}
+                            	}
+                            </script>
+                          </div>
+                        </div>
+                      </div>
+                      <div style="display: none" class="LOCATION_ADDR_WRAP">
+                        <div class="form-group">
+                          <div class="col-sm-12">
+                            Улица<br>
+                            <input class="form-control ORDER_PROP_STREET" maxlength="250" size="" value="тест" name="ORDER_PROP_7" id="ORDER_PROP_7" type="text">
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <div class="col-sm-2">
+                            Дом<br>
+                            <input style="width: 100%;" class="form-control ORDER_PROP_HOUSE" maxlength="250" value="1" name="ORDER_PROP_31" id="ORDER_PROP_31" type="text">
+                          </div>
+                          <div class="col-sm-2">
+                            Корпус<br>
+                            <input style="width: 100%;" class="form-control ORDER_PROP_HOUSING" maxlength="250" value="1" name="ORDER_PROP_32" id="ORDER_PROP_32" type="text">
+                          </div>
+                          <div class="col-sm-2">
+                            Квартира<br>
+                            <input style="width: 100%;" class="form-control ORDER_PROP_APARTMENT" maxlength="250" value="1" name="ORDER_PROP_33" id="ORDER_PROP_33" type="text">
+                          </div>
+                          <div class="col-sm-6">
+                            Индекс<br>
+                            <input style="width: 100%;" class="form-control ORDER_PROP_ZIP" maxlength="250" value="1" name="ORDER_PROP_4" id="ORDER_PROP_4" type="text">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div data-id="2" class="order-form-steps-block" style="display: none;">
+                  <h2 style="display: none">Доставка</h2>
+                  <script type="text/javascript">
+
+                  	function fShowStore(id, showImages, formWidth, siteId)
+                  	{
+                  		var strUrl = '/bitrix/templates/.default/components/bitrix/sale.order.ajax/digital-razor-new-step' + '/map.php';
+                  		var strUrlPost = 'delivery=' + id + '&showImages=' + showImages + '&siteId=' + siteId;
+
+                  		var storeForm = new BX.CDialog({
+                  					'title': 'Пункты выдачи заказа',
+                  					head: '',
+                  					'content_url': strUrl,
+                  					'content_post': strUrlPost,
+                  					'width': formWidth,
+                  					'height':450,
+                  					'resizable':false,
+                  					'draggable':false
+                  				});
+
+                  		var button = [
+                  				{
+                  					title: 'Сохранить',
+                  					id: 'crmOk',
+                  					'action': function ()
+                  					{
+                  						GetBuyerStore();
+                  						BX.WindowManager.Get().Close();
+                  					}
+                  				},
+                  				BX.CDialog.btnCancel
+                  			];
+                  		storeForm.ClearButtons();
+                  		storeForm.SetButtons(button);
+                  		storeForm.Show();
+                  	}
+
+                  	function GetBuyerStore()
+                  	{
+                  		BX('BUYER_STORE').value = BX('POPUP_STORE_ID').value;
+                  		//BX('ORDER_DESCRIPTION').value = 'Пункт выдачи: '+BX('POPUP_STORE_NAME').value;
+                  		BX('store_desc').innerHTML = BX('POPUP_STORE_NAME').value;
+                  		BX.show(BX('select_store'));
+                  	}
+                  </script>
+                  <input name="BUYER_STORE" id="BUYER_STORE" value="1" type="hidden">
+                  <div class="delivery-wrap">
+                    <div class="form-group">
+                      <div class="col-sm-12">
+                        Способ доставки
+                        <span class="bx_sof_req">*</span><br>
+                        <select id="LocationTypeSelector" class="form-control">
+                          <option value="spb_del">Доставка по Санкт-Петербургу</option>
+                          <option value="spb_hand">Самовывоз Санкт-Петербург</option>
+                          <option value="msk_del">Доставка по Москве</option>
+                          <option value="rus_del">Доставка по России</option>
+                          <option value="wrld_del">Доставка по Миру</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div id="LOCATION_WRAP" style="display: none;">
+                      <div class="form-group">
+                        <div class="col-sm-12">
+                          <div id="LOCATION_ORDER_PROP_5">
+                            <select class="form-control countryMainSelect" id="COUNTRYORDER_PROP_5" name="COUNTRYORDER_PROP_5" onchange="getLocation(this.value, '', '', {'COUNTRY_INPUT_NAME':'COUNTRY','REGION_INPUT_NAME':'REGION','CITY_INPUT_NAME':'ORDER_PROP_5','CITY_OUT_LOCATION':'Y','ALLOW_EMPTY_CITY':'Y','ONCITYCHANGE':'submitForm()'}, 'dg')" type="location">
+                              <option>(выберите страну)</option>
+                              <option value="3882">Беларусь</option>
+                              <option value="5172">Казахстан</option>
+                              <option value="8292" selected="selected">Россия</option>
+                            </select>
+                        		<select class="regionyMainSelect form-control" name="REGIONORDER_PROP_5" onchange="getLocation(8292, this.value, '', {'COUNTRY_INPUT_NAME':'COUNTRY','REGION_INPUT_NAME':'REGION','CITY_INPUT_NAME':'ORDER_PROP_5','CITY_OUT_LOCATION':'Y','ALLOW_EMPTY_CITY':'Y','ONCITYCHANGE':'submitForm()'}, 'dg')" type="location">
+                        		  <option>(выберите регион)</option>
+                        			<option value="8293">Адыгея Респ</option>
+                        			<option value="8325">Алтай Респ</option>
+                        			<option value="8478">Алтайский край</option>
+                        			<option value="8583">Амурская обл</option>
+                        			<option value="8594">Архангельская обл</option>
+                        			<option value="8608">Астраханская обл</option>
+                        			<option value="8296">Башкортостан Респ</option>
+                        			<option value="8615">Белгородская обл</option>
+                        			<option value="8627">Брянская обл</option>
+                        			<option value="8318">Бурятия Респ</option>
+                        			<option value="8644">Владимирская обл</option>
+                        			<option value="8668">Волгоградская обл</option>
+                        			<option value="8688">Вологодская обл</option>
+                        			<option value="8704">Воронежская обл</option>
+                        			<option value="8327">Дагестан Респ</option>
+                        			<option value="9474">Еврейская Аобл</option>
+                        			<option value="9450">Забайкальский край</option>
+                        			<option value="8721">Ивановская обл</option>
+                        			<option value="8338">Ингушетия Респ</option>
+                        			<option value="8739">Иркутская обл</option>
+                        			<option value="8343">Кабардино-Балкарская Респ</option>
+                        			<option value="8763">Калининградская обл</option>
+                        			<option value="8352">Калмыкия Респ</option>
+                        			<option value="8786">Калужская обл</option>
+                        			<option value="8811">Камчатский край</option>
+                        			<option value="8356">Карачаево-Черкесская Респ</option>
+                        			<option value="8361">Карелия Респ</option>
+                        			<option value="8815">Кемеровская обл</option>
+                        			<option value="8836">Кировская обл</option>
+                        			<option value="8375">Коми Респ</option>
+                        			<option value="8855">Костромская обл</option>
+                        			<option value="8491">Краснодарский край</option>
+                        			<option value="8518">Красноярский край</option>
+                        			<option value="9510">Крым Респ</option>
+                        			<option value="8868">Курганская обл</option>
+                        			<option value="8878">Курская обл</option>
+                        			<option value="8889" selected="selected">Ленинградская обл</option>
+                        			<option value="8931">Липецкая обл</option>
+                        			<option value="8940">Магаданская обл</option>
+                        			<option value="8386">Марий Эл Респ</option>
+                        			<option value="8391">Мордовия Респ</option>
+                        			<option value="8943">Московская обл</option>
+                        			<option value="9033">Мурманская обл</option>
+                        			<option value="9477">Ненецкий АО</option>
+                        			<option value="9053">Нижегородская обл</option>
+                        			<option value="9082">Новгородская обл</option>
+                        			<option value="9094">Новосибирская обл</option>
+                        			<option value="9110">Омская обл</option>
+                        			<option value="9117">Оренбургская обл</option>
+                        			<option value="9130">Орловская обл</option>
+                        			<option value="9138">Пензенская обл</option>
+                        			<option value="9152">Пермский край</option>
+                        			<option value="8542">Приморский край</option>
+                        			<option value="9178">Псковская обл</option>
+                        			<option value="9194">Ростовская обл</option>
+                        			<option value="9218">Рязанская обл</option>
+                        			<option value="9231">Самарская обл</option>
+                        			<option value="9243">Саратовская обл</option>
+                        			<option value="8399">Саха /Якутия/ Респ</option>
+                        			<option value="9265">Сахалинская обл</option>
+                        			<option value="9281">Свердловская обл</option>
+                        			<option value="8413">Северная Осетия - Алания Респ</option>
+                        			<option value="9330">Смоленская обл</option>
+                        			<option value="8555">Ставропольский край</option>
+                        			<option value="9346">Тамбовская обл</option>
+                        			<option value="8420">Татарстан Респ</option>
+                        			<option value="9355">Тверская обл</option>
+                        			<option value="9379">Томская обл</option>
+                        			<option value="9386">Тульская обл</option>
+                        			<option value="8443">Тыва Респ</option>
+                        			<option value="9406">Тюменская обл</option>
+                        			<option value="8449">Удмуртская Респ</option>
+                        			<option value="9412">Ульяновская обл</option>
+                        			<option value="8575">Хабаровский край</option>
+                        			<option value="8456">Хакасия Респ</option>
+                        			<option value="9479">Ханты-Мансийский Автономный округ - Югра АО</option>
+                        			<option value="9419">Челябинская обл</option>
+                        			<option value="8462">Чеченская Респ</option>
+                        			<option value="8468">Чувашская Респ</option>
+                        			<option value="9496">Чукотский АО</option>
+                        			<option value="9500">Ямало-Ненецкий АО</option>
+                        			<option value="9461">Ярославская обл</option>
+                        	  </select>
+                        		<select class="form-control cityMainSelect" id="ORDER_PROP_5" name="ORDER_PROP_5" onchange="submitForm()" type="location">
+                        		  <option>(выберите город)</option>
+                              <option value="0"></option>
+                        			<option value="8889">(другой)</option>
+                        			<option value="8901">Бокситогорск</option>
+                        			<option value="8903">Волосово</option>
+                        			<option value="8904">Волхов</option>
+                        			<option value="8907">Всеволожск</option>
+                        			<option value="8909">Выборг</option>
+                        			<option value="8910">Высоцк</option>
+                        			<option value="8914">Гатчина</option>
+                        			<option value="8892">Зеленогорск</option>
+                        			<option value="8917">Ивангород</option>
+                        			<option value="8911">Каменногорск</option>
+                        			<option value="8916">Кингисепп</option>
+                        			<option value="8918">Кириши</option>
+                        			<option value="8919">Кировск</option>
+                        			<option value="8899">Колпино</option>
+                        			<option value="8915">Коммунар</option>
+                        			<option value="8891">Красное Село</option>
+                        			<option value="8894">Кронштадт</option>
+                        			<option value="8922">Лодейное Поле</option>
+                        			<option value="8893">Ломоносов</option>
+                        			<option value="8923">Луга</option>
+                        			<option value="8930">Любань</option>
+                        			<option value="8929">Никольское</option>
+                        			<option value="8905">Новая Ладога</option>
+                        			<option value="8920">Отрадное</option>
+                        			<option value="8895">Павловск</option>
+                        			<option value="8896">Петергоф</option>
+                        			<option value="8902">Пикалево</option>
+                        			<option value="8924">Подпорожье</option>
+                        			<option value="8912">Приморск</option>
+                        			<option value="8925">Приозерск</option>
+                        			<option value="8898">Пушкин</option>
+                        			<option value="8890" selected="selected">Санкт-Петербург</option>
+                        			<option value="8913">Светогорск</option>
+                        			<option value="8908">Сертолово</option>
+                        			<option value="8897">Сестрорецк</option>
+                        			<option value="8926">Сланцы</option>
+                        			<option value="8900">Сосновый Бор</option>
+                        			<option value="8906">Сясьстрой</option>
+                        			<option value="8927">Тихвин</option>
+                        			<option value="8928">Тосно</option>
+                        			<option value="8921">Шлиссельбург</option>
+                        	  </select>
+                          </div>
+                          <div id="wait_container_ORDER_PROP_5" style="display: none;"></div>
+                          <script>
+                          	function newlocation(orderPropId)
+                          	{
+                          		var select = document.getElementById("LOCATION_ORDER_PROP_" + orderPropId);
+
+                          		arSelect = select.getElementsByTagName("select");
+                          		if (arSelect.length > 0)
+                          		{
+                          			for (var i in arSelect)
+                          			{
+                          				var elem = arSelect[i];
+                          				elem.disabled = false;
+                          			}
+                          		}
+                          	}
+                          </script>
+                        </div>
+                      </div>
+                    </div>
+                    <div style="display: none;" id="LOCATION_ADDR_CUSTOM">
+                      <h3><a href="#" onclick="$('.LOCATION_ADDR_CUSTOM[data-id='+$('[name=PERSON_TYPE]:checked').val()+']').toggle();return false;" class="showCustomCity">Моего города нет в списке</a></h3>
+                      <input placeholder="Укажите название вашего города" data-id="1" style="display: none;" class="form-control LOCATION_ADDR_CUSTOM" value="" name="ORDER_PROP_6" id="ORDER_PROP_6" type="text">
+                      <input placeholder="Укажите название вашего города" data-id="2" style="display: none;" class="form-control LOCATION_ADDR_CUSTOM" value="" name="ORDER_PROP_17" id="ORDER_PROP_17" type="text">
+                      <br>
+                    </div>
+                    <div id="LOCATION_ADDR_WRAP" style="display: block;">
+                      <div class="form-group">
+                        <div class="col-sm-12">
+                          Улица<br>
+                          <input class="form-control ORDER_PROP_STREET" maxlength="250" size="" value="тест" name="ORDER_PROP_7" id="ORDER_PROP_7" type="text">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <div class="col-sm-2">
+                          Дом<br>
+                          <input style="width: 100%;" class="form-control ORDER_PROP_HOUSE" maxlength="250" value="1" name="ORDER_PROP_31" id="ORDER_PROP_31" type="text">
+                        </div>
+                        <div class="col-sm-2">
+                          Корпус<br>
+                          <input style="width: 100%;" class="form-control ORDER_PROP_HOUSING" maxlength="250" value="1" name="ORDER_PROP_32" id="ORDER_PROP_32" type="text">
+                        </div>
+                        <div class="col-sm-2">
+                          Квартира<br>
+                          <input style="width: 100%;" class="form-control ORDER_PROP_APARTMENT" maxlength="250" value="1" name="ORDER_PROP_33" id="ORDER_PROP_33" type="text">
+                        </div>
+                        <div class="col-sm-6">
+                          Индекс<br>
+                          <input style="width: 100%;" class="form-control ORDER_PROP_ZIP" maxlength="250" value="1" name="ORDER_PROP_4" id="ORDER_PROP_4" type="text">
+                        </div>
+                      </div>
+                    </div>
+                    <div id="deliverySelector">
+                      <div class="col col-sm-12">
+                        <div class="cnf-var-wrap">
+                          <div style="display: none" class=" cnf-var-left">
+                            <label class="red-checkbox" for="ID_DELIVERY_ID_4" onclick="BX('ID_DELIVERY_ID_4').checked=true;submitForm();">
+                              <input class="delivery_radio" style="vertical-align: top;" id="ID_DELIVERY_ID_4" name="DELIVERY_ID" value="4" checked="" onclick="submitForm();" type="radio">
+                              <i></i>
+                            </label>
+                          </div>
+                          <div class="cnf-var-right">
+                            <b class="name">Бесплатная доставка Санкт-Петербургу в пределах КАД</b>
+                            Доставка осуществляется до парадной на следующий день после готовности заказа.
+                            <span id="select_store">
+                              <span class="select_store">Пункт выдачи: </span>
+                              <span class="ora-store" id="store_desc">Склад</span>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="clear"></div>
+                    </div>
+                  </div>
+                </div>
+                <div data-id="3" class="order-form-steps-block" style="display: none;">
+                  <h2 style="display: none">Оплата</h2>
+        				  <div class="section">
+                  	<script type="text/javascript">
+                  		function changePaySystem(param)
+                  		{
+                  			if (BX("account_only") && BX("account_only").value == 'Y') // PAY_CURRENT_ACCOUNT checkbox should act as radio
+                  			{
+                  				if (param == 'account')
+                  				{
+                  					if (BX("PAY_CURRENT_ACCOUNT"))
+                  					{
+                  						BX("PAY_CURRENT_ACCOUNT").checked = true;
+                  						BX("PAY_CURRENT_ACCOUNT").setAttribute("checked", "checked");
+                  						BX.addClass(BX("PAY_CURRENT_ACCOUNT_LABEL"), 'selected');
+
+                  						// deselect all other
+                  						var el = document.getElementsByName("PAY_SYSTEM_ID");
+                  						for(var i=0; i<el.length; i++)
+                  							el[i].checked = false;
+                  					}
+                  				}
+                  				else
+                  				{
+                  					BX("PAY_CURRENT_ACCOUNT").checked = false;
+                  					BX("PAY_CURRENT_ACCOUNT").removeAttribute("checked");
+                  					BX.removeClass(BX("PAY_CURRENT_ACCOUNT_LABEL"), 'selected');
+                  				}
+                  			}
+                  			else if (BX("account_only") && BX("account_only").value == 'N')
+                  			{
+                  				if (param == 'account')
+                  				{
+                  					if (BX("PAY_CURRENT_ACCOUNT"))
+                  					{
+                  						BX("PAY_CURRENT_ACCOUNT").checked = !BX("PAY_CURRENT_ACCOUNT").checked;
+
+                  						if (BX("PAY_CURRENT_ACCOUNT").checked)
+                  						{
+                  							BX("PAY_CURRENT_ACCOUNT").setAttribute("checked", "checked");
+                  							BX.addClass(BX("PAY_CURRENT_ACCOUNT_LABEL"), 'selected');
+                  						}
+                  						else
+                  						{
+                  							BX("PAY_CURRENT_ACCOUNT").removeAttribute("checked");
+                  							BX.removeClass(BX("PAY_CURRENT_ACCOUNT_LABEL"), 'selected');
+                  						}
+                  					}
+                  				}
+                  			}
+
+                  			submitForm();
+                  		}
+                  	</script>
+        	          <div class="">
+                      <div class="col col-sm-12">
+                        <div class="cnf-var-wrap">
+                          <div class=" cnf-var-left">
+                            <label class="red-checkbox" for="ID_PAY_SYSTEM_ID_9" onclick="BX('ID_PAY_SYSTEM_ID_9').checked=true;changePaySystem();">
+                              <input style="vertical-align: top;" class="paysystem_radio" id="ID_PAY_SYSTEM_ID_9" name="PAY_SYSTEM_ID" value="9" checked="checked" onclick="changePaySystem();" type="radio">
+                              <i></i>
+                            </label>
+                          </div>
+                          <label for="ID_PAY_SYSTEM_ID_9" onclick="BX('ID_PAY_SYSTEM_ID_9').checked=true;changePaySystem();" class="cnf-var-right">
+                            <b>Банковская карта</b> Вы сможете моментально оплатить свой заказ банковской картой Master / Visa.&nbsp;Осуществление доступа в платежную систему происходит по зашифрованному протоколу HTTPS/SSL. Наш платежный сервис защищен по PCI DSS — это стандарт Visa и Mastercard.<div>Оплата осуществляется через сервис Яндекс-Касса.</div><br>                                    <br><a target="_blank" href="/info/oplata/payment_9.pdf">Инструкция</a>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col col-sm-12">
+                        <div class="cnf-var-wrap">
+                          <div class=" cnf-var-left">
+                            <label class="red-checkbox" for="ID_PAY_SYSTEM_ID_1" onclick="BX('ID_PAY_SYSTEM_ID_1').checked=true;changePaySystem();">
+                              <input style="vertical-align: top;" class="paysystem_radio" id="ID_PAY_SYSTEM_ID_1" name="PAY_SYSTEM_ID" value="1" onclick="changePaySystem();" type="radio">
+                              <i></i>
+                            </label>
+                          </div>
+                          <label for="ID_PAY_SYSTEM_ID_1" onclick="BX('ID_PAY_SYSTEM_ID_1').checked=true;changePaySystem();" class="cnf-var-right">
+                            <b>Наличные в офисе</b> Оплата наличными в офисе компании.<br>После оформления заказа с вами свяжется менеджер для подтверждения состава заказа, а также условий и сроков доставки.
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col col-sm-12">
+                        <div class="cnf-var-wrap">
+                          <div class=" cnf-var-left">
+                            <label class="red-checkbox" for="ID_PAY_SYSTEM_ID_6" onclick="BX('ID_PAY_SYSTEM_ID_6').checked=true;changePaySystem();">
+                              <input style="vertical-align: top;" class="paysystem_radio" id="ID_PAY_SYSTEM_ID_6" name="PAY_SYSTEM_ID" value="6" onclick="changePaySystem();" type="radio">
+                              <i></i>
+                            </label>
+                          </div>
+                          <label for="ID_PAY_SYSTEM_ID_6" onclick="BX('ID_PAY_SYSTEM_ID_6').checked=true;changePaySystem();" class="cnf-var-right">
+                            <b>Счет</b> После оформления заказа с Вами свяжется менеджер для подтверждения состава заказа, и выставления счета на оплату.<div>Счет может быть оплачен в любом удобном для Вас банке.&nbsp;Денежные средства поступят на наш счёт в течение 2-3 рабочих дней после оплаты.</div><br>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col col-sm-12">
+                        <div class="cnf-var-wrap">
+                          <div class=" cnf-var-left">
+                            <label class="red-checkbox" for="ID_PAY_SYSTEM_ID_24" onclick="BX('ID_PAY_SYSTEM_ID_24').checked=true;changePaySystem();">
+                            <input style="vertical-align: top;" class="paysystem_radio" id="ID_PAY_SYSTEM_ID_24" name="PAY_SYSTEM_ID" value="24" onclick="changePaySystem();" type="radio">
+                            <i></i>
+                            </label>
+                          </div>
+                          <label for="ID_PAY_SYSTEM_ID_24" onclick="BX('ID_PAY_SYSTEM_ID_24').checked=true;changePaySystem();" class="cnf-var-right">
+                            <b>PayPal</b> Оплата заказа с банковского счета или карточки, подключенных к системе Paypal.&nbsp;<br> Комиссия с покупателя не взымается.
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col col-sm-12">
+                        <div class="cnf-var-wrap">
+                          <div class=" cnf-var-left">
+                            <label class="red-checkbox" for="ID_PAY_SYSTEM_ID_29" onclick="BX('ID_PAY_SYSTEM_ID_29').checked=true;changePaySystem();">
+                              <input style="vertical-align: top;" class="paysystem_radio" id="ID_PAY_SYSTEM_ID_29" name="PAY_SYSTEM_ID" value="29" onclick="changePaySystem();" type="radio">
+                              <i></i>
+                            </label>
+                          </div>
+                          <label for="ID_PAY_SYSTEM_ID_29" onclick="BX('ID_PAY_SYSTEM_ID_29').checked=true;changePaySystem();" class="cnf-var-right">
+                            <b>КупиВкредит «Тинькофф Банк»</b> Вы можете оформить заявку на покупку игровой системы в кредит прямо на сайте и узнать решение, не выходя из дома.&nbsp;<a href="/info/oplata/#kupivcredit" target="_blank">инструкция</a>
+                          </label>
+                        </div>
+                      </div>
+        					    <div class="col col-sm-12">
+                        <div class="cnf-var-wrap">
+                          <div class=" cnf-var-left">
+                            <label class="red-checkbox" for="ID_PAY_SYSTEM_ID_33" onclick="BX('ID_PAY_SYSTEM_ID_33').checked=true;changePaySystem();">
+                            <input style="vertical-align: top;" class="paysystem_radio" id="ID_PAY_SYSTEM_ID_33" name="PAY_SYSTEM_ID" value="33" onclick="changePaySystem();" type="radio">
+                                <i></i>
+                            </label>
+                          </div>
+                          <label for="ID_PAY_SYSTEM_ID_33" onclick="BX('ID_PAY_SYSTEM_ID_33').checked=true;changePaySystem();" class="cnf-var-right">
+                            <b>Кредит от Альфа-Банка</b> По завершению оформления заказа с Вами свяжется специалист Банка
+                          </label>
+                        </div>
+                      </div>
+        							<div style="clear: both;"></div>
+                    </div>
+                  </div>
+                  <script>
+                  	$(document).on("change","#CREDIT_CITY",function(){
+                  		$("#CREDIT_ADRESS option").hide();
+                  		$("#CREDIT_ADRESS option[data-city='"+$(this).val()+"'],#CREDIT_ADRESS option[value=0] ").show();
+                  	});
+                  </script>
+                </div>
+                <div data-id="4" class="order-form-steps-block" style="display: none;">
+                  <h2 style="display: none">Подтверждение</h2>
+                  <div class="bx_section" style="display:none">
+                    <h4>Свойства, связанные с оплатой и доставкой</h4><br>
+                  </div>
+                  <div class="bx_ordercart">
+                    <div id="summDataWrap">
+                      <table class="table">
+                        <tbody>
+                          <tr>
+                            <td width="50%">Тип плательщика:</td>
+                            <td id="PERSON_TYPE_sum" width="50%">Физическое лицо</td>
+                          </tr>
+                          <tr>
+                            <td width="50%">Контактное лицо:</td>
+                            <td id="NAME_sum" width="50%">Смирнов Владимир</td>
+                          </tr>
+                          <tr>
+                            <td width="50%">Email:</td>
+                            <td id="EMAIL_sum" width="50%">vova@giveandget.ru</td>
+                          </tr>
+                          <tr>
+                            <td width="50%">Телефон:</td>
+                            <td id="PHONE_sum" width="50%">89117031099</td>
+                          </tr>
+                          <tr>
+                            <td width="50%">Доставка:</td>
+                            <td id="DELIVERY_sum" width="50%">Бесплатная доставка Санкт-Петербургу в пределах КАД<br>Санкт-Петербург 1, тест д.1 к.1 кв.1</td>
+                          </tr>
+                          <tr>
+                            <td width="50%">Сроки поставки компьютера:</td>
+                            <td width="50%">Сроки сборки игрового компьютера от 7 до 15 рабочих дней</td>
+                          </tr>
+                          <tr>
+                            <td width="50%">Оплата:</td>
+                            <td id="PAY_sum" width="50%">Банковская карта</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+    	              <div class="bx_ordercart_order_pay">
+                  		<div class="bx_ordercart_order_pay_right">
+                        <h2>Состав заказа</h2>
+                        <div id="summProductsWrap">
+                		      <section class="fs-cart">
+                						<table class="items-list">
+                              <tr id="727160" class="item first">
+                  							<td class="name">
+                                  <div><a href="/configurator/583519/">DigitalRazor Performance</a></div>
+                  								<div class="fs-conf-body">
+                  									<p>Процессор: 6-ядерный Intel Core i5-8600K 3.60 GHz  x 1</p>
+                  									<p>Кулер: Воздушная система охлаждения  x 1</p>
+                  									<p>Системная плата: Совместимая материнская плата  x 1</p>
+                  									<p>Оперативная память: 16GB (2x8Gb) DDR4 2800Mhz   x 1</p>
+                  									<p>Видеокарта: NVIDIA GeForce GTX 1060 6GB  x 1</p>
+                  									<p>SSD накопитель - 1: SSD 240GB   x 1</p>
+                  									<p>SSD накопитель - 2: M.2 диск не выбран  x 1</p>
+                  									<p>HDD накопитель: Жесткий диск 1TB  x 1</p>
+                  									<p>Корпус: NZXT S340  x 1</p>
+                  									<p>Блок питания: 600W CoolerMaster MasterWatt Lite 600  x 1</p>
+                  									<p>WIFI/BT: Wi-fi не выбран  x 1</p>
+                  									<p>Операционная система: Microsoft Windows 10 Trial  x 1</p>
+                  									<p>Гарантия: Базовая гарантия 36 месяцев  x 1</p>
+                  									<p>Профессиональная сборка и настройка: Профессиональная сборка и настройка  x 1</p>
+                  									<p>Дополнительная упаковка: Стандартная упаковка  x 1</p>
+                  									<p>Бесплатная доставка: Бесплатная доставка  x 1</p>
+                  									<p>Нанесение изображения на корпус: Без нанесения изображения  x 1</p>
+                  									<p>Подсветка: Подсветка компьютера не выбрана  x 1</p>
+                  									<p>Цветная оплетка кабеля: Оплетка проводов не выбрана  x 1</p>
+                  								</div>
+                  							</td>
+                  							<td class="qnt-count"><i></i><b>1шт.</b></td>
+                  							<td class="total"><i></i><nobr>102 000 р.</nobr></td>
+                  							<td class="delete"><a data-removecart="1" data-price="102000" data-name="DigitalRazor Performance" data-id="727160" onclick="$('#loading').fadeIn();" href="?action=delete&amp;id=727160"><i class="icon-delete"></i></a></td>
+                  						</tr>
+                              <tr>
+                                <td class="text-left priceNotice" colspan="2"></td>
+                                <td class="text-right allSum mobile-hidden" colspan="2">Итого: 102 000 ₽</td>
+                              </tr>
+                            </table>
+                            <div class="hidden mobile-summ-wrap"><nobr class="total">Итого: 102 000 р.</nobr></div>
+                		      </section>
+                        </div>
+                    		<table class="bx_ordercart_order_sum"></table>
+                    	</div>
+                  	</div>
+                    <div class="form-group">
+                      <div class="col-sm-12">
+                        Комментарии к заказу:<br>
+                        <textarea class="form-control" name="ORDER_DESCRIPTION" id="ORDER_DESCRIPTION" style="max-width:100%;min-height:120px"></textarea>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="col-sm-12">
+                        Меня консультировал менеджер:<br>
+                        <select class="form-control" name="RESPONSIBLE_ID">
+                          <option selected="" value="0">Я выбрал сам</option>
+                          <option value="10723">Немченко Максим</option>
+                          <option value="9043">Трофименко Евгений</option>
+                          <option value="10368">Жинь Андрей</option>
+                          <option value="4204">Шварцбург Константин</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="agree_ofert_wrap">
+                      <div style="min-height: 0;" class="checkbox">
+                        <label>
+                          <input class="nojs" id="agree_ofert" type="checkbox">
+                          <span class="cr"><i class="cr-icon fa fa-check"></i></span>
+                          Я согласен на обработку <a target="_blank" href="/personal-data/">персональных данных</a>, а также с условиями <a target="_blank" href="/oferta/">договора оферты</a>.
+                        </label>
+                      </div>
+                      <label for="agree_ofert"></label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="config__sidebar">
+        <ul class="config-menu">
+          <li class="config-menu__item">
+            <span class="config-menu__root-link is-active"><span class="config-menu__cnt">01.</span>Оформление заказа</span>
+            <ul class="config__submenu">
+              <li class="config-menu__item"><a class="config-menu__link is-active" href="#"><span class="config-menu__link-inner"><span class="config-menu__cnt">1.1</span>Ваш заказ</span></a></li>
+              <li class="config-menu__item"><a class="config-menu__link" href="#"><span class="config-menu__link-inner"><span class="config-menu__cnt">1.2</span>Контактные данные</span></a></li>
+              <li class="config-menu__item"><a class="config-menu__link" href="#"><span class="config-menu__link-inner"><span class="config-menu__cnt">1.3</span>Адрес доставки</span></a></li>
+              <li class="config-menu__item"><a class="config-menu__link" href="#"><span class="config-menu__link-inner"><span class="config-menu__cnt">1.4</span>Способ оплаты</span></a></li>
+              <li class="config-menu__item"><a class="config-menu__link" href="#"><span class="config-menu__link-inner"><span class="config-menu__cnt">1.5</span>Подтверждение</span></a></li>
+              <li class="config-menu__item"><a class="config-menu__link" href="#"><span class="config-menu__link-inner"><span class="config-menu__cnt">1.6</span>Оплата</span></a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    //= template/cart/footer.html
+
+    //= template/config/scripts.html
+  </body>
+</html>

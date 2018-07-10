@@ -176,4 +176,10 @@ $(document).ready(function() {
     $('.js-config-consult').removeClass('open'); //убираем отметку открытия попапа
     $(".config").removeClass("blur");
   });
+
+  // тогл описания в корзине
+  $('.js-cart-description-opener').click(function() {
+    $(".cart-table__description[data-target=" + $(this).attr("data-link") + "]").slideToggle(300);
+    return false;
+  });
 });
