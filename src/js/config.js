@@ -182,4 +182,10 @@ $(document).ready(function() {
     $(".cart-table__description[data-target=" + $(this).attr("data-link") + "]").slideToggle(300);
     return false;
   });
+
+  // тогл описания в списке конфигураций
+  $('.js-config-detail-opener').click(function() {
+    $(".config-list__detail[data-target=" + $(this).attr("data-link") + "]").slideToggle(300);
+    return false;
+  });
 });

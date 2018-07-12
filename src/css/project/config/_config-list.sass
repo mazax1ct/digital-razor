@@ -1,0 +1,201 @@
+.config-list
+  border-collapse: collapse
+  border: 1px solid #161616
+  border-bottom: none
+  color: #999
+  width: 100%
+
+  &__cell
+    border-bottom: 1px solid #161616
+    padding: 10px 5px
+
+    @media(min-width: 768px)
+      border: 1px solid #161616
+      border-top: none
+
+    @media(min-width: 1200px)
+      padding: 10px
+
+  &__dark-row
+    @media(min-width: 768px)
+      background-color: #3b3b3b
+
+  &__light-row
+    @media(min-width: 768px)
+      background-color: #454545
+
+  &__th
+    border-top: 1px solid #161616
+    color: #fff
+    white-space: nowrap
+
+    @media(max-width: 767px)
+      background-color: #1F1F1F
+      font-size: 12px
+
+  &__type-block
+    text-align: center
+
+    @media(min-width: 768px)
+      display: none
+
+  &__id-block
+    text-align: center
+    white-space: nowrap
+
+  &__id
+    @media(min-width: 768px)
+      &::after
+        content: ':'
+
+  &__date
+    text-align: center
+
+    @media(max-width: 991px)
+      display: none
+
+  &__title
+    @media(max-width: 767px)
+      display: none
+
+  &__cost
+    @media(max-width: 767px)
+      display: none
+
+  &__price
+    @media(min-width: 768px)
+      display: none
+
+  &__price-block
+    text-align: center
+    white-space: nowrap
+
+  &__buttons
+    text-align: center
+    white-space: nowrap
+
+    @media(max-width: 767px)
+      display: none
+
+  &__more-block
+    @media(min-width: 768px)
+      display: none
+
+  &__more
+    background: none
+    border: none
+    color: #999
+    cursor: pointer
+    display: inline-block
+    font-weight: 700
+    height: 30px
+    padding: 0
+    width: 30px
+
+  &__type
+    color: #fff
+    display: inline-block
+    min-width: 60px
+    padding: 2px 5px
+    text-align: center
+
+    @media(min-width: 768px)
+      margin-left: 5px
+      margin-right: 5px
+
+    &--full
+      background-color: #f13724
+
+    &--smart
+      background-color: #1492e6
+
+    &--tablet
+      @media(max-width: 767px)
+        display: none
+
+  &__button
+    border: 1px solid #fff
+    color: #fff
+    display: inline-block
+    margin-right: 1px
+    margin-left: 1px
+    padding: 5px 10px
+    text-decoration: none
+
+    &:hover
+      text-decoration: none
+
+  &__detail-block
+    padding: 0
+
+  &__detail
+    border-bottom: 1px solid #161616
+    color: #ccc
+    display: none
+    padding: 10px 15px
+
+    @media(min-width: 768px)
+      display: none !important
+
+  &__detail-title,
+  &__detail-date
+    color: #fff
+    font-size: 18px
+    margin-bottom: 5px
+
+  &__detail-buttons
+    margin-top: 15px
+
+  &__detail-button
+    border: 1px solid #fff
+    color: #fff
+    display: inline-block
+    margin-right: 1px
+    margin-left: 1px
+    padding: 5px 10px
+    text-decoration: none
+
+    &:hover
+      text-decoration: none
+
+    &--buy
+      background-color: #F13724
+      border-color: #F13724
+
+  &__detail-buy-icon
+    fill: #fff
+    height: 16px
+    margin-right: 10px
+    position: relative
+    top: -2px
+    vertical-align: middle
+    width: 16px
+
+.config-detail
+  &__title
+    color: #fff
+    font-size: 24px
+    font-weight: 700
+
+    @media(min-width: 1200px)
+      font-size: 30px
+
+    @media(min-width: 1900px)
+      font-size: 40px
+
+  &__price
+    color: #fff
+    font-size: 18px
+    font-weight: 500
+    margin-top: 10px
+    margin-bottom: 10px
+
+    @media(min-width: 1200px)
+      font-size: 20px
+
+    @media(min-width: 1900px)
+      font-size: 24px
+
+  &__subtitle
+    margin-bottom: 10px
+    margin-top: 10px

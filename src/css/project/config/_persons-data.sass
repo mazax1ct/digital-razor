@@ -1,0 +1,37 @@
+.persons-data
+  &__row
+    margin-bottom: 15px
+
+    @media(min-width: 1200px)
+      margin-bottom: 25px
+
+  &__subrow
+    margin-bottom: 15px
+
+    @media(min-width: 768px)
+      margin-bottom: 0
+
+    .persons-data__label
+      @media(min-width: 768px)
+        font-size: 10px
+        white-space: nowrap
+
+      @media(min-width: 992px)
+        font-size: inherit
+
+  &__label
+    display: block
+    margin-bottom: 5px
+
+    &--tablet_right
+      @media(min-width: 768px)
+        align-items: center
+        display: flex
+        justify-content: flex-end
+        margin-bottom: 0
+
+  &__req
+    color: #e5262d
+
+.user-info
+  max-width: 600px
