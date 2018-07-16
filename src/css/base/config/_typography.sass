@@ -188,10 +188,12 @@ img
 .text-red
   color: #e5262d
 
-  &::-moz-selection
+  &::-moz-selection,
+  ::-moz-selection
     background: #fff
     text-shadow: none
 
-  &::selection
+  &::-moz-selection,
+  ::selection
     background: #fff
     text-shadow: none
