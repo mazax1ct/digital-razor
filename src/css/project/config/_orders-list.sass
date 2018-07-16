@@ -1,0 +1,126 @@
+.orders-list
+  border-collapse: collapse
+  border: 1px solid #161616
+  border-bottom: none
+  color: #999
+  width: 100%
+
+  &__cell
+    border-bottom: 1px solid #161616
+    padding: 10px 5px
+
+    @media(min-width: 768px)
+      border: 1px solid #161616
+      border-top: none
+
+    @media(min-width: 1200px)
+      padding: 10px
+
+  &__dark-row
+    @media(min-width: 768px)
+      background-color: #3b3b3b
+
+  &__light-row
+    @media(min-width: 768px)
+      background-color: #454545
+
+  &__th
+    border-top: 1px solid #161616
+    color: #fff
+    white-space: nowrap
+
+    @media(max-width: 767px)
+      background-color: #1F1F1F
+      font-size: 12px
+
+  &__number-block
+    @media(min-width: 768px)
+      text-align: center
+
+  &__num
+    @media(min-width: 768px)
+      display: none
+
+  &__number
+    @media(max-width: 767px)
+      display: none
+
+  &__date-block
+    text-align: center
+
+  &__date
+    text-align: center
+
+    @media(max-width: 991px)
+      display: none
+
+  &__price-block
+    text-align: center
+
+  &__cost
+    @media(max-width: 767px)
+      display: none
+
+  &__price
+    @media(min-width: 768px)
+      display: none
+
+  &__status-text
+    &::after
+      @media(min-width: 768px)
+        content: ':'
+
+  &__status-block
+    text-align: center
+
+  &__status
+    color: #fff
+    display: inline-block
+    min-width: 60px
+    padding: 2px 5px
+    text-align: center
+
+    @media(min-width: 768px)
+      margin-left: 5px
+      margin-right: 5px
+
+    &--cancel
+      background-color: #f13724
+
+  &__more-block
+    text-align: center
+
+  &__button
+    background: none
+    border: none
+    color: #999
+    cursor: pointer
+    display: inline-block
+    font-weight: 700
+    height: 30px
+    padding: 0
+    text-align: center
+    width: 30px
+
+    &:hover
+      text-decoration: none
+
+    @media(min-width: 576px)
+      border: 1px solid #fff
+      color: #fff
+      display: inline-block
+      font-weight: 400
+      height: auto
+      margin-right: 1px
+      margin-left: 1px
+      padding: 5px 10px
+      text-decoration: none
+      width: auto
+
+  &__more-text
+    @media(max-width: 575px)
+      display: none
+
+  &__more
+    @media(min-width: 576px)
+      display: none

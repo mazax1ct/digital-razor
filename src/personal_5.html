@@ -33,40 +33,45 @@
         <div class="config__content-inner">
           <div class="config__content-block config__content-block--personal">
             <div class="personal-block">
-              <form class="persons-data user-info" method="post" action="/" enctype="multipart/form-data" role="form">
-                <div class="persons-data__row">
-                  <label class="persons-data__label" for="main-profile-name">Имя:</label>
-                  <input class="input" name="NAME" maxlength="50" id="main-profile-name" value="" type="text">
-                </div>
-                <div class="persons-data__row">
-                	<label class="persons-data__label" for="main-profile-last-name">Фамилия:</label>
-                	<input class="input" name="LAST_NAME" maxlength="50" id="main-profile-last-name" value="Смирнов " type="text">
-                </div>
-                <div class="persons-data__row">
-                	<label class="persons-data__label" for="main-profile-second-name">Отчество:</label>
-                	<input class="input" name="SECOND_NAME" maxlength="50" id="main-profile-second-name" value="Владимир" type="text">
-                </div>
-                <div class="persons-data__row">
-                	<label class="persons-data__label" for="main-profile-email">E-Mail:</label>
-                	<input class="input" name="EMAIL" maxlength="50" id="main-profile-email" value="vova@giveandget.ru" type="text">
-                </div>
-                <div class="persons-data__row">
-                  <label class="persons-data__label" for="main-profile-phone">Телефон</label>
-                  <input class="input" name="PERSONAL_MOBILE" maxlength="50" id="main-profile-phone" value="" type="text">
-                </div>
-                <p class="persons-data__row">Пароль должен быть не менее 6 символов длиной<span class="persons-data__req">*</span></p>
-                <div class="persons-data__row">
-                	<label class="persons-data__label" for="main-profile-password">Новый пароль:</label>
-                	<input class="input" name="NEW_PASSWORD" maxlength="50" id="main-profile-password" value="" autocomplete="off" type="password">
-                </div>
-                <div class="persons-data__row">
-                	<label class="persons-data__label" for="main-profile-password-confirm">Подтверждение нового пароля:</label>
-                	<input class="input" name="NEW_PASSWORD_CONFIRM" maxlength="50" value="" id="main-profile-password-confirm" autocomplete="off" type="password">
-                </div>
-                <div class="persons-data__row">
-                	<label class="persons-data__label"></label>
-                  <input class="button" name="save" value="Сохранить" type="submit">
-                  <input class="button" name="reset" value="Отмена" type="submit">
+              <form class="persons-data" method="post" action="/" enctype="multipart/form-data" role="form">
+                <div class="row">
+                  <div class="col-sm-6">
+                    <div class="persons-data__row">
+                      <label class="persons-data__label" for="main-profile-name">Имя:</label>
+                      <input class="input" name="NAME" maxlength="50" id="main-profile-name" value="" type="text">
+                    </div>
+                    <div class="persons-data__row">
+                    	<label class="persons-data__label" for="main-profile-last-name">Фамилия:</label>
+                    	<input class="input" name="LAST_NAME" maxlength="50" id="main-profile-last-name" value="Смирнов " type="text">
+                    </div>
+                    <div class="persons-data__row">
+                    	<label class="persons-data__label" for="main-profile-second-name">Отчество:</label>
+                    	<input class="input" name="SECOND_NAME" maxlength="50" id="main-profile-second-name" value="Владимир" type="text">
+                    </div>
+                    <div class="persons-data__row">
+                    	<label class="persons-data__label" for="main-profile-email">E-Mail:</label>
+                    	<input class="input" name="EMAIL" maxlength="50" id="main-profile-email" value="vova@giveandget.ru" type="text">
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="persons-data__row">
+                      <label class="persons-data__label" for="main-profile-phone">Телефон</label>
+                      <input class="input" name="PERSONAL_MOBILE" maxlength="50" id="main-profile-phone" value="" type="text">
+                    </div>
+                    <div class="persons-data__row">
+                    	<label class="persons-data__label" for="main-profile-password">Новый пароль: <small>(не менее 6 символов длиной<span class="persons-data__req">*</span>)</small></label>
+                    	<input class="input" name="NEW_PASSWORD" maxlength="50" id="main-profile-password" value="" autocomplete="off" type="password">
+                    </div>
+                    <div class="persons-data__row">
+                    	<label class="persons-data__label" for="main-profile-password-confirm">Подтверждение нового пароля:</label>
+                    	<input class="input" name="NEW_PASSWORD_CONFIRM" maxlength="50" value="" id="main-profile-password-confirm" autocomplete="off" type="password">
+                    </div>
+                    <div class="persons-data__row">
+                    	<label class="persons-data__label">&nbsp;</label>
+                      <input class="persons-data__button button button--red" name="reset" value="Отмена" type="submit">
+                      <input class="persons-data__button button" name="save" value="Сохранить" type="submit">
+                    </div>
+                  </div>
                 </div>
               </form>
             </div>
