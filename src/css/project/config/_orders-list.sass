@@ -164,6 +164,17 @@
   &__text
     margin-bottom: 10px
 
+  &__status-buttons
+    align-items: center
+    display: flex
+    flex-wrap: wrap
+
+    @media(min-width: 576px)
+      justify-content: space-between
+
+  &__status-list
+    margin-bottom: 10px
+
   &__status
     background-color: #3c3c3c
     border: 1px solid #fff
@@ -172,11 +183,13 @@
     font-weight: 400
     line-height: 18px
     min-height: 40px
-    min-width: 120px
     margin: 2px 0
     padding: 9px
     text-align: center
     vertical-align: middle
+
+    @media(min-width: 768px)
+      min-width: 120px
 
     &--cancel
       color: #e5262d
@@ -189,8 +202,10 @@
         background: #fff
         text-shadow: none
 
+  &__top-buttons
+    margin-bottom: 10px
+
   &__button
-    font-family: 'Russo One', 'Roboto', Arial, sans-serif
     min-width: 140px
     padding-top: 10px
 
@@ -201,30 +216,29 @@
     padding-bottom: 20px
     text-align: right
 
-.sale-order-payment-change-pp-list
+.payment-systems
   margin-top: 20px
 
-.sale-order-payment-change-pp-company
+.payment-system
   margin-bottom: 20px
 
-.sale-order-payment-change-pp-company-graf-container
-  cursor: pointer
+  &__container
+    cursor: pointer
 
-.sale-order-payment-change-pp-company-image
-  border: 2px solid #c3cace
-  border-radius: 2px
-  background: #fff
-  background-size: contain
-  background-repeat: no-repeat
-  background-position: center
-  height: 0
-  position: relative
-  padding-top: 50%
-  width: auto
+  &__image
+    border: 2px solid #c3cace
+    border-radius: 2px
+    background: #fff
+    background-size: contain
+    background-repeat: no-repeat
+    background-position: center
+    height: 0
+    position: relative
+    padding-top: 50%
+    width: auto
 
-
-.sale-order-payment-change-pp-company-smalltitle
-  color: #a3a3a3
-  font-size: 14px
-  padding-top: 15px
-  text-align: center
+  &__title
+    color: #a3a3a3
+    font-size: 14px
+    padding-top: 15px
+    text-align: center

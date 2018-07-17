@@ -104,11 +104,17 @@
                 </div>
                 <div class="order-detail__section">
                   <p class="order-detail__subtitle">Статус:</p>
-                  <p>
-                    <span class="order-detail__status order-detail__status--cancel">Отменен</span>
-                    <span class="order-detail__status">Не оплачен</span>
-                    <span class="order-detail__status">Не отгружен</span>
-                  </p>
+                  <div class="order-detail__status-buttons">
+                    <div class="order-detail__status-list">
+                      <span class="order-detail__status order-detail__status--cancel">Отменен</span>
+                      <span class="order-detail__status">Не оплачен</span>
+                      <span class="order-detail__status">Не отгружен</span>
+                    </div>
+                    <div class="order-detail__top-buttons">
+                      <a class="order-detail__button button" href="#">Отменить</a>
+                      <a class="order-detail__button button button--red" href="#">Оплатить</a>
+                    </div>
+                  </div>
                 </div>
                 <div class="order-detail__section">
                   <p class="order-detail__subtitle">Оплата:</p>
@@ -125,47 +131,49 @@
                   <p class="order-detail__text">Тип платежной системы: Банковский перевод</p>
                   <p class="order-detail__text"><a class="order-detail__button button button--red" href="#">Сменить способ оплаты</a></p>
                   <p class="text-red"><b>Обратите внимание: оплата заказа будет доступна после подтверждения менеджером</b></p>
-                  <div class="row sale-order-payment-change-pp-list">
-                    <div class="sale-order-payment-change-pp-company col-md-2 col-sm-3 col-6">
-                      <div class="sale-order-payment-change-pp-company-graf-container">
-                        <input class="sale-order-payment-change-pp-company-hidden" name="PAY_SYSTEM_ID" value="9" checked="checked" type="hidden">
-                        <div class="sale-order-payment-change-pp-company-image" style="background-image: url(https://digital-razor.ru/upload/resize_cache/sale/paysystem/logotip/813/95_55_1/8133d08b12a8461d0f17401d3ff50595.jpg);"></div>
-                        <div class="sale-order-payment-change-pp-company-smalltitle">Банковская карта</div>
+                  <div class="payment-systems">
+                    <div class="row">
+                      <div class="payment-system col-md-2 col-sm-3 col-6">
+                        <div class="payment-system__container">
+                          <input name="PAY_SYSTEM_ID" value="9" checked="checked" type="hidden">
+                          <div class="payment-system__image" style="background-image: url(https://digital-razor.ru/upload/resize_cache/sale/paysystem/logotip/813/95_55_1/8133d08b12a8461d0f17401d3ff50595.jpg);"></div>
+                          <div class="payment-system__title">Банковская карта</div>
+                        </div>
                       </div>
-                    </div>
-                    <div class="sale-order-payment-change-pp-company col-md-2 col-sm-3 col-6">
-                      <div class="sale-order-payment-change-pp-company-graf-container">
-                        <input class="sale-order-payment-change-pp-company-hidden" name="PAY_SYSTEM_ID" value="1" type="hidden">
-                        <div class="sale-order-payment-change-pp-company-image" style="background-image: url(https://digital-razor.ru/upload/resize_cache/sale/paysystem/logotip/5ff/95_55_1/5ffd2e9c7aa27be9eb4ef0e02ce1b92b.jpg);"></div>
-                        <div class="sale-order-payment-change-pp-company-smalltitle">Наличные в офисе</div>
+                      <div class="payment-system col-md-2 col-sm-3 col-6">
+                        <div class="payment-system__container">
+                          <input name="PAY_SYSTEM_ID" value="1" type="hidden">
+                          <div class="payment-system__image" style="background-image: url(https://digital-razor.ru/upload/resize_cache/sale/paysystem/logotip/5ff/95_55_1/5ffd2e9c7aa27be9eb4ef0e02ce1b92b.jpg);"></div>
+                          <div class="payment-system__title">Наличные в офисе</div>
+                        </div>
                       </div>
-                    </div>
-                    <div class="sale-order-payment-change-pp-company col-md-2 col-sm-3 col-6">
-                      <div class="sale-order-payment-change-pp-company-graf-container">
-                        <input class="sale-order-payment-change-pp-company-hidden" name="PAY_SYSTEM_ID" value="6" type="hidden">
-                        <div class="sale-order-payment-change-pp-company-image" style="background-image: url(https://digital-razor.ru/upload/resize_cache/sale/paysystem/logotip/d8c/95_55_1/d8cac1582a667abb7f3bdf0d49f337a0.jpg);"></div>
-                        <div class="sale-order-payment-change-pp-company-smalltitle">Банковский перевод</div>
+                      <div class="payment-system col-md-2 col-sm-3 col-6">
+                        <div class="payment-system__container">
+                          <input name="PAY_SYSTEM_ID" value="6" type="hidden">
+                          <div class="payment-system__image" style="background-image: url(https://digital-razor.ru/upload/resize_cache/sale/paysystem/logotip/d8c/95_55_1/d8cac1582a667abb7f3bdf0d49f337a0.jpg);"></div>
+                          <div class="payment-system__title">Банковский перевод</div>
+                        </div>
                       </div>
-                    </div>
-                    <div class="sale-order-payment-change-pp-company col-md-2 col-sm-3 col-6">
-                      <div class="sale-order-payment-change-pp-company-graf-container">
-                        <input class="sale-order-payment-change-pp-company-hidden" name="PAY_SYSTEM_ID" value="24" type="hidden">
-                        <div class="sale-order-payment-change-pp-company-image" style="background-image: url(https://digital-razor.ru/upload/sale/paysystem/logotip/c7d/c7d13216196e4d4540733ca1d6a48c97.gif);"></div>
-                        <div class="sale-order-payment-change-pp-company-smalltitle">PayPal</div>
+                      <div class="payment-system col-md-2 col-sm-3 col-6">
+                        <div class="payment-system__container">
+                          <input name="PAY_SYSTEM_ID" value="24" type="hidden">
+                          <div class="payment-system__image" style="background-image: url(https://digital-razor.ru/upload/sale/paysystem/logotip/c7d/c7d13216196e4d4540733ca1d6a48c97.gif);"></div>
+                          <div class="payment-system__title">PayPal</div>
+                        </div>
                       </div>
-                    </div>
-                    <div class="sale-order-payment-change-pp-company col-md-2 col-sm-3 col-6">
-                      <div class="sale-order-payment-change-pp-company-graf-container">
-                        <input class="sale-order-payment-change-pp-company-hidden" name="PAY_SYSTEM_ID" value="29" type="hidden">
-                        <div class="sale-order-payment-change-pp-company-image" style="background-image: url(https://digital-razor.ru/upload/resize_cache/sale/paysystem/logotip/316/95_55_1/31601f98df343e72371af41a3931e8d2.png);"></div>
-                        <div class="sale-order-payment-change-pp-company-smalltitle">КупиВкредит «Тинькофф Банк»</div>
+                      <div class="payment-system col-md-2 col-sm-3 col-6">
+                        <div class="payment-system__container">
+                          <input name="PAY_SYSTEM_ID" value="29" type="hidden">
+                          <div class="payment-system__image" style="background-image: url(https://digital-razor.ru/upload/resize_cache/sale/paysystem/logotip/316/95_55_1/31601f98df343e72371af41a3931e8d2.png);"></div>
+                          <div class="payment-system__title">КупиВкредит «Тинькофф Банк»</div>
+                        </div>
                       </div>
-                    </div>
-                    <div class="sale-order-payment-change-pp-company col-md-2 col-sm-3 col-6">
-                      <div class="sale-order-payment-change-pp-company-graf-container">
-                        <input class="sale-order-payment-change-pp-company-hidden" name="PAY_SYSTEM_ID" value="33" type="hidden">
-                        <div class="sale-order-payment-change-pp-company-image" style="background-image: url(/bitrix/images/sale/nopaysystem.gif);"></div>
-                        <div class="sale-order-payment-change-pp-company-smalltitle">Кредит от Альфа-Банка</div>
+                      <div class="payment-system col-md-2 col-sm-3 col-6">
+                        <div class="payment-system__container">
+                          <input name="PAY_SYSTEM_ID" value="33" type="hidden">
+                          <div class="payment-system__image" style="background-image: url(https://digital-razor.ru/bitrix/images/sale/nopaysystem.gif);"></div>
+                          <div class="payment-system__title">Кредит от Альфа-Банка</div>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -246,8 +254,8 @@
                   </div>
                 </div>
                 <div class="order-detail__buttons-block">
-                  <a class="order-detail__button button button--red" href="#">Отменить</a>
-                  <a class="order-detail__button button" href="#">Оплатить</a>
+                  <a class="order-detail__button button" href="#">Отменить</a>
+                  <a class="order-detail__button button button--red" href="#">Оплатить</a>
                 </div>
               </div>
             </div>
