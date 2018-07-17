@@ -9,7 +9,7 @@
     z-index: 3
 
 .performance-title
-  @media(min-width: 992px)
+  @media(min-width: 1200px)
     display: none
 
   &__toggle
@@ -39,17 +39,18 @@
 
   @media(min-width: 992px)
     display: block !important
-    padding-top: 25px
+    padding-top: 15px
     padding-bottom: 20px
 
   &__image
+    display: none
     text-align: center
 
-    @media(max-width: 991px)
-      display: none
+    @media(min-width: 1600px) and (min-height: 850px)
+      display: block
 
     img
-      max-width: 40%
+      max-width: 30%
 
   &__subtitle
     font-size: 18px
