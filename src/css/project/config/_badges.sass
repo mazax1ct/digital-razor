@@ -2,11 +2,10 @@
   display: flex
   flex-wrap: wrap
   margin-bottom: 5px
-
-  @media(min-width: 1600px)
-    margin-top: 27px
+  margin-top: 25px    
 
 .component--config_description > .dr-smart-config-element-badge-wrap
+  display: flex
   padding-left: 10px
   padding-right: 10px
 
@@ -50,9 +49,13 @@
         font-size: 30px
 
 .component--config_description > div
+  display: none
   padding-left: 15px
   padding-right: 15px
   text-align: left
+
+  @media(min-width: 1600px) and (min-height: 850px)
+    display: block
 
   @media(min-width: 1900px)
     padding-left: 35px
