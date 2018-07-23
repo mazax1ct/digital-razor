@@ -1,0 +1,61 @@
+.accordion-block
+  background-color: #050505
+  padding-bottom: 5px
+
+.accordion
+  margin-bottom: 5px
+
+  &:last-child
+    margin-bottom: 0
+
+  &__title
+    align-items: center
+    background-color: #292929
+    cursor: pointer
+    display: flex
+    font-size: 16px
+    padding-top: 12px
+    padding-left: 15px
+    padding-bottom: 10px
+
+    @media(min-width: 1200px)
+      padding-top: 19px
+      padding-bottom: 18px
+
+    @media(min-width: 1600px)
+      font-size: 20px
+
+    @media(min-width: 1900px)
+      min-height: 80px
+
+    &--parent
+      background-color: #1D1D1D
+      padding-left: 0
+
+      @media(min-width: 1200px)
+        font-size: 20px
+
+      @media(min-width: 1600px)
+        font-size: 24px
+
+      @media(min-width: 1900px)
+        font-size: 30px
+
+  &__body
+    display: none
+    padding-top: 5px
+
+    &--child
+      padding-top: 20px
+      padding-bottom: 20px
+
+      @media(min-width: 1200px)
+        padding-left: 15px
+        padding-right: 15px
+
+    p,
+    ul,
+    ol,
+    table
+      &:last-child
+        margin-bottom: 0

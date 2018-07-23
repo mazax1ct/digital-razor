@@ -67,11 +67,27 @@
     &.is-active
       border-bottom-color: #E7212E
 
+    &--no_hover
+      &:hover
+        border-bottom-color: transparent
+
   &__link
     align-items: center
     display: flex
     min-height: 55px
     text-decoration: none
+    white-space: nowrap
 
     @media(min-width: 1200px)
       min-height: 80px
+
+    &:hover
+      .sections-menu__link-button
+        border-color: #E7212E
+        background-color: #E7212E
+
+  &__link-button
+    border: 1px solid #fff
+    display: inline-block
+    padding: 6px 10px 8px
+    transition: border-color 0.3s, background-color 0.3s

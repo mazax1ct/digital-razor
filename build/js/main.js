@@ -69,4 +69,10 @@ $(document).ready(function() {
       ]
     });
   }
+
+  //аккордеон
+  $('.js-accordion-title').click(function() {
+    $('.accordion__body[data-target=' + $(this).attr('data-link') + ']').slideToggle();
+    return false;
+  });
 });
