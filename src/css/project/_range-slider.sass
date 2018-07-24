@@ -1,0 +1,51 @@
+.title-block + .range-slider-block
+  margin-top: -20px
+
+  @media(min-width: 1200px)
+    margin-top: -40px
+
+  @media(min-width: 1900px)
+    margin-top: -80px
+
+.range-slider-block
+  background-color: #474747
+  overflow: hidden
+  margin-bottom: 30px
+  padding: 35px 15px 45px
+
+  @media(min-width: 768px)
+    padding-bottom: 65px
+    padding-left: 35px
+    padding-right: 35px
+
+  @media(min-width: 1200px)
+    border-bottom: 10px solid #000
+    padding-top: 70px
+    padding-bottom: 130px
+
+  @media(min-width: 1900px)
+    margin-bottom: 50px
+    padding-top: 130px
+    padding-bottom: 170px
+
+.range-slider-labels
+  display: none
+  font-size: 10px
+  justify-content: space-between
+  margin-bottom: 15px
+
+  @media(min-width: 768px)
+    display: flex
+    font-size: 14px
+
+  @media(min-width: 1200px)
+    font-size: 18px
+
+  .range-slider-label
+    &:first-child
+      @media(max-width: 767px)
+        transform: translateX(-50%)
+
+    &:last-child
+      @media(max-width: 767px)
+        transform: translateX(50%)

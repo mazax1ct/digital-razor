@@ -61,19 +61,150 @@
             <div class="scroll-menu container-fluid">
               <h1 class="decorated-title"><span class="decorated-title__red">ВЫБЕРИ</span> <span class="decorated-title__bordered">СВОЮ КОНФИГУРАЦИЮ</span></h1>
               <div class="sections-menu">
-                <div class="sections-menu__item"><a class="sections-menu__link" href="#">Подбор по параметрам</a></div>
-                <div class="sections-menu__item is-active"><a class="sections-menu__link" href="#">Подбор в бюджет</a></div>
+                <div class="sections-menu__item is-active"><a class="sections-menu__link" href="#">Подбор по параметрам</a></div>
+                <div class="sections-menu__item"><a class="sections-menu__link" href="#">Подбор в бюджет</a></div>
               </div>
             </div>
           </div>
         </div>
-        <div class="range-slider-block">
+        <div class="series-pick-block">
           <div class="container-fluid">
-            <div class="range-slider-labels">
-              <span class="range-slider-label">Progaming серия</span>
-              <span class="range-slider-label">Performance серия </span>
-            </div>
-            <input id="range" type="text"/>
+            <form class="row" action="/" method="post">
+              <div class="col-md-6">
+                <p class="h2">Я БУДУ ИГРАТЬ:</p>
+                <p>Мой монитор имеет разрешение:</p>
+                <div class="params-pick-list">
+                  <div class="params-pick-list__row">
+                    <div class="params-pick-list__item">
+                      <div class="params-picker">
+                        <input class="params-picker__input" id="1" type="radio" name="monitor" checked>
+                        <label class="params-picker__label" for="1">
+                          <span class="params-picker__title">FullHD</span>
+                          <span class="params-picker__text">1920x1080<br> обычный монитор</span>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="params-pick-list__item">
+                      <div class="params-picker">
+                        <input class="params-picker__input" id="2" type="radio" name="monitor">
+                        <label class="params-picker__label" for="2">
+                          <span class="params-picker__title">2K</span>
+                          <span class="params-picker__text">2560x1440<br> или монитор 21:9</span>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="params-pick-list__item">
+                      <div class="params-picker">
+                        <input class="params-picker__input" id="3" type="radio" name="monitor">
+                        <label class="params-picker__label" for="3">
+                          <span class="params-picker__title">4K</span>
+                          <span class="params-picker__text">3840x2160<br> UHD-мониторы</span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <p>Мои стандартные игровые настройки:</p>
+                <div class="params-pick-list">
+                  <div class="params-pick-list__row">
+                    <div class="params-pick-list__item">
+                      <div class="params-picker">
+                        <input class="params-picker__input" id="4" type="radio" name="options" checked>
+                        <label class="params-picker__label" for="4">
+                          <span class="params-picker__title">Средние</span>
+                          <span class="params-picker__text">Мне важнее FPS<br> жертвуем красотой</span>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="params-pick-list__item">
+                      <div class="params-picker">
+                        <input class="params-picker__input" id="5" type="radio" name="options">
+                        <label class="params-picker__label" for="5">
+                          <span class="params-picker__title">Высокие</span>
+                          <span class="params-picker__text">баланс между FPS<br> и детализацией картинки</span>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="params-pick-list__item">
+                      <div class="params-picker">
+                        <input class="params-picker__input" id="6" type="radio" name="options">
+                        <label class="params-picker__label" for="6">
+                          <span class="params-picker__title">Ультра</span>
+                          <span class="params-picker__text">Никаких компромисов<br> все на максимум</span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <p class="h2">СОЗДАВАТЬ КОНТЕНТ:</p>
+                <p>Мои типовые задачи кроме игр</p>
+                <div class="params-pick-list">
+                  <div class="params-pick-list__row">
+                    <div class="params-pick-list__item">
+                      <div class="params-picker">
+                        <input class="params-picker__input" id="7" type="checkbox" name="task" checked>
+                        <label class="params-picker__label" for="7">
+                          <span class="params-picker__title">Стриминг</span>
+                          <span class="params-picker__text">Строка 1<br> Строка 2</span>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="params-pick-list__item">
+                      <div class="params-picker">
+                        <input class="params-picker__input" id="8" type="checkbox" name="task">
+                        <label class="params-picker__label" for="8">
+                          <span class="params-picker__title">Запись игр</span>
+                          <span class="params-picker__text">Строка 1<br> Строка 2</span>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="params-pick-list__item">
+                      <div class="params-picker">
+                        <input class="params-picker__input" id="9" type="checkbox" name="task">
+                        <label class="params-picker__label" for="9">
+                          <span class="params-picker__title">Еще что-то</span>
+                          <span class="params-picker__text">Строка 1<br> Строка 2</span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <p>Я монтирую видеоролики</p>
+                <div class="params-pick-list">
+                  <div class="params-pick-list__row">
+                    <div class="params-pick-list__item">
+                      <div class="params-picker">
+                        <input class="params-picker__input" id="10" type="checkbox" name="video" checked>
+                        <label class="params-picker__label" for="10">
+                          <span class="params-picker__title">FullHD</span>
+                          <span class="params-picker__text">Строка 1<br> Строка 2</span>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="params-pick-list__item">
+                      <div class="params-picker">
+                        <input class="params-picker__input" id="11" type="checkbox" name="video">
+                        <label class="params-picker__label" for="11">
+                          <span class="params-picker__title">4K</span>
+                          <span class="params-picker__text">Строка 1<br> Строка 2</span>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="params-pick-list__item">
+                      <div class="params-picker">
+                        <input class="params-picker__input" id="12" type="checkbox" name="video">
+                        <label class="params-picker__label" for="12">
+                          <span class="params-picker__title">Рендеринг</span>
+                          <span class="params-picker__text">Строка 1<br> Строка 2</span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
           </div>
         </div>
         <div class="container-fluid">
@@ -393,16 +524,5 @@
     //= template/footer.html
 
     //= template/scripts.html
-    <script type="text/javascript" src="js/bootstrap-slider.js"></script>
-    <script>
-      $("#range").slider({
-        step: 10000,
-        range: true,
-        value: [65000, 95000],
-        ticks: [45000, 55000, 65000, 75000, 85000, 95000, 105000, 115000, 125000],
-        ticks_labels: ['45 000 р.', '55 000 р.', '65 000 р.', '75 000 р.', '85 000 р.', '95 000 р.', '105 000 р.', '115 000 р.', '125 000 р.'],
-        ticks_snap_bounds: 30
-      });
-    </script>
   </body>
 </html>
