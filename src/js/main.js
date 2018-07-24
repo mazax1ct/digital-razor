@@ -75,4 +75,22 @@ $(document).ready(function() {
     $('.accordion__body[data-target=' + $(this).attr('data-link') + ']').slideToggle();
     return false;
   });
+
+  //табы на страницах
+  $('.js-tab-link').click(function() {
+    $('.page-tabs[data-tabs=' + $(this).attr('data-tabs') + '] .page-tab').removeClass('is-active');
+    $('.page-tab[data-target=' + $(this).attr('data-link') + ']').addClass('is-active');
+    $(this).parent().parent().find('.sections-menu__item').removeClass('is-active');
+    $(this).parent().addClass('is-active');
+    return false;
+  });
+
+  //прокрутка к выбору варианта подбора
+  $('.js-pick-scroll').click(function() {
+    var headerHeaight = $('.header').height();
+    var topOffset = $('.js-scroll-here').offset();
+    $("html, body").animate({
+        scrollTop: topOffset.top - headerHeaight
+    }, 500);
+  });
 });

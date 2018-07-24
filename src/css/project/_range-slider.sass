@@ -11,22 +11,22 @@
   background-color: #474747
   overflow: hidden
   margin-bottom: 30px
-  padding: 35px 15px 45px
+  padding: 35px 15px 25px
 
   @media(min-width: 768px)
-    padding-bottom: 65px
+    padding-bottom: 40px
     padding-left: 35px
     padding-right: 35px
 
   @media(min-width: 1200px)
     border-bottom: 10px solid #000
-    padding-top: 70px
-    padding-bottom: 130px
+    padding-top: 60px
+    padding-bottom: 70px
 
   @media(min-width: 1900px)
     margin-bottom: 50px
     padding-top: 130px
-    padding-bottom: 170px
+    padding-bottom: 130px
 
 .range-slider-labels
   display: none
@@ -49,3 +49,28 @@
     &:last-child
       @media(max-width: 767px)
         transform: translateX(50%)
+
+.range-slider-button-block
+  margin-top: 50px
+  text-align: center
+
+  @media(min-width: 1200px)
+    margin-top: 100px
+
+.range-slider-button
+  background-color: #f13724
+  border: 1px solid #f13724
+  color: #fff
+  cursor: pointer
+  display: inline-block
+  font-weight: 400
+  line-height: 18px
+  min-height: 40px
+  min-width: 120px
+  padding: 9px
+  text-decoration: none
+  text-align: center
+  vertical-align: middle
+
+  &:hover
+    text-decoration: none
