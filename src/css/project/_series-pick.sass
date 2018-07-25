@@ -32,8 +32,30 @@
     margin-bottom: 30px
 
     @media(min-width: 768px)
+      position: relative
       margin-bottom: 0
       padding-right: 20px
+
+    &::after
+      @media(min-width: 768px)
+        background-color: #707070
+        content: ''
+        bottom: 0
+        top: auto
+        right: 0
+        left: auto
+        position: absolute
+        height: 195px
+        width: 1px
+
+      @media(min-width: 992px)
+        height: 200px
+
+      @media(min-width: 1200px)
+        height: 240px
+
+      @media(min-width: 1900px)
+        height: 305px
 
     @media(min-width: 1200px)
       padding-right: 30px
@@ -42,7 +64,7 @@
     @media(min-width: 768px)
       padding-left: 20px
 
-    @media(min-width: 768px)
+    @media(min-width: 1200px)
       padding-left: 30px
 
   &__title
@@ -111,6 +133,9 @@
     padding: 5px 5px 10px
     position: relative
     width: 100%
+
+    @media(min-width: 768px)
+      min-height: 68px
 
     @media(min-width: 1200px)
       min-height: 88px
