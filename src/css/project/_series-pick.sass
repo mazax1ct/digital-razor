@@ -1,4 +1,4 @@
-.title-block + .series-pick-block
+.title-block + .series-pick-blocks
   margin-top: -20px
 
   @media(min-width: 1200px)
@@ -7,7 +7,7 @@
   @media(min-width: 1900px)
     margin-top: -80px
 
-.series-pick-block
+.series-pick-blocks
   background-color: #474747
   overflow: hidden
   margin-bottom: 30px
@@ -27,7 +27,30 @@
     padding-top: 130px
     padding-bottom: 170px
 
+.series-pick-block
+  &:first-child
+    @media(min-width: 768px)
+      padding-right: 20px
+
+    @media(min-width: 1200px)
+      padding-right: 30px
+
+  &:last-child
+    @media(min-width: 768px)
+      padding-left: 20px
+
+    @media(min-width: 768px)
+      padding-left: 30px
+
+  &__title
+    margin-bottom: 10px
+
 .params-pick-list
+  margin-bottom: 30px
+
+  &:last-child
+    margin-bottom: 0
+
   &__row
     display: flex
     flex-wrap: wrap
@@ -46,7 +69,6 @@
     padding-left: 5px
     flex: 0 0 33.33%
     max-width: 33.33%
-    margin-bottom: 20px
 
     @media(min-width: 568px)
       padding-right: 10px
@@ -80,6 +102,7 @@
     cursor: pointer
     display: flex
     flex-direction: column
+    justify-content: center
     height: 100%
     overflow: hidden
     padding: 5px 5px 10px
@@ -87,7 +110,6 @@
     width: 100%
 
     @media(min-width: 1200px)
-      justify-content: center
       min-height: 88px
 
     @media(min-width: 1900px)
@@ -130,8 +152,11 @@
       font-size: 14px
 
     @media(min-width: 992px)
-      font-size: 22px
+      font-size: 18px
       margin-bottom: 5px
+
+    @media(min-width: 1200px)
+      font-size: 22px
 
     @media(min-width: 1900px)
       font-size: 34px
@@ -140,5 +165,5 @@
     display: block
     font-size: 9px
 
-    @media(min-width: 992px)
+    @media(min-width: 1200px)
       font-size: 11px
