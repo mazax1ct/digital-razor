@@ -20,8 +20,18 @@
     <meta name="theme-color" content="#ffffff">
 
     <link rel="stylesheet" href="css/config.css?v4"/>
+    <style>
+      body.tile .config__content-block.order-lg-2{
+        display: none;
+      }
+
+      body.tile .config__content-block.order-lg-1{
+        width: 100%;
+        margin-right: 0;
+      }
+    </style>
   </head>
-  <body>
+  <body class="tile">
     <svg aria-hidden="true" style="width: 0px; height: 0px; overflow: hidden; position: absolute;" xmlns="http://www.w3.org/2000/svg">
       <symbol id="back" viewBox="0 0 50 50">
         <path d="M14.8,15.8V9.7L0.5,24l14.3,14.3v-6.1L6.6,24L14.8,15.8z M27,17.9V9.7L12.8,24L27,38.3v-8.4c10.2,0,17.4,3.3,22.5,10.4C47.5,30.1,41.3,19.9,27,17.9z"/>
@@ -92,19 +102,20 @@
     <form class="config config--no_title" method="post" action="/">
       <div class="config__content">
         <div class="config__title-block config__title-block--for_desktop">
-          <h2 class="config__title">КОМПОНЕНТЫ</h2>
+          <h2 class="config__title">Корпус:</h2>
         </div>
         <div class="config__content-inner">
-          <div class="config__content-block">
+          <div class="config__content-block order-lg-2">
+            <div class="config__content-block-inner d-lg-flex align-items-lg-center justify-content-lg-center glare-image-block">
+              <div class="component component--no_padding_top">
+                <div class="component__image"><img src="images/content/img15.png" alt=""></div>
+              </div>
+              <p class="series-title">PERFORMANCE SERIES</p>
+            </div>
+          </div>
+          <div class="config__content-block order-lg-1">
             <div class="config__content-block-inner">
               <div class="smart-config-section tile">
-                <div class="config__subtitle-block">
-                  <h3 class="config__subtitle">Корпус</h3>
-                  <div class="config__views-block">
-                    <a class="js-smart-config-view config__view is-active" href="#" data-class="tile" title="Плиткой"><svg class="config__view-icon config__view-icon--tile" aria-hidden="true"><use xlink:href="#tile"/></svg></a>
-                    <a class="js-smart-config-view config__view" href="#" data-class="list" title="Списком"><svg class="config__view-icon config__view-icon--list" aria-hidden="true"><use xlink:href="#list"/></svg></a>
-                  </div>
-                </div>
                 <div class="tabs-menu tabs-menu--tall tabs-menu--small_indents">
                   <ul class="tabs-menu__list">
                     <li class="tabs-menu__item"><a class="tabs-menu__link is-active" href="#">Corsair</a></li>
@@ -116,7 +127,7 @@
                 <div class="c-list2">
                   <div class="c-list2__container">
                     <div class="c-list2__row">
-                      <div class="c-list2__item">
+                      <div class="c-list2__item c-list2__item--small">
                         <div class="cl-item2">
                           <input class="cl-item2__radio" id="1" type="radio" name="cl-item2" value="1" checked>
                           <label class="cl-item2__label" for="1">
@@ -125,7 +136,7 @@
                           </label>
                         </div>
                       </div>
-                      <div class="c-list2__item">
+                      <div class="c-list2__item c-list2__item--small">
                         <div class="cl-item2">
                           <input class="cl-item2__radio" id="2" type="radio" name="cl-item2" value="2">
                           <label class="cl-item2__label" for="2">
@@ -134,7 +145,7 @@
                           </label>
                         </div>
                       </div>
-                      <div class="c-list2__item">
+                      <div class="c-list2__item c-list2__item--small">
                         <div class="cl-item2">
                           <input class="cl-item2__radio" id="3" type="radio" name="cl-item2" value="3">
                           <label class="cl-item2__label" for="3">
@@ -143,7 +154,7 @@
                           </label>
                         </div>
                       </div>
-                      <div class="c-list2__item">
+                      <div class="c-list2__item c-list2__item--small">
                         <div class="cl-item2">
                           <input class="cl-item2__radio" id="4" type="radio" name="cl-item2" value="4">
                           <label class="cl-item2__label" for="4">
@@ -152,7 +163,7 @@
                           </label>
                         </div>
                       </div>
-                      <div class="c-list2__item">
+                      <div class="c-list2__item c-list2__item--small">
                         <div class="cl-item2">
                           <input class="cl-item2__radio" id="5" type="radio" name="cl-item2" value="5">
                           <label class="cl-item2__label" for="5">
@@ -165,14 +176,6 @@
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
-          <div class="config__content-block">
-            <div class="config__content-block-inner d-lg-flex align-items-lg-center justify-content-lg-center glare-image-block">
-              <div class="component component--no_padding_top">
-                <div class="component__image"><img src="images/content/img15.png" alt=""></div>
-              </div>
-              <p class="series-title">PERFORMANCE SERIES</p>
             </div>
           </div>
         </div>
