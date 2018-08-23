@@ -1,0 +1,62 @@
+.articles-list
+  &__item
+    border: 1px solid #313131
+    border-top: none
+
+    &:first-child
+      border-top: 1px solid #313131
+
+    &:nth-child(2)
+      @media(min-width: 576px)
+        border-top: 1px solid #313131
+
+    &:nth-child(3),
+    &:nth-child(4),
+      @media(min-width: 992px)
+        border-top: 1px solid #313131
+
+    &:nth-child(3)
+      border-left: none
+
+    &:nth-child(even)
+      @media(min-width: 576px)
+        border-left: none
+
+.article
+  display: block
+  padding: 25px 30px 50px
+  position: relative
+  transition: background-color 0.3s
+  text-decoration: none
+
+  &:hover
+    background-color: #252525
+
+  &__image
+    background-size: contain
+    display: block
+    height: 160px
+    width: 100%
+    background-position: left center
+    background-repeat: no-repeat
+    margin-bottom: 10px
+
+  &__title
+    color: #fff
+    display: block
+    font-family: 'Russo One', 'Roboto', 'Arial', sans-serif
+    font-size: 18px
+    font-weight: 600
+
+  &__preview-text
+    font-size: 16px
+
+  &::after
+    background: url('../images/icons/angle-right-solid.svg') no-repeat 50% 50% #505050
+    border-radius: 50%
+    content: ''
+    height: 30px
+    width: 30px
+    position: absolute
+    right: 30px
+    bottom: 10px
