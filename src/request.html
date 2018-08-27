@@ -25,44 +25,96 @@
     //= template/sprite.html
     <div class="wrapper">
       //= template/header.html
-      <div class="page-content page-content--simple_page page-content--landing">
-        <div class="js-main-banner main-banner">
-          <div class="main-banner__slide" style="background-image: url(images/content/img1.jpg)">
-            <div class="main-banner__slide-inner container-fluid">
-              <div class="main-banner__title"><p class="decorated-title"><span class="decorated-title__red">ВСТРЕЧАЙТЕ</span> <span class="decorated-title__bordered">СУПЕРТУШКУ</span></p></div>
-              <div class="main-banner__subtitle"><p>такой еще ни у кого не было</p></div>
-              <div class="main-banner__text">
-                <p>Если ты купишь суперштуку, то будешь самый крутой<br> Если ты купишь суперштуку, то будешь самый крутой<br> Если ты купишь суперштуку, то будешь самый крутой</p>
-              </div>
-              <img class="main-banner__image" width="300" height="150" src="images/content/img2.png" alt="Intel Nvidia">
-              <div class="main-banner__buttons">
-                <a class="button button--red" href="#">Подробнее</a>
-                <a class="button" href="#">Купить</a>
-              </div>
-            </div>
-          </div>
-          <div class="main-banner__slide" style="background-image: url(images/content/img3.jpg)">
-            <div class="main-banner__slide-inner container-fluid">
-              <div class="main-banner__title"><p class="decorated-title"><span class="decorated-title__red">ВСТРЕЧАЙТЕ</span> <span class="decorated-title__bordered">СУПЕРТУШКУ</span></p></div>
-              <div class="main-banner__subtitle"><p>такой еще ни у кого не было</p></div>
-              <div class="main-banner__text">
-                <p>Если ты купишь суперштуку, то будешь самый крутой<br> Если ты купишь суперштуку, то будешь самый крутой<br> Если ты купишь суперштуку, то будешь самый крутой</p>
-              </div>
-              <img class="main-banner__image" width="300" height="150" src="images/content/img2.png" alt="Intel Nvidia">
-              <div class="main-banner__buttons">
-                <a class="button button--red" href="#">Подробнее</a>
-                <a class="button" href="#">Купить</a>
-              </div>
+      <div class="page-content page-content--simple_page page-content--faq_page">
+        <div class="title-block">
+          <h1 class="decorated-title container-fluid">ФОРМА ОБРАТНОЙ СВЯЗИ</h1>
+        </div>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-10 col-xxl-8 offset-md-1 offset-xxl-2">
+              <p>Вы можете оставить запрос на подбор игрового компьютера и уточнить интересующую Вас информацию. Наши специалисты ответят в течении суток с момента отправки формы обратной связи.</p>
+              <p>Мы работаем с понедельника по воскресенье с 9:30 до 20:00. Также мы собрали ответы на основные вопросы. Рекомендуем проверить F.A.Q, расположенный ниже.</p>
+              <form class="request" action="/" method="get">
+                <div class="row">
+                  <div class="col-md-6">
+                    <label class="request__label" for="name">
+                      <input class="request__input input" id="name" name="name" type="text" value="" placeholder="Имя">
+                    </label>
+                    <label class="request__label" for="email">
+                      <input class="request__input input" id="email" name="email" type="text" value="" placeholder="Электронная почта">
+                    </label>
+                    <label class="request__label" for="phone">
+                      <input class="request__input input" id="phone" name="phone" type="text" value="" placeholder="Номер телефона">
+                    </label>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="request__label" for="message">
+                      <textarea class="request__textarea textarea" id="message" name="message" placeholder="Ваше сообщение..."></textarea>
+                    </label>
+                  </div>
+                </div>
+                <div class="request__button-block">
+                  <button class="request__button button" type="submit">Отправить</button>
+                </div>
+              </form>
             </div>
           </div>
         </div>
-        <div class="container-fluid">
-          <div class="amoforms_iframe_wrap">
-            <script>var amo_forms_params = {"id":363565,"hash":"bcf2dc285c6fdb219b13d552c862d016","locale":"ru"};</script>
-            <script id="amoforms_script" async="async" charset="utf-8" src="https://forms.amocrm.ru/forms/assets/js/amoforms.js"></script>
-            <style>
-              
-            </style>
+        <div class="accordion-block">
+          <div class="title-block title-block--faq">
+            <h2 class="container-fluid">ЧАСТО ЗАДАВАЕМЫЕ ВОПРОСЫ</h2>
+          </div>
+          <div class="accordion">
+            <div class="js-accordion-title accordion__title accordion__title--parent" data-link="1"><div class="container-fluid">Гарантия 12 месяцев</div></div>
+            <div class="accordion__body" data-target="1">
+              <div class="accordion">
+                <div class="js-accordion-title accordion__title" data-link="2"><div class="container-fluid">Где я могу оплатить заказ наличными?</div></div>
+                <div class="accordion__body accordion__body--child" data-target="2">
+                  <div class="container-fluid">
+                    <p>Вы можете оплатить заказ наличными в офис нашей компании расположен по адресу 196084, Санкт-Петербург, ул. Парковая, д. 9, пом.101.<br> Время работы офиса пн-пт с 10 до 18, сб - вс с 11 до 18.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion">
+                <div class="js-accordion-title accordion__title" data-link="3"><div class="container-fluid">Могу ли я оплатить заказ при получении?</div></div>
+                <div class="accordion__body accordion__body--child" data-target="3">
+                  <div class="container-fluid">
+                    <p>На текущий момент оплата после получения заказ невозможна. Это обусловлено производственными процессами и условиями доставки:</p>
+                    <ul>
+                      <li>Все компьютеры собираются под заказ, поэтому производственная линия требует бесперебойной работы. Любой отказ от заказа ведет к сбоям и увеличениям сроков сборки для всех клиентов. </li>
+                      <li>Во всех сборках используются новые комплектующие. В случае отказа от компьютера все компоненты системы теряют товарный вид, что не позволяет их использовать в дальнейшем.</li>
+                      <li>Игровые компьютеры это габаритный груз, средняя стоимость которого выше среднестатистических товаров. По этим причинам транспортные компании не могут принимать подобные грузы с оплатой при получении.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="accordion">
+            <div class="js-accordion-title accordion__title accordion__title--parent" data-link="1_"><div class="container-fluid">Гарантия 36 месяцев</div></div>
+            <div class="accordion__body" data-target="1_">
+              <div class="accordion">
+                <div class="js-accordion-title accordion__title" data-link="2_"><div class="container-fluid">Где я могу оплатить заказ наличными?</div></div>
+                <div class="accordion__body accordion__body--child" data-target="2_">
+                  <div class="container-fluid">
+                    <p>Вы можете оплатить заказ наличными в офис нашей компании расположен по адресу 196084, Санкт-Петербург, ул. Парковая, д. 9, пом.101.<br> Время работы офиса пн-пт с 10 до 18, сб - вс с 11 до 18.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="accordion">
+            <div class="js-accordion-title accordion__title accordion__title--parent" data-link="1__"><div class="container-fluid">Расширенная гарантия</div></div>
+            <div class="accordion__body" data-target="1__">
+              <div class="accordion">
+                <div class="js-accordion-title accordion__title" data-link="2__"><div class="container-fluid">Где я могу оплатить заказ наличными?</div></div>
+                <div class="accordion__body accordion__body--child" data-target="2__">
+                  <div class="container-fluid">
+                    <p>Вы можете оплатить заказ наличными в офис нашей компании расположен по адресу 196084, Санкт-Петербург, ул. Парковая, д. 9, пом.101.<br> Время работы офиса пн-пт с 10 до 18, сб - вс с 11 до 18.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
