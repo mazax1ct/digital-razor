@@ -1,0 +1,142 @@
+.software
+  background-color: #000
+  padding-top: 50px
+  padding-bottom: 50px
+  position: relative
+  text-align: center
+
+  @media(min-width: 1200px)
+    padding-top: 100px
+    padding-bottom: 100px
+
+  @media(min-width: 1400px)
+    padding-top: 140px
+    min-height: 800px
+
+  &__picture
+    @media(min-width: 600px)
+      display: none
+
+  &__bg
+    display: none
+
+    @media(min-width: 600px)
+      display: inline
+      max-width: 70%
+
+  &__list
+    max-width: 800px
+    margin-left: auto
+    margin-right: auto
+    position: relative
+
+  &__item
+    cursor: pointer
+    padding-bottom: 40px
+    position: relative
+
+    @media(min-width: 600px)
+      position: absolute
+      padding-bottom: 0
+
+    &::after
+      @media(max-width: 599px)
+        content: ''
+        width: 20px
+        height: 20px
+        background: #dd0330
+        position: absolute
+        bottom: 10px
+        left: 0
+        right: 0
+        margin: 0 auto
+        border-radius: 50%
+        z-index: 2
+
+    &::before
+      @media(max-width: 599px)
+        content: ''
+        width: .09375em
+        height: 130px
+        background: #310a11
+        position: absolute
+        top: -30px
+        left: 0
+        right: 0
+        margin: 0 auto
+        z-index: 1
+
+    a
+      font-size: 18px
+      color: #fff
+      position: relative
+      transition: .5s
+      text-decoration: none
+      z-index: 3
+
+      @media(min-width: 600px)
+        font-size: 15px
+
+      @media(min-width: 1200px)
+        font-size: 18px
+
+      @media(min-width: 1400px)
+        font-size: 28px
+        line-height: 1.2
+
+    &:hover
+      a
+        color: #dd0330
+
+    &:nth-child(1)
+      @media(min-width: 600px)
+        left: 50%
+        top: -30px
+        transform: translateX(-50%)
+        text-align: center
+
+      @media(min-width: 1400px)
+        top: -50px
+
+    &:nth-child(2)
+      @media(min-width: 600px)
+        left: auto
+        right: 0
+        top: 34%
+        text-align: left
+        width: 85px
+
+      @media(min-width: 1400px)
+        right: -30px
+        width: 135px
+
+    &:nth-child(3)
+      @media(min-width: 600px)
+        left: 0
+        top: 34%
+        text-align: right
+        width: 85px
+
+      @media(min-width: 1400px)
+        left: -30px
+        width: 135px
+
+    &:nth-child(4)
+      @media(min-width: 600px)
+        top: 105%
+        left: 20%
+
+      @media(min-width: 1400px)
+        left: 12%
+
+    &:nth-child(5)
+      @media(min-width: 600px)
+        top: 105%
+        left: auto
+        right: 20%
+
+      @media(min-width: 1400px)
+        right: 12%
+
+      &::before
+        display: none
