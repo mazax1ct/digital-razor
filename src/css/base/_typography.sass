@@ -96,15 +96,17 @@ h4,.h4
   line-height: 1.2
   margin-bottom: 15px
 
-  @media (min-width: 1200px)
+  @media(min-width: 768px)
     font-size: 40px
-    margin-bottom: 25px
+    margin-bottom: 40px
 
-  @media (min-width: 1600px)
-    font-size: 60px
+  @media (min-width: 1400px)
+    font-size: 50px
+    margin-bottom: 60px
 
   @media (min-width: 1900px)
-    font-size: 84px
+    font-size: 60px
+    margin-bottom: 100px
 
 .title-block
   background-color: #272727
@@ -136,6 +138,18 @@ h4,.h4
 
     @media (min-width: 1900px)
       margin-bottom: 0
+
+  &--no_mt
+    margin-top: 0
+
+    @media (min-width: 768px)
+      margin-top: 0
+
+    @media (min-width: 1200px)
+      margin-top: 0
+
+    @media (min-width: 1900px)
+      margin-top: 0
 
   > *
     margin-top: 0
@@ -177,6 +191,16 @@ h4,.h4
     padding-bottom: 3px
     padding-left: 5px
     padding-right: 5px
+
+  &__blue
+    background-color: #2980cf
+    display: inline-block
+    margin-top: 3px
+    margin-bottom: 3px
+    padding-top: 5px
+    padding-right: 5px
+    padding-bottom: 3px
+    padding-left: 5px
 
   &__bordered
     border-top: 2px solid currentColor

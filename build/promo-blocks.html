@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+    <title>DIGITAL RAZOR</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="apple-touch-icon" sizes="120x120" href="images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="images/favicon/site.webmanifest">
+    <link rel="mask-icon" href="images/favicon/safari-pinned-tab.svg" color="#ffffff">
+    <link rel="shortcut icon" href="images/favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-config" content="images/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="stylesheet" href="css/style.css?v7"/>
+  </head>
+  <body>
+    <svg aria-hidden="true" style="width: 0px; height: 0px; overflow: hidden; position: absolute;" xmlns="http://www.w3.org/2000/svg">
+      <symbol id="cart" viewBox="0 0 50 50">
+        <path d="M27,0.5l-6.7,6.7h11.1L27,0.5z M38.1,2.7l-4.5,4.5h8.9L38.1,2.7z M4.7,5v4.5h5.1l5.8,17.4
+      		l-3.3,4.5h-0.1c-1,1.4-1.1,3.2-0.3,4.7c0.8,1.5,2.3,2.4,4,2.4h29v-4.5h-29c0,0,0,0,0-0.1l3.3-4.4h20.9c0.9,0.1,1.7-0.5,2-1.3
+      		l6.9-15.6c0.5-1.1,0-2.4-1.1-2.9c-0.3-0.1-0.6-0.2-0.9-0.2H14.5l-1-2.9L13,5H4.7z M15.9,40.6c-2.5,0-4.5,2-4.5,4.5
+      		c0,2.5,2,4.5,4.5,4.5s4.5-2,4.5-4.5C20.3,42.6,18.3,40.6,15.9,40.6z M40.4,40.6c-2.5,0-4.5,2-4.5,4.5c0,2.5,2,4.5,4.5,4.5
+      		c2.5,0,4.5-2,4.5-4.5C44.8,42.6,42.8,40.6,40.4,40.6z"/>
+      </symbol>
+      <symbol id="delivery" viewBox="0 0 50 50">
+        <path d="M5.4,5.2c-2.7,0-4.9,2.1-4.9,4.7v25.6c0,2.6,2.2,4.7,4.9,4.7h0.2c0.6,2.7,3,4.7,6,4.7s5.4-2,6-4.7h15
+        	c0.6,2.7,3,4.7,6,4.7c3,0,5.4-2,6-4.7h0.2c0.3,0,0.7,0,1-0.1c2.2-0.4,3.9-2.3,3.9-4.6v-8.6c0-0.5-0.2-1-0.5-1.5l-8.6-12.3
+        	c-0.5-0.5-1.3-0.9-2-0.9h-8.6V9.9c0-2.6-2.2-4.7-4.9-4.7H5.4z M15.2,9.9c5.4,0,9.8,4.2,9.8,9.3s-4.4,9.3-9.8,9.3s-9.8-4.2-9.8-9.3
+        	S9.8,9.9,15.2,9.9z M17.5,12.6l-3.7,5.8l-0.6,1l0.8,0.9l4.4,4.1l2.2-2.1L17.3,19l3-4.8L17.5,12.6z M32.3,16.9h6.2l4.8,7h-11
+        	L32.3,16.9z M11.5,36.6c1.5,0,2.5,0.9,2.5,2.3s-1,2.3-2.5,2.3S9.1,40.4,9.1,39S10.1,36.6,11.5,36.6z M38.5,36.6
+        	c1.5,0,2.5,0.9,2.5,2.3s-1,2.3-2.5,2.3S36,40.4,36,39S37,36.6,38.5,36.6L38.5,36.6z"/>
+      </symbol>
+      <symbol id="service" viewBox="0 0 50 50">
+        <path d="M25,0.5c-12.8,0-23.2,9.9-23.2,22v14.7c0,2.7,2.3,4.9,5.2,4.9h7.7V25H6.9v-2.4C6.9,13.1,15,5.4,25,5.4
+        	s18.1,7.7,18.1,17.1V25h-7.7v17.1h2.6c0,1.4-1.2,2.5-2.6,2.4h-5.4c-0.6-1.5-2-2.5-3.6-2.5h-2.6c-2-0.1-3.8,1.5-3.9,3.5
+        	c-0.1,2,1.5,3.8,3.5,3.9c0.1,0,0.2,0,0.4,0h11.6c4.3,0,7.7-3.3,7.7-7.3c2.9,0,5.2-2.2,5.2-4.9V22.5C48.2,10.4,37.8,0.5,25,0.5z"/>
+      </symbol>
+      <symbol id="warranty" viewBox="0 0 50 50">
+        <path d="M5.4,1.7c-2.7,0-4.9,2.1-4.9,4.7v30.2c0,2.6,2.2,4.7,4.9,4.7h12.3v7l7.3-7l7.3,7v-7h12.3c2.7,0,4.9-2.1,4.9-4.7
+        	V6.4c0-2.6-2.2-4.7-4.9-4.7H5.4z M5.4,6.4h39.2v30.2H32.3v-4.4c0-3.5-2.5-6.5-5.9-7.1c-4.7-0.9-8.8,2.5-8.8,6.8v4.7H5.4V6.4z
+        	 M10.3,11v4.7h29.4V11H10.3z M10.3,18v4.7h29.4V18L10.3,18z M25,29.7c1.3,0.1,2.3,1.2,2.2,2.4c-0.1,1.3-1.2,2.3-2.4,2.2
+        	c-1.2-0.1-2.2-1.1-2.2-2.3C22.6,30.7,23.7,29.6,25,29.7z"/>
+      </symbol>
+      <symbol id="slider_arrow_left" viewBox="0 0 50 50">
+        <path d="M40.1,6.3l-5.8-5.8L9.9,25l24.5,24.5l5.8-5.8L21.4,25L40.1,6.3z"/>
+      </symbol>
+      <symbol id="slider_arrow_right" viewBox="0 0 50 50">
+        <path d="M9.9,43.7l5.8,5.8L40.1,25L15.6,0.5L9.9,6.3L28.6,25L9.9,43.7z"/>
+      </symbol>
+      <symbol id="pager_left" viewBox="0 0 256 512">
+        <path d="M31.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L127.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L201.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34z"></path>
+      </symbol>
+      <symbol id="pager_right" viewBox="0 0 256 512">
+        <path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"></path>
+      </symbol>
+    </svg>
+    <div class="wrapper">
+      <header class="header">
+        <div class="header__top">
+          <div class="header__top-inner container-fluid">
+            <a class="header__top-link header__top-link--phone" href="tel:88005009926">+7 (800) 500-99-26</a>
+            <a class="header__top-link" href="#">Задать вопрос</a>
+            <a class="header__top-link" href="#">Личный кабинет</a>
+            <a class="header__top-link" href="#">Контакты</a>
+          </div>
+        </div>
+        <div class="header__bottom">
+          <div class="header__bottom-inner container-fluid">
+            <a class="logo" href="main.html"><img src="images/logo.png" alt="DIGITAL RAZOR"></a>
+            <button class="js-menu-opener menu-opener" type="button" title="Меню"><span></span></button>
+            <div class="main-menu-block">
+              <ul class="main-menu">
+                <li class="main-menu__item root">
+                  <a class="main-menu__link root-link" href="#">Игровые компьютеры</a>
+                  <div class="main-menu__dropdown">
+                    <p class="main-menu__dropdown-title">ИГРОВЫЕ СЕРИИ</p>
+                    <a class="main-menu__dropdown-link" href="#">ProGaming - серия</a>
+                    <a class="main-menu__dropdown-link" href="#">Performance - серия</a>
+                    <a class="main-menu__dropdown-link" href="#">Performance X - серия</a>
+                    <p class="main-menu__dropdown-title">СПЕЦИАЛЬНЫЕ СЕРИИ</p>
+                    <a class="main-menu__dropdown-link" href="#">Powered by ASUS</a>
+                    <a class="main-menu__dropdown-link" href="#">Powered by AMD</a>
+                  </div>
+                </li>
+                <li class="main-menu__item">
+                  <a class="main-menu__link" href="#">Рабочие станции</a>
+                </li>
+                <li class="main-menu__item">
+                  <a class="main-menu__link" href="#">Моноблоки</a>
+                </li>
+                <li class="main-menu__item">
+                  <a class="main-menu__link" href="catalog.html">Аксессуары</a>
+                </li>
+                <li class="main-menu__item main-menu__item--duplicate">
+                  <a class="main-menu__link" href="#">Задать вопрос</a>
+                </li>
+                <li class="main-menu__item main-menu__item--duplicate">
+                  <a class="main-menu__link" href="#">Личный кабинет</a>
+                </li>
+                <li class="main-menu__item main-menu__item--duplicate">
+                  <a class="main-menu__link" href="#">Контакты</a>
+                </li>
+              </ul>
+              <a class="cart-icon" href="#" title="Корзина"><span class="cart-icon__qnt">0</span><svg class="cart-icon__icon" aria-hidden="true"><use xlink:href="#cart"/></svg></a>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="page-content page-content--simple_page page-content--faq_page">
+        <div class="scroll-menu-block title-block title-block--no_mb">
+          <div class="scroll-menu-block__inner">
+            <div class="scroll-menu container-fluid">
+              <h3 class="decorated-title">ЗАГОЛОВОК:</h3>
+              <div class="sections-menu">
+                <div class="sections-menu__item"><a class="js-tab-link sections-menu__link" href="#" data-tabs="1" data-link="1">Таб 1</a></div>
+                <div class="sections-menu__item"><a class="js-tab-link sections-menu__link" href="#" data-tabs="1" data-link="2">Таб 2</a></div>
+                <div class="sections-menu__item"><a class="js-tab-link sections-menu__link" href="#" data-tabs="1" data-link="3">Таб 3</a></div>
+                <div class="sections-menu__item"><a class="js-tab-link sections-menu__link" href="#" data-tabs="1" data-link="4">Таб 4</a></div>
+                <div class="sections-menu__item"><a class="js-tab-link sections-menu__link" href="#" data-tabs="1" data-link="5">Таб 5</a></div>
+                <div class="sections-menu__item is-active"><a class="js-tab-link sections-menu__link" href="#" data-tabs="1" data-link="6">Таб 6</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="page-tabs" data-tabs="1">
+          <div class="page-tab" data-target="1">
+            <div class="section section--h400 section--middle" style="background-color: #474747">
+              <div class="container-fluid">
+                <div class="pb-3 row">
+                  <div class="pb-3__item col-sm-6 col-md-3">
+                    <h3 class="pb-3__item-title">ЗАГОЛОВОК</h3>
+                    <p class="pb-3__item-text">Супер классная штука, которой ни о кого не было никогда до этого</p>
+                  </div>
+                  <div class="pb-3__item col-sm-6 col-md-3">
+                    <h3 class="pb-3__item-title">ЗАГОЛОВОК</h3>
+                    <p class="pb-3__item-text">Супер классная штука, которой ни о кого не было никогда до этого</p>
+                  </div>
+                  <div class="pb-3__item col-sm-6 col-md-3">
+                    <h3 class="pb-3__item-title">ЗАГОЛОВОК</h3>
+                    <p class="pb-3__item-text">Супер классная штука, которой ни о кого не было никогда до этого</p>
+                  </div>
+                  <div class="pb-3__item col-sm-6 col-md-3">
+                    <h3 class="pb-3__item-title">ЗАГОЛОВОК</h3>
+                    <p class="pb-3__item-text">Супер классная штука, которой ни о кого не было никогда до этого</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="page-tab" data-target="2">
+            <div class="section section--h800 section--middle" style="background-color: gray; background-image: url(images/content/img1.jpg)">
+              <div class="container-fluid">
+                <h2 class="text-center">ВЫБЕРИ СВОЮ КОНФИГУРАЦИЮ</h2>
+                <p>Во главе новой линейки стоит 8-ми ядерный процессор AMD Ryzen 2700X с 16 Мбайт кеша L3, поставляющийся вместе с вентилятором Wraith Prism с RGB-подсветкой. 2700X пришел на смену прошлогоднему Ryzen 7 1700X и обладает весьма неплохими частотными показателями.</p>
+                <div class="pb-3 row">
+                  <div class="pb-3__item pb-3__item--bordered col-sm-6 col-md-3">
+                    <h3 class="pb-3__item-title red">ЗАГОЛОВОК</h3>
+                    <p class="pb-3__item-text">Супер классная штука, которой ни о кого не было никогда до этого</p>
+                  </div>
+                  <div class="pb-3__item pb-3__item--bordered col-sm-6 col-md-3">
+                    <h3 class="pb-3__item-title red">ЗАГОЛОВОК</h3>
+                    <p class="pb-3__item-text">Супер классная штука, которой ни о кого не было никогда до этого</p>
+                  </div>
+                  <div class="pb-3__item pb-3__item--bordered col-sm-6 col-md-3">
+                    <h3 class="pb-3__item-title red">ЗАГОЛОВОК</h3>
+                    <p class="pb-3__item-text">Супер классная штука, которой ни о кого не было никогда до этого</p>
+                  </div>
+                  <div class="pb-3__item pb-3__item--bordered col-sm-6 col-md-3">
+                    <h3 class="pb-3__item-title red">ЗАГОЛОВОК</h3>
+                    <p class="pb-3__item-text">Супер классная штука, которой ни о кого не было никогда до этого</p>
+                  </div>
+                </div>
+                <p class="text-center"><img width="300" height="150" src="images/content/img2.png" alt=""></p>
+              </div>
+            </div>
+          </div>
+          <div class="page-tab" data-target="3">
+            <div class="section section--h1080" style="background-color: #000; background-image: url(images/content/img8.jpg)">
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col-md-1"></div>
+                  <div class="col-md-10">
+                    <h2 class="text-center">ТЕХ БРИФ + КАРТИНКА</h2>
+                    <p>Во главе новой линейки стоит 8-ми ядерный процессор AMD Ryzen 2700X с 16 Мбайт кеша L3, поставляющийся вместе с вентилятором Wraith Prism с RGB-подсветкой. 2700X пришел на смену прошлогоднему Ryzen 7 1700X и обладает весьма неплохими частотными показателями.</p>
+                    <div class="pb-4 row">
+                      <div class="pb-4__item col-6 col-md-3">
+                        <h3 class="pb-4__item-title">5 GHZ</h3>
+                        <p class="pb-4__item-text">Тактовая частота<br> процессора</p>
+                      </div>
+                      <div class="pb-4__item col-6 col-md-3">
+                        <h3 class="pb-4__item-title">16 GB</h3>
+                        <p class="pb-4__item-text">Оперативная память<br> стандарта DDR4</p>
+                      </div>
+                      <div class="pb-4__item col-6 col-md-3">
+                        <h3 class="pb-4__item-title">2080 ti</h3>
+                        <p class="pb-4__item-text">Видеокарта NVIDIA<br> Geforce RTX</p>
+                      </div>
+                      <div class="pb-4__item col-6 col-md-3">
+                        <h3 class="pb-4__item-title">120 GB</h3>
+                        <p class="pb-4__item-text">Твердотельный накопитель<br> SSD от Corsair</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-1"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="page-tab" data-target="4">
+            <div class="section section--h400 section--middle" style="background-color: #1d1d1d">
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col-md-1"></div>
+                  <div class="col-md-10">
+                    <h2 class="text-center">БЛОК ТИПА ТЕХ БРИФИНГ</h2>
+                    <p>Во главе новой линейки стоит 8-ми ядерный процессор AMD Ryzen 2700X с 16 Мбайт кеша L3, поставляющийся вместе с вентилятором Wraith Prism с RGB-подсветкой. 2700X пришел на смену прошлогоднему Ryzen 7 1700X и обладает весьма неплохими частотными показателями.</p>
+                    <div class="pb-4 row">
+                      <div class="pb-4__item col-6 col-md-3">
+                        <h3 class="pb-4__item-title">5 GHZ</h3>
+                        <p class="pb-4__item-text">Тактовая частота<br> процессора</p>
+                      </div>
+                      <div class="pb-4__item col-6 col-md-3">
+                        <h3 class="pb-4__item-title">16 GB</h3>
+                        <p class="pb-4__item-text">Оперативная память<br> стандарта DDR4</p>
+                      </div>
+                      <div class="pb-4__item col-6 col-md-3">
+                        <h3 class="pb-4__item-title">2080 ti</h3>
+                        <p class="pb-4__item-text">Видеокарта NVIDIA<br> Geforce RTX</p>
+                      </div>
+                      <div class="pb-4__item col-6 col-md-3">
+                        <h3 class="pb-4__item-title">120 GB</h3>
+                        <p class="pb-4__item-text">Твердотельный накопитель<br> SSD от Corsair</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-1"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="page-tab" data-target="5">
+            <div class="section section--h800 section--middle" style="background-color: green">
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col-md-1"></div>
+                  <div class="col-md-10">
+                    <h2 class="giant-title text-center">БЛОК ТИПА ТЕХ БРИФИНГ</h2>
+                    <p>Во главе новой линейки стоит 8-ми ядерный процессор AMD Ryzen 2700X с 16 Мбайт кеша L3, поставляющийся вместе с вентилятором Wraith Prism с RGB-подсветкой. 2700X пришел на смену прошлогоднему Ryzen 7 1700X и обладает весьма неплохими частотными показателями.</p>
+                  </div>
+                  <div class="col-md-1"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="page-tab is-active" data-target="6">
+            <div class="section section--h800 section--middle" style="background-color: #474747">
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col-md-1"></div>
+                  <div class="col-md-10">
+                    <div class="pb-5 row">
+                      <div class="col-sm-6">
+                        <div class="pb-5__item">
+                          <div class="pb-5__image">
+                            <img src="images/content/promo/tizer1.png" alt="">
+                          </div>
+                          <h4>ЗАГОЛОВОК</h4>
+                          <p>Во главе новой линейки стоит 8-ми ядерный процессор AMD Ryzen 2700X с 16 Мбайт кеша L3, поставляющийся вместе с</p>
+                        </div>
+                      </div>
+                      <div class="col-sm-6">
+                        <div class="pb-5__item">
+                          <div class="pb-5__image">
+                            <img src="images/content/promo/tizer2.png" alt="">
+                          </div>
+                          <h4>ЗАГОЛОВОК</h4>
+                          <p>Во главе новой линейки стоит 8-ми ядерный процессор AMD Ryzen 2700X с 16 Мбайт кеша L3, поставляющийся вместе с</p>
+                        </div>
+                      </div>
+                      <div class="col-sm-6">
+                        <div class="pb-5__item">
+                          <div class="pb-5__image">
+                            <img src="images/content/promo/tizer3.png" alt="">
+                          </div>
+                          <h4>ЗАГОЛОВОК</h4>
+                          <p>Во главе новой линейки стоит 8-ми ядерный процессор AMD Ryzen 2700X с 16 Мбайт кеша L3, поставляющийся вместе с</p>
+                        </div>
+                      </div>
+                      <div class="col-sm-6">
+                        <div class="pb-5__item">
+                          <div class="pb-5__image">
+                            <img src="images/content/promo/tizer4.png" alt="">
+                          </div>
+                          <h4>ЗАГОЛОВОК</h4>
+                          <p>Во главе новой линейки стоит 8-ми ядерный процессор AMD Ryzen 2700X с 16 Мбайт кеша L3, поставляющийся вместе с</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-1"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="software">
+          <img class="software__picture" src="images/content/promo/software--bg.png" alt="">
+          <div class="software__list">
+            <div class="software__item">
+              <a data-fancybox="" href="https://www.youtube.com/watch?v=3gCNLbnZr08">AMD <b>LINK</b></a>
+            </div>
+            <div class="software__item">
+              <a data-fancybox="" href="https://www.youtube.com/watch?v=GPUjaa18DLg">RADEON <b>OVERLAY</b></a>
+            </div>
+            <div class="software__item">
+              <a data-fancybox="" href="https://www.youtube.com/watch?v=3H-oUJkrff8">RADEON <b>RELIVE</b></a>
+            </div>
+            <div class="software__item">
+              <a data-fancybox="" href="https://www.youtube.com/watch?v=V4CKhmGzJeM">RADEON <b>CHILL</b></a>
+            </div>
+            <div class="software__item">
+              <a data-fancybox="" href="https://www.youtube.com/watch?v=ONpCsH-10uE">ENHANCED <b>SYNC</b></a>
+            </div>
+            <img class="software__bg" src="images/content/promo/software-bg.png" alt="">
+          </div>
+        </div>
+        <div class="block-2 section section--h1080" style="background-color: #000; background-image: url(images/content/background_spark.jpg)">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-md-1"></div>
+              <div class="col-md-10">
+                <h2 class="text-center">ТЕХНИЧЕСКИЕ ХАРАКТЕРИСТИКИ</h2>
+                <p>Уникальный игровой моноблок, открывающий новый класс высокопроизводительных игровых платформ. Stinger вмещает в себя все необходимое и экономит Ваше рабочее пространство, заменяя при этом традиционные громоздкие системные блоки. Главной особенностью моноблока является мощная игровая начинка и большой 34" изогнутый дисплей с разрешением 3440 x 1440px</p>
+                <div class="pb-4 row">
+                  <div class="pb-4__item col-6 col-md-3">
+                    <h3 class="pb-4__item-title">6 Ядер</h3>
+                    <p class="pb-4__item-text">Процессор Intel Core™<br> 8-го поколения</p>
+                  </div>
+                  <div class="pb-4__item col-6 col-md-3">
+                    <h3 class="pb-4__item-title">32 Gb</h3>
+                    <p class="pb-4__item-text">Высокоскоростная<br> память DDR4</p>
+                  </div>
+                  <div class="pb-4__item col-6 col-md-3">
+                    <h3 class="pb-4__item-title">RTX</h3>
+                    <p class="pb-4__item-text">поддержка<br> видеокарт 20-й серии</p>
+                  </div>
+                  <div class="pb-4__item col-6 col-md-3">
+                    <h3 class="pb-4__item-title">34"</h3>
+                    <p class="pb-4__item-text">Изогнутый дисплей с<br> разрешением 3440*1440</p>
+                  </div>
+                </div>
+                <div class="col-md-12 d-flex flex-column justify-content-sm-center align-items-sm-center">
+                  <div class="amby">
+                    <div class="amby__top" style="background-image: url(images/content/stinger.png); padding-bottom: 65%;"></div>
+                    <div class="amby__bottom" style="background-image: url(images/content/stinger_.png);"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-1"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="footer__top container-fluid">
+        <div class="footer-menu row">
+          <div class="footer-menu__section col-sm-6 col-md-3">
+            <ul>
+              <li class="footer-menu__title">МОЙ АККАУНТ</li>
+              <li><a class="footer-menu__link" href="#">Вход</a> / <a class="footer-menu__link" href="/auth/?register=yes">Регистрация</a></li>
+              <li><a class="footer-menu__link" href="#">Личный кабинет</a></li>
+              <li><a class="footer-menu__link" href="#">Моя корзина</a></li>
+              <li><a class="footer-menu__link" href="#">Забыли пароль</a></li>
+            </ul>
+          </div>
+          <div class="footer-menu__section col-sm-6 col-md-3">
+            <ul>
+              <li class="footer-menu__title">ПРОДУКЦИЯ</li>
+              <li><a class="footer-menu__link" href="#">Progaming - серия</a></li>
+              <li><a class="footer-menu__link" href="#">Performance - cерия</a></li>
+              <li><a class="footer-menu__link" href="#">Performance X - cерия</a></li>
+              <li><a class="footer-menu__link" href="#">Игровые моноблоки</a></li>
+              <li><a class="footer-menu__link" href="#">Рабочие станции</a></li>
+            </ul>
+          </div>
+          <div class="footer-menu__section col-sm-6 col-md-3">
+            <ul>
+              <li class="footer-menu__title">ПОДДЕРЖКА</li>
+            </ul>
+            <div class="row">
+              <div class="col-md-6">
+                <ul>
+                  <li><a class="footer-menu__link" href="#">Контакты</a></li>
+                  <li><a class="footer-menu__link" href="#">Оплата</a></li>
+                  <li><a class="footer-menu__link" href="#">Доставка</a></li>
+                  <li><a class="footer-menu__link" href="#">Гарантия</a></li>
+                </ul>
+              </div>
+              <div class="col-md-6">
+                <ul>
+                  <li><a class="footer-menu__link" href="#">Реквизиты</a></li>
+                  <li><a class="footer-menu__link" href="#">Договор оферты</a></li>
+                  <li><a class="footer-menu__link" href="#">Кредит</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-menu__section col-sm-6 col-md-3">
+            <ul>
+              <li class="footer-menu__title">НОВОСТИ И АКЦИИ</li>
+              <li><a class="footer-menu__link" href="#">Новости</a></li>
+              <li><a class="footer-menu__link" href="#">Проекты</a></li>
+              <li><a class="footer-menu__link" href="#">Акции</a></li>
+              <li><a class="footer-menu__link" href="#">Сотрудничество</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-5">
+            <span class="footer__logo"><img src="images/logo.png" alt="DIGITAL RAZOR"></span>
+          </div>
+          <div class="footer__contacts col-sm-7">
+            <p class="footer__phone"><a href="tel:88005009926">8 800 500-99-26</a></p>
+            <p class="footer__address">Санкт-петербург, ул. Парковая 9<br> <a href="mailto:order@digital-razor.ru">order@digital-razor.ru</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div class="container-fluid">
+          <div class="footer__links row">
+            <div class="footer__payments col-sm-6">
+              <img width="40" height="25" src="images/icons/visa.png" alt="VISA">
+              <img width="40" height="25" src="images/icons/paypal.png" alt="PAY PAL">
+              <img width="40" height="25" src="images/icons/mastercard.png" alt="MASTER CARD">
+            </div>
+            <div class="footer__social col-sm-6">
+              <a class="social-link" href="#" target="_blank" title="Google Plus"><img src="images/icons/gplus.png" alt="Google Plus"></a>
+              <a class="social-link" href="#" target="_blank" title="Twitter"><img src="images/icons/twitter.png" alt="Twitter"></a>
+              <a class="social-link" href="#" target="_blank" title="Mail"><img src="images/icons/mail.png" alt="Mail"></a>
+              <a class="social-link" href="#" target="_blank" title="Facebook"><img src="images/icons/facebook.png" alt="Facebook"></a>
+              <a class="social-link" href="#" target="_blank" title="RSS"><img src="images/icons/rss.png" alt="RSS"></a>
+            </div>
+          </div>
+          <p class="footer__copyright">2018 © DigitalRazor. Все права защищены.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/slick.min.js"></script>
+    <script type="text/javascript" src="js/spy-menu.js"></script>
+    <script type="text/javascript" src="js/jquery.fancybox.min.js"></script>
+    <script type="text/javascript" src="js/main.js?v6"></script>
+  </body>
+</html>
