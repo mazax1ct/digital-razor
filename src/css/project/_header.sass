@@ -59,9 +59,22 @@
       &:hover
         text-decoration: none
 
+  &__geo
+    &::after
+      position: relative
+      top: -1px
+      display: inline-block
+      width: 1px
+      height: 15px
+      margin-right: 15px
+      content: ""
+      vertical-align: middle
+      background-color: #fff
+
   &__bottom
     min-height: 55px
     position: relative
+    z-index: 1
 
     @media(min-width: 768px)
       min-height: 70px
@@ -172,3 +185,55 @@
     right: 7px
     top: 7px
     text-align: center
+
+.geo
+  align-items: center
+  display: flex
+  position: relative
+
+  &__opener
+    align-items: center
+    background: none
+    border: none
+    color: #fff
+    cursor: pointer
+    display: flex
+    justify-content: center
+    height: 50px
+    padding: 0 15px
+
+  &__list
+    background-color: #272727
+    border-bottom: 2px solid #D02228
+    display: none
+    left: -30px
+    position: absolute
+    padding-bottom: 10px
+    padding-top: 10px
+    top: 100%
+    width: 240px
+    z-index: 1
+
+    &.is-open
+      display: block
+
+  &__list-title
+    font-family: "Russo One", Arial, sans-serif
+    font-size: 18px
+    margin-bottom: 0
+    text-align: center
+
+  &__list-item
+    background: none
+    border: none
+    border-left: 2px solid transparent
+    transition: border-color 0.3s
+    color: #fff
+    cursor: pointer
+    display: block
+    padding: 10px
+    text-align: center
+    width: 100%
+
+    &:hover
+      border-left-color: #d02228

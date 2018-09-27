@@ -93,4 +93,17 @@ $(document).ready(function() {
         scrollTop: topOffset.top - headerHeaight
     }, 500);
   });
+
+  //выбор города
+  $('.js-geo').click(function() {
+    $('.geo__list').toggleClass('is-open');
+    return false;
+  });
+
+  //удалить
+  $('.geo__list-item').click(function() {
+    var text = $(this).text();
+    $('.geo__opener').text(text);
+    return false;
+  });
 });
