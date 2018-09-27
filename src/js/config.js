@@ -33,19 +33,53 @@ $(function() {
 $(document).ready(function() {
   //открытие/закрытие главного меню
   $(".js-menu-opener").click(function() {
-    if($(this).hasClass("is-active")){
+    if($(this).hasClass("is-active")) {
       $(this).removeClass("is-active");
       $("body").removeClass("overflow");
       $(".config").removeClass("blur");
       $(".main-menu").removeClass("is-open");
       $(".footer").removeClass("blur");
-    }else{
+    } else {
       $(this).addClass("is-active");
       $("body").addClass("overflow");
       $(".config").addClass("blur");
       $(".main-menu").addClass("is-open");
       $(".footer").addClass("blur");
     }
+    $(".config__content").removeClass("blur");
+    $(".config__intro").removeClass("blur");
+    $(".js-config-menu-opener").removeClass("is-active");
+    $(".config-menu").removeClass("is-open");
+    $('.js-personal-opener').removeClass('is-active');
+    $(".personal-menu").removeClass("is-open");
+    $('.js-config-save').removeClass('open');
+    $('.save-block').removeClass('is-open');
+    $('.js-config-consult').removeClass('open');
+    $('.consult-block').removeClass('is-open');
+    return false;
+  });
+
+  //открытие/закрытие меню личного кабинета
+  $(".js-personal-opener").click(function() {
+    if($(this).hasClass("is-active")) {
+      $(this).removeClass("is-active");
+      $("body").removeClass("overflow");
+      $(".config").removeClass("blur");
+      $(".personal-menu").removeClass("is-open");
+      $(".footer").removeClass("blur");
+    } else {
+      $(this).addClass("is-active");
+      $("body").addClass("overflow");
+      $(".config").addClass("blur");
+      $(".personal-menu").addClass("is-open");
+      $(".footer").addClass("blur");
+    }
+    $(".config__content").removeClass("blur");
+    $(".config__intro").removeClass("blur");
+    $(".js-menu-opener").removeClass('is-active');
+    $(".main-menu").removeClass("is-open");
+    $(".js-config-menu-opener").removeClass("is-active");
+    $(".config-menu").removeClass("is-open");
     $('.js-config-save').removeClass('open');
     $('.save-block').removeClass('is-open');
     $('.js-config-consult').removeClass('open');
@@ -55,17 +89,28 @@ $(document).ready(function() {
 
   //открытие/закрытие меню конфигуратора
   $(".js-config-menu-opener").click(function() {
-    if($(this).hasClass('is-active')){
+    if($(this).hasClass('is-active')) {
+      $(this).removeClass("is-active");
+      $(".config-menu").removeClass("is-open");
       $('body').removeClass('overflow');
-    }else{
+      $(".config__content").removeClass("blur");
+      $(".config__intro").removeClass("blur");
+      $(".footer").removeClass("blur");
+      $(".config__sidebar").removeClass("is-open");
+    } else {
+      $(this).addClass("is-active");
+      $(".config-menu").addClass("is-open");
       $('body').addClass('overflow');
+      $(".config__content").addClass("blur");
+      $(".config__intro").addClass("blur");
+      $(".footer").addClass("blur");
+      $(".config__sidebar").addClass("is-open");
     }
-    $(this).toggleClass("is-active");
-    $(".config__content").toggleClass("blur");
-    $(".config__intro").toggleClass("blur");
-    $(".footer").toggleClass("blur");
-    $(".config-menu").toggleClass("is-open");
-    $(".config__sidebar").toggleClass("is-open");
+    $(".config").removeClass("blur");
+    $(".js-menu-opener").removeClass('is-active');
+    $(".main-menu").removeClass("is-open");
+    $('.js-personal-opener').removeClass('is-active');
+    $(".personal-menu").removeClass("is-open");
     $('.js-config-save').removeClass('open');
     $('.save-block').removeClass('is-open');
     $('.js-config-consult').removeClass('open');
