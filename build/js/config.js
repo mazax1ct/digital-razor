@@ -191,6 +191,8 @@ $(document).ready(function() {
     $('.save-block').removeClass('is-open'); //закрываем попап
     $('.js-config-save').removeClass('open'); //убираем отметку открытия попапа
     $(".config").removeClass("blur");
+    $(".header").removeClass("blur");
+    $(".footer").removeClass("blur");
   });
 
   // попап консультации
@@ -206,7 +208,9 @@ $(document).ready(function() {
       $(this).addClass('open');
       $("body").addClass("overflow"); // убираем прокрутку
       $('.save-block').removeClass('is-open'); // скрываем попап сохранения
+      $('.save-block2').removeClass('is-open'); // скрываем попап сохранения
       $('.js-config-save').removeClass('open'); //снимаем отметку открытого попапа сохранения
+      $('.js-config-save2').removeClass('open'); //снимаем отметку открытого попапа сохранения
       $('.consult-block').addClass('is-open'); //открываем попап
       if($('body').width() > 1199){ // жесткий кастыль
         $(".config").addClass("blur");
@@ -220,6 +224,8 @@ $(document).ready(function() {
     $('.consult-block').removeClass('is-open'); //закрываем попап
     $('.js-config-consult').removeClass('open'); //убираем отметку открытия попапа
     $(".config").removeClass("blur");
+    $(".header").removeClass("blur");
+    $(".footer").removeClass("blur");
   });
 
   // тогл описания в корзине
@@ -233,4 +239,46 @@ $(document).ready(function() {
     $(".config-list__detail[data-target=" + $(this).attr("data-link") + "]").slideToggle(300);
     return false;
   });
+
+  // попап сохранение конфига новый
+  $('.js-config-save2').click(function() {
+    if($(this).hasClass('open')) {
+      $("body").removeClass("overflow"); //возвращаем прокрутку
+      $('.save-block2').removeClass('is-open'); //закрываем попап
+      $(this).removeClass('open');
+      $(".config").removeClass("blur");
+      $(".header").removeClass("blur");
+      $(".footer").removeClass("blur");
+    } else {
+      $(this).addClass('open');
+      $("body").addClass("overflow"); // убираем прокрутку
+      $(".config").addClass("blur");
+      $(".header").addClass("blur");
+      $(".footer").addClass("blur");
+      $('.consult-block').removeClass('is-open'); // скрываем попап консультаций
+      $('.js-config-consult').removeClass('open'); //снимаем отметку открытого попапа консультаций
+      $('.save-block2').addClass('is-open'); //открываем попап
+    }
+    return false;
+  });
+
+  $('.js-save-close2').click(function() {
+    $("body").removeClass("overflow"); //возвращаем прокрутку
+    $('.save-block2').removeClass('is-open'); //закрываем попап
+    $('.js-config-save2').removeClass('open'); //убираем отметку открытия попапа
+    $(".config").removeClass("blur");
+    $(".header").removeClass("blur");
+    $(".footer").removeClass("blur");
+  });
+
+  //слайдер итоговой конфигурации
+  if ($(".js-config-result-slider").length) {
+    $('.js-config-result-slider').slick({
+      adaptiveHeight: true,
+      prevArrow: '<button class="slick-prev" aria-label="Назад" type="button"><svg class="slick-arrow" aria-hidden="true"><use xlink:href="#slider_arrow_left"/></svg></button>',
+      nextArrow: '<button class="slick-next" aria-label="Вперед" type="button"><svg class="slick-arrow" aria-hidden="true"><use xlink:href="#slider_arrow_right"/></svg></button>',
+      dots: true,
+      fade: true
+    });
+  }
 });

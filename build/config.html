@@ -53,6 +53,12 @@
           <rect x="0.5" y="35.4" width="9.1" height="9.1"/>
       	</g>
       </symbol>
+      <symbol id="slider_arrow_left" viewBox="0 0 23 60">
+        <path d="M22.8,7.5l-4.3-7L0.2,30l18.3,29.5l4.3-7L8.8,30L22.8,7.5z"/>
+      </symbol>
+      <symbol id="slider_arrow_right" viewBox="0 0 23 60">
+        <path d="M0.2,52.5l4.3,7L22.8,30L4.5,0.5l-4.3,7l14,22.5L0.2,52.5z"/>
+      </symbol>
     </svg>
     <header class="header">
       <div class="header__inner">
@@ -483,57 +489,27 @@
       </div>
     </form>
 
-    <div class="save-block">
-      <div class="save-block__inner">
-        <button class="js-save-close save-block__close" type="button" title="Закрыть"><span></span></button>
-        <div class="save-block__description">
-          <p class="save-block__description-title">ID конфигурации: #123456</p>
-          <p class="save-block__description-price">Цена: 64 000 руб. (на 26.06.2018)</p>
-          <p class="save-block__description-subtitle">Игровой компьютер DigitalRazor Progaming:</p>
-          <p>Процессор: 4-ядерный AMD Ryzen 3 1200 3.1GHz</p>
-          <p>Кулер: Deepcool GAMMAXX 300</p>
-          <p>Системная плата: GIGABYTE GA-A320M-S2H</p>
-          <p>Оперативная память: 8GB (2x4Gb) DDR4 2400Mhz Corsair Vengeance</p>
-          <p>Видеокарта: ASUS PHOENIX GTX1050 2G</p>
-          <p>HDD накопитель: HDD 1TB WD Blue</p>
-          <p>Корпус: Cooler Master MasterBox MB600L</p>
-          <p>Блок питания: 500W CoolerMaster MasterWatt Lite 500</p>
-          <p>Процессор: 4-ядерный AMD Ryzen 3 1200 3.1GHz</p>
-          <p>Кулер: Deepcool GAMMAXX 300</p>
-          <p>Системная плата: GIGABYTE GA-A320M-S2H</p>
-          <p>Оперативная память: 8GB (2x4Gb) DDR4 2400Mhz Corsair Vengeance</p>
-          <p>Видеокарта: ASUS PHOENIX GTX1050 2G</p>
-          <p>HDD накопитель: HDD 1TB WD Blue</p>
-          <p>Корпус: Cooler Master MasterBox MB600L</p>
-          <p>Блок питания: 500W CoolerMaster MasterWatt Lite 500</p>
-          <p class="save-block__description-subtitle">Дизайн:</p>
-          <p>Кастомная окраска - Красный</p>
-          <p>Нанесение Арта на боковую крышку</p>
-          <p>Кастомная оплетка проводов</p>
-          <p class="save-block__description-subtitle">Гарантия и Сервис:</p>
-          <p>Тестирование: Стандартный стресс-тест основных компонентов 8 часов</p>
-          <p>Гарантия: Базовая гарантия 12 месяцев</p>
-          <p>Профессиональная сборка и настройка</p>
-          <p>Бесплатная доставка: Бесплатная доставка</p>
-          <p class="save-block__description-subtitle">Аксессуары:</p>
-          <p>Клавиатура и мышь Cooler master</p>
-          <p>ЖК монитор 32" ASUS Swift</p>
-        </div>
-        <div class="save-block__form-block">
-          <div class="save-block__form">
-            <p class="save-block__form-logo"><img width="400" src="images/vertical_logo.png" alt="DIGITAL RAZOR"></p>
-            <p>Сохраните Вашу конфигурацию, что бы не потерять информацию или вернуться к ней позднее.</p>
-            <p>Ссылка на конфигурацию придет к Вам на электронную почту, а так же все Ваши сохраненные конфигурации будут доступны в личном кабинете.</p>
-            <div class="save-form">
-              <label class="save-form__label" for="email">
-                <input id="email" class="input error" name="email" type="text" value="" placeholder="E-mail">
+    <div class="save-block2">
+      <div class="save-block2__inner">
+        <div class="save-block2__form-block">
+          <div class="save-block2__form">
+            <p class="save-block2__form-title">КОНФИГУРАЦИЯ #1234567</p>
+            <p>
+              Введите адрес электронной почты.<br>
+              На него будет отправлена Ваша сохраненная конфигурация.<br>
+              Ссылка на конфигурацию будет доступна в личном кабинете, если Вы зарегистрированы.
+            </p>
+            <p>При желании, Вы можете написать вопрос или пожелание к конфигурации.</p>
+            <div class="save-form2">
+              <label class="save-form2__label" for="email">
+                <input id="email" class="input error" name="email" type="text" value="" placeholder="Ваш E-mail">
               </label>
-              <label class="save-form__label" for="message">
-                <textarea id="message" class="save-form__textarea textarea" name="message" placeholder="Ваш вопрос или комментарий"></textarea>
+              <label class="save-form2__label" for="message">
+                <textarea id="message" class="save-form2__textarea textarea" name="message" placeholder="Ваш вопрос или комментарий"></textarea>
               </label>
-              <div class="save-form__buttons">
-                <button class="save-form__button button" type="button">Сохранить в PDF</button>
-                <button class="save-form__button button button--red" type="button">Отправить на почту</button>
+              <div class="save-form2__buttons">
+                <button class="js-save-close2 save-form2__button button" type="button">ЗАКРЫТЬ</button>
+                <button class="save-form2__button button" type="button">ОТПРАВИТЬ</button>
               </div>
             </div>
           </div>
@@ -557,7 +533,7 @@
               <input id="email" class="input" name="email" type="text" value="" placeholder="E-mail">
             </label>
             <label class="consult-form__label" for="message">
-              <textarea id="message" class="save-form__textarea textarea" name="message" placeholder="Ваш вопрос"></textarea>
+              <textarea id="message" class="save-form2__textarea textarea" name="message" placeholder="Ваш вопрос"></textarea>
             </label>
             <p>Укажите удобный для вас способ ответа:</p>
             <div class="consult-form__radios">
@@ -620,7 +596,7 @@
             <a class="footer__button config-admin" href="#" title="PREORDER">PREORDER</a>-->
           </div>
           <div class="footer__buttons-inner">
-            <button class="js-config-save footer__button config-save" type="button" title="Сохранить"><svg class="config-save__icon" aria-hidden="true"><use xlink:href="#save"/></svg><span class="config-save__text">СОХРАНИТЬ</span></button>
+            <a class="footer__button config-save" href="config-result.html" title="Сохранить"><svg class="config-save__icon" aria-hidden="true"><use xlink:href="#save"/></svg><span class="config-save__text">СОХРАНИТЬ</span></a>
             <div class="footer__buy-block">
               <div class="footer__price-block">
                 <p class="footer__price">100 000 руб.</p>
@@ -636,6 +612,7 @@
 
     <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script type="text/javascript" src="js/slick.min.js"></script>
     <script type="text/javascript" src="js/config.js?v4"></script>
   </body>
 </html>
