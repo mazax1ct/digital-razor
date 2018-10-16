@@ -45,6 +45,12 @@
     img
       max-width: 55%
 
+    >
+      .component__image
+        position: absolute
+        top: 0
+        width: 100%
+
   &__features
     padding-left: 15px
     padding-right: 15px
@@ -111,3 +117,67 @@
 
       &:last-child
         margin-bottom: 0
+
+.new-paint-layout
+  &__image
+    @media(max-width: 1199px)
+      height: calc(50vh - 55px)
+      left: 0
+      position: fixed
+      top: 55px
+      width: 100%
+      z-index: 2
+
+    .config__content-block-inner
+      @media(max-width: 1199px)
+        position: absolute
+        height: calc(100% - 55px)
+        width: 100%
+
+      >
+        .component
+          @media(max-width: 1199px)
+            height: 100%
+            left: 0
+            position: absolute
+            top: 0
+            width: 100%
+
+          >
+            div
+              @media(max-width: 1199px)
+                height: 100%
+                position: absolute
+                width: 100%
+
+              .component__image
+                @media(max-width: 1199px)
+                  height: 100%
+                  position: absolute
+                  width: 100%
+
+    .component__image
+      @media(max-width: 1199px)
+        margin-bottom: 0
+        padding-top: 0
+
+      img
+        @media(max-width: 1199px)
+          height: 94%
+          max-width: initial
+
+    .tabs-menu
+        @media(max-width: 1199px)
+          bottom: 0
+          margin-bottom: 0
+          position: absolute
+          width: 100%
+
+  &__options
+    @media(max-width: 1199px)
+      padding-top: calc(50vh - 55px)
+
+div:not(.is-active)[data-type="BG_WRAP_AREA"],
+img:not(.is-active)[data-type="BG_LAYER"],
+div:not(.is-active)[data-type="CONFIG_ITEM"]
+  display: none
