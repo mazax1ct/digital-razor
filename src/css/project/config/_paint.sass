@@ -26,16 +26,17 @@
   text-align: center
 
   @media(min-width: 1200px) and (min-height: 650px)
-    bottom: 120px
+    bottom: 115px
     height: 0
     left: 0
     padding: 0
     position: fixed
     top: auto
+    text-align: left
     width: 100%
     z-index: 1
 
-  @media(min-width: 1600px) and (min-height: 850px)
+  @media(min-width: 1600px)
     bottom: 140px
 
   &__container
@@ -51,11 +52,26 @@
 
   &__inner
     @media(min-width: 1200px) and (min-height: 650px)
-      padding: 5px 25px
+      overflow: hidden
+      padding: 5px 8px
+      position: relative
       width: 50%
 
+    &::after
+      @media(min-width: 1200px) and (min-height: 650px)
+        position: absolute
+        z-index: 1
+        top: 0
+        left: -30px
+        width: calc(100% - 5px)
+        height: 100%
+        padding-left: 60px
+        content: ''
+        transform: skew(45deg)
+        background-color: #404040
+
 .image-design-button
-  background: #242424
+  background: none
   border: 1px solid #fff
   color: #fff
   cursor: pointer
@@ -66,9 +82,11 @@
   margin-left: 2px
   margin-right: 2px
   padding: 5px
+  position: relative
   text-decoration: none
   text-align: center
   vertical-align: middle
+  z-index: 2
 
   @media(min-width: 360px)
     padding-left: 10px
@@ -81,14 +99,14 @@
   @media(min-width: 1200px)
     font-family: 'Russo One', 'Roboto', Arial, sans-serif
     font-size: 14px
-    min-height: 50px
-    padding: 15px
+    min-height: 40px
+    padding: 10px
     text-transform: uppercase
 
   @media(min-width: 1600px)
     font-size: 16px
-    padding-left: 20px
-    padding-right: 20px
+    min-height: 50px
+    padding: 15px 20px
 
   &:hover
     text-decoration: none
@@ -234,14 +252,14 @@
   @media(min-width: 1200px)
     font-family: 'Russo One', 'Roboto', Arial, sans-serif
     font-size: 14px
-    min-height: 50px
-    padding: 15px
+    min-height: 40px
+    padding: 10px 15px
     text-transform: uppercase
 
   @media(min-width: 1600px)
     font-size: 16px
-    padding-left: 20px
-    padding-right: 20px
+    min-height: 50px
+    padding: 15px 20px
 
   &:hover
     text-decoration: none
