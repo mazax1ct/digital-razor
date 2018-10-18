@@ -1,0 +1,214 @@
+.hero-banner
+  height: 400px
+  margin-top: -15px
+  margin-bottom: 20px
+  overflow: hidden
+  position: relative
+
+  @media(min-width: 768px)
+    height: 600px
+    margin-top: -30px
+
+  @media(min-width: 1900px)
+    height: 800px
+
+  &__slide
+    background-color: #f7f7f7
+    background-repeat: no-repeat
+    background-position: 50% 50%
+    background-size: cover
+    height: 400px
+
+    @media(min-width: 768px)
+      height: 600px
+
+    @media(min-width: 1900px)
+      height: 800px
+
+  &__slide-inner
+    align-items: center
+    display: flex
+    flex-direction: column
+    justify-content: center
+    height: 400px
+
+    @media(min-width: 768px)
+      height: 600px
+
+    @media(min-width: 1900px)
+      height: 800px
+
+  &__slide-row
+    height: 100%
+    padding-bottom: 60px
+
+    @media(min-width: 768px)
+      padding-bottom: 80px
+
+    @media (min-width: 992px)
+      padding-bottom: 100px
+
+    @media (min-width: 1200px)
+      padding-bottom: 120px
+
+    @media (min-width: 1900px)
+      padding-bottom: 160px
+
+  &__text-block
+    padding-top: 20px
+    padding-bottom: 20px
+
+    @media(min-width: 1200px)
+      padding-left: 30px
+
+  &__title
+    font-family: "Russo One",Arial,sans-serif
+    line-height: 1
+    text-align: center
+
+    @media(min-width: 768px)
+      text-align: left
+
+  &__title-block
+    display: block
+
+    &--1
+      font-size: 30px
+
+      @media(min-width: 1200px)
+        font-size: 40px
+
+      @media(min-width: 1200px)
+        font-size: 54px
+
+    &--2
+      font-size: 40px
+
+      @media(min-width: 768px)
+        font-size: 50px
+
+      @media(min-width: 1200px)
+        font-size: 100px
+
+    &--3
+      font-size: 30px
+
+      @media(min-width: 768px)
+        font-size: 50px
+
+      @media(min-width: 1200px)
+        font-size: 84px
+
+    &--red
+      color: #F13724
+
+  &__make-by
+    color: #fff
+    font-size: 24px
+
+    @media(min-width: 768px)
+      margin-bottom: 50px !important
+
+  &__buttons
+    display: flex
+    justify-content: center
+
+    @media(min-width: 1900px)
+      margin-top: 15px
+
+    .button
+      &:nth-child(2)
+        margin-left: -1px
+
+  &__image
+    @media(max-width: 767px)
+      max-width: 80%
+
+.hero-nav
+  bottom: 5px
+  left: 0
+  max-width: 1560px
+  position: absolute
+  padding-left: 20px
+  padding-right: 20px
+  top: auto
+  width: 100%
+
+  @media (min-width: 1200px)
+    bottom: 20px
+
+  @media (min-width: 1300px)
+    left: 50%
+    transform: translateX(-50%)
+    width: 90%
+
+  @media (min-width: 1500px)
+    width: 81.25%
+
+  .slick-slide
+    text-align: center
+    width: 80px
+
+  &__item
+    border: 1px solid #707070
+    cursor: pointer
+    display: inline-block
+    max-width: 230px
+    overflow: hidden
+    position: relative
+    width: 80px
+
+    @media (min-width: 768px)
+      width: 100px
+
+    @media (min-width: 992px)
+      width: 144px
+
+    @media (min-width: 1200px)
+      width: 172px
+
+    @media (min-width: 1900px)
+      width: 236px
+
+    &::after
+      background-color: #bbb
+      bottom: 0
+      content: ''
+      display: block
+      height: 10px
+      left: auto
+      position: absolute
+      right: -10px
+      transform: skew(-54deg)
+      width: 50%
+      z-index: 2
+
+    &::before
+      background-color: #bbb
+      bottom: 0
+      content: ''
+      display: block
+      height: 4px
+      left: 0
+      position: absolute
+      width: 100%
+      z-index: 2
+
+  .slick-current
+    .hero-nav__item
+      cursor: default
+
+      &::after,
+      &::before
+        background-color: #F13724
+
+  .slick-arrow
+    fill: #888
+    height: 20px
+    width: 20px
+
+  .slick-prev
+    left: 0
+
+  .slick-next
+    right: 0

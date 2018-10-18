@@ -106,4 +106,45 @@ $(document).ready(function() {
     $('.geo__opener').text(text);
     return false;
   });
+
+  //главный баннер
+  if ($(".js-hero-banner").length) {
+    $('.js-hero-banner').slick({
+      adaptiveHeight: true,
+      arrows: false,
+      dots: false,
+      asNavFor: '.js-hero-nav'
+    });
+
+    $('.js-hero-nav').slick({
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      asNavFor: '.js-hero-banner',
+      dots: false,
+      prevArrow: '<button class="slick-prev" aria-label="Назад" type="button"><svg class="slick-arrow" aria-hidden="true"><use xlink:href="#slider_arrow_left"/></svg></button>',
+      nextArrow: '<button class="slick-next" aria-label="Вперед" type="button"><svg class="slick-arrow" aria-hidden="true"><use xlink:href="#slider_arrow_right"/></svg></button>',
+      focusOnSelect: true,
+      mobileFirst: true,
+      responsive: [
+        {
+          breakpoint: 479,
+          settings: {
+            slidesToShow: 4
+          }
+        },
+        {
+          breakpoint: 639,
+          settings: {
+            slidesToShow: 5
+          }
+        },
+        {
+          breakpoint: 767,
+          settings: {
+            slidesToShow: 6
+          }
+        }
+      ]
+    });
+  }
 });
