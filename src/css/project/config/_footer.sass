@@ -140,7 +140,8 @@
     border-color: #FF00EE
 
 .config-dialog,
-.config-save
+.config-save,
+.config-share
   border-right: 1px solid #4d4d4d
 
   @media(min-width: 1200px)
@@ -158,6 +159,10 @@
     @media(max-width: 1199px)
       display: none
 
+.config-share
+  @media(min-width: 1200px)
+    display: none
+
 .config-save
   @media(min-width: 1200px)
     order: 3
@@ -174,6 +179,7 @@ a.config-save
 .config-buy
   font-size: 13px
   min-height: 40px
+  min-width: 40px
   padding-left: 10px
   padding-right: 10px
   text-align: center
@@ -182,7 +188,7 @@ a.config-save
     align-items: center
     display: flex
 
-  @media(min-width: 400px)
+  //@media(min-width: 400px)
     font-size: 16px
     padding-left: 15px
     padding-right: 15px
@@ -197,7 +203,8 @@ a.config-save
   &__icon
     fill: #fff
     height: 16px
-    margin-right: 10px
+    margin-left: 1px
+    //margin-right: 10px
     width: 16px
 
     @media(min-width: 1200px)
