@@ -12,6 +12,8 @@ $(document).ready(function() {
     $(".footer").toggleClass("blur");
     $(".main-menu").toggleClass("is-open");
     $(".main-menu-block").toggleClass("is-open");
+
+    $(".bb-popup").removeClass("is-open");
     return false;
   });
 
@@ -147,4 +149,22 @@ $(document).ready(function() {
       ]
     });
   }
+
+  //открытие/закрытие попапа "битва брендов"
+  $(".js-bb-opener").click(function() {
+    $(".js-menu-opener").removeClass("is-active");
+    $(".page-content").removeClass("blur");
+    $(".footer").removeClass("blur");
+    $(".main-menu").removeClass("is-open");
+    $(".main-menu-block").removeClass("is-open");
+
+    $("body").toggleClass("overflow");
+    $(".bb-popup").toggleClass("is-open");
+    return false;
+  });
+
+  $(".js-open-bb").click(function() {
+    $(".bb-popup__inner").toggle();
+    $(".bb-popup__bb").toggleClass("is-open");
+  });
 });
