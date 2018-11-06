@@ -82,10 +82,12 @@
   &__bb
     background-color: #000
     display: none
-    width: 100%
     max-width: 1780px
     margin-right: auto
     margin-left: auto
+    position: relative
+    width: 100%
+    z-index: 2
 
     @media(min-width: 768px)
       background: none
@@ -97,6 +99,17 @@
 
     @media(min-width: 1500px)
       width: 81.25%
+
+    &::after
+      @media(min-width: 768px)
+        background-color: rgba(0,0,0,0.3)
+        content: ""
+        height: 100%
+        left: 10px
+        position: absolute
+        top: 0
+        width: calc(100% - 20px)
+        z-index: 1
 
     &.is-open
       display: block
