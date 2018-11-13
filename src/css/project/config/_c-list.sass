@@ -86,6 +86,29 @@
         font-size: 20px
         margin-bottom: 5px
 
+      .badge
+        display: inline-block
+        font-size: 80%
+        margin-right: 10px
+        padding: 2px 5px
+        position: relative
+        top: -2px
+        vertical-align: middle
+        white-space: nowrap
+
+        &--red
+          background-color: #e7212e
+
+        &--blue
+          background-color: #2980cf
+
+        &--timer
+          background: url("../images/icons/timer.png") no-repeat 0 50% / 17px 17px transparent
+          padding-left: 20px
+
+          @media(min-width: 1200px)
+            padding-left: 25px
+
     &__text
       color: #7A7A7A
       display: none
