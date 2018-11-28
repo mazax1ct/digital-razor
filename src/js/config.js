@@ -26,25 +26,27 @@ $(function() {
 
   if (isSafari !== true && isChrome !== true && isBlink !== true) {
     $(window).on("load",function(){
-      $(".config__content-block").mCustomScrollbar({
-        scrollInertia: 0
-      });
-      $(".tabs-menu__list").mCustomScrollbar({
-        scrollInertia: 0,
-        axis:"x",
-        scrollbarPosition: 'outside',
-        alwaysShowScrollbar: 1
-      });
-      $(".config__sidebar").mCustomScrollbar({
-        scrollInertia: 0
-      });
-      $(".save-block__description").mCustomScrollbar({
-        scrollInertia: 0,
-        scrollbarPosition: 'outside'
-      });
-      $(".consult-block__inner").mCustomScrollbar({
-        scrollInertia: 0
-      });
+      if($("body").width()>991) {
+        $(".config__content-block").mCustomScrollbar({
+          scrollInertia: 0
+        });
+        $(".tabs-menu__list").mCustomScrollbar({
+          scrollInertia: 0,
+          axis:"x",
+          scrollbarPosition: 'outside',
+          alwaysShowScrollbar: 1
+        });
+        $(".config__sidebar").mCustomScrollbar({
+          scrollInertia: 0
+        });
+        $(".save-block__description").mCustomScrollbar({
+          scrollInertia: 0,
+          scrollbarPosition: 'outside'
+        });
+        $(".consult-block__inner").mCustomScrollbar({
+          scrollInertia: 0
+        });
+      }
     });
   }
 });
