@@ -300,4 +300,12 @@ $(document).ready(function() {
       fade: true
     });
   }
+
+  //переключение конфига на результат
+  $('.js-result-config').click(function() {
+    $("#config_block").toggleClass("is-active");
+    $("#result_block").toggleClass("is-active");
+    $(".js-config-result-slider").slick('reinit'); 
+    return false;
+  });
 });

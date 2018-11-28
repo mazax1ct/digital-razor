@@ -63,13 +63,19 @@
       width: 81.38%
 
   &__content-inner
-    //@media (min-width: 1200px) and (min-height: 650px)
-    @media (min-width: 992px)
-      display: flex
-      height: calc(100% - 55px)
-      padding-top: 5px
+    display: none
+
+    &.is-active
+      display: block
+
+      @media (min-width: 992px)
+        display: flex
+        height: calc(100% - 55px)
+        padding-top: 5px
 
     &--personal
+      display: block
+
       //@media (min-width: 1200px) and (min-height: 650px)
       @media (min-width: 992px)
         display: flex
