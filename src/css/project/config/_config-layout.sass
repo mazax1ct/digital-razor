@@ -40,6 +40,7 @@
   &__intro
     display: none
 
+    //@media (min-width: 1200px) and (min-height: 650px)
     @media (min-width: 992px)
       display: none
 
@@ -69,15 +70,11 @@
       width: 81.38%
 
   &__content-inner
-    display: none
-
-    &.is-active
-      display: block
-
-      @media (min-width: 992px)
-        display: flex
-        height: calc(100% - 55px)
-        padding-top: 5px
+    //@media (min-width: 1200px) and (min-height: 650px)
+    @media (min-width: 992px)
+      display: flex
+      height: calc(100% - 55px)
+      padding-top: 5px
 
     &--personal
       display: block
@@ -110,7 +107,7 @@
       display: none
 
       //@media (min-width: 1200px) and (min-height: 650px)
-      @media (min-width: 1200px)
+      @media (min-width: 992px)
         display: block
 
     &--full,
