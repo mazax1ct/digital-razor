@@ -38,18 +38,24 @@
         padding-top: 5px
 
   &__intro
-    align-items: center
-    display: flex
-    flex-direction: column
-    justify-content: center
-    height: calc(100vh - 110px)
-    min-height: 320px
-    margin-bottom: 15px
-    position: relative
+    display: none
 
-    //@media (min-width: 1200px) and (min-height: 650px)
     @media (min-width: 992px)
       display: none
+
+    &.is-active
+      align-items: center
+      display: flex
+      flex-direction: column
+      justify-content: center
+      height: calc(100vh - 110px)
+      min-height: 320px
+      margin-bottom: 15px
+      position: relative
+
+      //@media (min-width: 1200px) and (min-height: 650px)
+      @media (min-width: 992px)
+        display: none
 
   &__content
     //@media (min-width: 1200px) and (min-height: 650px)

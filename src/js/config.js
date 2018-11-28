@@ -305,7 +305,10 @@ $(document).ready(function() {
   $('.js-result-config').click(function() {
     $("#config_block").toggleClass("is-active");
     $("#result_block").toggleClass("is-active");
-    $(".js-config-result-slider").slick('reinit'); 
+    $(".js-config-result-slider").slick('reinit');
+    $(".config__intro").toggleClass("is-active");
+    $(".js-current-menu-sub-step").text("ИТОГОВАЯ КОНФИГУРАЦИЯ");
+    $(".config__views-block").toggle();
     return false;
   });
 });
