@@ -43,10 +43,12 @@
             <a class="js-config-view config__view is-active" href="#" data-class="list" title="Списком"><svg class="config__view-icon config__view-icon--list" aria-hidden="true"><use xlink:href="#list"/></svg></a>
           </div>
         </div>
-        <div class="config__content-inner">
+
+        <!--конфиг-->
+        <div id="config_block" class="config__content-inner is-active">
           <div class="config__content-block config__content-block--list">
             <div class="config__content-block-inner">
-              <div class="config-section is-active">
+              <div class="config-section is-active" data-type="CONFIG_ITEM" data-id="97">
                 <div class="tabs-menu tabs-menu--tall tabs-menu--right_big_indent">
                   <p class="tabs-menu__title">производитель</p>
                   <ul class="tabs-menu__list">
@@ -170,7 +172,7 @@
                   </div>
                 </div>
               </div>
-              <div class="config-section">
+              <div class="config-section" data-type="CONFIG_ITEM" data-id="96">
                 <div class="config__title-block config__title-block--duplicate">
                   <h2 class="config__title">ОПЕРАТИВНАЯ ПАМЯТЬ:</h2>
                   <div class="config__views-block">
@@ -358,6 +360,10 @@
             </div>
           </div>
         </div>
+        <!--конфиг-->
+
+        //= template/config/result.html
+
       </div>
       <div class="config__sidebar">
         <ul class="config-menu">
@@ -390,7 +396,7 @@
           <li class="config-menu__item"><a class="config-menu__root-link" href="#"><span class="config-menu__cnt">04.</span>Гарантия и сервис</a></li>
           <li class="config-menu__item"><a class="config-menu__root-link" href="#"><span class="config-menu__cnt">05.</span>Создать свой дизайн</a></li>
           <li class="config-menu__item"><a class="config-menu__root-link" href="#"><span class="config-menu__cnt">06.</span>Подобрать аксессуары</a></li>
-          <li class="config-menu__item"><a class="config-menu__root-link" href="#"><span class="config-menu__cnt">07.</span>Итоговая конфигурация</a></li>
+          <li class="config-menu__item"><a class="js-result-config config-menu__root-link" href="#"><span class="config-menu__cnt">07.</span>Итоговая конфигурация</a></li>
         </ul>
       </div>
     </form>
