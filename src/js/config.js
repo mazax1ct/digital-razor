@@ -25,13 +25,8 @@ $(function() {
   var isBlink = (isChrome || isOpera) && !!window.CSS;
 
   if (isSafari !== true && isChrome !== true && isBlink !== true) {
-<<<<<<< HEAD
     $(window).on("load", function() {
       if($("body").width() > 991) {
-=======
-    $(window).on("load",function(){
-      if($("body").width()>991) {
->>>>>>> b7fd635f150b438b4781ad3c2c040bf71b2af7df
         $(".config__content-block").mCustomScrollbar({
           scrollInertia: 0
         });
@@ -307,15 +302,4 @@ $(document).ready(function() {
       fade: true
     });
   }
-
-  //переключение конфига на результат
-  $('.js-result-config').click(function() {
-    $("#config_block").toggleClass("is-active");
-    $("#result_block").toggleClass("is-active");
-    $(".js-config-result-slider").slick('reinit');
-    $(".config__intro").toggleClass("is-active");
-    $(".js-current-menu-sub-step").text("ИТОГОВАЯ КОНФИГУРАЦИЯ");
-    $(".config__views-block").toggle();
-    return false;
-  });
 });
