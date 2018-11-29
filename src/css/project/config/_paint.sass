@@ -42,7 +42,7 @@
     z-index: 1
 
   @media(min-width: 1600px)
-    bottom: 140px
+    bottom: 125px
 
   &__container
     max-width: 1800px
@@ -312,12 +312,14 @@
       width: 100%
 
 .dr-config-back,
-.dr-config-next
+.dr-config-next,
+.js-current-menu-sub-step
   display: block
   font-size: 13px
   font-weight: 700
   height: 55px
   overflow: hidden
+  padding-top: 17px
   text-align: center
   text-overflow: ellipsis
   text-decoration: none
@@ -325,14 +327,11 @@
 
   @media(min-width: 375px)
     font-size: 16px
+    padding-top: 14px
 
 .dr-config-back,
 .dr-config-next
   color: #929292
-  padding-top: 17px
-
-  @media(min-width: 375px)
-    padding-top: 14px
 
   &:hover
     text-decoration: none

@@ -1,7 +1,7 @@
 .config
   margin-left: auto
   margin-right: auto
-  max-width: 1992px
+  max-width: 1800px
   padding-top: 60px
   padding-bottom: 60px
 
@@ -25,8 +25,8 @@
 
     //@media (min-width: 1200px) and (min-height: 650px)
     @media (min-width: 992px)
-      height: calc(100% - 60px)
-      padding-top: 60px
+      height: calc(100% - 65px)
+      padding-top: 65px
 
     @media(min-width: 1600px) and (min-height: 850px)
       height: calc(100% - 80px)
@@ -38,25 +38,18 @@
         padding-top: 5px
 
   &__intro
-    display: none
+    align-items: center
+    display: flex
+    flex-direction: column
+    justify-content: center
+    height: calc(100vh - 110px)
+    min-height: 320px
+    margin-bottom: 15px
+    position: relative
 
     //@media (min-width: 1200px) and (min-height: 650px)
     @media (min-width: 992px)
       display: none
-
-    &.is-active
-      align-items: center
-      display: flex
-      flex-direction: column
-      justify-content: center
-      height: calc(100vh - 110px)
-      min-height: 320px
-      margin-bottom: 15px
-      position: relative
-
-      //@media (min-width: 1200px) and (min-height: 650px)
-      @media (min-width: 992px)
-        display: none
 
   &__content
     //@media (min-width: 1200px) and (min-height: 650px)
@@ -64,9 +57,6 @@
       display: flex
       flex-direction: column
       padding-right: 5px
-      width: 78%
-
-    @media (min-width: 1200px)
       width: 81.38%
 
   &__content-inner
@@ -77,10 +67,8 @@
       padding-top: 5px
 
     &--personal
-      display: block
-
       //@media (min-width: 1200px) and (min-height: 650px)
-      @media (min-width: 992px)
+      //@media (min-width: 992px)
         display: flex
         height: 100%
         padding-top: 0
@@ -94,14 +82,14 @@
       margin-right: 5px
       width: 50%
 
-    &--list
-      @media(min-width: 992px)
+    //&--list
+      @media(min-width: 1200px)
         margin-right: 0
         width: 100%
 
-      @media (min-width: 1200px)
-        margin-right: 5px
-        width: 50%
+      //@media (min-width: 1200px) and (min-height: 650px)
+        margin-right: 5px !important
+        width: 50% !important
 
     &--description
       display: none
@@ -182,12 +170,15 @@
 
   &__title
     font-size: 16px
+    font-weight: 400
     margin-bottom: 0
+    padding-top: 0
     position: relative
     z-index: 2
 
     @media(min-width: 400px)
       font-size: 18px
+      padding-top: 0
 
     @media(min-width: 768px)
       font-size: 20px
@@ -239,9 +230,6 @@
     @media (min-width: 992px)
       background-color: #1a1a1a
       overflow-y: auto
-      width: 22%
-
-    @media (min-width: 1200px)
       width: 18.62%
 
     &.is-open
@@ -273,7 +261,7 @@
       background-color: #050505
       text-transform: uppercase
 
-    @media(min-width: 1200px)
+    @media(min-width: 1400px)
       padding-left: 30px
 
     &::after
