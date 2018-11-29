@@ -11,16 +11,16 @@
 
   .cl-item
     position: relative
-    padding-left: 60px
+    padding-left: 40px
 
     @media(min-width: 992px)
       margin-bottom: 10px
 
+    @media(min-width: 1400px)
+      padding-left: 60px
+
     &:last-child
       margin-bottom: 0
-
-    @media(min-width: 1600px)
-      padding-left: 80px
 
     &__radio
       display: none
@@ -66,21 +66,27 @@
         border: 3px solid #fff
         border-radius: 50%
         content: ""
-        height: 20px
-        left: 20px
+        height: 16px
+        left: 10px
         position: absolute
-        top: 10px
-        width: 20px
+        top: 12px
+        width: 16px
+
+        @media(min-width: 1400px)
+          height: 20px
+          left: 20px
+          top: 10px
+          width: 20px
 
     &__image
       display: none
 
     &__title
-      font-size: 16px
+      font-size: 14px
       font-weight: 500
 
-      @media(min-width: 1200px)
-        font-weight: 500
+      @media(min-width: 1400px)
+        font-size: 15px
 
       @media(min-width: 1600px)
         font-size: 20px
@@ -116,7 +122,10 @@
       @media(min-width: 992px)
         display: block
         font-weight: 300
-        font-size: 14px
+        font-size: 12px
+
+      @media(min-width: 1400px)
+        font-size: 13px
 
       @media(min-width: 1600px)
         font-size: 15px
@@ -236,6 +245,12 @@
       font-weight: 500
       padding-left: 25px
       position: relative
+
+      @media(min-width: 992px)
+        font-size: 12px
+
+      @media(min-width: 1400px)
+        font-size: 14px
 
       @media(min-width: 1600px)
         font-size: 16px
