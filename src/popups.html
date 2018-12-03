@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+    <title>DIGITAL RAZOR</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="apple-touch-icon" sizes="120x120" href="images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="images/favicon/site.webmanifest">
+    <link rel="mask-icon" href="images/favicon/safari-pinned-tab.svg" color="#ffffff">
+    <link rel="shortcut icon" href="images/favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-config" content="images/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    //= template/config/style.html
+  </head>
+  <body class="config-page list">
+    //= template/config/sprite.html
+    //= template/config/header.html
+
+    <form class="config" method="post" action="/">
+      <div class="config__content">
+        <div class="config__title-block">
+          <h2 class="config__title js-current-menu-sub-step">ПОПАПЫ</h2>
+        </div>
+        <div class="config__content-inner is-active">
+          <div class="config__content-block config__content-block--list">
+            <div class="config__content-block-inner">
+              <div style="padding: 20px">
+                <a data-fancybox="popup" href="#popup_1">Попап 1</a><br>
+                <a data-fancybox="popup" href="#popup_2">Попап 2</a><br>
+                <a data-fancybox="popup" href="#popup_3">Попап 3</a><br>
+                <a data-fancybox="popup" href="#popup_4">Попап 4</a><br>
+                <a data-fancybox="popup" href="#popup_5">Попап 5</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="config__sidebar">
+        <ul class="config-menu">
+          <li class="config-menu__item">
+            <a class="config-menu__root-link is-active" href="#"><span class="config-menu__cnt">01.</span>Компоненты</a>
+            <ul class="config__submenu">
+              <li class="config-menu__item"><a class="config-menu__link" href="#"><span class="config-menu__link-inner"><span class="config-menu__cnt">1.1</span>Процессор</span></a></li>
+              <li class="config-menu__item"><a class="config-menu__link" href="#"><span class="config-menu__link-inner"><span class="config-menu__cnt">1.2</span>Системная плата</span></a></li>
+              <li class="config-menu__item"><a class="config-menu__link" href="#"><span class="config-menu__link-inner"><span class="config-menu__cnt">1.3</span>Оперативная память</span></a></li>
+              <li class="config-menu__item"><a class="config-menu__link is-active" href="#"><span class="config-menu__link-inner"><span class="config-menu__cnt">1.4</span>Видеокарта</span></a></li>
+              <li class="config-menu__item"><a class="config-menu__link" href="#"><span class="config-menu__link-inner"><span class="config-menu__cnt">1.5</span>Блок питания</span></a></li>
+              <li class="config-menu__item"><a class="config-menu__link" href="#"><span class="config-menu__link-inner"><span class="config-menu__cnt">1.6</span>Корпус</span></a></li>
+            </ul>
+          </li>
+          <li class="config-menu__item">
+            <a class="config-menu__root-link" href="#"><span class="config-menu__cnt">02.</span>Система хранения</a>
+            <ul class="config__submenu">
+              <li class="config-menu__item"><a class="config-menu__link" href="#"><span class="config-menu__link-inner"><span class="config-menu__cnt">2.1</span>Накопитель SSD - 1</span></a></li>
+              <li class="config-menu__item"><a class="config-menu__link" href="#"><span class="config-menu__link-inner"><span class="config-menu__cnt">2.2</span>Накопитель SSD - 2</span></a></li>
+              <li class="config-menu__item"><a class="config-menu__link" href="#"><span class="config-menu__link-inner"><span class="config-menu__cnt">2.3</span>Накопитель HDD</span></a></li>
+            </ul>
+          </li>
+          <li class="config-menu__item">
+            <a class="config-menu__root-link" href="#"><span class="config-menu__cnt">03.</span>Система охлаждения</a>
+            <ul class="config__submenu">
+              <li class="config-menu__item"><a class="config-menu__link" href="#"><span class="config-menu__link-inner"><span class="config-menu__cnt">3.1</span>Кулер процессора</span></a></li>
+              <li class="config-menu__item"><a class="config-menu__link" href="#"><span class="config-menu__link-inner"><span class="config-menu__cnt">3.2</span>Охлаждение</span></a></li>
+            </ul>
+          </li>
+          <li class="config-menu__item"><a class="config-menu__root-link" href="#"><span class="config-menu__cnt">04.</span>Гарантия и сервис</a></li>
+          <li class="config-menu__item"><a class="config-menu__root-link" href="#"><span class="config-menu__cnt">05.</span>Создать свой дизайн</a></li>
+          <li class="config-menu__item"><a class="config-menu__root-link" href="#"><span class="config-menu__cnt">06.</span>Подобрать аксессуары</a></li>
+          <li class="config-menu__item"><a class="config-menu__root-link" href="config-result.html"><span class="config-menu__cnt">07.</span>Итоговая конфигурация</a></li>
+        </ul>
+      </div>
+    </form>
+
+    //= template/config/footer.html
+
+    //= template/config/popup.html
+
+    //= template/config/scripts.html
+  </body>
+</html>

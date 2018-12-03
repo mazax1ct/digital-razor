@@ -302,4 +302,22 @@ $(document).ready(function() {
       fade: true
     });
   }
+
+  //открытие попапа
+  if ($("[data-fancybox='popup']").length) {
+    $("[data-fancybox='popup']").fancybox({
+      touch: false,
+      infobar: false,
+      toolbar: false,
+      smallBtn: false,
+      animationEffect: false,
+      arrows: false
+    });
+  }
+
+  //закрытие попапа
+  $('.js-popup-close').on('click', function() {
+    $.fancybox.close();
+    return false;
+  });
 });

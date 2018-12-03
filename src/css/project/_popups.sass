@@ -1,0 +1,195 @@
+.popup
+  background-color: #1D1D1D
+  color: #E1E1E1
+  display: none
+  max-width: 1200px
+  padding: 15px
+  width: 100%
+
+  @media(min-width: 768px)
+    padding: 30px
+
+  @media(min-width: 1200px)
+    font-size: 20px
+    padding: 50px
+
+  &__close
+    background: none
+    border: none
+    cursor: pointer
+    height: 40px
+    left: auto
+    position: absolute
+    padding: 0
+    right: 6px
+    top: 6px
+    width: 40px
+
+    @media(min-width: 768px)
+      right: 12px
+      top: 12px
+
+    @media(min-width: 1400px)
+      right: 24px
+      top: 24px
+
+  &__close-icon
+    fill: #E1E1E1
+    height: 40px
+    width: 40px
+
+  &__title
+    font-size: 20px
+    font-weight: 900
+    margin-bottom: 20px
+    padding-right: 45px
+    text-transform: uppercase
+
+    @media(min-width: 992px)
+      font-size: 28px
+      margin-bottom: 35px
+
+    @media(min-width: 1600px)
+      font-size: 30px
+      margin-bottom: 50px
+
+  &__text
+    margin-bottom: 10px
+
+    @media(min-width: 992px)
+      margin-bottom: 20px
+
+    @media(min-width: 1600px)
+      font-size: 28px
+
+    a
+      color: #E5262D
+
+      &::-moz-selection
+        color: #fff
+
+      &::selection
+        color: #fff
+
+  &__options-buttons
+    margin-top: 30px
+
+    @media(min-width: 600px)
+      align-items: flex-start
+      display: flex
+      justify-content: center
+
+    @media(min-width: 1200px)
+      margin-top: 60px
+
+  &__option-button
+    color: #E1E1E1
+    display: block
+    margin-left: auto
+    margin-right: auto
+    margin-bottom: 20px
+    text-align: center
+
+    &:last-child
+      margin-bottom: 0
+      margin-right: 0
+
+    @media(min-width: 600px)
+      margin-left: 0
+      margin-right: 60px
+      margin-left: 0
+      margin-bottom: 0
+      width: 180px
+
+    @media(min-width: 1200px)
+      font-size: 18px
+      width: 290px
+
+    @media(min-width: 1600px)
+      font-size: 24px
+
+  &__option-button-icon
+    fill: #E1E1E1
+    height: 50px
+    width: 50px
+
+    @media(min-width: 600px)
+      height: 75px
+      width: 75px
+
+    @media(min-width: 992px)
+      height: 100px
+      width: 100px
+
+  &__option-button-text
+    display: block
+
+  &__buttons
+    margin-top: 20px
+    text-align: center
+
+    @media(min-width: 600px)
+      display: flex
+      justify-content: center
+      margin-top: 30px
+
+  &__button
+    margin: 5px
+    padding-top: 15px
+    padding-bottom: 15px
+    width: 280px
+
+    @media(min-width: 600px)
+      padding-top: 20px
+      padding-bottom: 20px
+
+    @media(min-width: 1600px)
+      font-size: 24px
+      padding-top: 25px
+      padding-bottom: 25px
+
+  &__form-row
+    @media(min-width: 600px)
+      display: flex
+
+  &__form-row-block
+    @media(min-width: 600px)
+      margin-right: 15px
+      width: 50%
+
+    &:last-child
+      margin-right: 0
+
+  &__form-label
+    display: block
+    margin-bottom: 15px
+
+  &__form-textarea
+    @media(min-width: 1200px)
+      height: 250px
+
+    @media(min-width: 1600px)
+      height: 300px
+
+  &__form-buttons
+    text-align: center
+
+    @media(min-width: 600px)
+      text-align: right
+
+  &__form-button
+    width: 280px
+
+    @media(min-width: 1600px)
+      font-size: 24px
+
+  .fancybox-button
+    display: none
+
+  hr
+    margin-top: 20px
+    margin-bottom: 20px
+
+    @media(min-width: 1600px)
+      margin-top: 30px
+      margin-bottom: 30px
