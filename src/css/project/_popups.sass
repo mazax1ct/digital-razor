@@ -60,7 +60,7 @@
       margin-bottom: 20px
 
     @media(min-width: 1600px)
-      font-size: 28px
+      font-size: 24px
 
     a
       color: #E5262D
@@ -89,6 +89,7 @@
     margin-right: auto
     margin-bottom: 20px
     text-align: center
+    transition: color 0.3s
 
     &:last-child
       margin-bottom: 0
@@ -108,9 +109,17 @@
     @media(min-width: 1600px)
       font-size: 24px
 
+    &:hover
+      color: #E5262D
+      text-decoration: none
+
+      .popup__option-button-icon
+        fill: #E5262D
+
   &__option-button-icon
     fill: #E1E1E1
     height: 50px
+    transition: fill 0.3s
     width: 50px
 
     @media(min-width: 600px)

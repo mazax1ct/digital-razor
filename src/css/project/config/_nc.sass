@@ -1,0 +1,113 @@
+.nc
+  margin-left: auto
+  margin-right: auto
+  max-width: 1800px
+  padding-top: 60px
+  padding-bottom: 60px
+
+  @media (min-width: 992px)
+    height: calc(100% - 65px)
+    min-height: 320px
+    padding-bottom: 0
+    padding-top: 65px
+
+  @media(min-width: 1600px) and (min-height: 850px)
+    height: calc(100% - 80px)
+    padding-top: 80px
+
+  &__inner
+    @media (min-width: 992px)
+      background-color: #242424
+      height: 100%
+      display: flex
+      flex-direction: column
+
+  &__inner-top
+    @media (min-width: 992px)
+      display: flex
+      flex-grow: 1
+
+  &__picture-block
+    text-align: center
+
+    @media (min-width: 992px)
+      align-items: center
+      display: flex
+      justify-content: center
+      order: 2
+      padding: 15px
+      width: 50%
+
+    @media (min-width: 1600px)
+      padding: 35px
+
+  &__picture
+    @media (min-width: 992px)
+      max-width: 50%
+
+    @media (min-width: 1900px)
+      max-width: 90%
+
+  &__performance-block
+    background-color: #242424
+
+    @media (min-width: 992px)
+      order: 1
+      padding: 15px
+      width: 50%
+
+    @media (min-width: 1600px)
+      padding: 35px
+
+  &__performance-title
+    background-color: #000
+    cursor: pointer
+    position: relative
+
+    &::after
+      background: url("../images/icons/arrow_down.svg") no-repeat 50% 50% / 12px 8px transparent
+      content: ""
+      height: 100%
+      left: auto
+      position: absolute
+      right: 0
+      top: 0
+      width: 40px
+
+    @media (min-width: 992px)
+      display: none
+
+  &__performance-dropdown
+    display: none
+
+    &.is-open
+      display: block
+
+    @media (min-width: 992px)
+      display: block
+
+  &__list-block
+    background-color: #242424
+
+    @media (min-width: 992px)
+      background-color: #1D1D1D
+      border-top: 1px solid #000
+      height: 180px
+      min-width: 100%
+      order: 3
+      width: 100%
+
+  &__title
+    display: flex
+    font-family: "Russo One", "Roboto", Arial, sans-serif
+    font-size: 16px
+    font-weight: 400
+    min-height: 50px
+    padding-right: 15px
+    padding-left: 15px
+    align-items: center
+    justify-content: space-between
+    text-transform: uppercase
+
+    @media (min-width: 992px)
+      display: none

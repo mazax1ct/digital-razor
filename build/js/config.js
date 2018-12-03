@@ -320,4 +320,9 @@ $(document).ready(function() {
     $.fancybox.close();
     return false;
   });
+
+  //открытие нового блока производительности
+  $(".js-performance").click(function () {
+    $(".nc__performance-dropdown").toggleClass("is-open");
+  })
 });
