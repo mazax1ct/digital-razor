@@ -83,6 +83,9 @@
       <symbol id="comments-alt" viewBox="0 0 576 512">
         <path d="M512 160h-96V64c0-35.3-28.7-64-64-64H64C28.7 0 0 28.7 0 64v160c0 35.3 28.7 64 64 64h32v52c0 7.1 5.8 12 12 12 2.4 0 4.9-.7 7.1-2.4L224 288h128c35.3 0 64-28.7 64-64v-32h96c17.6 0 32 14.4 32 32v160c0 17.6-14.4 32-32 32h-64v49.6l-80.2-45.4-7.3-4.2H256c-17.6 0-32-14.4-32-32v-96l-32 18.1V384c0 35.3 28.7 64 64 64h96l108.9 61.6c2.2 1.6 4.7 2.4 7.1 2.4 6.2 0 12-4.9 12-12v-52h32c35.3 0 64-28.7 64-64V224c0-35.3-28.7-64-64-64zm-128 64c0 17.6-14.4 32-32 32H215.6l-7.3 4.2-80.3 45.4V256H64c-17.6 0-32-14.4-32-32V64c0-17.6 14.4-32 32-32h288c17.6 0 32 14.4 32 32v160z"/>
       </symbol>
+      <symbol id="times-circle" viewBox="0 0 512 512">
+        <path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 464c-118.7 0-216-96.1-216-216 0-118.7 96.1-216 216-216 118.7 0 216 96.1 216 216 0 118.7-96.1 216-216 216zm94.8-285.3L281.5 256l69.3 69.3c4.7 4.7 4.7 12.3 0 17l-8.5 8.5c-4.7 4.7-12.3 4.7-17 0L256 281.5l-69.3 69.3c-4.7 4.7-12.3 4.7-17 0l-8.5-8.5c-4.7-4.7-4.7-12.3 0-17l69.3-69.3-69.3-69.3c-4.7-4.7-4.7-12.3 0-17l8.5-8.5c4.7-4.7 12.3-4.7 17 0l69.3 69.3 69.3-69.3c4.7-4.7 12.3-4.7 17 0l8.5 8.5c4.6 4.7 4.6 12.3 0 17z">
+      </symbol>
     </svg>
     <header class="header">
       <div class="header__inner">
@@ -112,8 +115,7 @@
             </li>
           </ul>
         </div>
-        <button class="js-config-menu-opener menu-opener config-menu-opener" type="button" title="Меню"><span></span></button>
-        <button class="js-menu-opener menu-opener" type="button" title="Меню"><span></span></button>
+        <button class="js-menu-opener menu-opener menu-opener--nc" type="button" title="Меню"><span></span></button>
         <div class="main-menu">
           <ul class="main-menu__list">
             <li class="main-menu__item root">
@@ -152,49 +154,554 @@
           <div class="nc__performance-block">
             <p class="js-performance nc__title nc__performance-title">Производительность:</p>
             <div class="nc__performance-dropdown">
-              <div class="tabs-menu tabs-menu--tall tabs-menu--small_indents">
-                <ul class="tabs-menu__list">
-                  <li class="tabs-menu__item"><a class="tabs-menu__link is-active" href="#">ИГРЫ</a></li>
-                  <li class="tabs-menu__item"><a class="tabs-menu__link" href="#">СОЗДАНИЕ КОНТЕНТА</a></li>
+              <div class="nc__performance-tabs">
+                <ul class="js-performance-type nc__performance-tabs-list nc__performance-tabs-list--big">
+                  <li class="nc__performance-tabs-item"><a class="nc__performance-tabs-link is-active" data-target="games" href="#">ИГРЫ</a></li>
+                  <li class="nc__performance-tabs-item"><a class="nc__performance-tabs-link" data-target="content" href="#">СОЗДАНИЕ КОНТЕНТА</a></li>
+                </ul>
+                <p class="nc__performance-tabs-title">Разрешение</p>
+                <ul class="nc__performance-tabs-list nc__performance-tabs-list--small">
+                  <li class="nc__performance-tabs-item"><a class="nc__performance-tabs-link is-active" href="#">FullHD</a></li>
+                  <li class="nc__performance-tabs-item"><a class="nc__performance-tabs-link" href="#">2K</a></li>
+                  <li class="nc__performance-tabs-item"><a class="nc__performance-tabs-link" href="#">4K</a></li>
                 </ul>
               </div>
-              <div class="performance__bars">
-                <div class="performance-bar" data-game-id="1516" data-test-name="GTA5 (FullHD ULTRA)">
-                  <div class="performance-bar__title">GTA5 (FullHD ULTRA)</div>
-                  <div class="performance-bar__bar" data-width="27" style="background-color: rgb(229, 38, 45); width: 30%;"></div>
-                  <div class="performance-bar__value" data-fps="38"><span>43</span> FPS</div>
+              <div class="nc__performance-bars">
+                <div class="nc__performance-bars-tab is-active" data-target="games">
+                  <div class="perf-bar">
+                    <div class="perf-bar__title">GTA5 (FullHD ULTRA)</div>
+                    <div class="perf-bar__bar" style="width: 30%;"></div>
+                    <div class="perf-bar__value"><span>43</span> FPS</div>
+                  </div>
+                  <div class="perf-bar">
+                    <div class="perf-bar__title">Battlefield 1 (FullHD ULTRA)</div>
+                    <div class="perf-bar__bar" style="width: 36%;"></div>
+                    <div class="perf-bar__value"><span>70</span> FPS</div>
+                  </div>
+                  <div class="perf-bar">
+                    <div class="perf-bar__title">Overwatch (FullHD ULTRA)</div>
+                    <div class="perf-bar__bar" style="width: 38%;"></div>
+                    <div class="perf-bar__value"><span>72</span> FPS</div>
+                  </div>
+                  <div class="perf-bar">
+                    <div class="perf-bar__title">CS:GO (FullHD ULTRA)</div>
+                    <div class="perf-bar__bar" style="width: 24%;"></div>
+                    <div class="perf-bar__value"><span>110</span> FPS</div>
+                  </div>
+                  <div class="perf-bar">
+                    <div class="perf-bar__title">PUBG (FullHD ULTRA)</div>
+                    <div class="perf-bar__bar" style="width: 30%;"></div>
+                    <div class="perf-bar__value"><span>38</span> FPS</div>
+                  </div>
+                  <div class="nc__performance-bars-hidden">
+                    <div class="perf-bar">
+                      <div class="perf-bar__title">GTA5 (FullHD ULTRA)</div>
+                      <div class="perf-bar__bar" style="width: 30%;"></div>
+                      <div class="perf-bar__value"><span>43</span> FPS</div>
+                    </div>
+                    <div class="perf-bar" >
+                      <div class="perf-bar__title">Battlefield 1 (FullHD ULTRA)</div>
+                      <div class="perf-bar__bar" style="width: 36%;"></div>
+                      <div class="perf-bar__value"><span>70</span> FPS</div>
+                    </div>
+                    <div class="perf-bar">
+                      <div class="perf-bar__title">Overwatch (FullHD ULTRA)</div>
+                      <div class="perf-bar__bar" style="width: 38%;"></div>
+                      <div class="perf-bar__value"><span>72</span> FPS</div>
+                    </div>
+                    <div class="perf-bar">
+                      <div class="perf-bar__title">CS:GO (FullHD ULTRA)</div>
+                      <div class="perf-bar__bar" style="width: 24%;"></div>
+                      <div class="perf-bar__value"><span>110</span> FPS</div>
+                    </div>
+                    <div class="perf-bar">
+                      <div class="perf-bar__title">PUBG (FullHD ULTRA)</div>
+                      <div class="perf-bar__bar" style="width: 30%;"></div>
+                      <div class="perf-bar__value"><span>38</span> FPS</div>
+                    </div>
+                  </div>
+                  <div class="nc__performance-opener-block"><button class="js-hidden-bars-opener nc__performance-bars-opener" type="button" data-text1="показать ещё" data-text2="скрыть">показать ещё</button></div>
                 </div>
-                <div class="performance-bar" data-game-id="1530" data-test-name="Battlefield 1 (FullHD ULTRA)">
-                  <div class="performance-bar__title">Battlefield 1 (FullHD ULTRA)</div>
-                  <div class="performance-bar__bar" data-width="33" style="background-color: rgb(229, 38, 45); width: 36%;"></div>
-                  <div class="performance-bar__value" data-fps="63"><span>70</span> FPS</div>
-                </div>
-                <div class="performance-bar" data-game-id="1541" data-test-name="Overwatch (FullHD ULTRA)">
-                  <div class="performance-bar__title">Overwatch (FullHD ULTRA)</div>
-                  <div class="performance-bar__bar" data-width="34" style="background-color: rgb(229, 38, 45); width: 38%;"></div>
-                  <div class="performance-bar__value" data-fps="63"><span>72</span> FPS</div>
-                </div>
-                <div class="performance-bar" data-game-id="1547" data-test-name="CS:GO (FullHD ULTRA)">
-                  <div class="performance-bar__title">CS:GO (FullHD ULTRA)</div>
-                  <div class="performance-bar__bar" data-width="21" style="background-color: rgb(229, 38, 45); width: 24%;"></div>
-                  <div class="performance-bar__value" data-fps="100"><span>110</span> FPS</div>
-                </div>
-                <div class="performance-bar" data-game-id="1662" data-test-name="PUBG (FullHD ULTRA)">
-                  <div class="performance-bar__title">PUBG (FullHD ULTRA)</div>
-                  <div class="performance-bar__bar" data-width="23" style="background-color: rgb(229, 38, 45); width: 30%;"></div>
-                  <div class="performance-bar__value" data-fps="30"><span>38</span> FPS</div>
-                </div>
-              </div>
-              <div class="nc__performance-tabs">
-                <div class="nc__performance-tab-block">
-
+                <div class="nc__performance-bars-tab" data-target="content">
+                  <div class="perf-bar">
+                    <div class="perf-bar__title">Рендеринг</div>
+                    <div class="perf-bar__bar" style="width: 46%;"></div>
+                  </div>
+                  <div class="perf-bar">
+                    <div class="perf-bar__title">Обработка видео H264</div>
+                    <div class="perf-bar__bar" style="width: 35%;"></div>
+                  </div>
+                  <div class="perf-bar">
+                    <div class="perf-bar__title">Многозадачность</div>
+                    <div class="perf-bar__bar" style="width: 60%;"></div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
         <div class="nc__list-block">
-          <p class="nc__title">Процессор:</p>
+          <div class="nc-c-list">
+            <button class="nc-c-list__arrow nc-c-list__arrow--prev" type="button" title="Назад" disabled><svg class="nc-c-list__arrow-icon" aria-hidden="true"><use xlink:href="#slider_arrow_left"/></svg></button>
+            <div class="nc-c-list__inner">
+              <div class="nc-c-list__item is-active">
+                <div class="nc-c">
+                  <p class="nc-c__title">Процессор:</p>
+                  <div class="js-nc-c-block nc-c__block">
+                    <p class="nc-c__block-title">i7 8086K</p>
+                    <p class="nc-c__block-feature">6-ти ядерный</p>
+                    <p class="nc-c__block-sign">изменить</p>
+                  </div>
+                  <div class="nc-c__list">
+                    <label class="nc-item" for="1">
+                      <input class="nc-item__radio" id="1" type="radio" name="proc" value="1" checked>
+                      <div class="nc-item__inner">
+                        <div class="nc-item__image"><img src="images/content/img_45.png" alt="i7 8086K"></div>
+                        <div class="nc-item__title-block">
+                          <div class="nc-item__title">i7 8086K</div>
+                          <div class="nc-item__feature">6-ти ядерный</div>
+                        </div>
+                        <div class="nc-item__prop">4,20 Ghz</div>
+                      </div>
+                    </label>
+                    <label class="nc-item" for="2">
+                      <input class="nc-item__radio" id="2" type="radio" name="proc" value="2">
+                      <div class="nc-item__inner">
+                        <div class="nc-item__image"><img src="images/content/img_45.png" alt="i7 8700K"></div>
+                        <div class="nc-item__title-block">
+                          <div class="nc-item__title">i7 8700K</div>
+                          <div class="nc-item__feature">6-ти ядерный</div>
+                        </div>
+                        <div class="nc-item__prop">3,80 Ghz</div>
+                      </div>
+                    </label>
+                    <label class="nc-item" for="3">
+                      <input class="nc-item__radio" id="3" type="radio" name="proc" value="3">
+                      <div class="nc-item__inner">
+                        <div class="nc-item__image"><img src="images/content/img_45.png" alt="i7 8700"></div>
+                        <div class="nc-item__title-block">
+                          <div class="nc-item__title">i7 8700</div>
+                          <div class="nc-item__feature">6-ти ядерный</div>
+                        </div>
+                        <div class="nc-item__prop">4,50 Ghz</div>
+                      </div>
+                    </label>
+                    <label class="nc-item" for="4">
+                      <input class="nc-item__radio" id="4" type="radio" name="proc" value="4">
+                      <div class="nc-item__inner">
+                        <div class="nc-item__image"><img src="images/content/img_45.png" alt="i5 8600"></div>
+                        <div class="nc-item__title-block">
+                          <div class="nc-item__title">i5 8600</div>
+                          <div class="nc-item__feature">6-ти ядерный</div>
+                        </div>
+                        <div class="nc-item__prop">4,20 Ghz</div>
+                      </div>
+                    </label>
+                    <label class="nc-item" for="5">
+                      <input class="nc-item__radio" id="5" type="radio" name="proc" value="5">
+                      <div class="nc-item__inner">
+                        <div class="nc-item__image"><img src="images/content/img_45.png" alt="i5 8400"></div>
+                        <div class="nc-item__title-block">
+                          <div class="nc-item__title">i5 8400</div>
+                          <div class="nc-item__feature">6-ти ядерный</div>
+                        </div>
+                        <div class="nc-item__prop">3800Mhz</div>
+                      </div>
+                    </label>
+                    <label class="nc-item" for="6">
+                      <input class="nc-item__radio" id="6" type="radio" name="proc" value="6">
+                      <div class="nc-item__inner">
+                        <div class="nc-item__image"><img src="images/content/img_45.png" alt="i5 8000"></div>
+                        <div class="nc-item__title-block">
+                          <div class="nc-item__title">i5 8000</div>
+                          <div class="nc-item__feature">6-ти ядерный</div>
+                        </div>
+                        <div class="nc-item__prop">3600Mhz</div>
+                      </div>
+                    </label>
+                    <label class="nc-item" for="7">
+                      <input class="nc-item__radio" id="7" type="radio" name="proc" value="7">
+                      <div class="nc-item__inner">
+                        <div class="nc-item__image"><img src="images/content/img_45.png" alt="i3 8000K"></div>
+                        <div class="nc-item__title-block">
+                          <div class="nc-item__title">i3 8000K</div>
+                          <div class="nc-item__feature">4-х ядерный</div>
+                        </div>
+                        <div class="nc-item__prop">3000Mhz</div>
+                      </div>
+                    </label>
+                    <label class="nc-item" for="8">
+                      <input class="nc-item__radio" id="8" type="radio" name="proc" value="8">
+                      <div class="nc-item__inner">
+                        <div class="nc-item__image"><img src="images/content/img_45.png" alt="i3 8000"></div>
+                        <div class="nc-item__title-block">
+                          <div class="nc-item__title">i3 8000</div>
+                          <div class="nc-item__feature">4-х ядерный</div>
+                        </div>
+                        <div class="nc-item__prop">2800Mhz</div>
+                      </div>
+                    </label>
+                    <button class="js-nc-c-block-close nc-c__list-close" type="button" title="Закрыть"><svg class="nc-c__list-close-icon" aria-hidden="true"><use xlink:href="#times-circle"/></svg></button>
+                  </div>
+                </div>
+                <div class="nc-c">
+                  <p class="nc-c__title">Память:</p>
+                  <div class="js-nc-c-block nc-c__block nc-c__block--with_icon">
+                    <div class="nc-c__block-icon"><img src="images/icons/ram.png" alt=""></div>
+                    <div class="nc-c__block-text">
+                      <p class="nc-c__block-title">16GB</p>
+                      <p class="nc-c__block-feature">3200Mhz DDR4</p>
+                      <p class="nc-c__block-sign">изменить</p>
+                    </div>
+                  </div>
+                  <div class="nc-c__list">
+                    <label class="nc-item" for="1_">
+                      <input class="nc-item__radio" id="1_" type="radio" name="ram" value="1_" checked>
+                      <div class="nc-item__inner">
+                        <div class="nc-item__image"><img src="images/icons/ram.png" alt="16GB"></div>
+                        <div class="nc-item__title-block">
+                          <div class="nc-item__title">16GB</div>
+                          <div class="nc-item__feature">3200Mhz DDR4</div>
+                        </div>
+                        <div class="nc-item__prop">4,20 Ghz</div>
+                      </div>
+                    </label>
+                    <label class="nc-item" for="2_">
+                      <input class="nc-item__radio" id="2_" type="radio" name="ram" value="2_" checked>
+                      <div class="nc-item__inner">
+                        <div class="nc-item__image"><img src="images/icons/ram.png" alt="32GB"></div>
+                        <div class="nc-item__title-block">
+                          <div class="nc-item__title">32GB</div>
+                          <div class="nc-item__feature">3200Mhz DDR4</div>
+                        </div>
+                        <div class="nc-item__prop">4,20 Ghz</div>
+                      </div>
+                    </label>
+                    <button class="js-nc-c-block-close nc-c__list-close" type="button" title="Закрыть"><svg class="nc-c__list-close-icon" aria-hidden="true"><use xlink:href="#times-circle"/></svg></button>
+                  </div>
+                </div>
+                <div class="nc-c">
+                  <p class="nc-c__title">Видеокарта:</p>
+                  <div class="js-nc-c-block nc-c__block">
+                    <p class="nc-c__block-title">1060 6Gb</p>
+                    <p class="nc-c__block-feature">GeForce GTX</p>
+                    <p class="nc-c__block-sign">изменить</p>
+                  </div>
+                  <div class="nc-c__list">
+                    <label class="nc-item" for="1__">
+                      <input class="nc-item__radio" id="1__" type="radio" name="video" value="1__" checked>
+                      <div class="nc-item__inner">
+                        <div class="nc-item__image"><img src="images/icons/gpu.png" alt="1060 6Gb"></div>
+                        <div class="nc-item__title-block">
+                          <div class="nc-item__title">1060 6Gb</div>
+                          <div class="nc-item__feature">GeForce GTX</div>
+                        </div>
+                      </div>
+                    </label>
+                    <button class="js-nc-c-block-close nc-c__list-close" type="button" title="Закрыть"><svg class="nc-c__list-close-icon" aria-hidden="true"><use xlink:href="#times-circle"/></svg></button>
+                  </div>
+                </div>
+                <div class="nc-c">
+                  <p class="nc-c__title">Накопитель ssd:</p>
+                  <div class="js-nc-c-block nc-c__block">
+                    <p class="nc-c__block-title">240Gb</p>
+                    <p class="nc-c__block-feature">SSD sata</p>
+                    <p class="nc-c__block-sign">изменить</p>
+                  </div>
+                  <div class="nc-c__list">
+                    <label class="nc-item" for="1___">
+                      <input class="nc-item__radio" id="1___" type="radio" name="ssd" value="1___" checked>
+                      <div class="nc-item__inner">
+                        <div class="nc-item__image"><img src="images/icons/disk.png" alt="240Gb"></div>
+                        <div class="nc-item__title-block">
+                          <div class="nc-item__title">240Gb</div>
+                          <div class="nc-item__feature">SSD sata</div>
+                        </div>
+                      </div>
+                    </label>
+                    <button class="js-nc-c-block-close nc-c__list-close" type="button" title="Закрыть"><svg class="nc-c__list-close-icon" aria-hidden="true"><use xlink:href="#times-circle"/></svg></button>
+                  </div>
+                </div>
+                <div class="nc-c">
+                  <p class="nc-c__title">Накопитель hdd:</p>
+                  <div class="js-nc-c-block nc-c__block nc-c__block--with_icon">
+                    <div class="nc-c__block-icon"><img src="images/content/hdd.png" alt=""></div>
+                    <div class="nc-c__block-text">
+                      <p class="nc-c__block-title">2Tb</p>
+                      <p class="nc-c__block-feature">7200 rpm</p>
+                      <p class="nc-c__block-sign">изменить</p>
+                    </div>
+                  </div>
+                  <div class="nc-c__list">
+                    <label class="nc-item" for="1-">
+                      <input class="nc-item__radio" id="1-" type="radio" name="hdd" value="1-" checked>
+                      <div class="nc-item__inner">
+                        <div class="nc-item__image"><img src="images/icons/disk.png" alt="2Tb"></div>
+                        <div class="nc-item__title-block">
+                          <div class="nc-item__title">2Tb</div>
+                          <div class="nc-item__feature">7200 rpm</div>
+                        </div>
+                      </div>
+                    </label>
+                    <button class="js-nc-c-block-close nc-c__list-close" type="button" title="Закрыть"><svg class="nc-c__list-close-icon" aria-hidden="true"><use xlink:href="#times-circle"/></svg></button>
+                  </div>
+                </div>
+                <div class="nc-c">
+                  <p class="nc-c__title">Корпус:</p>
+                  <div class="js-nc-c-block nc-c__block">
+                    <p class="nc-c__block-title">K500L</p>
+                    <p class="nc-c__block-feature">MasterBox</p>
+                    <p class="nc-c__block-sign">изменить</p>
+                  </div>
+                  <div class="nc-c__list nc-c__list--horizontal_reverse nc-c__list--tile">
+                    <label class="nc-item2" for="1--">
+                      <input class="nc-item2__radio" id="1--" type="radio" name="body" value="1--" checked>
+                      <div class="nc-item2__image"><img src="images/content/img_46.png" alt="K500L"></div>
+                      <div class="nc-item2__title">K500L</div>
+                      <div class="nc-item2__feature">MasterBox</div>
+                    </label>
+                    <label class="nc-item2" for="2--">
+                      <input class="nc-item2__radio" id="2--" type="radio" name="body" value="2--">
+                      <div class="nc-item2__image"><img src="images/content/img_47.png" alt="K500L"></div>
+                      <div class="nc-item2__title">CM MasterCase H500P</div>
+                      <div class="nc-item2__feature">MasterBox</div>
+                    </label>
+                    <label class="nc-item2" for="3--">
+                      <input class="nc-item2__radio" id="3--" type="radio" name="body" value="3--">
+                      <div class="nc-item2__image"><img src="images/content/img_46.png" alt="K500L"></div>
+                      <div class="nc-item2__title">CM MasterCase Maker 5t</div>
+                      <div class="nc-item2__feature">MasterBox</div>
+                    </label>
+                    <label class="nc-item2" for="4--">
+                      <input class="nc-item2__radio" id="4--" type="radio" name="body" value="4--">
+                      <div class="nc-item2__image"><img src="images/content/img_47.png" alt="K500L"></div>
+                      <div class="nc-item2__title">CM Cosmos II 25th Anniversary Edition</div>
+                      <div class="nc-item2__feature">MasterBox</div>
+                    </label>
+                    <label class="nc-item2" for="5--">
+                      <input class="nc-item2__radio" id="5--" type="radio" name="body" value="5--">
+                      <div class="nc-item2__image"><img src="images/content/img_46.png" alt="K500L"></div>
+                      <div class="nc-item2__title">CM Cosmos II 25th Anniversary Edition</div>
+                      <div class="nc-item2__feature">MasterBox</div>
+                    </label>
+                    <label class="nc-item2" for="6--">
+                      <input class="nc-item2__radio" id="6--" type="radio" name="body" value="6--">
+                      <div class="nc-item2__image"><img src="images/content/img_47.png" alt="K500L"></div>
+                      <div class="nc-item2__title">CM Cosmos II 25th Anniversary Edition</div>
+                      <div class="nc-item2__feature">MasterBox</div>
+                    </label>
+                    <label class="nc-item2" for="7--">
+                      <input class="nc-item2__radio" id="7--" type="radio" name="body" value="7--">
+                      <div class="nc-item2__image"><img src="images/content/img_46.png" alt="K500L"></div>
+                      <div class="nc-item2__title">CM Cosmos II 25th Anniversary Edition</div>
+                      <div class="nc-item2__feature">MasterBox</div>
+                    </label>
+                    <label class="nc-item2" for="8--">
+                      <input class="nc-item2__radio" id="8--" type="radio" name="body" value="8--">
+                      <div class="nc-item2__image"><img src="images/content/img_47.png" alt="K500L"></div>
+                      <div class="nc-item2__title">CM Cosmos II 25th Anniversary Edition</div>
+                      <div class="nc-item2__feature">MasterBox</div>
+                    </label>
+                    <button class="js-nc-c-block-close nc-c__list-close" type="button" title="Закрыть"><svg class="nc-c__list-close-icon" aria-hidden="true"><use xlink:href="#times-circle"/></svg></button>
+                  </div>
+                </div>
+                <div class="nc-c">
+                  <p class="nc-c__title">Операционная система:</p>
+                  <div class="js-nc-c-block nc-c__block">
+                    <p class="nc-c__block-title">WIN 10</p>
+                    <p class="nc-c__block-feature">Home X64</p>
+                    <p class="nc-c__block-sign">изменить</p>
+                  </div>
+                  <div class="nc-c__list nc-c__list--horizontal_reverse">
+                    <label class="nc-item" for="1---">
+                      <input class="nc-item__radio" id="1---" type="radio" name="soft" value="1---" checked>
+                      <div class="nc-item__inner">
+                        <div class="nc-item__image"><img src="images/icons/soft.png" alt="WIN 10"></div>
+                        <div class="nc-item__title-block">
+                          <div class="nc-item__title">WIN 10</div>
+                          <div class="nc-item__feature">Home X64</div>
+                        </div>
+                      </div>
+                    </label>
+                    <label class="nc-item" for="2---">
+                      <input class="nc-item__radio" id="2---" type="radio" name="soft" value="2---" checked>
+                      <div class="nc-item__inner">
+                        <div class="nc-item__image"><img src="images/icons/soft.png" alt="WIN 10"></div>
+                        <div class="nc-item__title-block">
+                          <div class="nc-item__title">WIN 10</div>
+                          <div class="nc-item__feature">Professional X64</div>
+                        </div>
+                      </div>
+                    </label>
+                    <button class="js-nc-c-block-close nc-c__list-close" type="button" title="Закрыть"><svg class="nc-c__list-close-icon" aria-hidden="true"><use xlink:href="#times-circle"/></svg></button>
+                  </div>
+                </div>
+              </div>
+              <div class="nc-c-list__item ">
+                <div class="nc-c">
+                  <p class="nc-c__title">Процессор:</p>
+                  <div class="js-nc-c-block nc-c__block">
+                    <p class="nc-c__block-title">i7 8086K</p>
+                    <p class="nc-c__block-feature">6-ти ядерный</p>
+                    <p class="nc-c__block-sign">изменить</p>
+                  </div>
+                  <div class="nc-c__list">
+                    <label class="nc-item" for="1">
+                      <input class="nc-item__radio" id="1" type="radio" name="proc" value="1" checked>
+                      <div class="nc-item__inner">
+                        <div class="nc-item__image"><img src="images/content/img_45.png" alt="i7 8086K"></div>
+                        <div class="nc-item__title-block">
+                          <div class="nc-item__title">i7 8086K</div>
+                          <div class="nc-item__feature">6-ти ядерный</div>
+                        </div>
+                        <div class="nc-item__prop">4,20 Ghz</div>
+                      </div>
+                    </label>
+                    <label class="nc-item" for="2">
+                      <input class="nc-item__radio" id="2" type="radio" name="proc" value="2">
+                      <div class="nc-item__inner">
+                        <div class="nc-item__image"><img src="images/content/img_45.png" alt="i7 8700K"></div>
+                        <div class="nc-item__title-block">
+                          <div class="nc-item__title">i7 8700K</div>
+                          <div class="nc-item__feature">6-ти ядерный</div>
+                        </div>
+                        <div class="nc-item__prop">3,80 Ghz</div>
+                      </div>
+                    </label>
+                    <label class="nc-item" for="3">
+                      <input class="nc-item__radio" id="3" type="radio" name="proc" value="3">
+                      <div class="nc-item__inner">
+                        <div class="nc-item__image"><img src="images/content/img_45.png" alt="i7 8700"></div>
+                        <div class="nc-item__title-block">
+                          <div class="nc-item__title">i7 8700</div>
+                          <div class="nc-item__feature">6-ти ядерный</div>
+                        </div>
+                        <div class="nc-item__prop">4,50 Ghz</div>
+                      </div>
+                    </label>
+                    <label class="nc-item" for="4">
+                      <input class="nc-item__radio" id="4" type="radio" name="proc" value="4">
+                      <div class="nc-item__inner">
+                        <div class="nc-item__image"><img src="images/content/img_45.png" alt="i5 8600"></div>
+                        <div class="nc-item__title-block">
+                          <div class="nc-item__title">i5 8600</div>
+                          <div class="nc-item__feature">6-ти ядерный</div>
+                        </div>
+                        <div class="nc-item__prop">4,20 Ghz</div>
+                      </div>
+                    </label>
+                    <label class="nc-item" for="5">
+                      <input class="nc-item__radio" id="5" type="radio" name="proc" value="5">
+                      <div class="nc-item__inner">
+                        <div class="nc-item__image"><img src="images/content/img_45.png" alt="i5 8400"></div>
+                        <div class="nc-item__title-block">
+                          <div class="nc-item__title">i5 8400</div>
+                          <div class="nc-item__feature">6-ти ядерный</div>
+                        </div>
+                        <div class="nc-item__prop">3800Mhz</div>
+                      </div>
+                    </label>
+                    <label class="nc-item" for="6">
+                      <input class="nc-item__radio" id="6" type="radio" name="proc" value="6">
+                      <div class="nc-item__inner">
+                        <div class="nc-item__image"><img src="images/content/img_45.png" alt="i5 8000"></div>
+                        <div class="nc-item__title-block">
+                          <div class="nc-item__title">i5 8000</div>
+                          <div class="nc-item__feature">6-ти ядерный</div>
+                        </div>
+                        <div class="nc-item__prop">3600Mhz</div>
+                      </div>
+                    </label>
+                    <label class="nc-item" for="7">
+                      <input class="nc-item__radio" id="7" type="radio" name="proc" value="7">
+                      <div class="nc-item__inner">
+                        <div class="nc-item__image"><img src="images/content/img_45.png" alt="i3 8000K"></div>
+                        <div class="nc-item__title-block">
+                          <div class="nc-item__title">i3 8000K</div>
+                          <div class="nc-item__feature">4-х ядерный</div>
+                        </div>
+                        <div class="nc-item__prop">3000Mhz</div>
+                      </div>
+                    </label>
+                    <label class="nc-item" for="8">
+                      <input class="nc-item__radio" id="8" type="radio" name="proc" value="8">
+                      <div class="nc-item__inner">
+                        <div class="nc-item__image"><img src="images/content/img_45.png" alt="i3 8000"></div>
+                        <div class="nc-item__title-block">
+                          <div class="nc-item__title">i3 8000</div>
+                          <div class="nc-item__feature">4-х ядерный</div>
+                        </div>
+                        <div class="nc-item__prop">2800Mhz</div>
+                      </div>
+                    </label>
+                    <button class="js-nc-c-block-close nc-c__list-close" type="button" title="Закрыть"><svg class="nc-c__list-close-icon" aria-hidden="true"><use xlink:href="#times-circle"/></svg></button>
+                  </div>
+                </div>
+              </div>
+              <div class="nc-c-list__item ">
+                <div class="nc-c">
+                  <p class="nc-c__title">Корпус:</p>
+                  <div class="js-nc-c-block nc-c__block">
+                    <p class="nc-c__block-title">K500L</p>
+                    <p class="nc-c__block-feature">MasterBox</p>
+                    <p class="nc-c__block-sign">изменить</p>
+                  </div>
+                  <div class="nc-c__list nc-c__list--tile">
+                    <label class="nc-item2" for="1--">
+                      <input class="nc-item2__radio" id="1--" type="radio" name="body" value="1--" checked>
+                      <div class="nc-item2__image"><img src="images/content/img_46.png" alt="K500L"></div>
+                      <div class="nc-item2__title">K500L</div>
+                      <div class="nc-item2__feature">MasterBox</div>
+                    </label>
+                    <label class="nc-item2" for="2--">
+                      <input class="nc-item2__radio" id="2--" type="radio" name="body" value="2--">
+                      <div class="nc-item2__image"><img src="images/content/img_47.png" alt="K500L"></div>
+                      <div class="nc-item2__title">CM MasterCase H500P</div>
+                      <div class="nc-item2__feature">MasterBox</div>
+                    </label>
+                    <label class="nc-item2" for="3--">
+                      <input class="nc-item2__radio" id="3--" type="radio" name="body" value="3--">
+                      <div class="nc-item2__image"><img src="images/content/img_46.png" alt="K500L"></div>
+                      <div class="nc-item2__title">CM MasterCase Maker 5t</div>
+                      <div class="nc-item2__feature">MasterBox</div>
+                    </label>
+                    <label class="nc-item2" for="4--">
+                      <input class="nc-item2__radio" id="4--" type="radio" name="body" value="4--">
+                      <div class="nc-item2__image"><img src="images/content/img_47.png" alt="K500L"></div>
+                      <div class="nc-item2__title">CM Cosmos II 25th Anniversary Edition</div>
+                      <div class="nc-item2__feature">MasterBox</div>
+                    </label>
+                    <label class="nc-item2" for="5--">
+                      <input class="nc-item2__radio" id="5--" type="radio" name="body" value="5--">
+                      <div class="nc-item2__image"><img src="images/content/img_46.png" alt="K500L"></div>
+                      <div class="nc-item2__title">CM Cosmos II 25th Anniversary Edition</div>
+                      <div class="nc-item2__feature">MasterBox</div>
+                    </label>
+                    <label class="nc-item2" for="6--">
+                      <input class="nc-item2__radio" id="6--" type="radio" name="body" value="6--">
+                      <div class="nc-item2__image"><img src="images/content/img_47.png" alt="K500L"></div>
+                      <div class="nc-item2__title">CM Cosmos II 25th Anniversary Edition</div>
+                      <div class="nc-item2__feature">MasterBox</div>
+                    </label>
+                    <label class="nc-item2" for="7--">
+                      <input class="nc-item2__radio" id="7--" type="radio" name="body" value="7--">
+                      <div class="nc-item2__image"><img src="images/content/img_46.png" alt="K500L"></div>
+                      <div class="nc-item2__title">CM Cosmos II 25th Anniversary Edition</div>
+                      <div class="nc-item2__feature">MasterBox</div>
+                    </label>
+                    <label class="nc-item2" for="8--">
+                      <input class="nc-item2__radio" id="8--" type="radio" name="body" value="8--">
+                      <div class="nc-item2__image"><img src="images/content/img_47.png" alt="K500L"></div>
+                      <div class="nc-item2__title">CM Cosmos II 25th Anniversary Edition</div>
+                      <div class="nc-item2__feature">MasterBox</div>
+                    </label>
+                    <button class="js-nc-c-block-close nc-c__list-close" type="button" title="Закрыть"><svg class="nc-c__list-close-icon" aria-hidden="true"><use xlink:href="#times-circle"/></svg></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="nc-c-list__arrow nc-c-list__arrow--next" type="button" title="Вперед"><svg class="nc-c-list__arrow-icon" aria-hidden="true"><use xlink:href="#slider_arrow_right"/></svg></button>
+          </div>
         </div>
       </div>
     </form>
@@ -204,13 +711,10 @@
         <a class="footer__button config-close" href="#" title="Закрыть конфигуратор">ЗАКРЫТЬ</a>
         <div class="footer__buttons">
           <div class="footer__admin-buttons">
-            <!--<button class="js-config-consult footer__button config-dialog" type="button" title="Консультант"><svg class="config-dialog__icon" aria-hidden="true"><use xlink:href="#dialog"/></svg><span class="config-dialog__text">КОНСУЛЬТАНТ</span></button>-->
             <button class="footer__button config-share" type="button" title="Поделиться"><svg class="config-share__icon" aria-hidden="true"><use xlink:href="#share"/></svg></button>
-            <!--<a class="footer__button config-admin" href="#" title="АДМИН">АДМИН</a>
-            <a class="footer__button config-admin" href="#" title="PREORDER">PREORDER</a>-->
           </div>
           <div class="footer__buttons-inner">
-            <a class="footer__button config-save" href="config-result.html" title="Сохранить"><svg class="config-save__icon" aria-hidden="true"><use xlink:href="#save"/></svg><span class="config-save__text">СОХРАНИТЬ</span></a>
+            <a class="footer__button config-save" href="#" title="Сохранить"><svg class="config-save__icon" aria-hidden="true"><use xlink:href="#save"/></svg><span class="config-save__text">СОХРАНИТЬ</span></a>
             <div class="footer__buy-block">
               <div class="footer__price-block">
                 <p class="footer__price">100 000 руб.</p>
@@ -218,7 +722,6 @@
               </div>
               <a class="footer__button footer__button--red config-buy" href="#" title="Купить"><svg class="config-buy__icon" aria-hidden="true"><use xlink:href="#cart"/></svg><span class="config-save__text">КУПИТЬ</span></a>
             </div>
-            <button class="footer__button footer__button--red config-next" type="button">ДАЛЕЕ</button>
           </div>
         </div>
       </div>
