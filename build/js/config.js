@@ -46,6 +46,9 @@ $(function() {
         $(".consult-block__inner").mCustomScrollbar({
           scrollInertia: 0
         });
+        $(".nc__inner-cell").mCustomScrollbar({
+          scrollInertia: 0
+        });
       }
     });
   }
@@ -414,5 +417,12 @@ $(document).ready(function() {
       console.log("слайдов 1, нужно отключить кнопки");
     }
 
+  });
+
+  //переключение на итоговую конфигурацию
+  $(".js-config-save3").click(function () {
+    $(".nc__inner").toggleClass("is-active");
+    $('.js-config-result-slider').slick('reinit');
+    return false;
   });
 });

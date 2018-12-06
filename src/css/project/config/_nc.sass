@@ -38,11 +38,26 @@
           opacity: 1
 
   &__inner
+    display: none
+
+    &.is-active
+      display: block
+
+      @media (min-width: 992px)
+        display: flex
+
     @media (min-width: 992px)
       background-color: #242424
       height: 100%
-      display: flex
-      flex-direction: column
+
+    &--config
+      @media (min-width: 992px)
+        flex-direction: column
+
+  &__inner-cell
+    @media (min-width: 992px)
+      overflow-y: auto
+      width: 50%
 
   &__inner-top
     @media (min-width: 992px)
@@ -689,10 +704,17 @@
       @media(min-width: 992px)
         display: none
 
-  &__image,
+  &__image
+    display: none
+
+    @media(min-width: 992px)
+      display: block
+
+  &__title-block,
+  &__title,
   &__feature,
   &__prop
-    display: none
+    display: inline
 
     @media(min-width: 992px)
       display: block
@@ -707,12 +729,11 @@
       padding-right: 30px
 
   &__title
-    white-space: nowrap
-
     @media(min-width: 992px)
       font-weight: 900
       line-height: 1
       text-align: right
+      white-space: nowrap
 
     @media(min-width: 1200px) and (min-height: 650px)
       font-size: 18px
@@ -736,11 +757,12 @@
       width: 50px
 
   &__feature
-    font-size: 10px
-    font-weight: 500
-    line-height: 1
-    text-align: right
-    white-space: nowrap
+    @media(min-width: 992px)
+      font-size: 10px
+      font-weight: 500
+      line-height: 1
+      text-align: right
+      white-space: nowrap
 
     @media(min-width: 1500px) and (min-height: 730px)
       font-size: 12px
@@ -749,13 +771,14 @@
       font-size: 18px
 
   &__prop
-    border-left: 1px solid rgba(255,255,255,0.5)
-    font-size: 16px
-    font-weight: 900
-    margin-left: 10px
-    padding-left: 10px
-    padding-right: 10px
-    white-space: nowrap
+    @media(min-width: 992px)
+      border-left: 1px solid rgba(255,255,255,0.5)
+      font-size: 16px
+      font-weight: 900
+      margin-left: 10px
+      padding-left: 10px
+      padding-right: 10px
+      white-space: nowrap
 
     @media(min-width: 1200px) and (min-height: 650px)
       font-size: 18px
