@@ -50,6 +50,9 @@
       flex-grow: 1
 
   &__picture-block
+    background-position: 50% 50%
+    background-repeat: no-repeat
+    background-size: contain
     text-align: center
 
     @media (min-width: 992px)
@@ -59,6 +62,9 @@
       order: 2
       padding: 15px
       width: 40%
+
+    @media (min-width: 1400px)
+      width: 42%
 
     @media (min-width: 1600px)
       padding: 20px 35px
@@ -78,14 +84,19 @@
       padding: 0 15px 15px
       width: 60%
 
-    @media (min-width: 1200px) and (min-height: 700px)
+    @media (min-width: 1500px) and (min-height: 730px)
       padding-top: 15px
 
     @media (min-width: 1400px)
       width: 58%
 
-    @media (min-width: 1600px)
-      padding: 20px 35px
+    @media (min-width: 1500px)
+      padding-left: 30px
+      padding-right: 30px
+
+    @media (min-width: 1600px) and (min-height: 850px)
+      padding-top: 20px
+      padding-bottom: 20px
 
   &__performance-title
     background-color: #000
@@ -135,10 +146,10 @@
       display: flex
       justify-content: space-between
 
-    @media (min-width: 1200px) and (min-height: 700px)
+    @media (min-width: 1500px) and (min-height: 730px)
       margin-bottom: 20px
 
-    @media (min-width: 1900px)
+    @media (min-width: 1900px) and (min-height: 1000px)
       margin-bottom: 45px
 
   &__performance-tabs-title
@@ -175,7 +186,10 @@
       @media(min-width: 1400px)
         min-width: 500px
 
-      @media(min-width: 1900px)
+      @media(min-width: 1600px) and (min-width: 850px)
+        min-width: 634px
+
+      @media(min-width: 1900px) and (min-height: 1000px)
         font-size: 20px
 
       .nc__performance-tabs-item
@@ -267,11 +281,11 @@
       width: 100%
       z-index: 2
 
-    @media(min-width: 1500px) and (min-height: 730px)
+    @media(min-width: 1300px) and (min-height: 740px)
       height: 120px
       min-height: 120px
 
-    @media(min-width: 1900px) and (min-height: 1080px)
+    @media(min-width: 1900px) and (min-height: 1000px)
       height: 180px
       min-height: 180px
 
@@ -289,7 +303,6 @@
   padding-right: 15px
 
   @media(min-width: 992px) and (min-height: 600px)
-    background: none
     height: 25px
 
   @media (min-width: 992px) and (min-height: 650px)
@@ -307,10 +320,10 @@
 
   @media(min-width: 1900px) and (min-height: 850px)
     font-size: 20px
-    height: 40px !important
+    height: 35px !important
 
-  @media(min-width: 1900px) and (min-height: 1080px)
-    margin-bottom: 20px
+  @media(min-width: 1900px) and (min-height: 900px)
+    height: 40px !important
 
   &:last-child
     @media(min-width: 992px)
@@ -345,9 +358,9 @@
     position: relative
     width: 100%
 
-  @media(min-width: 1900px) and (min-height: 1080px)
-    padding-left: 120px
-    padding-right: 120px
+  @media(min-width: 1500px)
+    padding-left: 100px
+    padding-right: 100px
 
   &__arrow
     border: none
@@ -366,22 +379,24 @@
     @media(min-width: 1500px) and (min-height: 730px)
       height: 60px
 
-    @media(min-width: 1900px) and (min-height: 1080px)
-      height: 85px
+    @media (min-width: 1500px)
       width: 50px
+
+    @media(min-width: 1900px) and (min-height: 1000px)
+      height: 85px
 
     &--prev
       left: 5px
 
-      @media(min-width: 1900px) and (min-height: 1080px)
-        left: 45px
+      @media(min-width: 1500px)
+        left: 30px
 
     &--next
       left: auto
       right: 5px
 
-      @media(min-width: 1900px) and (min-height: 1080px)
-        right: 45px
+      @media(min-width: 1500px)
+        right: 30px
 
     &:disabled
       opacity: 0.3
@@ -396,7 +411,7 @@
     height: 32px
     width: 12px
 
-    @media(min-width: 1900px) and (min-height: 1080px)
+    @media(min-width: 1900px) and (min-height: 1000px)
       height: 55px
       width: 22px
 
@@ -413,6 +428,9 @@
     position: relative
     margin-right: 5px
     width: 14.2857%
+
+  @media(min-width: 1500px) and (min-height: 730px)
+    margin-right: 15px
 
   &:last-child
     margin-right: 0
@@ -446,11 +464,11 @@
     @media (min-width: 1200px)
       font-size: 12px
 
-    @media(min-width: 1900px) and (min-height: 1080px)
+    @media(min-width: 1900px) and (min-height: 1000px)
       font-size: 18px
 
   &__block
-    border: 1px solid #fff
+    border: 1px solid #424242
     background-color: #000
     color: #fff
     cursor: pointer
@@ -467,7 +485,7 @@
       min-height: 60px
       padding: 11px 10px
 
-    @media(min-width: 1900px) and (min-height: 1080px)
+    @media(min-width: 1900px) and (min-height: 1000px)
       min-height: 85px
 
     &--with_icon
@@ -483,13 +501,12 @@
         color: #fff
 
   &__block-icon
-    border: 1px solid rgba(255,255,255,0.5)
     width: 30px
 
     @media(min-width: 1500px) and (min-height: 730px)
       width: 35px
 
-    @media(min-width: 1900px) and (min-height: 1080px)
+    @media(min-width: 1900px) and (min-height: 1000px)
       width: 50px
 
   &__block-text
@@ -501,10 +518,16 @@
     line-height: 1
     margin-bottom: 0
 
-    @media(min-width: 1500px) and (min-height: 730px)
+    @media(min-width: 1200px) and (min-height: 650px)
+      font-size: 18px
+
+    @media(min-width: 1360px) and (min-height: 650px)
       font-size: 20px
 
-    @media(min-width: 1900px) and (min-height: 1080px)
+    @media(min-width: 1500px) and (min-height: 730px)
+      font-size: 24px
+
+    @media(min-width: 1900px) and (min-height: 1000px)
       font-size: 35px
 
   &__block-feature
@@ -516,7 +539,7 @@
     @media(min-width: 1500px) and (min-height: 730px)
       font-size: 12px
 
-    @media(min-width: 1900px) and (min-height: 1080px)
+    @media(min-width: 1900px) and (min-height: 1000px)
       font-size: 18px
 
   &__block-sign
@@ -534,7 +557,7 @@
     top: auto
     transition: all 0.3s
 
-    @media(min-width: 1900px) and (min-height: 1080px)
+    @media(min-width: 1900px) and (min-height: 1000px)
       font-size: 14px
       padding: 1px 4px 2px 15px
 
@@ -618,7 +641,7 @@
   @media(min-width: 1500px) and (min-height: 730px)
     min-height: 60px
 
-  @media(min-width: 1900px) and (min-height: 1080px)
+  @media(min-width: 1900px) and (min-height: 1000px)
     min-height: 85px
 
   &:last-child
@@ -648,7 +671,7 @@
       min-height: 58px
       padding: 11px 10px
 
-    @media(min-width: 1900px) and (min-height: 1080px)
+    @media(min-width: 1900px) and (min-height: 1000px)
       min-height: 83px
 
     &::before
@@ -691,10 +714,16 @@
       line-height: 1
       text-align: right
 
-    @media(min-width: 1500px) and (min-height: 730px)
+    @media(min-width: 1200px) and (min-height: 650px)
+      font-size: 18px
+
+    @media(min-width: 1360px) and (min-height: 650px)
       font-size: 20px
 
-    @media(min-width: 1900px) and (min-height: 1080px)
+    @media(min-width: 1500px) and (min-height: 730px)
+      font-size: 24px
+
+    @media(min-width: 1900px) and (min-height: 1000px)
       font-size: 35px
 
   &__image
@@ -703,7 +732,7 @@
     @media(min-width: 1500px) and (min-height: 730px)
       width: 35px
 
-    @media(min-width: 1900px) and (min-height: 1080px)
+    @media(min-width: 1900px) and (min-height: 1000px)
       width: 50px
 
   &__feature
@@ -716,7 +745,7 @@
     @media(min-width: 1500px) and (min-height: 730px)
       font-size: 12px
 
-    @media(min-width: 1900px) and (min-height: 1080px)
+    @media(min-width: 1900px) and (min-height: 1000px)
       font-size: 18px
 
   &__prop
@@ -728,14 +757,20 @@
     padding-right: 10px
     white-space: nowrap
 
-    @media(min-width: 1500px) and (min-height: 730px)
+    @media(min-width: 1200px) and (min-height: 650px)
+      font-size: 18px
+
+    @media(min-width: 1360px) and (min-height: 650px)
       font-size: 20px
+
+    @media(min-width: 1500px) and (min-height: 730px)
+      font-size: 24px
 
     @media(min-width: 1600px)
       padding-left: 30px
       padding-right: 30px
 
-    @media(min-width: 1900px) and (min-height: 1080px)
+    @media(min-width: 1900px) and (min-height: 1000px)
       font-size: 50px
 
 .nc-item2
