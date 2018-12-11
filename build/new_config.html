@@ -765,7 +765,7 @@
             <div class="footer__buy-block">
               <div class="footer__price-block">
                 <p class="footer__price">100 000 руб.</p>
-                <p class="footer__price-per-month">3500 руб. / мес.</p>
+                <p class="footer__price-per-month">3500 руб. / мес. <a class="footer__month-price-link" data-fancybox="popup" data-src="#popup_6" href="javascript:void(0)"><svg class="footer__month-price-icon" aria-hidden="true"><use xlink:href="#question-circle"/></svg></a></p>
               </div>
               <a class="footer__button footer__button--red config-buy" href="#" title="Купить"><svg class="config-buy__icon" aria-hidden="true"><use xlink:href="#cart"/></svg><span class="config-save__text">КУПИТЬ</span></a>
             </div>
@@ -887,6 +887,35 @@
           <button class="popup__form-button button button--red" type="submit">Отправить</button>
         </div>
       </form>
+    </div>
+    
+    <div id="popup_6" class="popup">
+      <button class="js-popup-close popup__close" type="button" title="Закрыть"><svg class="popup__close-icon" aria-hidden="true"><use xlink:href="#window-close"/></svg></button>
+      <p class="popup__title">ОПЛАТА ЧАСТЯМИ ОНЛАЙН</p>
+      <div class="credit-block">
+        <svg class="credit-block__icon" aria-hidden="true"><use xlink:href="#piggy-bank"/></svg>
+        <div class="credit-block__text-block">
+          <p>Вы можете купить игровой компьютер в кредит и оплачивать всю сумму равными частями в течение выбранного срока - от 2 до 36 месяцев</p>
+        </div>
+      </div>
+      <div class="credit-block">
+        <svg class="credit-block__icon" aria-hidden="true"><use xlink:href="#wpforms"/></svg>
+        <div class="credit-block__text-block">
+          <p class="credit-block__title">БЫСТРО И ПРОСТО</p>
+          <p>Заполните короткую анкету и получите решение по Вашей заявке за 2 минуты.</p>
+        </div>
+      </div>
+      <div class="credit-block">
+        <svg class="credit-block__icon" aria-hidden="true"><use xlink:href="#ruble-sign"/></svg>
+        <div class="credit-block__text-block">
+          <p class="credit-block__title">ВЫБОР ЛУЧШИХ УСЛОВИЙ</p>
+          <p>Заявка уходит на рассмотрение в больше число финансовых организаций: Райффайзен Банк Банк Восточный, Тинькофф Банк, Кредит Европа Банк, Почта Банк, Альфа-Банк и др.</p>
+        </div>
+      </div>
+      <div class="popup__buttons">
+        <a class="js-popup-close popup__button button" href="#">Назад</a>
+        <a class="popup__button button button--red" href="#">Купить в рассрочку</a>
+      </div>
     </div>
 
     <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
