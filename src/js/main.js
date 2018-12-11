@@ -176,7 +176,8 @@ $(document).ready(function() {
       toolbar: false,
       smallBtn: false,
       animationEffect: false,
-      arrows: false
+      arrows: false,
+      hash: false
   	});
   }
 
