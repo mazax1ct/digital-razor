@@ -358,9 +358,9 @@ $(document).ready(function() {
     $(".nc-c").removeClass("is-open");
     $(".js-nc-c-block").removeClass("is-open");
     $(this).addClass("is-open");
-    $(".nc-c__list").fadeOut(100).removeClass("is-open");
+    $(".nc-c__list").removeClass("is-open");
     $(this).parent(".nc-c").addClass("is-open");
-    $(this).next(".nc-c__list").fadeIn(100).addClass("is-open");
+    $(this).next(".nc-c__list").addClass("is-open");
     if($(this).hasClass("is-open")){
       $(".nc").addClass("is-open");
     } else {
@@ -371,7 +371,8 @@ $(document).ready(function() {
   //закрытие списка компонентов на 992
   $(".js-nc-c-block-close").click(function () {
     $(".js-nc-c-block").removeClass("is-open");
-    $(".nc-c__list").fadeOut(100).removeClass("is-open");
+    $(".nc-c__list").removeClass("is-open");
+    $(".nc-c").removeClass("is-open");
     $(".nc").removeClass("is-open");
   });
 
