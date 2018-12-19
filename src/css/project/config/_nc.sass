@@ -498,7 +498,9 @@
     text-align: right
 
     @media (min-width: 992px)
-      display: block
+      display: flex
+      flex-direction: column
+      justify-content: center
       min-height: 50px
 
     @media(min-width: 1500px) and (min-height: 730px)
@@ -512,6 +514,7 @@
       @media (min-width: 992px)
         align-items: center
         display: flex
+        flex-direction: row
         justify-content: space-between
 
     &:hover,
@@ -547,7 +550,7 @@
     @media(min-width: 1500px) and (min-height: 730px)
       font-size: 24px
 
-    @media(min-width: 1900px) and (min-height: 1000px)
+    //@media(min-width: 1900px) and (min-height: 1000px)
       font-size: 35px
 
   &__block-feature
@@ -559,7 +562,7 @@
     @media(min-width: 1500px) and (min-height: 730px)
       font-size: 12px
 
-    @media(min-width: 1900px) and (min-height: 1000px)
+    //@media(min-width: 1900px) and (min-height: 1000px)
       font-size: 18px
 
   &__block-sign
