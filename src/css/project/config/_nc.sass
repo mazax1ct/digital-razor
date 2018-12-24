@@ -620,6 +620,44 @@
         @media(min-width: 1500px) and (min-height: 730px)
           min-width: 800px
 
+    &--double
+      align-items: flex-start
+      display: flex
+      flex-wrap: wrap
+
+      &.is-open
+        @media (min-width: 992px)
+          display: flex !important
+          min-width: 300px
+
+        @media (min-width: 1600px)
+          display: flex !important
+          min-width: 390px
+
+        @media(min-width: 1500px) and (min-height: 730px)
+          min-width: 360px
+
+        @media(min-width: 1600px) and (min-height: 730px)
+          min-width: 460px
+
+        @media(min-width: 1900px) and (min-height: 1000px)
+          min-width: 490px
+
+      .nc-c__list-block
+        min-width: 150px
+
+        @media (min-width: 1600px)
+          min-width: 195px
+
+        @media(min-width: 1500px) and (min-height: 730px)
+          min-width: 180px
+
+        @media(min-width: 1600px) and (min-height: 730px)
+          min-width: 230px
+
+        @media(min-width: 1900px) and (min-height: 1000px)
+          min-width: 245px
+
   &__list-close
     border: none
     background: none
@@ -696,6 +734,7 @@
 
     @media(min-width: 1900px) and (min-height: 1000px)
       min-height: 83px
+      padding: 15px
 
     &::before
       position: absolute
@@ -732,7 +771,7 @@
       flex-grow: 1
       padding-left: 10px
 
-    @media(min-width: 1600px)
+    //@media(min-width: 1600px)
       padding-left: 30px
       padding-right: 30px
 
@@ -785,7 +824,7 @@
       font-weight: 900
       margin-left: 10px
       padding-left: 10px
-      padding-right: 10px
+      //padding-right: 10px
       white-space: nowrap
 
     @media(min-width: 1200px) and (min-height: 650px)
@@ -797,7 +836,7 @@
     @media(min-width: 1500px) and (min-height: 730px)
       font-size: 24px
 
-    @media(min-width: 1600px)
+    //@media(min-width: 1600px)
       padding-left: 30px
       padding-right: 30px
 
