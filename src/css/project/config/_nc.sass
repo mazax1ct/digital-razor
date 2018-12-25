@@ -621,42 +621,17 @@
           min-width: 800px
 
     &--double
-      align-items: flex-start
-      display: flex
-      flex-wrap: wrap
-
       &.is-open
         @media (min-width: 992px)
-          display: flex !important
-          min-width: 300px
-
-        @media (min-width: 1600px)
-          display: flex !important
-          min-width: 390px
-
-        @media(min-width: 1500px) and (min-height: 730px)
-          min-width: 360px
-
-        @media(min-width: 1600px) and (min-height: 730px)
-          min-width: 460px
-
-        @media(min-width: 1900px) and (min-height: 1000px)
-          min-width: 490px
+          display: table
 
       .nc-c__list-block
-        min-width: 150px
+        @media (min-width: 992px)
+          display: table-cell
+          min-width: 150px
 
-        @media (min-width: 1600px)
-          min-width: 195px
-
-        @media(min-width: 1500px) and (min-height: 730px)
+        @media (min-width: 1200px)
           min-width: 180px
-
-        @media(min-width: 1600px) and (min-height: 730px)
-          min-width: 230px
-
-        @media(min-width: 1900px) and (min-height: 1000px)
-          min-width: 245px
 
   &__list-close
     border: none
@@ -664,10 +639,10 @@
     cursor: pointer
     display: none
     height: 30px
-    left: auto
+    left: 100%
     padding: 0
     position: absolute
-    right: -30px
+    //right: -30px
     top: -26px
     width: 30px
     z-index: 1
