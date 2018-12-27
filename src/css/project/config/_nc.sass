@@ -64,9 +64,16 @@
       width: 50%
 
   &__inner-top
+    background-position: 50% 50%
+    background-size: cover
+    background-repeat: no-repeat
+
     @media (min-width: 992px)
       display: flex
       flex-grow: 1
+
+    @media (max-width: 991px)
+      background: none
 
   &__picture-block
     background-position: 50% 50%
@@ -86,9 +93,6 @@
     @media (min-width: 1400px)
       width: 42%
 
-    //@media (min-width: 1600px)
-      padding: 20px 35px
-
   &__picture
     @media (min-width: 992px)
       max-width: 70%
@@ -100,6 +104,7 @@
     background-color: #242424
 
     @media (min-width: 992px)
+      background-color: transparent
       order: 1
       padding: 0 15px 15px
       width: 60%
@@ -312,6 +317,7 @@
 .perf-bar
   align-items: center
   background-color: #424242
+  box-shadow: 0 5px 10px 10px rgba(0,0,0,0.3)
   color: #fff
   display: flex
   justify-content: space-between
@@ -642,7 +648,6 @@
     left: 100%
     padding: 0
     position: absolute
-    //right: -30px
     top: -26px
     width: 30px
     z-index: 1
