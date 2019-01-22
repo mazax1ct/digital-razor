@@ -158,14 +158,8 @@
     &.is-open
       display: block
 
-      @media (min-width: 992px)
-        display: flex
-        height: 100%
-
     @media (min-width: 992px)
-      display: flex
-      flex-direction: column
-      height: 100%
+      display: block
       padding-bottom: 0
 
   &__performance-tabs
@@ -176,12 +170,11 @@
       background: none
       display: flex
       justify-content: space-between
-      margin-bottom: 0
 
-    //@media (min-width: 1500px) and (min-height: 730px)
+    @media (min-width: 1500px) and (min-height: 730px)
       margin-bottom: 20px
 
-    //@media (min-width: 1900px) and (min-height: 1000px)
+    @media (min-width: 1900px) and (min-height: 1000px)
       margin-bottom: 45px
 
   &__performance-tabs-title
