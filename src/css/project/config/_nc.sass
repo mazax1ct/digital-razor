@@ -106,7 +106,7 @@
     @media (min-width: 992px)
       background-color: transparent
       order: 1
-      padding: 0 15px 15px
+      padding: 0 15px
       width: 60%
 
     @media (min-width: 1500px) and (min-height: 730px)
@@ -119,7 +119,7 @@
       padding-left: 30px
       padding-right: 30px
 
-    @media (min-width: 1600px) and (min-height: 850px)
+    @media (min-width: 1600px) and (min-height: 900px)
       padding-top: 20px
       padding-bottom: 20px
 
@@ -158,8 +158,14 @@
     &.is-open
       display: block
 
+      @media (min-width: 992px)
+        display: flex
+        height: 100%
+
     @media (min-width: 992px)
-      display: block
+      display: flex
+      flex-direction: column
+      height: 100%
       padding-bottom: 0
 
   &__performance-tabs
@@ -170,11 +176,12 @@
       background: none
       display: flex
       justify-content: space-between
+      margin-bottom: 0
 
-    @media (min-width: 1500px) and (min-height: 730px)
+    //@media (min-width: 1500px) and (min-height: 730px)
       margin-bottom: 20px
 
-    @media (min-width: 1900px) and (min-height: 1000px)
+    //@media (min-width: 1900px) and (min-height: 1000px)
       margin-bottom: 45px
 
   &__performance-tabs-title
@@ -255,6 +262,8 @@
     padding-right: 15px
 
     @media (min-width: 992px)
+      margin-top: auto
+      margin-bottom: auto
       padding-left: 0
       padding-right: 0
 
@@ -328,27 +337,34 @@
   padding-left: 15px
   padding-right: 15px
 
-  @media(min-width: 992px) and (min-height: 600px)
+  //@media(min-width: 992px) and (min-height: 600px)
     height: 25px
 
-  @media (min-width: 992px) and (min-height: 650px)
+  //@media (min-width: 992px) and (min-height: 650px)
     height: 30px !important
 
-  @media (min-width: 992px) and (min-height: 700px)
+  @media (min-width: 992px) and (min-height: 650px)
+    height: 40px
+
+  //@media (min-width: 992px) and (min-height: 700px)
     margin-bottom: 10px
 
-  @media (min-width: 1200px)
+  @media (min-width: 1200px) and (min-height: 650px)
     font-size: 14px
     font-weight: 500
 
   @media(min-width: 1500px) and (min-height: 730px)
     margin-bottom: 10px
 
-  @media(min-width: 1900px) and (min-height: 850px)
+  @media(min-width: 1600px) and (min-height: 850px)
+    font-size: 20px
+    height: 50px
+
+  //@media(min-width: 1900px) and (min-height: 850px)
     font-size: 20px
     height: 35px !important
 
-  @media(min-width: 1900px) and (min-height: 900px)
+  //@media(min-width: 1900px) and (min-height: 900px)
     height: 40px !important
 
   &:last-child
@@ -370,11 +386,16 @@
       background-color: #F13724
 
   &__value
+    line-height: 1.15
     position: relative
     z-index: 1
 
     @media(min-width: 992px)
       width: 90px
+
+  &__value-note
+    font-size: 10px
+    opacity: 0.5
 
 .nc-c-list
   @media (min-width: 992px)
