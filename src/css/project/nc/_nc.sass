@@ -101,7 +101,7 @@
       max-width: 80%
 
   &__performance-block
-    background-color: #242424
+    background-color: #272727
 
     @media (min-width: 992px)
       background-color: transparent
@@ -123,53 +123,13 @@
       padding-top: 20px
       padding-bottom: 20px
 
-  &__performance-title
-    background-color: #000
-    cursor: pointer
-    position: relative
-    display: flex
-    font-family: "Russo One", "Roboto", Arial, sans-serif
-    font-size: 16px
-    font-weight: 400
-    min-height: 50px
-    padding-right: 15px
-    padding-left: 15px
-    align-items: center
-    justify-content: space-between
-    text-transform: uppercase
-
-    &::after
-      background: url("../images/icons/arrow_down.svg") no-repeat 50% 50% / 12px 8px transparent
-      content: ""
-      height: 100%
-      left: auto
-      position: absolute
-      right: 0
-      top: 0
-      width: 40px
-
-    @media (min-width: 992px)
-      display: none
-
-  &__performance-dropdown
-    display: none
-    padding-bottom: 10px
-
-    &.is-open
-      display: block
-
-    @media (min-width: 992px)
-      display: block
-      padding-bottom: 0
-
   &__performance-tabs
-    background-color: #272727
+    display: flex
+    justify-content: space-between
     margin-bottom: 10px
 
     @media (min-width: 992px)
       background: none
-      display: flex
-      justify-content: space-between
 
     @media (min-width: 1500px) and (min-height: 730px)
       margin-bottom: 20px
@@ -177,22 +137,27 @@
     @media (min-width: 1900px) and (min-height: 1000px)
       margin-bottom: 45px
 
+  &__performance-tabs-resolution
+    position: relative
+
   &__performance-tabs-title
     font-size: 11px
-    margin-top: 5px
+    left: auto
     margin-bottom: 0
     opacity: 0.5
+    position: absolute
     padding-left: 15px
     padding-right: 15px
+    right: 0
     text-align: right
+    top: 0
 
     @media (min-width: 992px)
       display: none
 
   &__performance-tabs-list
-    background-color: #404040
     display: flex
-    font-size: 16px
+    font-size: 12px
     overflow-x: auto
     padding-left: 15px
     padding-right: 15px
@@ -222,7 +187,6 @@
           margin-right: 45px
 
     &--small
-      background-color: #272727
       justify-content: flex-end
 
       @media(min-width: 992px)
@@ -230,7 +194,7 @@
 
   &__performance-tabs-item
     display: flex
-    margin-right: 20px
+    margin-right: 10px
 
     &:last-child
       margin-right: 0
@@ -239,7 +203,7 @@
     align-items: center
     border-bottom: 5px solid transparent
     display: flex
-    min-height: 45px
+    min-height: 50px
     padding-top: 5px
     transition: border-bottom-color 0.3s
     text-decoration: none
@@ -251,6 +215,7 @@
       text-decoration: none
 
   &__performance-bars
+    padding-bottom: 15px
     padding-left: 15px
     padding-right: 15px
 
@@ -259,6 +224,7 @@
       margin-bottom: auto
       padding-left: 0
       padding-right: 0
+      padding-bottom: 0
 
   &__performance-bars-hidden
     display: none
@@ -301,7 +267,7 @@
       border-top: 1px solid #000
       display: flex
       justify-content: center
-      height: 100px
+      height: 110px
       min-width: 100%
       order: 3
       position: relative
@@ -325,58 +291,36 @@
   justify-content: space-between
   font-size: 12px
   height: 30px
-  margin-bottom: 5px
+  margin-top: 5px
   position: relative
   padding-left: 15px
   padding-right: 15px
 
-  //@media(min-width: 992px) and (min-height: 600px)
-    height: 25px
-
-  //@media (min-width: 992px) and (min-height: 650px)
-    height: 30px !important
-
   @media (min-width: 992px) and (min-height: 650px)
     height: 40px
-
-  //@media (min-width: 992px) and (min-height: 700px)
-    margin-bottom: 10px
+    margin-top: 3px
 
   @media (min-width: 1200px) and (min-height: 650px)
     font-size: 14px
     font-weight: 500
 
   @media(min-width: 1500px) and (min-height: 730px)
-    margin-bottom: 10px
+    margin-top: 10px
 
   @media(min-width: 1600px) and (min-height: 850px)
     font-size: 20px
     height: 50px
-
-  //@media(min-width: 1900px) and (min-height: 850px)
-    font-size: 20px
-    height: 35px !important
-
-  //@media(min-width: 1900px) and (min-height: 900px)
-    height: 40px !important
-
-  &:last-child
-    @media(min-width: 992px)
-      margin-bottom: 0
 
   &__title
     position: relative
     z-index: 1
 
   &__bar
-    background-color: #888
+    background-color: #F13724
     height: 100%
     left: 0
     position: absolute
     top: 0
-
-    @media(min-width: 992px)
-      background-color: #F13724
 
   &__value
     line-height: 1.15
@@ -461,16 +405,71 @@
 
     &.is-active
       @media (min-width: 992px)
-        display: flex
+        display: block
+
+  &__item-title
+    align-items: center
+    background-color: #1D1D1D
+    border-top: 1px solid #888
+    border-bottom: 1px solid #888
+    color: #fff
+    cursor: pointer
+    display: flex
+    font-size: 16px
+    font-weight: 700
+    justify-content: center
+    min-height: 50px
+    margin-bottom: 0
+    position: relative
+
+    @media(min-width: 992px)
+      display: none
+
+  &__item-title-icon
+    fill: #fff
+    height: 16px
+    left: auto
+    position: absolute
+    right: 15px
+    top: 50%
+    transform: translateY(-50%)
+    width: 16px
+
+  &__item-list
+    display: flex
+    flex-wrap: wrap
+    padding-top: 5px
+    padding-left: 10px
+    padding-right: 10px
+
+    @media(min-width: 992px)
+      flex-wrap: nowrap
+      padding-left: 0
+      padding-right: 0
+
+    @media(min-width: 1500px) and (min-height: 730px)
+      padding-left: 10px
 
 .nc-c
+  margin-left: 5px
+  margin-right: 5px
+  margin-bottom: 10px
+  position: relative
+  width: calc(50% - 10px)
+
   @media (min-width: 992px)
+    display: flex
+    flex-direction: column
+    flex-basis: calc(100% / 7)
     position: relative
     margin-right: 5px
-    width: 14.2857%
+    margin-left: 0
+    margin-bottom: 0
+    min-width: calc(100% / 7 - 10px)
+    width: calc(100% / 7 - 10px)
 
   @media(min-width: 1500px) and (min-height: 730px)
-    margin-right: 15px
+    margin-right: 10px
 
   &:first-child,
   &:nth-child(2),
@@ -488,21 +487,17 @@
         left: auto
         right: 0
 
-  &:last-child
-    margin-right: 0
-
   &__title
-    background-color: #404040
-    display: flex
-    font-family: "Russo One", "Roboto", Arial, sans-serif
-    font-size: 16px
+    background-color: #888
+    font-size: 10px
     font-weight: 400
-    min-height: 50px
-    padding-right: 15px
-    padding-left: 15px
-    align-items: center
-    justify-content: space-between
-    text-transform: uppercase
+    left: auto
+    padding-right: 10px
+    padding-left: 10px
+    position: absolute
+    right: 0
+    top: 0
+    z-index: 2
 
     @media (min-width: 992px)
       background: none
@@ -515,37 +510,46 @@
       margin-bottom: 2px
       padding-left: 0
       padding-right: 0
+      position: static
       text-transform: lowercase
       white-space: nowrap
+      z-index: 0
 
     @media (min-width: 1200px)
       font-size: 12px
 
     @media(min-width: 1900px) and (min-height: 1000px)
-      font-size: 18px
+      font-size: 16px
 
   &__block
-    border: 1px solid #424242
-    background-color: #000
+    border: 1px solid #888
+    background-color: #373737
     color: #fff
     cursor: pointer
-    display: none
+    display: flex
+    flex-direction: column
+    height: 100%
     position: relative
-    padding: 9px 5px
+    padding-top: 20px
     text-align: right
 
     @media (min-width: 992px)
-      display: flex
-      flex-direction: column
+      background-color: #000
+      flex-grow: 1
       justify-content: center
+      height: auto
       min-height: 56px
+      padding: 9px 5px
 
     @media(min-width: 1200px) and (min-height: 650px)
       min-height: 58px
 
     @media(min-width: 1500px) and (min-height: 730px)
       min-height: 68px
-      padding: 7px 10px
+      padding: 5px
+
+    @media(min-width: 1500px) and (min-height: 750px)
+      min-height: 75px
 
     @media(min-width: 1900px) and (min-height: 1000px)
       min-height: 85px
@@ -564,45 +568,82 @@
         color: #fff
 
   &__block-icon
+    left: 5px
+    position: absolute
+    top: 20px
     width: 30px
 
-    @media(min-width: 1500px) and (min-height: 730px)
-      width: 35px
+    @media(min-width: 992px)
+      display: none
+      left: auto
+      position: static
+      top: auto
+
+    @media(min-width: 1200px)
+      display: block
 
     @media(min-width: 1900px) and (min-height: 1000px)
-      width: 50px
+      min-width: 40px
+      width: 40px
 
   &__block-text
-    padding-left: 5px
+    display: flex
+    flex-direction: column
+    flex-grow: 1
+
+    @media(min-width: 992px)
+      display: block
+
+    @media(min-width: 1200px)
+      padding-left: 5px
 
   &__block-title
-    font-size: 16px
+    font-size: 14px
     font-weight: 900
+    flex-grow: 1
     line-height: 1
+    min-height: 40px
     margin-bottom: 0
+    padding: 5px
+    padding-left: 40px
+
+    @media(min-width: 992px)
+      font-size: 13px
+      flex-grow: 0
+      min-height: 0
+      padding: 0
 
     @media(min-width: 1200px) and (min-height: 650px)
-      font-size: 18px
+      font-size: 15px
 
-    @media(min-width: 1500px) and (min-height: 730px)
-      font-size: 24px
+    @media(min-width: 1500px) and (min-height: 650px)
+      font-size: 17px
+
+    @media(min-width: 1900px) and (min-height: 1000px)
+      font-size: 20px
 
   &__block-feature
+    align-items: center
+    background-color: #232323
+    display: flex
     font-size: 10px
-    font-weight: 500
+    justify-content: flex-end
     line-height: 1
+    min-height: 40px
+    padding: 10px 5px
     white-space: nowrap
 
-    @media(min-width: 1500px) and (min-height: 730px)
-      font-size: 12px
-
-    //@media(min-width: 1900px) and (min-height: 1000px)
-      font-size: 18px
+    @media(min-width: 992px)
+      background: none
+      min-height: 0
+      margin-top: 5px
+      padding: 0
 
   &__block-sign
     background-color: #3C3C3C
-    bottom: -15px
+    bottom: -16px
     color: #9a9b9c
+    display: none
     font-size: 10px
     font-weight: 500
     height: 15px
@@ -614,13 +655,18 @@
     top: auto
     transition: all 0.3s
 
+    @media(min-width: 992px)
+      display: block
+
     @media(min-width: 1900px) and (min-height: 1000px)
-      bottom: -17px
+      bottom: -18px
       font-size: 14px
       height: 17px
       padding: 1px 4px 2px 15px
 
   &__list
+    display: none
+
     @media (min-width: 992px)
       bottom: 0
       display: none
@@ -630,6 +676,16 @@
       z-index: 1
 
     &.is-open
+      background-color: #202020
+      display: block
+      height: 100%
+      left: 0
+      overflow-y: auto
+      position: fixed
+      top: 0
+      width: 100%
+      z-index: 100
+
       @media (min-width: 992px)
         display: block
 
@@ -637,20 +693,13 @@
         @media (min-width: 992px)
           display: block
 
-    //&--horizontal_reverse
-      @media (min-width: 992px)
-        left: auto
-        right: 0
-
     &--tile
-      align-items: flex-start
-      display: flex
-      flex-wrap: wrap
-
       &.is-open
         @media (min-width: 992px)
+          align-items: flex-start
           display: flex !important
-          min-width: 600px
+          flex-wrap: wrap
+          min-width: 570px
 
         @media(min-width: 1500px) and (min-height: 730px)
           min-width: 800px
@@ -664,6 +713,7 @@
         @media (min-width: 992px)
           display: table-cell
           min-width: 150px
+          padding-right: 1px
 
         @media (min-width: 1200px)
           min-width: 180px
@@ -864,12 +914,11 @@
     background-color: #000
     margin-bottom: 1px
     min-height: 50px
-    min-width: 148px
+    min-width: 140px
     margin: 1px
-    padding-top: 0
-    padding-bottom: 0
+    padding: 0
     position: relative
-    width: 148px
+    width: 140px
 
   @media(min-width: 1500px) and (min-height: 730px)
     min-width: 198px
@@ -886,10 +935,13 @@
 
     &:checked ~ .nc-item2__title
       @media(min-width: 992px)
-        color: #E5262D
+        background-color: #F13724
 
   &__image
     margin-bottom: 10px
+
+    @media(min-width: 992px)
+      margin-bottom: 0
 
   &__feature
     display: none
@@ -899,15 +951,14 @@
     position: relative
 
     @media(min-width: 992px)
-      background-color: rgba(136, 136, 136, 0.5)
-      bottom: 0
-      font-weight: 900
+      align-items: center
+      background-color: #444
+      display: flex
+      justify-content: flex-end
       line-height: 1
-      left: 0
+      min-height: 50px
       padding: 10px
-      position: absolute
-      text-align: center
-      top: auto
+      text-align: right
       width: 100%
 
     @media(min-width: 1500px) and (min-height: 730px)
