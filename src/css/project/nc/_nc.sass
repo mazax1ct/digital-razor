@@ -1,9 +1,43 @@
+.config-title
+  align-items: center
+  background-color: #3C3C3C
+  border-top: 1px solid #707070
+  border-bottom: 1px solid #707070
+  color: #fff
+  cursor: pointer
+  display: flex
+  font-size: 16px
+  font-weight: 700
+  justify-content: center
+  min-height: 50px
+  margin-bottom: 0
+  position: relative
+
+  @media(min-width: 992px)
+    display: none
+
+  & + &
+    margin-top: -1px
+
+  &:hover
+    text-decoration: none
+
+  &__icon
+    fill: #fff
+    height: 16px
+    left: auto
+    position: absolute
+    right: 15px
+    top: 50%
+    transform: translateY(-50%)
+    width: 16px
+
 .nc
   margin-left: auto
   margin-right: auto
   max-width: 1800px
-  padding-top: 60px
-  padding-bottom: 60px
+  padding-top: 55px
+  padding-bottom: 55px
 
   @media (min-width: 992px)
     height: calc(100% - 65px)
@@ -215,7 +249,7 @@
       text-decoration: none
 
   &__performance-bars
-    padding-bottom: 15px
+    padding-bottom: 10px
     padding-left: 15px
     padding-right: 15px
 
@@ -400,12 +434,10 @@
       width: 22px
 
   &__item
-    @media (min-width: 992px)
-      display: none
+    display: none
 
     &.is-active
-      @media (min-width: 992px)
-        display: block
+      display: block
 
   &__item-title
     align-items: center
@@ -438,12 +470,13 @@
   &__item-list
     display: flex
     flex-wrap: wrap
-    padding-top: 5px
+    padding-top: 10px
     padding-left: 10px
     padding-right: 10px
 
     @media(min-width: 992px)
       flex-wrap: nowrap
+      padding-top: 0
       padding-left: 0
       padding-right: 0
 
@@ -456,6 +489,9 @@
   margin-bottom: 10px
   position: relative
   width: calc(50% - 10px)
+
+  @media (min-width: 600px)
+    width: calc(25% - 10px)
 
   @media (min-width: 992px)
     display: flex
@@ -598,9 +634,12 @@
       padding-left: 5px
 
   &__block-title
+    align-items: center
+    display: flex
     font-size: 14px
     font-weight: 900
     flex-grow: 1
+    justify-content: flex-end
     line-height: 1
     min-height: 40px
     margin-bottom: 0
@@ -608,6 +647,7 @@
     padding-left: 40px
 
     @media(min-width: 992px)
+      display: block
       font-size: 13px
       flex-grow: 0
       min-height: 0
@@ -667,14 +707,6 @@
   &__list
     display: none
 
-    @media (min-width: 992px)
-      bottom: 0
-      display: none
-      min-width: 100%
-      position: absolute
-      top: auto
-      z-index: 1
-
     &.is-open
       background-color: #202020
       display: block
@@ -687,7 +719,16 @@
       z-index: 100
 
       @media (min-width: 992px)
+        background: none
+        bottom: -1px
         display: block
+        height: auto
+        min-width: 100%
+        overflow: visible
+        position: absolute
+        top: auto
+        width: auto
+        z-index: 1
 
       .nc-c__list-close
         @media (min-width: 992px)
@@ -696,27 +737,97 @@
     &--tile
       &.is-open
         @media (min-width: 992px)
-          align-items: flex-start
-          display: flex !important
-          flex-wrap: wrap
           min-width: 570px
 
         @media(min-width: 1500px) and (min-height: 730px)
           min-width: 800px
 
+        .nc-c__list-inner
+          @media (min-width: 992px)
+            align-items: flex-start
+            display: flex !important
+            flex-wrap: wrap
+
     &--double
       &.is-open
-        @media (min-width: 992px)
-          display: table
+        .nc-c__list-inner
+          display: flex
+          padding-left: 10px
+          padding-right: 10px
+
+          @media (min-width: 992px)
+            display: table
+            padding-left: 0
+            padding-right: 0
 
       .nc-c__list-block
+        margin-right: 5px
+        margin-left: 5px
+        position: relative
+        width: calc(50% - 10px)
+
+        @media(min-width: 600px)
+          display: flex
+          flex-wrap: wrap
+          margin-left: auto
+          margin-right: auto
+          width: 50%
+
         @media (min-width: 992px)
           display: table-cell
           min-width: 150px
           padding-right: 1px
+          width: auto
 
         @media (min-width: 1200px)
           min-width: 180px
+
+  &__list-inner
+    display: flex
+    flex-wrap: wrap
+    padding-left: 10px
+    padding-right: 10px
+
+    @media(min-width: 992px)
+      display: block
+      padding-left: 0
+      padding-right: 0
+
+  &__list-block
+    .nc-item
+      margin-left: 0
+      margin-right: 0
+      width: 100%
+
+      @media(min-width: 600px)
+        margin-left: 5px
+        margin-right: 5px
+        width: calc(50% - 10px)
+
+      @media(min-width: 992px)
+        margin-left: 0
+        margin-right: 0
+        width: 100%
+
+  &__list-title
+    align-items: center
+    color: #fff
+    cursor: pointer
+    display: inline-flex
+    font-size: 15px
+    font-weight: 700
+    min-height: 55px
+    padding-left: 10px
+    padding-right: 10px
+
+    @media(min-width: 992px)
+      display: none
+
+  &__list-title-icon
+    font-size: 0
+    margin-right: 5px
+    min-width: 19px
+    width: 19px
 
   &__list-close
     border: none
@@ -745,21 +856,32 @@
     width: 30px
 
 .nc-item
+  border: 1px solid #888
+  background-color: #373737
   color: #fff
   cursor: pointer
-  display: block
-  font-size: 16px
-  font-weight: 500
-  padding-top: 10px
-  padding-bottom: 10px
+  display: flex
+  flex-direction: column
+  margin-bottom: 10px
+  margin-left: 5px
+  margin-right: 5px
+  position: relative
+  text-align: right
+  width: calc(50% - 10px)
+
+  @media(min-width: 600px)
+    width: calc(25% - 10px)
 
   @media(min-width: 992px)
     border: 1px solid #fff
     background-color: #000
     margin-bottom: 1px
     min-height: 56px
+    margin-left: 0
+    margin-right: 0
     padding-top: 0
     padding-bottom: 0
+    width: auto
 
   @media(min-width: 1200px) and (min-height: 650px)
     min-height: 58px
@@ -770,13 +892,11 @@
   @media(min-width: 1900px) and (min-height: 1000px)
     min-height: 85px
 
-  &:last-child
-    margin-bottom: 0
-
   &__radio
     display: none
 
-    &:checked + .nc-item__inner::before
+    &:checked + .nc-item__inner .nc-item__feature,
+    &:checked + .nc-item__inner .nc-item__prop
       background-color: #E5262D
 
     &:checked + .nc-item__inner
@@ -784,12 +904,16 @@
         background-color: #E5262D
 
   &__inner
+    display: flex
+    flex-direction: column
+    height: 100%
+    padding-top: 30px
     position: relative
-    padding-left: 40px
 
     @media(min-width: 992px)
       align-items: center
-      display: flex
+      flex-direction: row
+      height: auto
       min-height: 54px
       padding: 9px 5px
 
@@ -804,45 +928,40 @@
       min-height: 83px
       padding: 15px
 
-    &::before
-      position: absolute
-      top: 50%
-      left: 10px
-      width: 16px
-      height: 16px
-      content: ""
-      border: 3px solid #fff
-      border-radius: 50%
-      background-color: #242424
-      transform: translateY(-50%)
-
-      @media(min-width: 992px)
-        display: none
-
-  &__image
-    display: none
-
-    @media(min-width: 992px)
-      display: block
-
-  &__title-block,
-  &__title,
-  &__feature,
-  &__prop
-    display: inline
-
-    @media(min-width: 992px)
-      display: block
-
   &__title-block
+    display: flex
+    flex-grow: 1
+    flex-direction: column
+
     @media(min-width: 992px)
-      flex-grow: 1
+      display: block
       padding-left: 10px
 
+    &:last-child
+      .nc-item__feature
+        min-height: 40px
+        padding-bottom: 10px
+
+        @media(min-width: 992px)
+          min-height: 0
+          padding-bottom: 0
+
   &__title
+    flex-grow: 1
+    font-size: 12px
+    font-weight: 900
+    padding: 5px
+    padding-left: 60px
+
+    @media(min-width: 360px)
+      font-size: 14px
+
+    @media(min-width: 600px) and (max-width: 639px)
+      font-size: 12px
+
     @media(min-width: 992px)
-      font-weight: 900
       line-height: 1
+      padding: 0
       text-align: right
       white-space: nowrap
 
@@ -856,19 +975,33 @@
       font-size: 24px
 
   &__image
-    width: 30px
+    left: 0
+    position: absolute
+    top: 0
+    width: 55px
 
-    @media(min-width: 1500px) and (min-height: 730px)
+    @media(min-width: 992px)
+      left: auto
+      position: static
+      top: auto
       width: 35px
 
     @media(min-width: 1900px) and (min-height: 1000px)
       width: 50px
 
   &__feature
+    background-color: #232323
+    font-size: 10px
+    line-height: 1
+    //min-height: 40px
+    padding: 10px 5px 3px
+
     @media(min-width: 992px)
-      font-size: 10px
+      background: none
       font-weight: 500
-      line-height: 1
+      min-height: 0
+      margin-top: 5px
+      padding: 0
       text-align: right
       white-space: nowrap
 
@@ -876,11 +1009,18 @@
       font-size: 12px
 
   &__prop
+    background-color: #232323
+    font-size: 10px
+    line-height: 1
+    padding: 0 5px 10px 60px
+
     @media(min-width: 992px)
+      background: none
       border-left: 1px solid rgba(255,255,255,0.5)
       font-size: 16px
       font-weight: 900
       margin-left: 10px
+      padding: 0
       padding-left: 10px
       white-space: nowrap
 
@@ -897,17 +1037,22 @@
       font-size: 28px
 
 .nc-item2
+  border: 1px solid #888
+  background-color: #373737
   color: #fff
   cursor: pointer
-  display: block
+  display: flex
+  flex-direction: column
   font-size: 14px
   font-weight: 500
-  padding: 10px
-  width: 50%
+  margin-left: 5px
+  margin-right: 5px
+  margin-bottom: 10px
+  width: calc(50% - 10px)
 
   @media(min-width: 600px)
     font-size: 13px
-    width: 25%
+    width: calc(25% - 10px)
 
   @media(min-width: 992px)
     border: 1px solid #fff
@@ -916,7 +1061,6 @@
     min-height: 50px
     min-width: 140px
     margin: 1px
-    padding: 0
     position: relative
     width: 140px
 
@@ -924,56 +1068,33 @@
     min-width: 198px
     width: 198px
 
-  &:last-child
-    margin-bottom: 0
-
   &__radio
     display: none
 
-    &:checked ~ .nc-item2__title::before
-      background-color: #E5262D
-
     &:checked ~ .nc-item2__title
-      @media(min-width: 992px)
-        background-color: #F13724
-
-  &__image
-    margin-bottom: 10px
-
-    @media(min-width: 992px)
-      margin-bottom: 0
+      background-color: #F13724
 
   &__feature
     display: none
 
   &__title
-    padding-left: 30px
-    position: relative
+    align-items: center
+    background-color: #444
+    display: flex
+    font-size: 12px
+    flex-grow: 1
+    justify-content: flex-end
+    line-height: 1
+    min-height: 50px
+    padding: 5px 10px
+    text-align: right
+    width: 100%
 
-    @media(min-width: 992px)
-      align-items: center
-      background-color: #444
-      display: flex
-      justify-content: flex-end
-      line-height: 1
-      min-height: 50px
-      padding: 10px
-      text-align: right
-      width: 100%
+    @media(min-width: 360px)
+      font-size: 14px
+
+    @media(min-width: 600px) and (max-width: 639px)
+      font-size: 12px
 
     @media(min-width: 1500px) and (min-height: 730px)
-      font-size: 16px
-
-    &::before
-      position: absolute
-      top: 1px
-      left: 0
-      width: 16px
-      height: 16px
-      content: ""
-      border: 3px solid #fff
-      border-radius: 50%
-      background-color: #242424
-
-      @media(min-width: 992px)
-        display: none
+      font-size: 15px

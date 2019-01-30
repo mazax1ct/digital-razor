@@ -1,3 +1,11 @@
+function ncClose() {
+  $("body").removeClass("overflow");
+  $(".nc").removeClass("is-open");
+  $(".nc-c").removeClass("is-open");
+  $(".js-nc-c-block").removeClass("is-open");
+  $(".nc-c__list").removeClass("is-open");
+}
+
 $(document).ready(function() {
   //открытие/закрытие главного меню
   $(".js-menu-opener").click(function() {
@@ -68,7 +76,7 @@ $(document).ready(function() {
     return false;
   });
 
-  //открытие списка компонентов на 992
+  //открытие списка компонентов
   $(".js-nc-c-block").click(function () {
     $(".nc-c").removeClass("is-open");
     $(".js-nc-c-block").removeClass("is-open");
@@ -85,12 +93,14 @@ $(document).ready(function() {
     }
   });
 
-  //закрытие списка компонентов на 992
+  //закрытие списка компонентов
+  $(".js-nc-c-block-closer").click(function () {
+    ncClose();
+  });
+
+  //закрытие списка компонентов
   $(".js-nc-c-block-close").click(function () {
-    $(".js-nc-c-block").removeClass("is-open");
-    $(".nc-c__list").removeClass("is-open");
-    $(".nc-c").removeClass("is-open");
-    $(".nc").removeClass("is-open");
+    ncClose();
   });
 
   //листалка "слайдов" конфига
@@ -143,4 +153,26 @@ $(document).ready(function() {
     $(".nc__inner").toggleClass("is-active");
     return false;
   });
+
+  //аккордион секций конфига
+  $(".js-config-section-opener").click(function () {
+    var section = $(this).attr('data-item');
+    $('.nc-c-list__item[data-item=' + section + ']').slideDown("300", function () {
+      $(".nc-c-list__item").not($('.nc-c-list__item[data-item=' + section + ']')).slideUp("300", function () {
+        $(".nc-c-list__item").not($('.nc-c-list__item[data-item=' + section + ']')).removeClass("is-active");
+      });
+      $('.nc-c-list__item[data-item=' + section + ']').addClass("is-active");
+    });
+    return false;
+  });
+
+});
+
+// закрытие списка компонентов
+$(window).resize(function() {
+  ncClose();
+});
+
+$(window).on("orientationchange", function() {
+  ncClose();
 });
