@@ -12,28 +12,18 @@ $(document).ready(function() {
     if($(this).hasClass("is-active")) {
       $(this).removeClass("is-active");
       $("body").removeClass("overflow");
-      $(".config").removeClass("blur");
       $(".main-menu").removeClass("is-open");
       $(".footer").removeClass("blur");
       $(".nc").removeClass("blur");
     } else {
       $(this).addClass("is-active");
       $("body").addClass("overflow");
-      $(".config").addClass("blur");
       $(".main-menu").addClass("is-open");
       $(".footer").addClass("blur");
       $(".nc").addClass("blur");
     }
-    $(".config__content").removeClass("blur");
-    $(".config__intro").removeClass("blur");
-    $(".js-config-menu-opener").removeClass("is-active");
-    $(".config-menu").removeClass("is-open");
     $('.js-personal-opener').removeClass('is-active');
     $(".personal-menu").removeClass("is-open");
-    $('.js-config-save').removeClass('open');
-    $('.save-block').removeClass('is-open');
-    $('.js-config-consult').removeClass('open');
-    $('.consult-block').removeClass('is-open');
     return false;
   });
 
@@ -42,28 +32,18 @@ $(document).ready(function() {
     if($(this).hasClass("is-active")) {
       $(this).removeClass("is-active");
       $("body").removeClass("overflow");
-      $(".config").removeClass("blur");
       $(".personal-menu").removeClass("is-open");
       $(".footer").removeClass("blur");
       $(".nc").removeClass("blur");
     } else {
       $(this).addClass("is-active");
       $("body").addClass("overflow");
-      $(".config").addClass("blur");
       $(".personal-menu").addClass("is-open");
       $(".footer").addClass("blur");
       $(".nc").addClass("blur");
     }
-    $(".config__content").removeClass("blur");
-    $(".config__intro").removeClass("blur");
     $(".js-menu-opener").removeClass('is-active');
     $(".main-menu").removeClass("is-open");
-    $(".js-config-menu-opener").removeClass("is-active");
-    $(".config-menu").removeClass("is-open");
-    $('.js-config-save').removeClass('open');
-    $('.save-block').removeClass('is-open');
-    $('.js-config-consult').removeClass('open');
-    $('.consult-block').removeClass('is-open');
     return false;
   });
 
@@ -105,18 +85,18 @@ $(document).ready(function() {
 
   //листалка "слайдов" конфига
   $(".nc-c-list__arrow").click(function () {
-    var slides = $('.nc-c-list__item').length; //кол-во слайдов
+    var parent = $(this).parent();
+    var slides = parent.find($('.nc-c-list__item-cell')).length; //кол-во слайдов
 
     if(slides > 1) { //если есть другие слайды
 
       if($(this).hasClass("nc-c-list__arrow--next")) { //если движемся вперед
 
-        var slide = $(".nc-c-list__item.is-active").index();
-        console.log("вперед", slide, slides);
+        var slide = $(".nc-c-list__item-cell.is-active").index();
 
         if ((slide + 1) < slides) {
-          $(".nc-c-list__item").removeClass("is-active");
-          $(".nc-c-list__item").eq(slide + 1).addClass("is-active");
+          $(".nc-c-list__item-cell").removeClass("is-active");
+          $(".nc-c-list__item-cell").eq(slide + 1).addClass("is-active");
           $(".nc-c-list__arrow--prev").prop("disabled", false);
         }
 
@@ -127,12 +107,12 @@ $(document).ready(function() {
       }
 
       if($(this).hasClass("nc-c-list__arrow--prev")) { //если движемся назад
-        var slide = $(".nc-c-list__item.is-active").index();
+        var slide = $(".nc-c-list__item-cell.is-active").index();
 
         console.log("назад");
         if(slide > 0) {
-          $(".nc-c-list__item").removeClass("is-active");
-          $(".nc-c-list__item").eq(slide - 1).addClass("is-active");
+          $(".nc-c-list__item-cell").removeClass("is-active");
+          $(".nc-c-list__item-cell").eq(slide - 1).addClass("is-active");
           $(".nc-c-list__arrow--next").prop("disabled", false);
         }
 
@@ -156,16 +136,46 @@ $(document).ready(function() {
 
   //аккордион секций конфига
   $(".js-config-section-opener").click(function () {
-    var section = $(this).attr('data-item');
-    $('.nc-c-list__item[data-item=' + section + ']').slideDown("300", function () {
-      $(".nc-c-list__item").not($('.nc-c-list__item[data-item=' + section + ']')).slideUp("300", function () {
-        $(".nc-c-list__item").not($('.nc-c-list__item[data-item=' + section + ']')).removeClass("is-active");
+    var section_id = $(this).attr('data-section');
+    $('.nc__inner[data-section=' + section_id + ']').slideDown("300", function () {
+      $(".nc__inner").not($('.nc__inner[data-section=' + section_id + ']')).slideUp("300", function () {
+        $(".nc__inner").not($('.nc__inner[data-section=' + section_id + ']')).removeClass("is-active");
       });
-      $('.nc-c-list__item[data-item=' + section + ']').addClass("is-active");
+      $('.nc__inner[data-section=' + section_id + ']').addClass("is-active");
     });
     return false;
   });
 
+  //аккордион подсекций конфига
+  $(".js-config-subsection-opener").click(function () {
+    var section_id = $(this).attr('data-section');
+    $('.nc-c-list__item[data-section=' + section_id + ']').slideDown("300", function () {
+      $(".nc-c-list__item").not($('.nc__inner .nc-c-list__item[data-section=' + section_id + ']')).slideUp("300", function () {
+        $(".nc-c-list__item").not($('.nc__inner .nc-c-list__item[data-section=' + section_id + ']')).removeClass("is-active");
+      });
+      $('.nc-c-list__item[data-section=' + section_id + ']').addClass("is-active");
+    });
+    return false;
+  });
+
+  //открытие попапа
+  if ($("[data-fancybox='popup']").length) {
+    $("[data-fancybox='popup']").fancybox({
+      touch: false,
+      infobar: false,
+      toolbar: false,
+      smallBtn: false,
+      animationEffect: false,
+      arrows: false,
+      hash: false
+    });
+  }
+
+  //закрытие попапа
+  $('.js-popup-close').on('click', function() {
+    $.fancybox.close();
+    return false;
+  });
 });
 
 // закрытие списка компонентов

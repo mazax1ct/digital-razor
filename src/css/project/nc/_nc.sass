@@ -16,7 +16,8 @@
   @media(min-width: 992px)
     display: none
 
-  & + &
+  & + &,
+  & + .nc__section
     margin-top: -1px
 
   &:hover
@@ -92,10 +93,53 @@
       @media (min-width: 992px)
         flex-direction: column
 
+    &--result
+      position: relative
+
+      &::before
+        @media (min-width: 992px)
+          background-color: #373737
+          content: ""
+          height: calc(100% - 60px)
+          left: 50%
+          position: absolute
+          top: 30px
+          width: 1px
+
+  &__section
+    @media(min-width: 992px)
+      display: none
+      height: 100%
+
+    &.is-active
+      display: block !important
+
+    & + &,
+    & + .config-title
+      margin-top: -1px
+
+      @media(min-width: 992px)
+        margin-top: 0
+
   &__inner-cell
     @media (min-width: 992px)
       overflow-y: auto
       width: 50%
+
+    &--result_picture
+      background-position: 50% 50%
+      background-repeat: no-repeat
+      background-size: contain
+      padding-bottom: 100%
+
+      @media (min-width: 992px)
+        padding-bottom: 0
+
+    &--result_info
+      padding: 15px
+
+      @media (min-width: 992px)
+        padding: 30px
 
   &__inner-top
     background-position: 50% 50%
@@ -433,8 +477,25 @@
       height: 55px
       width: 22px
 
+  &__item-cell
+    margin-top: -1px
+
+    @media(min-width: 992px)
+      display: none
+      margin-top: 0
+
+    &.is-active
+      @media(min-width: 992px)
+        display: block
+
+    &:first-child
+      margin-top: 0
+
   &__item
     display: none
+
+    @media(min-width: 992px)
+      display: block !important
 
     &.is-active
       display: block
@@ -813,12 +874,15 @@
     align-items: center
     color: #fff
     cursor: pointer
-    display: inline-flex
+    display: flex
     font-size: 15px
     font-weight: 700
     min-height: 55px
     padding-left: 10px
     padding-right: 10px
+
+    @media(min-width: 400px)
+      font-size: 20px
 
     @media(min-width: 992px)
       display: none
@@ -1085,16 +1149,85 @@
     flex-grow: 1
     justify-content: flex-end
     line-height: 1
-    min-height: 50px
+    min-height: 40px
     padding: 5px 10px
     text-align: right
     width: 100%
 
-    @media(min-width: 360px)
-      font-size: 14px
-
-    @media(min-width: 600px) and (max-width: 639px)
-      font-size: 12px
-
     @media(min-width: 1500px) and (min-height: 730px)
       font-size: 15px
+      min-height: 50px
+
+.result-info
+  color: #fff
+  font-size: 13px
+
+  @media(min-width: 992px)
+    font-size: 14px
+    width: 100%
+
+  @media(min-width: 1200px)
+    font-size: 16px
+
+  @media(min-width: 1900px)
+    font-size: 20px
+
+  &__row
+    border-bottom: 1px solid #242424
+    display: flex
+
+    &:last-child
+      border-bottom: none
+
+    &:nth-child(even)
+      .result-info__cell
+        background-color: #373737
+
+    &:nth-child(odd)
+      .result-info__cell
+        background-color: #4d4d4d
+
+  &__cell
+    display: flex
+    flex-direction: column
+    justify-content: center
+    min-height: 40px
+    padding: 15px
+
+    @media(min-width: 1200px)
+      padding: 15px 30px
+
+    @media(min-width: 1600px) and (min-height: 850px)
+      min-height: 50px
+
+    &--info
+      flex-grow: 1
+
+    &--qnt
+      align-items: center
+      border-left: 1px solid #242424
+      display: flex
+      justify-content: center
+      white-space: nowrap
+      width: 50px
+
+      @media(min-width: 1500px)
+        width: 100px
+
+    &--price
+      font-family: "Russo One", "Roboto", Arial, sans-serif
+      font-weight: 700
+      font-size: 16px
+      margin-left: auto
+      text-align: right
+      white-space: nowrap
+
+      @media(min-width: 1200px)
+        font-size: 22px
+
+    &--transparent
+      background-color: transparent !important
+      width: 50%
+
+  &__title
+    margin-bottom: 20px
