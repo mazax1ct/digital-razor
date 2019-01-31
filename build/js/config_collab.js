@@ -136,10 +136,17 @@ $(document).ready(function() {
 
   //аккордион секций конфига
   $(".js-config-section-opener").click(function () {
+    var section_title = $(this);
     var section_id = $(this).attr('data-section');
-    $('.nc__inner[data-section=' + section_id + ']').slideDown("300", function () {
-      $(".nc__inner").not($('.nc__inner[data-section=' + section_id + ']')).slideUp("300", function () {
+
+    $('.nc__inner[data-section=' + section_id + ']').slideDown(100, function () {
+      $(".nc__inner").not($('.nc__inner[data-section=' + section_id + ']')).slideUp(100, function () {
         $(".nc__inner").not($('.nc__inner[data-section=' + section_id + ']')).removeClass("is-active");
+        //откручиваем страницу к заголовку секции
+        var topOffset = section_title.offset().top - $('.header').height();
+        $("html, body").animate({
+            scrollTop: topOffset
+        }, 0);
       });
       $('.nc__inner[data-section=' + section_id + ']').addClass("is-active");
     });
@@ -148,10 +155,16 @@ $(document).ready(function() {
 
   //аккордион подсекций конфига
   $(".js-config-subsection-opener").click(function () {
+    var section_title = $(this);
     var section_id = $(this).attr('data-section');
-    $('.nc-c-list__item[data-section=' + section_id + ']').slideDown("300", function () {
-      $(".nc-c-list__item").not($('.nc__inner .nc-c-list__item[data-section=' + section_id + ']')).slideUp("300", function () {
+    $('.nc-c-list__item[data-section=' + section_id + ']').slideDown(100, function () {
+      $(".nc-c-list__item").not($('.nc__inner .nc-c-list__item[data-section=' + section_id + ']')).slideUp(100, function () {
         $(".nc-c-list__item").not($('.nc__inner .nc-c-list__item[data-section=' + section_id + ']')).removeClass("is-active");
+        //откручиваем страницу к заголовку секции
+        var topOffset = section_title.offset().top - $('.header').height();
+        $("html, body").animate({
+            scrollTop: topOffset
+        }, 0);
       });
       $('.nc-c-list__item[data-section=' + section_id + ']').addClass("is-active");
     });
