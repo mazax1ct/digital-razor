@@ -6,6 +6,15 @@ function ncClose() {
   $(".nc-c__list").removeClass("is-open");
 }
 
+//залипание блока графиков производительности
+var resize_scroll = function(e) {
+  $(window).scrollTop() > $(".nc__picture-block").innerHeight() + $(".nc__picture-block").offset().top - $(".header").innerHeight()
+    ? $(".nc__picture-block").addClass("fixed")
+    : $(".nc__picture-block").removeClass("fixed");
+};
+
+$(window).on("scroll", resize_scroll).on("resize", resize_scroll);
+
 $(document).ready(function() {
   //открытие/закрытие главного меню
   $(".js-menu-opener").click(function() {
@@ -74,11 +83,6 @@ $(document).ready(function() {
   });
 
   //закрытие списка компонентов
-  $(".js-nc-c-block-closer").click(function () {
-    ncClose();
-  });
-
-  //закрытие списка компонентов
   $(".js-nc-c-block-close").click(function () {
     ncClose();
   });
@@ -142,11 +146,13 @@ $(document).ready(function() {
     $('.nc__inner[data-section=' + section_id + ']').slideDown(100, function () {
       $(".nc__inner").not($('.nc__inner[data-section=' + section_id + ']')).slideUp(100, function () {
         $(".nc__inner").not($('.nc__inner[data-section=' + section_id + ']')).removeClass("is-active");
+        //снимаем класс для фиксации блока графиков производительности
+        $(".nc__picture-block").removeClass("fixed");
         //откручиваем страницу к заголовку секции
         var topOffset = section_title.offset().top - $('.header').height();
         $("html, body").animate({
             scrollTop: topOffset
-        }, 0);
+        }, 100);
       });
       $('.nc__inner[data-section=' + section_id + ']').addClass("is-active");
     });
@@ -157,14 +163,17 @@ $(document).ready(function() {
   $(".js-config-subsection-opener").click(function () {
     var section_title = $(this);
     var section_id = $(this).attr('data-section');
+    var parent_section_id = $(this).attr('data-parent-section');
+
     $('.nc-c-list__item[data-section=' + section_id + ']').slideDown(100, function () {
-      $(".nc-c-list__item").not($('.nc__inner .nc-c-list__item[data-section=' + section_id + ']')).slideUp(100, function () {
-        $(".nc-c-list__item").not($('.nc__inner .nc-c-list__item[data-section=' + section_id + ']')).removeClass("is-active");
+      $('.nc__inner[data-section=' + parent_section_id + '] .nc-c-list__item:not(.nc-c-list__item[data-section=' + section_id + '])').slideUp(100, function () {
+        $('.nc__inner[data-section=' + parent_section_id + '] .nc-c-list__item:not(.nc-c-list__item[data-section=' + section_id + '])').removeClass("is-active");
         //откручиваем страницу к заголовку секции
-        var topOffset = section_title.offset().top - $('.header').height();
+        var topOffset = section_title.offset().top - 275 - $('.header').innerHeight();
+        console.log(topOffset);
         $("html, body").animate({
             scrollTop: topOffset
-        }, 0);
+        }, 100);
       });
       $('.nc-c-list__item[data-section=' + section_id + ']').addClass("is-active");
     });
@@ -192,10 +201,6 @@ $(document).ready(function() {
 });
 
 // закрытие списка компонентов
-$(window).resize(function() {
-  ncClose();
-});
-
 $(window).on("orientationchange", function() {
   ncClose();
 });
