@@ -122,6 +122,9 @@
       <symbol id="arrow_down" viewBox="0 0 12 7.4">
         <path d="M10.6,0L6,4.6L1.4,0L0,1.4l6,6l6-6L10.6,0z"/>
       </symbol>
+      <symbol id="edit" viewBox="0 0 50 50">
+        <path d="M36.3,30.2l1.7-1.7c0.3-0.3,0.9-0.1,0.9,0.4v14.3c0,2.3-1.9,4.2-4.2,4.2H4.2c-2.3,0-4.2-1.9-4.2-4.2V12.5c0-2.3,1.9-4.2,4.2-4.2h25.4c0.5,0,0.7,0.6,0.4,0.9L28.2,11c-0.1,0.1-0.2,0.2-0.4,0.2H4.2c-0.8,0-1.4,0.6-1.4,1.4v30.6c0,0.8,0.6,1.4,1.4,1.4h30.6c0.8,0,1.4-0.6,1.4-1.4V30.5C36.1,30.4,36.2,30.3,36.3,30.2z M48.9,13.6L21.8,40.7l-8.7,1c-1.2,0.1-2.1-0.9-2-2l1-8.7L39.2,3.8c1.4-1.4,3.7-1.4,5.2,0l4.6,4.6C50.4,9.8,50.4,12.1,48.9,13.6L48.9,13.6z M40.8,17.8L35,12L14.7,32.2L14,38.8l6.5-0.7L40.8,17.8L40.8,17.8z M47,10.4l-4.6-4.6c-0.3-0.3-0.9-0.3-1.2,0L37,10l5.8,5.8l4.2-4.2C47.3,11.3,47.3,10.7,47,10.4L47,10.4z"/>
+      </symbol>
     </svg>
     <header class="header">
       <div class="header__inner">
@@ -1379,9 +1382,9 @@
           </div>
         </div>
       </div>
-      <div class="nc__section ">
-        <p class="js-config-section-opener config-title" data-section="3">Итого <svg class="config-title__icon" aria-hidden="true"><use xlink:href="#arrow_down"/></svg></p>
+      <div class="nc__section nc__section--result ">
         <div class="nc__inner nc__inner--result" data-section="3">
+          <p class="config-title">Итого <svg class="config-title__icon" aria-hidden="true"><use xlink:href="#arrow_down"/></svg></p>
           <div class="nc__inner-cell nc__inner-cell--result_picture" style="background-image: url('images/content/img_44.png')"></div>
           <div class="nc__inner-cell nc__inner-cell--result_info custom-scroll">
             <h3>ИТОГОВАЯ КОНФИГУРАЦИЯ:</h3>
@@ -1427,7 +1430,7 @@
     </form>
 
     <footer class="footer">
-      <div class="footer__inner">
+      <div class="footer__inner footer__inner--main is-active">
         <a class="footer__button config-close" href="#" title="Закрыть конфигуратор">ЗАКРЫТЬ</a>
         <div class="footer__buttons">
           <div class="footer__admin-buttons">
@@ -1440,8 +1443,16 @@
               <p class="footer__price">100 000 руб.</p>
               <p class="footer__price-per-month">3500 руб. / мес. <a class="footer__month-price-link" data-fancybox="popup" data-src="#popup_6" href="javascript:void(0)"><svg class="footer__month-price-icon" aria-hidden="true"><use xlink:href="#question-circle"/></svg></a></p>
             </div>
-            <a class="footer__button footer__button--red config-buy" href="#" title="Итого">Итого</a>
+            <a class="js-config-result footer__button footer__button--red config-buy" href="#" title="Итого">Итого</a>
           </div>
+        </div>
+      </div>
+      <div class="footer__inner footer__inner--result">
+        <a class="footer__button config-close" href="#" title="Закрыть конфигуратор">ЗАКРЫТЬ</a>
+        <div class="footer__result-buttons">
+          <a class="footer__button config-save" href="#popup_1" title="Сохранить" data-fancybox="popup"><svg class="config-save__icon" aria-hidden="true"><use xlink:href="#save"/></svg><span class="config-save__text">СОХРАНИТЬ</span></a>
+          <a class="js-config-edit footer__button config-edit" href="#" title="Изменить"><svg class="config-edit__icon" aria-hidden="true"><use xlink:href="#edit"/></svg><span class="config-edit__text">ИЗМЕНИТЬ</span></a>
+          <a class="footer__button footer__button--red config-buy" href="cart.html" title="Оформить заказ">Оформить заказ</a>
         </div>
       </div>
     </footer>
