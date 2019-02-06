@@ -1,62 +1,15 @@
-//закрытие попапа блока компонентов
-function ncClose() {
-  $("body").removeClass("overflow");
-  $(".nc").removeClass("is-open");
-  $(".nc-c").removeClass("is-open");
-  $(".js-nc-c-block").removeClass("is-open");
-  $(".nc-c__list").removeClass("is-open");
+//залипание блока графиков производительности через соседний селектор в css
+if($(".nc__picture-block").length) {
+  var resize_scroll = function(e) {
+    $(window).scrollTop() > $(".nc__picture-block").innerHeight() + $(".nc__picture-block").offset().top - $(".header").innerHeight()
+      ? $(".nc__picture-block").addClass("fixed")
+      : $(".nc__picture-block").removeClass("fixed");
+  };
+
+  $(window).on("scroll", resize_scroll).on("resize", resize_scroll);
 }
 
-//залипание блока графиков производительности через соседний селектор в css
-var resize_scroll = function(e) {
-  $(window).scrollTop() > $(".nc__picture-block").innerHeight() + $(".nc__picture-block").offset().top - $(".header").innerHeight()
-    ? $(".nc__picture-block").addClass("fixed")
-    : $(".nc__picture-block").removeClass("fixed");
-};
-
-$(window).on("scroll", resize_scroll).on("resize", resize_scroll);
-
 $(document).ready(function() {
-  //открытие/закрытие главного меню
-  $(".js-menu-opener").click(function() {
-    if($(this).hasClass("is-active")) {
-      $(this).removeClass("is-active"); //снимаем класс активности с кнопки
-      $("body").removeClass("overflow"); //убираем запрет скролла на body
-      $(".main-menu").removeClass("is-open"); //закрываем меню
-      $(".footer").removeClass("blur"); //убираем класс размытия
-      $(".nc").removeClass("blur");
-    } else { //обратные действия
-      $(this).addClass("is-active");
-      $("body").addClass("overflow");
-      $(".main-menu").addClass("is-open");
-      $(".footer").addClass("blur");
-      $(".nc").addClass("blur");
-    }
-    $('.js-personal-opener').removeClass('is-active'); //закрываем меню личного каинета
-    $(".personal-menu").removeClass("is-open");
-    return false;
-  });
-
-  //открытие/закрытие меню личного кабинета
-  $(".js-personal-opener").click(function() {
-    if($(this).hasClass("is-active")) {
-      $(this).removeClass("is-active"); //снимаем класс активности с кнопки
-      $("body").removeClass("overflow"); //убираем запрет скролла на body
-      $(".personal-menu").removeClass("is-open"); //закрываем меню
-      $(".footer").removeClass("blur"); //убираем класс размытия
-      $(".nc").removeClass("blur");
-    } else {
-      $(this).addClass("is-active");
-      $("body").addClass("overflow");
-      $(".personal-menu").addClass("is-open");
-      $(".footer").addClass("blur");
-      $(".nc").addClass("blur");
-    }
-    $(".js-menu-opener").removeClass('is-active');  //закрываем главное меню
-    $(".main-menu").removeClass("is-open");
-    return false;
-  });
-
   //переключение выводимых параметров производительности
   $(".js-performance-type .nc__performance-tabs-link").click(function () {
     $(".js-performance-type .nc__performance-tabs-link").removeClass("is-active");
@@ -64,28 +17,6 @@ $(document).ready(function() {
     $(".nc__performance-bars-tab").removeClass("is-active");
     $(".nc__performance-bars-tab[data-target=" + $(this).attr("data-target") + "]").addClass("is-active");
     return false;
-  });
-
-  //открытие списка компонентов
-  $(".js-nc-c-block").click(function () {
-    $(".nc-c").removeClass("is-open"); //закрываем все подобные блоки
-    $(".js-nc-c-block").removeClass("is-open");
-    $(".nc-c__list").removeClass("is-open");
-    $(this).addClass("is-open"); //открываем текущий
-    $(this).parent(".nc-c").addClass("is-open");
-    $(this).next(".nc-c__list").addClass("is-open");
-    if($(this).hasClass("is-open")){
-      $(".nc").addClass("is-open"); //класс с затененеием
-      $("body").addClass("overflow"); //класс с запретом скролла
-    } else {
-      $(".nc").removeClass("is-open");
-      $("body").removeClass("overflow");
-    }
-  });
-
-  //закрытие списка компонентов
-  $(".js-nc-c-block-close").click(function () {
-    ncClose();
   });
 
   //листалка "слайдов" конфига
@@ -114,7 +45,6 @@ $(document).ready(function() {
       if($(this).hasClass("nc-c-list__arrow--prev")) { //если движемся назад
         var slide = $(".nc-c-list__item-cell.is-active").index();
 
-        console.log("назад");
         if(slide > 0) {
           $(".nc-c-list__item-cell").removeClass("is-active");
           $(".nc-c-list__item-cell").eq(slide - 1).addClass("is-active");
@@ -143,9 +73,9 @@ $(document).ready(function() {
     $(".nc__picture-block").removeClass("fixed");
 
     if($('body').width() < 992) { //отсекаем мобилы по ширине body 992px
-      $('.nc__inner').slideUp(0, function () {
-        $('.nc__inner--result').slideDown(0, function () {
-          $('.nc__inner').removeClass("is-active");
+      $('.nc__inner').slideUp(0, function () { //закрываем секции
+        $('.nc__inner--result').slideDown(0, function () { //открываем итог
+          $('.nc__inner').removeClass("is-active"); //меням классы активности
           $('.nc__inner--result').addClass("is-active");
           //откручиваем к началу блока
           var topOffset = $('.nc__inner--result .config-title').offset().top - $('.header').height();
@@ -155,6 +85,7 @@ $(document).ready(function() {
         });
       });
     } else {
+      //меняем калссы активности
       $('.nc__inner').removeClass("is-active");
       $('.nc__inner--result').addClass("is-active");
     }
@@ -253,28 +184,4 @@ $(document).ready(function() {
     });
     return false;
   });
-
-  //открытие попапа
-  if ($("[data-fancybox='popup']").length) {
-    $("[data-fancybox='popup']").fancybox({
-      touch: false,
-      infobar: false,
-      toolbar: false,
-      smallBtn: false,
-      animationEffect: false,
-      arrows: false,
-      hash: false
-    });
-  }
-
-  //закрытие попапа
-  $('.js-popup-close').on('click', function() {
-    $.fancybox.close();
-    return false;
-  });
-});
-
-// закрытие списка компонентов
-$(window).on("orientationchange", function() {
-  ncClose();
 });

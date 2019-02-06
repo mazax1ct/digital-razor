@@ -19,181 +19,44 @@
     <meta name="msapplication-config" content="images/favicon/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
 
-    <link rel="stylesheet" href="css/nc.css?v1"/>
+    //= template/config_collab/style.html
   </head>
   <body class="config-page">
-    <svg aria-hidden="true" style="width: 0px; height: 0px; overflow: hidden; position: absolute;" xmlns="http://www.w3.org/2000/svg">
-      <symbol id="back" viewBox="0 0 50 50">
-        <path d="M14.8,15.8V9.7L0.5,24l14.3,14.3v-6.1L6.6,24L14.8,15.8z M27,17.9V9.7L12.8,24L27,38.3v-8.4c10.2,0,17.4,3.3,22.5,10.4C47.5,30.1,41.3,19.9,27,17.9z"/>
-      </symbol>
-      <symbol id="dialog" viewBox="0 0 50 50">
-        <path d="M44.6,0.5H5.4c-2.7,0-4.9,2.2-4.9,4.9l0,44.1l9.8-9.8h34.3c2.7,0,4.9-2.2,4.9-4.9V5.4C49.5,2.7,47.3,0.5,44.6,0.5z M17.6,22.5h-4.9v-4.9h4.9V22.5z M27.5,22.5h-4.9v-4.9h4.9V22.5z M37.3,22.5h-4.9v-4.9h4.9V22.5z"/>
-      </symbol>
-      <symbol id="save" viewBox="0 0 50 50">
-        <path d="M38.6,0.5H5.9c-3,0-5.4,2.4-5.4,5.4c0,0,0,0,0,0v38.1c0,3,2.4,5.4,5.4,5.4c0,0,0,0,0,0h38.1c3,0,5.4-2.4,5.4-5.4V11.4L38.6,0.5z M25,44.1c-4.5,0-8.2-3.7-8.2-8.2s3.7-8.2,8.2-8.2s8.2,3.7,8.2,8.2C33.2,40.4,29.5,44,25,44.1C25,44.1,25,44.1,25,44.1z M33.2,16.8H5.9V5.9h27.2V16.8z"/>
-      </symbol>
-      <symbol id="cart" viewBox="0 0 50 50">
-        <path d="M27,0.5l-6.7,6.7h11.1L27,0.5z M38.1,2.7l-4.5,4.5h8.9L38.1,2.7z M4.7,5v4.5h5.1l5.8,17.4l-3.3,4.5h-0.1c-1,1.4-1.1,3.2-0.3,4.7c0.8,1.5,2.3,2.4,4,2.4h29v-4.5h-29c0,0,0,0,0-0.1l3.3-4.4h20.9c0.9,0.1,1.7-0.5,2-1.3l6.9-15.6c0.5-1.1,0-2.4-1.1-2.9c-0.3-0.1-0.6-0.2-0.9-0.2H14.5l-1-2.9L13,5H4.7z M15.9,40.6c-2.5,0-4.5,2-4.5,4.5c0,2.5,2,4.5,4.5,4.5s4.5-2,4.5-4.5C20.3,42.6,18.3,40.6,15.9,40.6z M40.4,40.6c-2.5,0-4.5,2-4.5,4.5c0,2.5,2,4.5,4.5,4.5c2.5,0,4.5-2,4.5-4.5C44.8,42.6,42.8,40.6,40.4,40.6z"/>
-      </symbol>
-      <symbol id="tile" viewBox="0 0 50 50">
-        <g>
-          <rect fill="none" stroke-width="4" stroke-miterlimit="10" x="28" y="2" width="20" height="20"/>
-          <rect fill="none" stroke-width="4" stroke-miterlimit="10" x="2" y="2" width="20" height="20"/>
-          <rect fill="none" stroke-width="4" stroke-miterlimit="10" x="2" y="28" width="20" height="20"/>
-          <rect fill="none" stroke-width="4" stroke-miterlimit="10" x="28" y="28" width="20" height="20"/>
-      	</g>
-      </symbol>
-      <symbol id="list" viewBox="0 0 50 50">
-        <g>
-          <rect x="16.1" y="20.4" width="33.4" height="9.1"/>
-          <rect x="16.1" y="5.5" width="33.4" height="9.1"/>
-          <rect x="16.1" y="35.4" width="33.4" height="9.1"/>
-          <rect x="0.5" y="20.4" width="9.1" height="9.1"/>
-          <rect x="0.5" y="5.5" width="9.1" height="9.1"/>
-          <rect x="0.5" y="35.4" width="9.1" height="9.1"/>
-      	</g>
-      </symbol>
-      <symbol id="slider_arrow_left" viewBox="0 0 23 60">
-        <path d="M22.8,7.5l-4.3-7L0.2,30l18.3,29.5l4.3-7L8.8,30L22.8,7.5z"/>
-      </symbol>
-      <symbol id="slider_arrow_right" viewBox="0 0 23 60">
-        <path d="M0.2,52.5l4.3,7L22.8,30L4.5,0.5l-4.3,7l14,22.5L0.2,52.5z"/>
-      </symbol>
-      <symbol id="share" viewBox="0 0 50 50">
-        <path d="M41.8,15.8c-2.5,0-4.8-1.2-6.2-3.1l-20.3,9.8c0.3,0.8,0.4,1.6,0.4,2.5c0,0.7-0.1,1.4-0.3,2l20.2,10.3c1.4-1.9,3.6-3.1,6.1-3.1c4.2,0,7.7,3.4,7.7,7.7c0,4.2-3.4,7.7-7.7,7.7s-7.7-3.4-7.7-7.7c0-0.6,0.1-1.2,0.2-1.8L14.2,29.7c-1.4,1.8-3.6,2.9-6,2.9c-4.2,0-7.7-3.4-7.7-7.7s3.4-7.7,7.7-7.7c2.3,0,4.3,1,5.7,2.5l20.6-10c-0.1-0.6-0.2-1.1-0.2-1.7c0-4.2,3.4-7.7,7.7-7.7c4.2,0,7.7,3.4,7.7,7.7C49.5,12.4,46.1,15.8,41.8,15.8L41.8,15.8z M41.8,46.4c2.5,0,4.6-2.1,4.6-4.6c0-2.5-2.1-4.6-4.6-4.6c-2.5,0-4.6,2.1-4.6,4.6C37.3,44.4,39.3,46.4,41.8,46.4L41.8,46.4z M8.2,20.4c-2.5,0-4.6,2.1-4.6,4.6c0,2.5,2.1,4.6,4.6,4.6c2.5,0,4.6-2.1,4.6-4.6C12.8,22.5,10.7,20.4,8.2,20.4L8.2,20.4z M41.8,3.6c-2.5,0-4.6,2.1-4.6,4.6c0,2.5,2.1,4.6,4.6,4.6c2.5,0,4.6-2.1,4.6-4.6C46.4,5.6,44.4,3.6,41.8,3.6L41.8,3.6z"/>
-      </symbol>
-      <symbol id="window-close" viewBox="0 0 512 512">
-        <path d="M464 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h416c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zm0 394c0 3.3-2.7 6-6 6H54c-3.3 0-6-2.7-6-6V86c0-3.3 2.7-6 6-6h404c3.3 0 6 2.7 6 6v340zM356.5 194.6L295.1 256l61.4 61.4c4.6 4.6 4.6 12.1 0 16.8l-22.3 22.3c-4.6 4.6-12.1 4.6-16.8 0L256 295.1l-61.4 61.4c-4.6 4.6-12.1 4.6-16.8 0l-22.3-22.3c-4.6-4.6-4.6-12.1 0-16.8l61.4-61.4-61.4-61.4c-4.6-4.6-4.6-12.1 0-16.8l22.3-22.3c4.6-4.6 12.1-4.6 16.8 0l61.4 61.4 61.4-61.4c4.6-4.6 12.1-4.6 16.8 0l22.3 22.3c4.7 4.6 4.7 12.1 0 16.8z"/>
-      </symbol>
-      <symbol id="file-pdf" viewBox="0 0 512 512">
-        <path d="M433.9,97.9L350,14c-9-9-21.2-14.1-33.9-14.1H112C85.5,0,64,21.5,64,48v416c0,26.5,21.5,48,48,48h288c26.5,0,48-21.5,48-48V131.9C448,119.2,442.9,106.9,433.9,97.9z M396.1,128H320V51.9L396.1,128z M112,464V48h160v104c0,13.3,10.7,24,24,24h104v288H112z M362.2,320.3c-12.2-12-47-8.7-64.4-6.5c-17.2-10.5-28.7-25-36.8-46.3c3.9-16.1,10.1-40.6,5.4-56c-4.2-26.2-37.8-23.6-42.6-5.9c-4.4,16.1-0.4,38.5,7,67.1c-10,23.9-24.9,56-35.4,74.4c-20,10.3-47,26.2-51,46.2c-3.3,15.8,26,55.2,76.1-31.2c22.4-7.4,46.8-16.5,68.4-20.1c18.9,10.2,41,17,55.8,17C370.2,359,372.7,330.8,362.2,320.3z M164.1,398.1c5.1-13.7,24.5-29.5,30.4-35C175.5,393.4,164.1,398.8,164.1,398.1z M245.7,207.5c7.4,0,6.7,32.1,1.8,40.8C243.1,234.4,243.2,207.5,245.7,207.5z M221.3,344.1c9.7-16.9,18-37,24.7-54.7c8.3,15.1,18.9,27.2,30.1,35.5C255.3,329.2,237.2,338,221.3,344.1z M352.9,339.1c0,0-5,6-37.3-7.8C350.7,328.7,356.5,336.7,352.9,339.1z"/>
-      </symbol>
-      <symbol id="mail-bulk" viewBox="0 0 576 512">
-        <path d="M112 48h288v48h48V48c0-26.51-21.49-48-48-48H112C85.49 0 64 21.49 64 48v144h48V48zm224 176H48c-26.51 0-48 21.49-48 48v192c0 26.51 21.49 48 48 48h288c26.51 0 48-21.49 48-48V272c0-26.51-21.49-48-48-48zm0 240H48V343.96c14.49 11.01 80 58.12 80 58.12 14.44 11.2 38.62 29.92 64 29.92s49.56-18.72 64-29.92c0 0 65.5-47.1 80-58.12V464zm0-178.61c-2.37 1.85-111.81 81.94-117.09 85.55-8.5 5.83-19.1 13.06-26.91 13.06-9.41 0-22.69-10.55-31.5-17.53-3.41-2.72-110.13-82.43-112.5-84.28V272h288v13.39zM528 128H240c-26.51 0-48 21.49-48 48v16h48v-16h288v192H416v48h112c26.51 0 48-21.49 48-48V176c0-26.51-21.49-48-48-48zm-96 80v64h64v-64h-64z">
-      </symbol>
-      <symbol id="link" viewBox="0 0 512 512">
-        <path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/>
-      </symbol>
-      <symbol id="comment-dollar" viewBox="0 0 512 512">
-        <path d="M256 32C114.62 32 0 125.12 0 240c0 47.55 19.86 91.23 52.9 126.27C38 405.72 6.97 439.06 6.54 439.5c-6.56 6.95-8.38 17.19-4.59 25.98S14.39 480 23.98 480c61.51 0 110.02-25.72 139.15-46.33C191.95 442.8 223.2 448 256 448c141.38 0 256-93.12 256-208S397.38 32 256 32zm0 384c-28.33 0-56.32-4.32-83.21-12.84l-15.16-4.8-12.99 9.19c-23.02 16.29-58.53 35.34-102.62 39.59 11.99-15.09 29.82-40.44 40.81-69.55l7.07-18.71-13.72-14.55C47.28 313.67 32 277.6 32 240c0-97.05 100.49-176 224-176s224 78.95 224 176-100.49 176-224 176zm33.94-182.95l-59.06-16.86c-8.75-2.52-14.88-10.61-14.88-19.7 0-11.3 9.19-20.48 20.47-20.48h36.91c8.24 0 16.08 2.56 22.63 7.32 2.99 2.17 7.22 1.46 9.84-1.16l11.42-11.42c3.5-3.5 2.94-9.22-.99-12.23-12.26-9.41-27.18-14.51-42.9-14.51H272v-24c0-4.42-3.58-8-8-8h-16c-4.42 0-8 3.58-8 8v24h-3.53c-30.59 0-55.13 26.3-52.24 57.48 2.06 22.16 19.06 40.12 40.45 46.22l56.44 16.11c8.75 2.52 14.88 10.61 14.88 19.7 0 11.3-9.19 20.48-20.47 20.48h-36.91c-8.24 0-16.08-2.56-22.63-7.32-2.99-2.17-7.22-1.46-9.84 1.16l-11.42 11.42c-3.5 3.5-2.94 9.21.99 12.23 12.26 9.41 27.18 14.51 42.9 14.51H240v24c0 4.42 3.58 8 8 8h16c4.42 0 8-3.58 8-8v-24h1.36c22.81 0 44.33-13.59 51.72-35.17 10.15-29.65-7.28-59.8-35.14-67.78z">
-      </symbol>
-      <symbol id="shipping-fast" viewBox="0 0 640 512">
-        <path d="M280 192c4.4 0 8-3.6 8-8v-16c0-4.4-3.6-8-8-8H40c-4.4 0-8 3.6-8 8v16c0 4.4 3.6 8 8 8h240zm352 192h-24V275.9c0-16.8-6.8-33.3-18.8-45.2l-83.9-83.9c-11.8-12-28.3-18.8-45.2-18.8H416V78.6c0-25.7-22.2-46.6-49.4-46.6H113.4C86.2 32 64 52.9 64 78.6V96H8c-4.4 0-8 3.6-8 8v16c0 4.4 3.6 8 8 8h240c4.4 0 8-3.6 8-8v-16c0-4.4-3.6-8-8-8H96V78.6c0-8.1 7.8-14.6 17.4-14.6h253.2c9.6 0 17.4 6.5 17.4 14.6V384H207.6C193 364.7 170 352 144 352c-18.1 0-34.6 6.2-48 16.4V288H64v144c0 44.2 35.8 80 80 80s80-35.8 80-80c0-5.5-.6-10.8-1.6-16h195.2c-1.1 5.2-1.6 10.5-1.6 16 0 44.2 35.8 80 80 80s80-35.8 80-80c0-5.5-.6-10.8-1.6-16H632c4.4 0 8-3.6 8-8v-16c0-4.4-3.6-8-8-8zm-488 96c-26.5 0-48-21.5-48-48s21.5-48 48-48 48 21.5 48 48-21.5 48-48 48zm272-320h44.1c8.4 0 16.7 3.4 22.6 9.4l83.9 83.9c.8.8 1.1 1.9 1.8 2.8H416V160zm80 320c-26.5 0-48-21.5-48-48s21.5-48 48-48 48 21.5 48 48-21.5 48-48 48zm80-96h-16.4C545 364.7 522 352 496 352s-49 12.7-63.6 32H416v-96h160v96zM256 248v-16c0-4.4-3.6-8-8-8H8c-4.4 0-8 3.6-8 8v16c0 4.4 3.6 8 8 8h240c4.4 0 8-3.6 8-8z"/>
-      </symbol>
-      <symbol id="comments-alt" viewBox="0 0 576 512">
-        <path d="M512 160h-96V64c0-35.3-28.7-64-64-64H64C28.7 0 0 28.7 0 64v160c0 35.3 28.7 64 64 64h32v52c0 7.1 5.8 12 12 12 2.4 0 4.9-.7 7.1-2.4L224 288h128c35.3 0 64-28.7 64-64v-32h96c17.6 0 32 14.4 32 32v160c0 17.6-14.4 32-32 32h-64v49.6l-80.2-45.4-7.3-4.2H256c-17.6 0-32-14.4-32-32v-96l-32 18.1V384c0 35.3 28.7 64 64 64h96l108.9 61.6c2.2 1.6 4.7 2.4 7.1 2.4 6.2 0 12-4.9 12-12v-52h32c35.3 0 64-28.7 64-64V224c0-35.3-28.7-64-64-64zm-128 64c0 17.6-14.4 32-32 32H215.6l-7.3 4.2-80.3 45.4V256H64c-17.6 0-32-14.4-32-32V64c0-17.6 14.4-32 32-32h288c17.6 0 32 14.4 32 32v160z"/>
-      </symbol>
-      <symbol id="times-circle" viewBox="0 0 512 512">
-        <path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 464c-118.7 0-216-96.1-216-216 0-118.7 96.1-216 216-216 118.7 0 216 96.1 216 216 0 118.7-96.1 216-216 216zm94.8-285.3L281.5 256l69.3 69.3c4.7 4.7 4.7 12.3 0 17l-8.5 8.5c-4.7 4.7-12.3 4.7-17 0L256 281.5l-69.3 69.3c-4.7 4.7-12.3 4.7-17 0l-8.5-8.5c-4.7-4.7-4.7-12.3 0-17l69.3-69.3-69.3-69.3c-4.7-4.7-4.7-12.3 0-17l8.5-8.5c4.7-4.7 12.3-4.7 17 0l69.3 69.3 69.3-69.3c4.7-4.7 12.3-4.7 17 0l8.5 8.5c4.6 4.7 4.6 12.3 0 17z">
-      </symbol>
-      <symbol id="question-circle" viewBox="0 0 512 512">
-        <path d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 448c-110.532 0-200-89.431-200-200 0-110.495 89.472-200 200-200 110.491 0 200 89.471 200 200 0 110.53-89.431 200-200 200zm107.244-255.2c0 67.052-72.421 68.084-72.421 92.863V300c0 6.627-5.373 12-12 12h-45.647c-6.627 0-12-5.373-12-12v-8.659c0-35.745 27.1-50.034 47.579-61.516 17.561-9.845 28.324-16.541 28.324-29.579 0-17.246-21.999-28.693-39.784-28.693-23.189 0-33.894 10.977-48.942 29.969-4.057 5.12-11.46 6.071-16.666 2.124l-27.824-21.098c-5.107-3.872-6.251-11.066-2.644-16.363C184.846 131.491 214.94 112 261.794 112c49.071 0 101.45 38.304 101.45 88.8zM298 368c0 23.159-18.841 42-42 42s-42-18.841-42-42 18.841-42 42-42 42 18.841 42 42z" />
-      </symbol>
-      <symbol id="delivery" viewBox="0 0 50 50">
-        <path d="M5.4,5.2c-2.7,0-4.9,2.1-4.9,4.7v25.6c0,2.6,2.2,4.7,4.9,4.7h0.2c0.6,2.7,3,4.7,6,4.7s5.4-2,6-4.7h15c0.6,2.7,3,4.7,6,4.7c3,0,5.4-2,6-4.7h0.2c0.3,0,0.7,0,1-0.1c2.2-0.4,3.9-2.3,3.9-4.6v-8.6c0-0.5-0.2-1-0.5-1.5l-8.6-12.3c-0.5-0.5-1.3-0.9-2-0.9h-8.6V9.9c0-2.6-2.2-4.7-4.9-4.7H5.4z M15.2,9.9c5.4,0,9.8,4.2,9.8,9.3s-4.4,9.3-9.8,9.3s-9.8-4.2-9.8-9.3S9.8,9.9,15.2,9.9z M17.5,12.6l-3.7,5.8l-0.6,1l0.8,0.9l4.4,4.1l2.2-2.1L17.3,19l3-4.8L17.5,12.6z M32.3,16.9h6.2l4.8,7h-11L32.3,16.9z M11.5,36.6c1.5,0,2.5,0.9,2.5,2.3s-1,2.3-2.5,2.3S9.1,40.4,9.1,39S10.1,36.6,11.5,36.6z M38.5,36.6c1.5,0,2.5,0.9,2.5,2.3s-1,2.3-2.5,2.3S36,40.4,36,39S37,36.6,38.5,36.6L38.5,36.6z"/>
-      </symbol>
-      <symbol id="service" viewBox="0 0 50 50">
-        <path d="M25,0.5c-12.8,0-23.2,9.9-23.2,22v14.7c0,2.7,2.3,4.9,5.2,4.9h7.7V25H6.9v-2.4C6.9,13.1,15,5.4,25,5.4s18.1,7.7,18.1,17.1V25h-7.7v17.1h2.6c0,1.4-1.2,2.5-2.6,2.4h-5.4c-0.6-1.5-2-2.5-3.6-2.5h-2.6c-2-0.1-3.8,1.5-3.9,3.5c-0.1,2,1.5,3.8,3.5,3.9c0.1,0,0.2,0,0.4,0h11.6c4.3,0,7.7-3.3,7.7-7.3c2.9,0,5.2-2.2,5.2-4.9V22.5C48.2,10.4,37.8,0.5,25,0.5z"/>
-      </symbol>
-      <symbol id="warranty" viewBox="0 0 50 50">
-        <path d="M5.4,1.7c-2.7,0-4.9,2.1-4.9,4.7v30.2c0,2.6,2.2,4.7,4.9,4.7h12.3v7l7.3-7l7.3,7v-7h12.3c2.7,0,4.9-2.1,4.9-4.7V6.4c0-2.6-2.2-4.7-4.9-4.7H5.4z M5.4,6.4h39.2v30.2H32.3v-4.4c0-3.5-2.5-6.5-5.9-7.1c-4.7-0.9-8.8,2.5-8.8,6.8v4.7H5.4V6.4z M10.3,11v4.7h29.4V11H10.3z M10.3,18v4.7h29.4V18L10.3,18z M25,29.7c1.3,0.1,2.3,1.2,2.2,2.4c-0.1,1.3-1.2,2.3-2.4,2.2c-1.2-0.1-2.2-1.1-2.2-2.3C22.6,30.7,23.7,29.6,25,29.7z"/>
-      </symbol>
-      <symbol id="pager_left" viewBox="0 0 256 512">
-        <path d="M31.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L127.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L201.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34z"></path>
-      </symbol>
-      <symbol id="pager_right" viewBox="0 0 256 512">
-        <path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"></path>
-      </symbol>
-      <symbol id="share" viewBox="0 0 50 50">
-        <path d="M41.8,15.8c-2.5,0-4.8-1.2-6.2-3.1l-20.3,9.8c0.3,0.8,0.4,1.6,0.4,2.5c0,0.7-0.1,1.4-0.3,2l20.2,10.3c1.4-1.9,3.6-3.1,6.1-3.1c4.2,0,7.7,3.4,7.7,7.7c0,4.2-3.4,7.7-7.7,7.7s-7.7-3.4-7.7-7.7c0-0.6,0.1-1.2,0.2-1.8L14.2,29.7c-1.4,1.8-3.6,2.9-6,2.9c-4.2,0-7.7-3.4-7.7-7.7s3.4-7.7,7.7-7.7c2.3,0,4.3,1,5.7,2.5l20.6-10c-0.1-0.6-0.2-1.1-0.2-1.7c0-4.2,3.4-7.7,7.7-7.7c4.2,0,7.7,3.4,7.7,7.7C49.5,12.4,46.1,15.8,41.8,15.8L41.8,15.8z M41.8,46.4c2.5,0,4.6-2.1,4.6-4.6c0-2.5-2.1-4.6-4.6-4.6c-2.5,0-4.6,2.1-4.6,4.6C37.3,44.4,39.3,46.4,41.8,46.4L41.8,46.4z M8.2,20.4c-2.5,0-4.6,2.1-4.6,4.6c0,2.5,2.1,4.6,4.6,4.6c2.5,0,4.6-2.1,4.6-4.6C12.8,22.5,10.7,20.4,8.2,20.4L8.2,20.4z M41.8,3.6c-2.5,0-4.6,2.1-4.6,4.6c0,2.5,2.1,4.6,4.6,4.6c2.5,0,4.6-2.1,4.6-4.6C46.4,5.6,44.4,3.6,41.8,3.6L41.8,3.6z"/>
-      </symbol>
-      <symbol id="question-circle" viewBox="0 0 512 512">
-        <path d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 448c-110.532 0-200-89.431-200-200 0-110.495 89.472-200 200-200 110.491 0 200 89.471 200 200 0 110.53-89.431 200-200 200zm107.244-255.2c0 67.052-72.421 68.084-72.421 92.863V300c0 6.627-5.373 12-12 12h-45.647c-6.627 0-12-5.373-12-12v-8.659c0-35.745 27.1-50.034 47.579-61.516 17.561-9.845 28.324-16.541 28.324-29.579 0-17.246-21.999-28.693-39.784-28.693-23.189 0-33.894 10.977-48.942 29.969-4.057 5.12-11.46 6.071-16.666 2.124l-27.824-21.098c-5.107-3.872-6.251-11.066-2.644-16.363C184.846 131.491 214.94 112 261.794 112c49.071 0 101.45 38.304 101.45 88.8zM298 368c0 23.159-18.841 42-42 42s-42-18.841-42-42 18.841-42 42-42 42 18.841 42 42z" />
-      </symbol>
-      <symbol id="piggy-bank" viewBox="0 0 576 512">
-        <path d="M432 256c-8.8 0-16 7.2-16 16s7.2 16 16 16 16-7.2 16-16-7.2-16-16-16zm128-32h-29.5c-11.1-25.3-28.7-46.9-50.5-63.4V96h-16c-30.3 0-57.8 10.1-80.9 26.2.4-3.4.9-6.7.9-10.2C384 50.1 333.9 0 272 0S160 50.1 160 112c0 9.7 1.6 18.9 4 27.9C115 159.7 78 203 67.2 256H56c-14.8 0-26.5-13.5-23.5-28.8C34.7 215.8 45.4 208 57 208h1c3.3 0 6-2.7 6-6v-20c0-3.3-2.7-6-6-6-28.5 0-53.9 20.4-57.5 48.6C-3.9 258.8 22.7 288 56 288h8c0 52.2 25.4 98.1 64 127.3V496c0 8.8 7.2 16 16 16h112c8.8 0 16-7.2 16-16v-48h64v48c0 8.8 7.2 16 16 16h112c8.8 0 16-7.2 16-16v-80.9c11.7-9 22.4-19.3 31.3-31.1H560c8.8 0 16-7.2 16-16V240c0-8.8-7.2-16-16-16zM272 32c44.2 0 80 35.8 80 80 0 5.5-.6 10.8-1.6 16H224c-10.1 0-19.9 1.2-29.5 3-1.6-6.1-2.5-12.4-2.5-19 0-44.2 35.8-80 80-80zm272 320h-48.7c-17 22.4-17 24.1-47.3 47.3V480h-80v-64H240v64h-80v-80.7c-64.9-49-64-93.5-64-111.3 0-70.6 57.4-128 128-128h161.7c16.9-13.5 33.2-26.5 62.3-30.8v47.3c39.7 30.1 44 39.3 61.6 79.5H544v96z" />
-      </symbol>
-      <symbol id="wpforms" viewBox="0 0 448 512">
-        <path d="M448 75.2v361.7c0 24.3-19 43.2-43.2 43.2H43.2C19.3 480 0 461.4 0 436.8V75.2C0 51.1 18.8 32 43.2 32h361.7c24 0 43.1 18.8 43.1 43.2zm-37.3 361.6V75.2c0-3-2.6-5.8-5.8-5.8h-9.3L285.3 144 224 94.1 162.8 144 52.5 69.3h-9.3c-3.2 0-5.8 2.8-5.8 5.8v361.7c0 3 2.6 5.8 5.8 5.8h361.7c3.2.1 5.8-2.7 5.8-5.8zM150.2 186v37H76.7v-37h73.5zm0 74.4v37.3H76.7v-37.3h73.5zm11.1-147.3l54-43.7H96.8l64.5 43.7zm210 72.9v37h-196v-37h196zm0 74.4v37.3h-196v-37.3h196zm-84.6-147.3l64.5-43.7H232.8l53.9 43.7zM371.3 335v37.3h-99.4V335h99.4z"/>
-      </symbol>
-      <symbol id="ruble-sign" viewBox="0 0 384 512">
-        <path d="M245.712 287.809c80.296 0 138.288-50.323 138.288-128.803C384 81.125 326.009 32 245.712 32H108c-6.627 0-12 5.373-12 12v204H12c-6.627 0-12 5.373-12 12v16c0 6.627 5.373 12 12 12h84v58H12c-6.627 0-12 5.373-12 12v14c0 6.627 5.373 12 12 12h84v84c0 6.627 5.373 12 12 12h19.971c6.627 0 12-5.373 12-12v-84H308c6.627 0 12-5.373 12-12v-14c0-6.627-5.373-12-12-12H139.971v-58.191h105.741zM139.971 71.594h104.643c59.266 0 98.14 31.979 98.14 87.215 0 55.818-38.873 88.96-98.777 88.96H139.971V71.594z"/>
-      </symbol>
-      <symbol id="arrow_down" viewBox="0 0 12 7.4">
-        <path d="M10.6,0L6,4.6L1.4,0L0,1.4l6,6l6-6L10.6,0z"/>
-      </symbol>
-      <symbol id="edit" viewBox="0 0 50 50">
-        <path d="M36.3,30.2l1.7-1.7c0.3-0.3,0.9-0.1,0.9,0.4v14.3c0,2.3-1.9,4.2-4.2,4.2H4.2c-2.3,0-4.2-1.9-4.2-4.2V12.5c0-2.3,1.9-4.2,4.2-4.2h25.4c0.5,0,0.7,0.6,0.4,0.9L28.2,11c-0.1,0.1-0.2,0.2-0.4,0.2H4.2c-0.8,0-1.4,0.6-1.4,1.4v30.6c0,0.8,0.6,1.4,1.4,1.4h30.6c0.8,0,1.4-0.6,1.4-1.4V30.5C36.1,30.4,36.2,30.3,36.3,30.2z M48.9,13.6L21.8,40.7l-8.7,1c-1.2,0.1-2.1-0.9-2-2l1-8.7L39.2,3.8c1.4-1.4,3.7-1.4,5.2,0l4.6,4.6C50.4,9.8,50.4,12.1,48.9,13.6L48.9,13.6z M40.8,17.8L35,12L14.7,32.2L14,38.8l6.5-0.7L40.8,17.8L40.8,17.8z M47,10.4l-4.6-4.6c-0.3-0.3-0.9-0.3-1.2,0L37,10l5.8,5.8l4.2-4.2C47.3,11.3,47.3,10.7,47,10.4L47,10.4z"/>
-      </symbol>
-    </svg>
-    <header class="header">
-      <div class="header__inner">
-        <a class="header__back" href="#"><img class="header__back-icon" src="images/icons/back.svg" alt="Назад"> Performance серия</a>
-        <h1 class="header__title"><span class="header__title-red">КОНФИГУРАТОР</span> <span class="header__title-bordered">PERFORMANCE</span></h1>
-        <button class="js-personal-opener personal-opener" type="button" title="Личный кабинет"><img width="20" height="20" src="images/icons/person.png" alt=""></button>
-        <div class="personal-menu">
-          <ul class="personal-menu__list">
-            <li class="personal-menu__title">ЛИЧНЫЙ КАБИНЕТ</li>
-            <li class="personal-menu__item">
-              <a class="personal-menu__link" href="#">Сохраненные конфигурации</a>
-            </li>
-            <li class="personal-menu__item">
-              <a class="personal-menu__link" href="#">Текущие заказы</a>
-            </li>
-            <li class="personal-menu__item">
-              <a class="personal-menu__link" href="#">Корзина</a>
-            </li>
-            <li class="personal-menu__item">
-              <a class="personal-menu__link" href="#">Личные данные</a>
-            </li>
-            <li class="personal-menu__item">
-              <a class="personal-menu__link" href="#">История заказов</a>
-            </li>
-            <li class="personal-menu__item">
-              <a class="personal-menu__link" href="#">Выход</a>
-            </li>
-          </ul>
-        </div>
-        <button class="js-menu-opener menu-opener menu-opener--nc" type="button" title="Меню"><span></span></button>
-        <div class="main-menu">
-          <ul class="main-menu__list">
-            <li class="main-menu__item root">
-              <a class="main-menu__link root-link" href="#">Игровые компьютеры</a>
-              <div class="main-menu__dropdown">
-                <p class="main-menu__dropdown-title">ИГРОВЫЕ СЕРИИ</p>
-                <a class="main-menu__dropdown-link" href="#">ProGaming - серия</a>
-                <a class="main-menu__dropdown-link" href="#">Performance - серия</a>
-                <a class="main-menu__dropdown-link" href="#">Performance X - серия</a>
-                <p class="main-menu__dropdown-title">СПЕЦИАЛЬНЫЕ СЕРИИ</p>
-                <a class="main-menu__dropdown-link" href="#">Powered by ASUS</a>
-                <a class="main-menu__dropdown-link" href="#">Powered by AMD</a>
-              </div>
-            </li>
-            <li class="main-menu__item">
-              <a class="main-menu__link" href="#">Рабочие станции</a>
-            </li>
-            <li class="main-menu__item">
-              <a class="main-menu__link" href="#">Моноблоки</a>
-            </li>
-            <li class="main-menu__item">
-              <a class="main-menu__link" href="#">Аксессуары</a>
-            </li>
-          </ul>
-        </div>
-        <a class="cart-icon" href="#" title="Корзина"><span class="cart-icon__qnt">0</span><svg class="cart-icon__icon" aria-hidden="true"><use xlink:href="images/icons/sprite.svg#cart"/></svg></a>
-      </div>
-    </header>
+    //= template/config_collab/sprite.html
+    //= template/config_collab/header.html
 
     <form class="nc" action="">
       <div class="nc__section is-active">
         <p class="js-config-section-opener config-title" data-section="1">Дизайн <svg class="config-title__icon" aria-hidden="true"><use xlink:href="#arrow_down"/></svg></p>
         <div class="nc__inner nc__inner--config is-active" data-section="1">
-          <div class="nc__inner-top" style="background-image: url('images/content/nc_bg.jpg')">
-            <div class="nc__inner-cell nc__inner-cell--canvas">
+          <div class="nc__inner-top nc__inner-top--design-block nc__inner-top--design " style="background-image: url('images/content/nc_bg.jpg')">
+            <div class="nc__inner-cell nc__inner-cell--canvas is-active" data-side="back">
               <canvas class="nc__inner-canvas" id="back_side"></canvas>
             </div>
-            <div class="nc__inner-cell nc__inner-cell--canvas">
+            <div class="nc__inner-cell nc__inner-cell--canvas" data-side="front">
               <canvas class="nc__inner-canvas" id="front_side"></canvas>
+            </div>
+          </div>
+          <div class="nc__inner-top nc__inner-top--design-block nc__inner-top--own_design is-active">
+            <p class="js-own-design-close own-design-closer"><img class="own-design-closer__icon" src="images/icons/back.svg" alt="Назад"> Дизайн</p>
+            <div class="nc__inner-cell nc__inner-cell--own_design nc__inner-cell--own_design_canvas">
+              <canvas class="nc__inner-canvas" id="own_back"></canvas>
+            </div>
+            <div class="nc__inner-cell nc__inner-cell--own_design custom-scroll">
+              <h2 class="own-design-title">СОЗДАТЬ СВОЙ ВАРИАНТ:</h2>
+              <div class="image-preview">
+                <div data-type="REDACTOR_CROP"></div>
+              </div>
+              <div class="image-preview-info">
+                <p>Загружен пользовательское изображение: <span data-type="REDACTOR_FILE_NAME">…/Sasha_Gray_Boobs.jpg</span></p>
+                <div class="file-upload">
+                  <label class="file-upload__label" for="file">
+                    <input class="file-upload__input" id="file" type="file" data-type="REDACTOR_FILE">
+                    <input class="file-upload__input" name="DR_CUSTOM_ART" type="hidden" data-type="REDACTOR_FILE_VALUE">
+                  </label>
+                  <span class="file-upload__mobile-text">Применить /&nbsp;</span>Загрузить
+                </div>
+              </div>
             </div>
           </div>
           <div class="nc__list-block">
@@ -607,180 +470,11 @@
       </div>
     </form>
 
-    <footer class="footer">
-      <div class="footer__inner footer__inner--main is-active">
-        <a class="footer__button config-close" href="#" title="Закрыть конфигуратор">ЗАКРЫТЬ</a>
-        <div class="footer__buttons">
-          <div class="footer__admin-buttons">
-            <!--<a class="footer__button config-admin" href="#" title="АДМИН">АДМИН</a>
-            <a class="footer__button config-admin" href="#" title="PREORDER">PREORDER</a>-->
-          </div>
-          <div class="footer__buttons-inner">
-            <a class="footer__button config-save" href="#popup_1" title="Сохранить" data-fancybox="popup"><svg class="config-save__icon" aria-hidden="true"><use xlink:href="#save"/></svg><span class="config-save__text">СОХРАНИТЬ</span></a>
-            <div class="footer__price-block">
-              <p class="footer__price">100 000 руб.</p>
-              <p class="footer__price-per-month">3500 руб. / мес. <a class="footer__month-price-link" data-fancybox="popup" data-src="#popup_6" href="javascript:void(0)"><svg class="footer__month-price-icon" aria-hidden="true"><use xlink:href="#question-circle"/></svg></a></p>
-            </div>
-            <a class="js-config-result footer__button footer__button--red config-buy" href="#" title="Итого">Итого</a>
-          </div>
-        </div>
-      </div>
-      <div class="footer__inner footer__inner--result">
-        <a class="footer__button config-close" href="#" title="Закрыть конфигуратор">ЗАКРЫТЬ</a>
-        <div class="footer__result-buttons">
-          <a class="footer__button config-save" href="#popup_1" title="Сохранить" data-fancybox="popup"><svg class="config-save__icon" aria-hidden="true"><use xlink:href="#save"/></svg><span class="config-save__text">СОХРАНИТЬ</span></a>
-          <a class="js-config-edit footer__button config-edit" href="#" title="Изменить"><svg class="config-edit__icon" aria-hidden="true"><use xlink:href="#edit"/></svg><span class="config-edit__text">ИЗМЕНИТЬ</span></a>
-          <a class="footer__button footer__button--red config-buy" href="cart.html" title="Оформить заказ">Оформить заказ</a>
-        </div>
-      </div>
-    </footer>
+    //= template/config_collab/footer.html
 
-    <div id="popup_1" class="popup">
-      <button class="js-popup-close popup__close" type="button" title="Закрыть"><svg class="popup__close-icon" aria-hidden="true"><use xlink:href="#window-close"/></svg></button>
-      <p class="popup__title">НЕ ЗАБУДЬТЕ СОХРАНИТЬ КОНФИГУРАЦИЮ:</p>
-      <p class="popup__text">Рекомендуем сохранить Вашу конфигурацию, что бы не сделанные изменения или вернуться к ней позднее.</p>
-      <p class="popup__text">Ссылка на конфигурацию придет к Вам на электронную почту, а так же все Ваши сохраненные конфигурации будут доступны в личном кабинете.</p>
-      <div class="popup__options-buttons">
-        <a class="popup__option-button" href="#">
-          <svg class="popup__option-button-icon" aria-hidden="true"><use xlink:href="#file-pdf"/></svg>
-          <span class="popup__option-button-text">Сохранить конфигурацию<br> в PDF файл</span>
-        </a>
-        <a class="popup__option-button" href="#popup_3" data-fancybox="popup">
-          <svg class="popup__option-button-icon" aria-hidden="true"><use xlink:href="#mail-bulk"/></svg>
-          <span class="popup__option-button-text">Отправить конфигурацию<br> на почту</span>
-        </a>
-        <a class="popup__option-button" href="#popup_5" data-fancybox="popup">
-          <svg class="popup__option-button-icon" aria-hidden="true"><use xlink:href="#link"/></svg>
-          <span class="popup__option-button-text">Создать постоянную<br> ссылку</span>
-        </a>
-      </div>
-    </div>
-    
-    <div id="popup_2" class="popup">
-      <button class="js-popup-close popup__close" type="button" title="Закрыть"><svg class="popup__close-icon" aria-hidden="true"><use xlink:href="#window-close"/></svg></button>
-      <p class="popup__title">ОБРАТИТЕ ВНИМАНИЕ, ВЫ НЕ ЗАВЕРШИЛИ ОФОРМЛЕНИЕ ЗАКАЗА</p>
-      <p class="popup__text">По какой-то причине Вы не завершили оформление заказа, не беспокойтесь мы сохраним вашу конфигурацию и список товаров в вашем личном кабинете, вы сможете продолжить покупки в более удобное время.</p>
-      <div class="popup__options-buttons">
-        <a class="popup__option-button" href="#">
-          <svg class="popup__option-button-icon" aria-hidden="true"><use xlink:href="#comment-dollar"/></svg>
-          <span class="popup__option-button-text">У меня есть вопрос<br> по оплате</span>
-        </a>
-        <a class="popup__option-button" href="#">
-          <svg class="popup__option-button-icon" aria-hidden="true"><use xlink:href="#shipping-fast"/></svg>
-          <span class="popup__option-button-text">У меня есть вопрос<br> по доставке</span>
-        </a>
-        <a class="popup__option-button" href="#">
-          <svg class="popup__option-button-icon" aria-hidden="true"><use xlink:href="#comments-alt"/></svg>
-          <span class="popup__option-button-text">Мне нужна<br> консультация</span>
-        </a>
-      </div>
-      <div class="popup__buttons">
-        <a class="popup__button button" href="#">Не интересует</a>
-        <a class="popup__button button button--red" href="#">Продолжу позже</a>
-      </div>
-    </div>
-    
-    <div id="popup_3" class="popup">
-      <button class="js-popup-close popup__close" type="button" title="Закрыть"><svg class="popup__close-icon" aria-hidden="true"><use xlink:href="#window-close"/></svg></button>
-      <p class="popup__title">ОТПРАВИТЬ КОНФИГУРАЦИЮ НА ПОЧТУ:</p>
-      <form class="popup__form" action="">
-        <label class="popup__form-label" for="email">
-          <input class="input" id="email" type="text" placeholder="E-mail">
-        </label>
-        <label class="popup__form-label" for="comment">
-          <textarea class="popup__form-textarea textarea" id="comment" placeholder="Ваш вопрос или комментарий"></textarea>
-        </label>
-        <div class="popup__form-buttons">
-          <button class="popup__form-button button button--red" type="submit">Отправить на почту</button>
-        </div>
-      </form>
-    </div>
-    
-    <div id="popup_4" class="popup">
-      <button class="js-popup-close popup__close" type="button" title="Закрыть"><svg class="popup__close-icon" aria-hidden="true"><use xlink:href="#window-close"/></svg></button>
-      <p class="popup__title">Какой у Вас вопрос?</p>
-      <form class="popup__form" action="">
-        <div class="popup__form-row">
-          <div class="popup__form-row-block">
-            <label class="popup__form-label" for="name">
-              <input class="input" id="name" type="text" placeholder="Имя">
-            </label>
-            <label class="popup__form-label" for="phone">
-              <input class="input" id="phone" type="text" placeholder="Телефон">
-            </label>
-          </div>
-          <div class="popup__form-row-block">
-            <label class="popup__form-label" for="email_">
-              <input class="input" id="email_" type="text" placeholder="E-mail">
-            </label>
-            <label class="popup__form-label" for="city">
-              <input class="input" id="city" type="text" placeholder="Город">
-            </label>
-          </div>
-        </div>
-        <label class="popup__form-label" for="question">
-          <textarea class="popup__form-textarea textarea" id="question" placeholder="Ваш вопрос"></textarea>
-        </label>
-        <div class="popup__form-buttons">
-          <button class="popup__form-button button button--red" type="submit">Отправить</button>
-        </div>
-      </form>
-    </div>
-    
-    <div id="popup_5" class="popup">
-      <button class="js-popup-close popup__close" type="button" title="Закрыть"><svg class="popup__close-icon" aria-hidden="true"><use xlink:href="#window-close"/></svg></button>
-      <p class="popup__title">ССЫЛКА НА КОНФИГУРАЦИЮ</p>
-      <p class="popup__text">Конфигурация успешно сохранена и доступна по постоянной<br> ссылке: <a href="https://digital-razor.ru/configurator/670093/" target="_blank">https://digital-razor.ru/configurator/670093/</a></p>
-      <hr>
-      <p class="popup__text">Еще Вы можете отправить ссылку на конфигурацию себе на электронную почту.</p>
-      <form class="popup__form" action="">
-        <div class="popup__form-row">
-          <div class="popup__form-row-block">
-            <label class="popup__form-label" for="email__">
-              <input class="input" id="email__" type="text" placeholder="E-mail">
-            </label>
-          </div>
-        </div>
-        <label class="popup__form-label" for="question_">
-          <textarea class="popup__form-textarea textarea" id="question_" placeholder="Ваш вопрос или комментарий"></textarea>
-        </label>
-        <div class="popup__form-buttons">
-          <button class="popup__form-button button button--red" type="submit">Отправить</button>
-        </div>
-      </form>
-    </div>
-    
-    <div id="popup_6" class="popup">
-      <button class="js-popup-close popup__close" type="button" title="Закрыть"><svg class="popup__close-icon" aria-hidden="true"><use xlink:href="#window-close"/></svg></button>
-      <p class="popup__title">ОПЛАТА ЧАСТЯМИ ОНЛАЙН</p>
-      <div class="credit-block">
-        <svg class="credit-block__icon" aria-hidden="true"><use xlink:href="#piggy-bank"/></svg>
-        <div class="credit-block__text-block">
-          <p>Вы можете купить игровой компьютер в кредит и оплачивать всю сумму равными частями в течение выбранного срока - от 2 до 36 месяцев</p>
-        </div>
-      </div>
-      <div class="credit-block">
-        <svg class="credit-block__icon" aria-hidden="true"><use xlink:href="#wpforms"/></svg>
-        <div class="credit-block__text-block">
-          <p class="credit-block__title">БЫСТРО И ПРОСТО</p>
-          <p>Заполните короткую анкету и получите решение по Вашей заявке за 2 минуты.</p>
-        </div>
-      </div>
-      <div class="credit-block">
-        <svg class="credit-block__icon" aria-hidden="true"><use xlink:href="#ruble-sign"/></svg>
-        <div class="credit-block__text-block">
-          <p class="credit-block__title">ВЫБОР ЛУЧШИХ УСЛОВИЙ</p>
-          <p>Заявка уходит на рассмотрение в больше число финансовых организаций: Райффайзен Банк Банк Восточный, Тинькофф Банк, Кредит Европа Банк, Почта Банк, Альфа-Банк и др.</p>
-        </div>
-      </div>
-      <div class="popup__buttons">
-        <a class="js-popup-close popup__button button" href="#">Назад</a>
-        <a class="popup__button button button--red" href="#">Купить в рассрочку</a>
-      </div>
-    </div>
+    //= template/config/popup.html
 
-    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
-    <script type="text/javascript" src="js/jquery.fancybox.min.js"></script>
-    <script type="text/javascript" src="js/config_collab.js?v1"></script>
+    //= template/config_collab/scripts.html
+    <script type="text/javascript" src="js/nc/design-config.js"></script>
   </body>
 </html>
