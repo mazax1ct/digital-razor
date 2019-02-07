@@ -1,0 +1,443 @@
+.nc-c
+  margin-left: 5px
+  margin-right: 5px
+  margin-bottom: 10px
+  position: relative
+  width: calc(50% - 10px)
+
+  @media (min-width: 600px)
+    width: calc(25% - 10px)
+
+  @media (min-width: 992px)
+    display: flex
+    flex-direction: column
+    flex-basis: calc(100% / 7)
+    position: relative
+    margin-right: 5px
+    margin-left: 0
+    margin-bottom: 0
+    min-width: calc(100% / 7 - 10px)
+    width: calc(100% / 7 - 10px)
+
+  @media(min-width: 1500px) and (min-height: 730px)
+    margin-right: 10px
+
+  &:first-child,
+  &:nth-child(2),
+  &:nth-child(3)
+    .nc-c__list
+      @media (min-width: 992px)
+        left: 0
+
+  &:nth-child(4),
+  &:nth-child(5),
+  &:nth-child(6),
+  &:nth-child(7)
+    .nc-c__list
+      @media (min-width: 992px)
+        left: auto
+        right: 0
+
+  &--empty
+    display: none
+
+    @media (min-width: 992px)
+      display: flex
+
+    .nc-c__block
+      cursor: default
+
+  &__title
+    background-color: #888
+    font-size: 10px
+    font-weight: 400
+    left: auto
+    padding-right: 10px
+    padding-left: 10px
+    position: absolute
+    right: 0
+    top: 0
+    z-index: 2
+
+    @media (min-width: 992px)
+      background: none
+      color: #888
+      display: block
+      font-family: "Roboto", Arial, sans-serif
+      font-size: 10px
+      line-height: 1
+      min-height: 0
+      margin-bottom: 2px
+      padding-left: 0
+      padding-right: 0
+      position: static
+      white-space: nowrap
+      z-index: 0
+
+    @media (min-width: 1200px)
+      font-size: 12px
+
+    @media(min-width: 1900px) and (min-height: 1000px)
+      font-size: 16px
+
+  &__block
+    border: 1px solid #888
+    background-color: #373737
+    color: #fff
+    cursor: pointer
+    display: flex
+    flex-direction: column
+    height: 100%
+    position: relative
+    padding-top: 20px
+    text-align: right
+
+    @media (min-width: 992px)
+      background-color: #000
+      flex-grow: 1
+      justify-content: center
+      height: auto
+      min-height: 56px
+      padding: 9px 5px
+
+    @media(min-width: 1200px) and (min-height: 650px)
+      min-height: 58px
+
+    @media(min-width: 1500px) and (min-height: 730px)
+      min-height: 68px
+      padding: 5px
+
+    @media(min-width: 1900px) and (min-height: 1000px)
+      min-height: 85px
+
+    &--with_icon
+      @media (min-width: 992px)
+        align-items: center
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+
+    &:hover,
+    &.is-open
+      .nc-c__block-sign
+        background-color: #E5262D
+        color: #fff
+
+  &__block-icon
+    left: 5px
+    position: absolute
+    top: 20px
+    width: 30px
+
+    @media(min-width: 992px)
+      display: none
+      left: auto
+      position: static
+      top: auto
+
+    @media(min-width: 1200px)
+      display: block
+
+    @media(min-width: 1900px) and (min-height: 1000px)
+      min-width: 40px
+      width: 40px
+
+  &__block-text
+    display: flex
+    flex-direction: column
+    flex-grow: 1
+
+    @media(min-width: 992px)
+      justify-content: center
+
+    @media(min-width: 1200px)
+      padding-left: 5px
+
+  &__block-title
+    align-items: center
+    display: flex
+    font-size: 14px
+    font-weight: 900
+    flex-grow: 1
+    justify-content: flex-end
+    line-height: 1
+    min-height: 40px
+    margin-bottom: 0
+    padding: 5px
+    padding-left: 40px
+
+    @media(min-width: 992px)
+      display: block
+      font-size: 13px
+      flex-grow: 0
+      min-height: 0
+      padding: 0
+
+    @media(min-width: 1200px) and (min-height: 650px)
+      font-size: 15px
+
+    @media(min-width: 1500px) and (min-height: 650px)
+      font-size: 16px
+
+    @media(min-width: 1500px) and (min-height: 730px)
+      font-size: 17px
+
+    @media(min-width: 1900px) and (min-height: 1000px)
+      font-size: 20px
+
+  &__block-feature
+    align-items: center
+    background-color: #232323
+    display: flex
+    font-size: 10px
+    justify-content: flex-end
+    line-height: 1
+    min-height: 40px
+    padding: 10px 5px
+    white-space: nowrap
+
+    @media(min-width: 992px)
+      background: none
+      min-height: 0
+      margin-top: 5px
+      padding: 0
+
+  &__block-sign
+    background-color: #3C3C3C
+    bottom: -16px
+    color: #9a9b9c
+    display: none
+    font-size: 10px
+    font-weight: 500
+    height: 15px
+    line-height: 1
+    left: auto
+    position: absolute
+    padding: 2px 4px 2px 15px
+    right: -1px
+    top: auto
+    transition: all 0.3s
+
+    @media(min-width: 992px)
+      display: block
+
+    @media(min-width: 1900px) and (min-height: 1000px)
+      bottom: -18px
+      font-size: 14px
+      height: 17px
+      padding: 1px 4px 2px 15px
+
+  &__list
+    display: none
+
+    &.is-open
+      background-color: #202020
+      display: block
+      height: 100%
+      left: 0
+      overflow-y: auto
+      position: fixed
+      top: 0
+      width: 100%
+      z-index: 100
+
+      @media (min-width: 992px)
+        background: none
+        bottom: -1px
+        display: block
+        height: auto
+        min-width: 100%
+        overflow: visible
+        position: absolute
+        top: auto
+        width: auto
+        z-index: 1
+
+      .nc-c__list-close
+        @media (min-width: 992px)
+          display: block
+
+    &--tile
+      &.is-open
+        @media (min-width: 992px)
+          min-width: 570px
+
+        @media(min-width: 1500px) and (min-height: 730px)
+          min-width: 800px
+
+        .nc-c__list-inner
+          @media (min-width: 992px)
+            align-items: flex-start
+            display: flex !important
+            flex-wrap: wrap
+
+    &--double
+      &.is-open
+        .nc-c__list-inner
+          display: flex
+          padding-left: 10px
+          padding-right: 10px
+
+          @media (min-width: 992px)
+            display: table
+            padding-left: 0
+            padding-right: 0
+
+      .nc-c__list-block
+        margin-right: 5px
+        margin-left: 5px
+        position: relative
+        width: calc(50% - 10px)
+
+        @media(min-width: 600px)
+          display: flex
+          flex-wrap: wrap
+          margin-left: auto
+          margin-right: auto
+          width: 50%
+
+        @media (min-width: 992px)
+          display: table-cell
+          min-width: 150px
+          padding-right: 1px
+          width: auto
+
+        @media (min-width: 1200px)
+          min-width: 180px
+
+  &__list-filter-block
+    margin-bottom: 5px
+
+    @media(min-width: 992px)
+      display: flex
+      justify-content: flex-end
+
+  &__list-filter
+    align-items: center
+    display: flex
+    justify-content: flex-end
+    overflow-x: auto
+    padding-left: 15px
+    padding-right: 15px
+
+    @media(min-width: 992px)
+      background-color: #1D1D1D
+      display: inline-flex
+      padding-left: 10px
+      padding-right: 10px
+
+  &__list-filter-item
+    margin-right: 20px
+
+    &--button
+      @media(min-width: 1400px)
+        margin-left: 20px
+
+    &:last-child
+      margin-right: 0
+
+  &__list-filter-link
+    align-items: center
+    border-bottom: 5px solid transparent
+    display: flex
+    min-height: 50px
+    transition: border-bottom-color 0.3s
+    text-decoration: none
+    white-space: nowrap
+
+    @media(min-width: 992px)
+      border-bottom-width: 2px
+      min-height: 45px
+
+    &.is-active,
+    &:hover
+      border-bottom-color: #D02228
+      text-decoration: none
+
+  &__list-filter-button
+    background-color: #F13724
+    display: inline-block
+    padding: 2px 5px
+
+    @media(min-width: 992px)
+      padding-left: 10px
+      padding-right: 10px
+
+    &:hover
+      text-decoration: none
+
+  &__list-inner
+    display: flex
+    flex-wrap: wrap
+    padding-left: 10px
+    padding-right: 10px
+
+    @media(min-width: 992px)
+      display: block
+      padding-left: 0
+      padding-right: 0
+
+  &__list-block
+    .nc-item
+      margin-left: 0
+      margin-right: 0
+      width: 100%
+
+      @media(min-width: 600px)
+        margin-left: 5px
+        margin-right: 5px
+        width: calc(50% - 10px)
+
+      @media(min-width: 992px)
+        margin-left: 0
+        margin-right: 0
+        width: 100%
+
+  &__list-title
+    align-items: center
+    color: #fff
+    cursor: pointer
+    display: flex
+    font-size: 15px
+    font-weight: 700
+    min-height: 55px
+    padding-left: 10px
+    padding-right: 10px
+
+    @media(min-width: 400px)
+      font-size: 20px
+
+    @media(min-width: 992px)
+      display: none
+
+  &__list-title-icon
+    font-size: 0
+    margin-right: 5px
+    min-width: 19px
+    width: 19px
+
+  &__list-close
+    border: none
+    background: none
+    cursor: pointer
+    display: none
+    height: 30px
+    left: 100%
+    padding: 0
+    position: absolute
+    top: 0
+    width: 30px
+    z-index: 1
+
+    @media(min-height: 650px)
+      top: -20px
+
+    &:hover
+      .nc-c__list-close-icon
+        fill: #E5262D
+
+  &__list-close-icon
+    fill: #fff
+    height: 30px
+    transition: fill 0.3s
+    width: 30px

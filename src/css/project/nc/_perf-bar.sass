@@ -1,0 +1,51 @@
+.perf-bar
+  align-items: center
+  background-color: #424242
+  box-shadow: 0 5px 10px 10px rgba(0,0,0,0.3)
+  color: #fff
+  display: flex
+  justify-content: space-between
+  font-size: 12px
+  height: 30px
+  margin-top: 5px
+  position: relative
+  padding-left: 15px
+  padding-right: 15px
+
+  @media (min-width: 992px) and (min-height: 650px)
+    height: 40px
+    margin-top: 3px
+
+  @media (min-width: 1200px) and (min-height: 650px)
+    font-size: 14px
+    font-weight: 500
+
+  @media(min-width: 1500px) and (min-height: 730px)
+    margin-top: 10px
+
+  @media(min-width: 1600px) and (min-height: 850px)
+    font-size: 20px
+    height: 50px
+
+  &__title
+    position: relative
+    z-index: 1
+
+  &__bar
+    background-color: #F13724
+    height: 100%
+    left: 0
+    position: absolute
+    top: 0
+
+  &__value
+    line-height: 1.15
+    position: relative
+    z-index: 1
+
+    @media(min-width: 992px)
+      width: 90px
+
+  &__value-note
+    font-size: 10px
+    opacity: 0.5

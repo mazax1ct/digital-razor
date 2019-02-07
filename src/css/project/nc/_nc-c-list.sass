@@ -1,0 +1,139 @@
+.nc-c-list
+  @media (min-width: 992px)
+    margin-bottom: 16px
+    padding-left: 40px
+    padding-right: 40px
+    position: relative
+    width: 100%
+
+  @media(min-width: 1500px)
+    padding-left: 100px
+    padding-right: 100px
+
+  &__arrow
+    border: none
+    bottom: 0
+    background-color: #3C3C3C
+    cursor: pointer
+    display: none
+    height: 50px
+    position: absolute
+    transition: all 0.3s
+    width: 30px
+
+    @media (min-width: 992px)
+      display: block
+
+    @media(min-width: 1500px) and (min-height: 730px)
+      height: 60px
+
+    @media (min-width: 1500px)
+      width: 50px
+
+    @media(min-width: 1900px) and (min-height: 1000px)
+      height: 85px
+
+    &--prev
+      left: 5px
+
+      @media(min-width: 1500px)
+        left: 30px
+
+    &--next
+      left: auto
+      right: 5px
+
+      @media(min-width: 1500px)
+        right: 30px
+
+    &:disabled
+      opacity: 0.3
+
+    &:not(:disabled)
+      &:hover,
+      &.is-active
+        background-color: #E5262D
+
+  &__arrow-icon
+    fill: #fff
+    height: 32px
+    width: 12px
+
+    @media(min-width: 1900px) and (min-height: 1000px)
+      height: 55px
+      width: 22px
+
+  &__item-cell
+    margin-top: -1px
+
+    @media(min-width: 992px)
+      display: none
+      margin-top: 0
+
+    &.is-active
+      @media(min-width: 992px)
+        display: block
+
+    &:first-child
+      margin-top: 0
+
+  &__item
+    display: none
+
+    @media(min-width: 992px)
+      display: block !important
+
+    &.is-active
+      display: block
+
+  &__item-title
+    align-items: center
+    background-color: #1D1D1D
+    border-top: 1px solid #888
+    border-bottom: 1px solid #888
+    color: #fff
+    cursor: pointer
+    display: flex
+    font-size: 16px
+    font-weight: 700
+    justify-content: center
+    min-height: 55px
+    margin-bottom: 0
+    position: relative
+
+    @media(min-width: 992px)
+      display: none
+
+  &__item-title-icon
+    fill: #fff
+    height: 16px
+    left: auto
+    position: absolute
+    right: 15px
+    top: 50%
+    transform: translateY(-50%)
+    width: 16px
+
+  &__item-list
+    display: flex
+    flex-wrap: wrap
+    padding-top: 10px
+    padding-left: 10px
+    padding-right: 10px
+
+    @media(min-width: 992px)
+      flex-wrap: nowrap
+      padding-top: 0
+      padding-left: 0
+      padding-right: 0
+
+    @media(min-width: 1500px) and (min-height: 730px)
+      padding-left: 10px
+
+a.nc-c-list__arrow
+  display: none
+  
+  @media(min-width: 992px)
+    align-items: center
+    display: flex
+    justify-content: center

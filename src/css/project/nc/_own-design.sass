@@ -1,0 +1,172 @@
+.own-design-closer
+  cursor: pointer
+  font-size: 15px
+  font-weight: 700
+  padding-right: 10px
+  padding-left: 10px
+
+  @media(min-width: 992px)
+    height: 40px
+    left: auto
+    position: absolute
+    padding-left: 0
+    padding-right: 0
+    right: 20px
+    top: 20px
+    width: 40px
+    z-index: 1
+
+  &__inner
+    align-items: center
+    color: #fff
+    display: flex
+    min-height: 55px
+
+    @media(min-width: 992px)
+      display: none
+
+  &__icon
+    font-size: 0
+    width: 19px
+    min-width: 19px
+    margin-right: 5px
+
+  &__svg-icon
+    display: none
+    fill: #888
+    height: 40px
+    transition: fill 0.3s
+    width: 40px
+
+    &:hover
+      fill: #f13724
+
+    @media(min-width: 992px)
+      display: block
+
+.own-design-title
+  display: none
+
+  @media(min-width: 992px)
+    display: block
+
+.image-preview
+  border: 1px solid #707070
+  background-color: #1a1a1a
+  height: 140px
+  margin-bottom: 15px
+  margin-left: auto
+  margin-right: auto
+  position: relative
+  max-width: 345px
+
+  @media(min-height: 600px)
+    height: 180px
+    margin-left: auto
+    margin-right: auto
+
+  @media(min-height: 700px)
+    height: 300px
+
+  @media(min-height: 800px)
+    height: 345px
+
+  @media (min-width: 992px)
+    max-width: 100%
+
+  @media (min-width: 992px) and (min-height: 600px)
+    height: 0
+    padding-bottom: 180px
+    width: 100%
+
+  @media(min-width: 1200px) and (min-height: 700px)
+    padding-bottom: 250px
+
+  @media(min-width: 1500px) and (min-height: 730px)
+    padding-bottom: 300px
+
+  @media(min-width: 1600px) and (min-height: 850px)
+    padding-bottom: 350px
+
+  @media(min-width: 1900px) and (min-height: 900px)
+    padding-bottom: 400px
+
+  .croppie-container
+    left: 0
+    position: absolute
+    top: 0
+
+.image-preview-info
+  @media(min-width: 992px)
+    align-items: center
+    display: flex
+    justify-content: space-between
+
+.image-preview-title
+  color: #888
+  display: none
+  font-size: 12px
+
+  @media(min-width: 992px)
+    display: block
+
+  @media(min-width: 1400px)
+    font-size: 16px
+
+.file-upload
+  align-items: center
+  background-color: #f13724
+  border: 1px solid #f13724
+  color: #fff
+  cursor: pointer
+  display: flex
+  font-size: 13px
+  font-family: 'Russo One', 'Roboto', Arial, sans-serif
+  justify-content: center
+  line-height: 18px
+  min-height: 40px
+  max-width: 345px
+  margin-top: 15px
+  margin-left: auto
+  margin-right: auto
+  overflow: hidden
+  position: relative
+  padding: 5px 20px
+  text-decoration: none
+  text-align: center
+  vertical-align: middle
+  width: 100%
+  z-index: 1
+
+  @media(min-width: 992px)
+    font-size: 16px
+    min-width: 200px
+    margin-top: 0
+    margin-left: 30px
+    margin-right: 0
+    text-transform: uppercase
+    width: auto
+
+  @media(min-width: 1600px) and (min-height: 850px)
+    font-size: 18px
+    min-height: 50px
+    padding: 10px 15px
+
+  &:hover
+    text-decoration: none
+
+  &__input
+    display: none
+
+  &__label
+    display: block
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    cursor: pointer
+
+  &__mobile-text
+    @media(min-width: 992px)
+      display: none
