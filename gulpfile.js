@@ -75,7 +75,7 @@ gulp.task("js:build", function() {
 });
 
 gulp.task("style:build", function() {
-  /*gulp
+  gulp
     .src(path.src.style)
     .pipe(sass())
     .pipe(csscomb())
@@ -102,7 +102,7 @@ gulp.task("style:build", function() {
     )
     .pipe(cleanCSS())
     .pipe(gulp.dest(path.build.css))
-    .pipe(reload({ stream: true }));*/
+    .pipe(reload({ stream: true }));
   gulp
     .src(path.src.nc)
     .pipe(sass())

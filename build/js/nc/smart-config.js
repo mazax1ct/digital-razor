@@ -96,7 +96,6 @@ $(".js-config-edit").click(function () {
         });
       });
     }
-
   } else {
     //переключаем видимость основной секции на начало конфига
     $('.nc__section').removeClass('is-active');
@@ -119,23 +118,6 @@ $(".js-config-edit").click(function () {
 
   //сбрасываем залипание блока с графиками
   $(".nc__picture-block").removeClass("fixed");
-
-  /*if($('body').width() < 992) { //отсекаем мобилы по ширине body 992px
-    $('.nc__inner').slideUp(0, function () {
-      $('.nc__inner').removeClass("is-active"); //убираем классы активности
-      $('.nc__inner--config').slideDown(0, function () {
-        $('.nc__inner--config').addClass("is-active"); //вешаем класс активности на главную секцию
-        //откручиваем страницу к началу блока
-        var topOffset = $('.nc__inner--config').prev('.config-title').offset().top - $('.header').height();
-        $("html, body").animate({
-            scrollTop: topOffset
-        }, 0);
-      });
-    });
-  } else {
-    $('.nc__inner').removeClass("is-active");
-    $('.nc__inner--config').addClass("is-active");
-  }*/
 
   //переключаем кнопки в футере
   $('.footer__inner').removeClass('is-active');

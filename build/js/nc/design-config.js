@@ -17,7 +17,7 @@ function drawBack() {
     var pic = new Image();
     back_side.height = 840;
     back_side.width = 840;
-    pic.src = '../images/content/back.png';
+    pic.src = '/images/content/back.png';
     pic.onload = function () {
       ctx.save();
       ctx.scale(-1,1);
@@ -34,7 +34,7 @@ function drawOwnBack() {
     var pic = new Image();
     own_back.height = 840;
     own_back.width = 840;
-    pic.src = '../images/content/back.png';
+    pic.src = '/images/content/back.png';
     pic.onload = function () {
       ctx.save();
       ctx.scale(-1,1);
@@ -52,8 +52,8 @@ function drawFront() {
     var pic2 = new Image();
     front_side.height = 840;
     front_side.width = 840;
-    pic.src = '../images/content/back.png';
-    pic2.src = '../images/content/back_light.png';
+    pic.src = '/images/content/back.png';
+    pic2.src = '/images/content/back_light.png';
     pic.onload = function () {
       ctx.drawImage(pic, 0, 0);
     }
