@@ -20,6 +20,19 @@ $(window).on("orientationchange", function() {
   ncClose();
 });
 
+//закрытие попапа блока компонентов при выборе компонента
+$('.nc-item').click(function() {
+  ncClose();
+});
+
+$('.nc-item2').click(function() {
+  ncClose();
+});
+
+$('.nc-item3').click(function() {
+  ncClose();
+});
+
 //открытие/закрытие главного меню
 $(".js-menu-opener").click(function() {
   if($(this).hasClass("is-active")) {

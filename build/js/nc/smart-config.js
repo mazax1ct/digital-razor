@@ -1,8 +1,5 @@
 //если возвращаемся из дизайн конфига сразу на аксессуары
 if(window.location.hash.substring(1) == 'accessories') {
-  //снимаем класс для фиксации блока графиков производительности
-  $(".nc__picture-block").removeClass("fixed");
-
   $('.nc__section[data-hash="accessories"] .nc__inner').slideDown(0, function () { //открываем секцию аксессов
     $(".nc__inner").not($('.nc__section[data-hash="accessories"] .nc__inner')).slideUp(0, function () { //закрываем остальные секции
       $(".nc__inner").not($('.nc__section[data-hash="accessories"] .nc__inner')).removeClass("is-active"); //закрываем внутренности остальных секций
@@ -22,17 +19,6 @@ if(window.location.hash.substring(1) == 'accessories') {
   });
 }
 
-//залипание блока графиков производительности через соседний селектор в css
-if($(".nc__picture-block").length) {
-  var resize_scroll = function(e) {
-    $(window).scrollTop() > $(".nc__picture-block").innerHeight() + $(".nc__picture-block").offset().top - $(".header").innerHeight()
-      ? $(".nc__picture-block").addClass("fixed")
-      : $(".nc__picture-block").removeClass("fixed");
-  };
-
-  $(window).on("scroll", resize_scroll).on("resize", resize_scroll);
-}
-
 //переключение выводимых параметров производительности
 $(".js-performance-type .nc__performance-tabs-link").click(function () {
   $(".js-performance-type .nc__performance-tabs-link").removeClass("is-active");
@@ -47,9 +33,6 @@ $(".js-config-result").click(function () {
   //переключаем видимость основной секции
   $('.nc__section').removeClass('is-active');
   $('.nc__section--result').addClass('is-active');
-
-  //сбрасываем залипание блока с графиками
-  $(".nc__picture-block").removeClass("fixed");
 
   if($('body').width() < 992) { //отсекаем мобилы по ширине body 992px
     $('.nc__inner').slideUp(0, function () { //закрываем секции
@@ -116,9 +99,6 @@ $(".js-config-edit").click(function () {
     }
   }
 
-  //сбрасываем залипание блока с графиками
-  $(".nc__picture-block").removeClass("fixed");
-
   //переключаем кнопки в футере
   $('.footer__inner').removeClass('is-active');
   $('.footer__inner--main').addClass('is-active');
@@ -131,9 +111,6 @@ $(".js-config-section-opener").click(function () {
   var section_title = $(this);
   var section_id = $(this).attr('data-section');
   var section_parent = $(this).parent('.nc__section');
-
-  //снимаем класс для фиксации блока графиков производительности
-  $(".nc__picture-block").removeClass("fixed");
 
   $('.nc__inner[data-section=' + section_id + ']').slideDown(0, function () { //открываем секцию на заголовок которой нажали
     $(".nc__inner").not($('.nc__inner[data-section=' + section_id + ']')).slideUp(0, function () { //закрываем остальные секции

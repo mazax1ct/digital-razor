@@ -138,6 +138,10 @@
     @media(min-width: 1200px)
       display: block
 
+    @media(min-width: 1500px) and (min-height: 730px)
+      min-width: 35px
+      width: 35px
+
     @media(min-width: 1900px) and (min-height: 1000px)
       min-width: 40px
       width: 40px
@@ -156,7 +160,7 @@
   &__block-title
     align-items: center
     display: flex
-    font-size: 14px
+    font-size: 20px
     font-weight: 900
     flex-grow: 1
     justify-content: flex-end
@@ -176,31 +180,37 @@
     @media(min-width: 1200px) and (min-height: 650px)
       font-size: 15px
 
-    @media(min-width: 1500px) and (min-height: 650px)
+    @media(min-width: 1400px) and (min-height: 650px)
       font-size: 16px
 
-    @media(min-width: 1500px) and (min-height: 730px)
-      font-size: 17px
+    @media(min-width: 1500px) and (min-height: 700px)
+      font-size: 19px
 
-    @media(min-width: 1900px) and (min-height: 1000px)
+    @media(min-width: 1600px) and (min-height: 730px)
       font-size: 20px
+
+    @media(min-width: 1900px) and (min-height: 800px)
+      font-size: 24px
 
   &__block-feature
     align-items: center
     background-color: #232323
     display: flex
-    font-size: 10px
+    font-size: 14px
     justify-content: flex-end
     line-height: 1
     min-height: 40px
     padding: 10px 5px
-    white-space: nowrap
 
     @media(min-width: 992px)
       background: none
+      font-size: 10px
       min-height: 0
       margin-top: 5px
       padding: 0
+
+    @media(min-width: 1500px) and (min-width: 730px)
+      font-size: 12px
 
   &__block-sign
     background-color: #3C3C3C
