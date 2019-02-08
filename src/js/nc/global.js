@@ -23,14 +23,17 @@ $(window).on("orientationchange", function() {
 //закрытие попапа блока компонентов при выборе компонента
 $('.nc-item').click(function() {
   ncClose();
+  ncClose2();
 });
 
 $('.nc-item2').click(function() {
   ncClose();
+  ncClose2();
 });
 
 $('.nc-item3').click(function() {
   ncClose();
+  ncClose2();
 });
 
 //открытие/закрытие главного меню
