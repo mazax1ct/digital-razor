@@ -124,13 +124,15 @@
   &__image
     left: 5px
     position: absolute
-    top: 8px
+    top: 50%
+    transform: translateY(-50%)
     width: 55px
 
     @media(min-width: 992px)
       left: auto
       position: static
       top: auto
+      transform: none
       width: 35px
 
     @media(min-width: 1900px) and (min-height: 1000px)
