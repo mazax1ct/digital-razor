@@ -126,14 +126,17 @@
   &__block-icon
     left: 5px
     position: absolute
-    top: 20px
-    width: 30px
+    top: 50%
+    transform: translateY(-50%)
+    width: 55px
 
     @media(min-width: 992px)
       display: none
       left: auto
       position: static
       top: auto
+      transform: none
+      width: 30px
 
     @media(min-width: 1200px)
       display: block
@@ -160,8 +163,8 @@
   &__block-title
     align-items: center
     display: flex
-    font-size: 20px
-    font-weight: 900
+    font-size: 22px
+    font-weight: 700
     flex-grow: 1
     justify-content: flex-end
     line-height: 1

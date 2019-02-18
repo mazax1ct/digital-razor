@@ -4,7 +4,11 @@ function ncClose() {
   $(".nc").removeClass("is-open");
   $(".nc-c").removeClass("is-open");
   $(".js-nc-c-block").removeClass("is-open");
-  $(".nc-c__list").removeClass("is-open");
+  $(".nc-c__list").stop(true, true).animate({
+    opacity: 0
+  }, 100, function() {
+    $(".nc-c__list").removeClass("is-open");
+  });
 }
 
 //закрытие попапа блока компонентов тип 2
@@ -12,7 +16,11 @@ function ncClose2() {
   $("body").removeClass("overflow");
   $(".nc-c2").removeClass("is-open");
   $(".js-nc-c2-block").removeClass("is-open");
-  $(".nc-c2__list").removeClass("is-open");
+  $(".nc-c2__list").stop(true, true).animate({
+    opacity: 0
+  }, 100, function() {
+    $(".nc-c2__list").removeClass("is-open");
+  });
 }
 
 // закрытие списка компонентов по перевороту устройства
@@ -97,13 +105,23 @@ $('.js-popup-close').on('click', function() {
 
 //открытие списка компонентов
 $(".js-nc-c-block").click(function () {
+  var el = $(this); //элемент
   $(".nc-c").removeClass("is-open"); //закрываем все подобные блоки
   $(".js-nc-c-block").removeClass("is-open");
-  $(".nc-c__list").removeClass("is-open");
-  $(this).addClass("is-open"); //открываем текущий
-  $(this).parent(".nc-c").addClass("is-open");
-  $(this).next(".nc-c__list").addClass("is-open");
-  if($(this).hasClass("is-open")){
+  el.addClass("is-open"); //открываем текущий
+
+  $(".nc-c__list").stop(true, true).animate({ //скрываем список
+    opacity: 0
+  }, 100, function() {
+    $(".nc-c__list").removeClass("is-open"); //удаляем класс после скрытия
+    el.next(".nc-c__list").addClass("is-open").stop(true, true).animate({ //добавляем класс открытия и показываем список
+      opacity: 1
+    }, 100);
+  });
+
+  el.parent(".nc-c").addClass("is-open"); //вешаем класс открытия на родителя
+
+  if(el.hasClass("is-open")){
     $(".nc").addClass("is-open"); //класс с затененеием
     $("body").addClass("overflow"); //класс с запретом скролла
   } else {
@@ -119,15 +137,27 @@ $(".js-nc-c-block-close").click(function () {
 
 //открытие списка компонентов тип 2
 $(".js-nc-c2-block").click(function () {
-  $(".nc-c2").removeClass("is-open"); //закрываем все подобные блоки
+  var el = $(this);
+  $(".nc-c2").removeClass("is-open");
   $(".js-nc-c2-block").removeClass("is-open");
-  $(".nc-c2__list").removeClass("is-open");
-  $(this).addClass("is-open"); //открываем текущий
-  $(this).parent(".nc-c").addClass("is-open");
-  $(this).next(".nc-c2__list").addClass("is-open");
-  if($(this).hasClass("is-open")){
-    $("body").addClass("overflow"); //класс с запретом скролла
+  el.addClass("is-open");
+
+  $(".nc-c2__list").stop(true, true).animate({
+    opacity: 0
+  }, 100, function() {
+    $(".nc-c2__list").removeClass("is-open");
+    el.next(".nc-c2__list").addClass("is-open").stop(true, true).animate({
+      opacity: 1
+    }, 100);
+  });
+
+  el.parent(".nc-c2").addClass("is-open");
+
+  if(el.hasClass("is-open")){
+    $(".nc").addClass("is-open");
+    $("body").addClass("overflow");
   } else {
+    $(".nc").removeClass("is-open");
     $("body").removeClass("overflow");
   }
 });
