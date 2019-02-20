@@ -18,37 +18,9 @@
   @media(min-height: 800px)
     height: 800px
 
-.gm-style-iw
+.gm-style .gm-style-iw-c
   background-color: #000
-  box-shadow: -14px 0px 0px #000, -14px 9px 0px #000, -14px -8px 0px #000, 15px -8px 0px #000, 15px 9px 0px #000
-  font-size: 16px !important
-  padding: 5px
-  overflow: visible !important
+  font-size: 16px
 
-  @media(max-width: 600px)
-    box-shadow: -14px 0px 0px #000, -14px 9px 0px #000, -14px -8px 0px #000, 27px -8px 0px #000, 27px 9px 0px #000
-    font-size: 14px !important
-    width: 260px !important
-
-  &::after
-    content: ''
-    width: 0
-    height: 0
-    border: 22px solid transparent
-    border-top-color: #000
-    z-index: 4
-    left: 50%
-    margin-left: -22px
-    position: absolute
-    top: auto
-    bottom: -51px
-
-    @media(max-width: 600px)
-      margin-left: -14px
-
-  a
-    text-decoration: none !important
-
-  & + div
-    right: 2px !important
-    top: 2px !important
+.gm-style .gm-style-iw-t::after
+  border-top-color: #000
