@@ -81,11 +81,15 @@
 
     @media(min-width: 992px)
       border: 1px solid #888
+      font-size: 14px
       min-height: 40px
-      min-width: 170px
+      min-width: 155px
       margin-right: 5px
-      padding-left: 15px
-      padding-right: 15px
+      padding-left: 10px
+      padding-right: 10px
+
+    @media(min-width: 1200px)
+      font-size: 16px
 
     @media(min-width: 1600px) and (min-height: 850px)
       font-size: 18px
@@ -108,9 +112,6 @@
     margin-left: auto
     margin-right: 10px
     text-align: right
-
-    @media(min-width: 400px)
-      margin-right: 15px
 
   &__price
     font-family: 'Russo One', 'Roboto', Arial, sans-serif
@@ -150,7 +151,7 @@
 
   &__result-buttons
     display: flex
-    width: 100%
+    flex-grow: 1
 
     @media(min-width: 992px)
       justify-content: flex-end
@@ -160,7 +161,7 @@
 
       @media(min-width: 992px)
         margin-left: 0
-        margin-right: 15px
+        margin-right: 10px
 
     .config-buy
       margin-left: auto
@@ -173,9 +174,26 @@
   @media(max-width: 991px)
     display: none
 
+.config-close
+  @media(min-width: 992px)
+    margin-right: 10px
+
 .config-admin
   @media(min-width: 1200px)
     border-color: #FF00EE
+
+.config-full
+  white-space: nowrap
+
+  @media(max-width: 991px)
+    display: none
+
+  &__icon
+    flex-basis: 24px
+    height: 24px
+    margin-right: 10px
+    min-width: 24px
+    width: 24px
 
 .config-save
   align-items: center
@@ -186,7 +204,7 @@
   @media(min-width: 992px)
     border-color: #888
     order: 2
-    margin-right: 15px
+    margin-right: 10px
 
   &__icon
     fill: #fff
@@ -194,7 +212,7 @@
     width: 24px
 
     @media(min-width: 992px)
-      margin-right: 15px
+      margin-right: 10px
 
   &__text
     @media(max-width: 991px)
@@ -217,7 +235,7 @@
     width: 24px
 
     @media(min-width: 992px)
-      margin-right: 15px
+      margin-right: 10px
 
   &__text
     @media(max-width: 991px)
