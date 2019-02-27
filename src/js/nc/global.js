@@ -9,6 +9,10 @@ function ncClose() {
   }, 100, function() {
     $(".nc-c__list").removeClass("is-open");
   });
+
+  //закрытие поповера с информацией
+  $(".nci-info").removeClass("is-active");
+  $(".nci-button").removeClass("is-active");
 }
 
 //закрытие попапа блока компонентов тип 2
@@ -210,4 +214,20 @@ $(".nc-c-list__arrow").click(function () {
     console.log("слайдов 1, нужно отключить кнопки");
   }
 
+});
+
+//открытие описания компонена
+$(".js-nci-info-opener").click(function () {
+  $(".nci-button").removeClass("is-active");
+  $(".nci-info").removeClass("is-active");
+  $(this).addClass("is-active");
+  $(this).next(".nci-info").addClass("is-active");
+  return false;
+});
+
+//закрытие описания компонена
+$(".js-nci-info-closer").click(function () {
+  $(this).parent(".nci-info").removeClass("is-active");
+  $(this).parent(".nci-info").prev(".nci-button").removeClass("is-active");
+  return false;
 });

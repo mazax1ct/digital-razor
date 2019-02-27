@@ -1,0 +1,229 @@
+.nc-c
+  &:nth-child(3),
+  &:nth-child(4)
+    .nc-c__list-block:nth-child(2)
+      .nci-info
+        left: -254px
+
+        @media(min-width: 1400px)
+          left: -314px
+
+        &::after
+          border-color: rgba(255, 255, 255, 0)
+          border-left-color: #fff
+          left: auto
+          right: -18px
+
+      .nci-info__close
+        left: -35px
+
+      .nci-holder
+        &:nth-last-child(5),
+        &:nth-last-child(6),
+        &:nth-last-child(7),
+        &:nth-last-child(8)
+          .nci-info
+            &::after
+              border-left-color: #707070
+
+  &:nth-child(5),
+  &:nth-child(6),
+  &:nth-child(7)
+    .nci-info
+      left: -254px
+
+      @media(min-width: 1400px)
+        left: -314px
+
+      &::after
+        border-color: rgba(255, 255, 255, 0)
+        border-left-color: #fff
+        left: auto
+        right: -18px
+
+    .nci-info__close
+      left: -35px
+
+    .nci-holder
+      &:nth-last-child(5),
+      &:nth-last-child(6),
+      &:nth-last-child(7),
+      &:nth-last-child(8)
+        .nci-info
+          &::after
+            border-color: rgba(255, 255, 255, 0)
+            border-left-color: #707070
+
+.nci-holder
+  @media(min-width: 992px)
+    position: relative
+
+  &--with_info
+    .nc-item__inner
+      @media(min-width: 992px)
+        padding-right: 60px
+
+      @media(min-width: 1500px) and (min-height: 730px)
+        padding-right: 60px
+
+      @media(min-width: 1900px) and (min-height: 1000px)
+        padding-right: 90px
+
+  &:nth-last-child(1),
+  &:nth-last-child(2),
+  &:nth-last-child(3),
+  &:nth-last-child(4)
+    .nci-info
+      bottom: 0
+      top: auto
+
+  &:nth-last-child(5),
+  &:nth-last-child(6),
+  &:nth-last-child(7),
+  &:nth-last-child(8)
+    .nci-info
+      top: 0
+
+      &::after
+        border-right-color: #707070
+        top: 30px
+
+        @media(min-width: 1900px) and (min-height: 1000px)
+          top: 40px
+
+.nci-button
+  border-left: 1px solid rgba(255,255,255,.5)
+  display: none
+  height: 100%
+  left: auto
+  position: absolute
+  right: 0
+  top: 0
+  text-decoration: none
+  width: 50px
+  z-index: 1
+
+  @media(min-width: 992px)
+    align-items: center
+    display: flex
+    justify-content: center
+
+  @media(min-width: 1900px) and (min-height: 1000px)
+    width: 80px
+
+  &__icon
+    fill: #fff
+    height: 24px
+    transition: fill 0.3s
+    width: 24px
+
+    @media(min-width: 1900px) and (min-height: 1000px)
+      height: 34px
+      width: 34px
+
+.nci-info
+  background-color: #fff
+  color: #1D1D1D
+  display: none
+  font-size: 14px
+  left: auto
+  position: absolute
+  right: -254px
+  top: 0
+  width: 240px
+  z-index: 3
+
+  @media(min-width: 1400px)
+    right: -314px
+    width: 300px
+
+  @media(min-width: 1600px)
+    font-size: 16px
+
+  &.is-active
+    display: block
+
+  &::after
+    left: -18px
+    top: auto
+    bottom: 20px
+    border: solid transparent
+    content: ""
+    height: 0
+    width: 0
+    position: absolute
+    pointer-events: none
+    border-color: rgba(255, 255, 255, 0)
+    border-right-color: #ffffff
+    border-width: 10px
+    margin-top: -10px
+
+    @media(min-width: 1900px) and (min-height: 1000px)
+      bottom: 30px
+
+  &__close
+    position: absolute
+    z-index: 1
+    top: -15px
+    left: auto
+    right: -35px
+    width: 30px
+    height: 30px
+    padding: 0
+    cursor: pointer
+    border: none
+    background: 0 0
+
+  &__close-icon
+    width: 30px
+    height: 30px
+    fill: #fff
+
+  &__image
+    background-color: #707070
+    text-align: center
+
+    img
+      max-height: 100px
+
+      @media(min-width: 1400px)
+        max-height: 125px
+
+      @media(min-width: 1600px)
+        max-height: 150px
+
+  &__description
+    padding: 15px
+
+  &__title
+    font-size: 16px
+    font-weight: 700
+
+    @media(min-width: 1600px)
+      font-size: 20px
+
+  &__date
+    color: #888
+
+    .blue
+      color: #1492E6
+
+    .red
+      color: #F13724
+
+  p
+    margin-bottom: 5px
+
+    @media(min-width: 1600px)
+      margin-bottom: 10px
+
+    &:last-child
+      margin-bottom: 0
+
+  .button
+    min-height: 30px
+    padding: 4px 9px
+
+    @media(min-width: 1400px)
+      min-height: 40px
+      padding: 9px
