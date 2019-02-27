@@ -129,3 +129,33 @@
     right: 7px
     top: 7px
     text-align: center
+
+.config-admin,
+.config-preorder
+  align-items: center
+  display: none
+  flex-basis: 50px
+  justify-content: center
+  height: 50px
+  left: auto
+  min-width: 50px
+  position: absolute
+  right: 50px
+  top: 50%
+  transform: translateY(-50%)
+  width: 50px
+  z-index: 4
+
+  @media(min-width: 992px)
+    display: flex
+
+  &__icon
+    fill: #fff
+    height: 22px
+    width: 22px
+
+.config-preorder
+  right: 150px
+
+.config-admin
+  right: 200px
