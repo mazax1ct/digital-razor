@@ -157,3 +157,36 @@ $(".js-config-subsection-opener").click(function () {
   });
   return false;
 });
+
+//обработка кнопок для анимации графиков
+$('html').keydown(function(e) { //отлавливаем нажатие клавиш
+  if (e.keyCode == 107 || e.keyCode == 61) { //если нажали +
+    $("#dplus").addClass("plus").animate({
+      width: "64%"
+    }, 300, function() {
+      $(this).addClass("animated flash");
+      setTimeout(function() {
+        $("#plus").animate({
+          width: "64%"
+        }, 300 , function() {
+          $("#dplus").removeClass("plus animated flash");
+        });
+      }, 1000);
+    });
+  }
+
+  if (e.keyCode == 109 || e.keyCode == 173) { //если нажали -
+    $("#plus").animate({
+      width: "51%"
+    }, 300, function() {
+      $("#dplus").addClass("minus").addClass("animated flash");
+      setTimeout(function() {
+        $("#dplus").animate({
+          width: "51%"
+        }, 300 , function() {
+          $("#dplus").removeClass("minus animated flash");
+        });
+      }, 1000);
+    });
+  }
+});

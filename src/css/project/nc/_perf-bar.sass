@@ -29,7 +29,7 @@
 
   &__title
     position: relative
-    z-index: 1
+    z-index: 3
 
   &__bar
     background-color: #F13724
@@ -37,11 +37,30 @@
     left: 0
     position: absolute
     top: 0
+    z-index: 2
+
+  &__delta
+    align-items: center
+    color: #fff
+    display: flex
+    height: 100%
+    justify-content: flex-end
+    left: 0
+    position: absolute
+    padding-right: 10px
+    top: 0
+    z-index: 1
+
+    &.minus
+      background-color: #7e4640
+
+    &.plus
+      background-color: #487348
 
   &__value
     line-height: 1.15
     position: relative
-    z-index: 1
+    z-index: 3
 
     @media(min-width: 992px)
       width: 90px
