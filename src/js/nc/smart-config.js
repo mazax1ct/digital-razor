@@ -161,33 +161,35 @@ $(".js-config-subsection-opener").click(function () {
 //обработка кнопок для анимации графиков
 $('html').keydown(function(e) { //отлавливаем нажатие клавиш
   if (e.keyCode == 107 || e.keyCode == 61) { //если нажали +
-    $("#dplus").addClass("plus").animate({
+    $("#dplus").addClass("plus").animate({ //сначала добавляем класс для цвета увеличения затем анимируем до нового значения ширины
       width: "64%"
     }, 450, function() {
-      $(this).addClass("animated slow flash");
-      setTimeout(function() {
-        $("#plus").animate({
+      setTimeout(function() { //небольшой таймаут между завершением анимации дельты и основной полоски
+        $("#plus").animate({ //анимируем основную полоску
           width: "64%"
         }, 450 , function() {
-          $("#dplus").removeClass("plus animated slow flash");
+          $("#dplus").animate({ //по завершению анимации основной полоски дотягиваем до нее дельту
+            width: "64%"
+          }, 450 , function() { //по завершению анимации дельты убираем класс для цвета
+            $("#dplus").removeClass("plus");
+          });
         });
-      }, 1000);
+      }, 450);
     });
   }
 
   if (e.keyCode == 109 || e.keyCode == 173) { //если нажали -
-    $("#dplus").addClass("minus");
-    $("#plus").animate({
+    $("#dplus").addClass("minus"); //сначала добавляем класс для цвета уменьшения
+    $("#plus").animate({ //анимируем основную полоску до нового значения ширины
       width: "51%"
     }, 450, function() {
-      $("#dplus").addClass("animated slow flash");
-      setTimeout(function() {
-        $("#dplus").animate({
+      setTimeout(function() { //небольшой таймаут между завершением анимации основной полоски и дельты
+        $("#dplus").animate({ //анимируем основную дельту
           width: "51%"
         }, 450 , function() {
-          $("#dplus").removeClass("minus animated slow flash");
+          $("#dplus").removeClass("minus"); //по завершению анимации дельты убираем класс для цвета
         });
-      }, 1000);
+      }, 450);
     });
   }
 });
