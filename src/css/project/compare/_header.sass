@@ -1,0 +1,76 @@
+.header
+  background-color: #050505
+  left: 0
+  min-height: 55px
+  position: fixed
+  padding-top: 5px
+  top: 0
+  width: 100%
+  z-index: 10
+
+  @media(min-width: 1600px) and (min-height: 850px)
+    min-height: 70px
+
+  &__inner
+    align-items: center
+    background-color: #3E3E3E
+    display: flex
+    min-height: 55px
+    margin-left: auto
+    margin-right: auto
+    max-width: 1800px
+    min-width: 992px
+    position: relative
+    padding-left: 30px
+    padding-right: 30px
+
+    @media(min-width: 1600px) and (min-height: 850px)
+      min-height: 70px
+
+    &::before
+      background-color: #3E3E3E
+      content: ''
+      height: 100%
+      left: 0
+      position: absolute
+      top: 0
+      width: 100%
+      z-index: 4
+
+  &__title
+    font-family: 'Russo One', Arial, sans-serif
+    font-size: 24px
+    line-height: 1
+    margin: 0
+    position: relative
+    z-index: 4
+
+    @media(min-width: 1600px) and (min-height: 850px)
+      font-size: 38px
+
+  &__title-red
+    background-color: #E7212E
+    display: inline-block
+    margin-top: 3px
+    margin-bottom: 3px
+    padding-top: 5px
+    padding-bottom: 3px
+    padding-left: 5px
+    padding-right: 5px
+
+  &__title-bordered
+    border-top: 2px solid currentColor
+    border-bottom: 2px solid currentColor
+    display: inline-block
+    margin-top: 3px
+    margin-bottom: 3px
+    padding-top: 3px
+
+  &__button
+    left: auto
+    min-width: 145px
+    position: absolute
+    right: 30px
+    top: 50%
+    transform: translateY(-50%)
+    z-index: 4

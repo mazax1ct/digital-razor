@@ -28,6 +28,7 @@ var path = {
     style: "src/css/style.sass",
     config: "src/css/config.sass",
     nc: "src/css/nc.sass",
+    compare: "src/css/compare.sass",
     img: "src/images/**/*.*",
     fonts: "src/fonts/**/*.*"
   },
@@ -89,6 +90,7 @@ gulp.task("style:build", function() {
     .pipe(cleanCSS())
     .pipe(gulp.dest(path.build.css))
     .pipe(reload({ stream: true }));
+
   gulp
     .src(path.src.config)
     .pipe(sass())
@@ -103,8 +105,24 @@ gulp.task("style:build", function() {
     .pipe(cleanCSS())
     .pipe(gulp.dest(path.build.css))
     .pipe(reload({ stream: true }));
+
   gulp
     .src(path.src.nc)
+    .pipe(sass())
+    .pipe(csscomb())
+    .pipe(gcmq())
+    .pipe(
+      prefixer({
+        browsers: ["last 2 versions", "ie >= 10"],
+        cascade: false
+      })
+    )
+    .pipe(cleanCSS())
+    .pipe(gulp.dest(path.build.css))
+    .pipe(reload({ stream: true }));
+
+  gulp
+    .src(path.src.compare)
     .pipe(sass())
     .pipe(csscomb())
     .pipe(gcmq())
