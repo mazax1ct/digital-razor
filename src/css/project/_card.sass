@@ -90,6 +90,43 @@
   &__link
     text-decoration: none
 
+  &__image
+    position: relative
+
+  &__fps
+    background-color: #707070
+    bottom: 26px
+    color: #fff
+    font-size: 46px
+    font-weight: 700
+    line-height: 1
+    left: auto
+    position: absolute
+    padding: 5px 5px 20px
+    right: 0
+    top: auto
+    z-index: 1
+
+    @media(min-width: 1900px)
+      bottom: 36px
+
+  &__fps-units
+    bottom: 0
+    display: block
+    font-size: 12px
+    left: auto
+    padding: 3px
+    position: absolute
+    right: 0
+    top: auto
+    text-transform: uppercase
+
+    &.red
+      background-color: #F13724
+
+    &.blue
+      background-color: #2680EB
+
   &__title
     font-family: 'Russo One', Arial, sans-serif
     font-size: 28px
@@ -141,7 +178,6 @@
   &__month-price
     color: #A5A5A5
     display: block
-    //font-family: 'Russo One', 'Roboto', Arial, sans-serif
     font-size: 10px
     white-space: nowrap
 

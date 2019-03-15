@@ -61,152 +61,49 @@
             <div class="scroll-menu container-fluid">
               <h1 class="decorated-title"><span class="decorated-title__red">ВЫБЕРИ</span> <span class="decorated-title__bordered">СВОЮ КОНФИГУРАЦИЮ</span></h1>
               <div class="sections-menu">
-                <div class="sections-menu__item is-active"><a class="sections-menu__link" href="podbor_1.html">Подбор по параметрам</a></div>
+                <div class="sections-menu__item is-active"><a class="sections-menu__link" href="podbor_2.html">Показать FPS в играх</a></div>
                 <div class="sections-menu__item"><a class="sections-menu__link" href="podbor.html">Подбор в бюджет</a></div>
               </div>
             </div>
           </div>
         </div>
-        <div class="series-pick-blocks">
+        <div class="fps-selection-block">
           <div class="container-fluid">
-            <form class="row" action="/" method="post">
-              <div class="series-pick-block col-md-6 ">
-                <p class="h2">Я БУДУ ИГРАТЬ:</p>
-                <div class="series-pick-block__title">Мой монитор имеет разрешение:</div>
-                <div class="params-pick-list">
-                  <div class="params-pick-list__row">
-                    <div class="params-pick-list__item">
-                      <div class="params-picker">
-                        <input class="params-picker__input" id="1" type="radio" name="monitor" checked>
-                        <label class="params-picker__label" for="1">
-                          <span class="params-picker__title">FullHD</span>
-                          <span class="params-picker__text">1920x1080<br> обычный монитор</span>
-                        </label>
-                      </div>
-                    </div>
-                    <div class="params-pick-list__item">
-                      <div class="params-picker">
-                        <input class="params-picker__input" id="2" type="radio" name="monitor">
-                        <label class="params-picker__label" for="2">
-                          <span class="params-picker__title">2K</span>
-                          <span class="params-picker__text">2560x1440<br> или монитор 21:9</span>
-                        </label>
-                      </div>
-                    </div>
-                    <div class="params-pick-list__item">
-                      <div class="params-picker">
-                        <input class="params-picker__input" id="3" type="radio" name="monitor">
-                        <label class="params-picker__label" for="3">
-                          <span class="params-picker__title">4K</span>
-                          <span class="params-picker__text">3840x2160<br> UHD-мониторы</span>
-                        </label>
-                      </div>
-                    </div>
-                  </div>
+            <div class="fps-selection row">
+              <div class="col-md-6 col-lg-4 d-md-flex flex-column justify-content-center">
+                <p class="fps-selection__title">Выбери разрешение:</p>
+                <div class="fps-selection__resolution-block">
+                  <a class="fps-selection__resolution is-active" href="javascript:void(0)">FullHD</a>
+                  <a class="fps-selection__resolution" href="javascript:void(0)">2K</a>
+                  <a class="fps-selection__resolution" href="javascript:void(0)">4K</a>
                 </div>
-                <div class="series-pick-block__title">Мои стандартные игровые настройки:</div>
-                <div class="params-pick-list">
-                  <div class="params-pick-list__row">
-                    <div class="params-pick-list__item">
-                      <div class="params-picker">
-                        <input class="params-picker__input" id="4" type="radio" name="options" checked>
-                        <label class="params-picker__label" for="4">
-                          <span class="params-picker__title">Средние</span>
-                          <span class="params-picker__text">Мне важнее FPS<br> жертвуем красотой</span>
-                        </label>
-                      </div>
-                    </div>
-                    <div class="params-pick-list__item">
-                      <div class="params-picker">
-                        <input class="params-picker__input" id="5" type="radio" name="options">
-                        <label class="params-picker__label" for="5">
-                          <span class="params-picker__title">Высокие</span>
-                          <span class="params-picker__text">баланс между FPS<br> и детализацией картинки</span>
-                        </label>
-                      </div>
-                    </div>
-                    <div class="params-pick-list__item">
-                      <div class="params-picker">
-                        <input class="params-picker__input" id="6" type="radio" name="options">
-                        <label class="params-picker__label" for="6">
-                          <span class="params-picker__title">Ультра</span>
-                          <span class="params-picker__text">Никаких компромисов<br> все на максимум</span>
-                        </label>
-                      </div>
-                    </div>
+              </div>
+              <div class="col-md-6 col-lg-8">
+                <p class="fps-selection__title">Выбери игру:</p>
+                <div class="js-fps-slider fps-slider">
+                  <div class="fps-slider__slide">
+                    <div class="game"><img src="images/content/fps.jpg" alt=""></div>
+                    <p class="game-title">Apex Legend</p>
+                  </div>
+                  <div class="fps-slider__slide">
+                    <div class="game"><img src="images/content/fps.jpg" alt=""></div>
+                    <p class="game-title">Just Cause 4</p>
+                  </div>
+                  <div class="fps-slider__slide">
+                    <div class="game"><img src="images/content/fps.jpg" alt=""></div>
+                    <p class="game-title">Apex Legend</p>
+                  </div>
+                  <div class="fps-slider__slide">
+                    <div class="game"><img src="images/content/fps.jpg" alt=""></div>
+                    <p class="game-title">Anthem</p>
                   </div>
                 </div>
               </div>
-              <div class="series-pick-block col-md-6">
-                <p class="h2">СОЗДАВАТЬ КОНТЕНТ:</p>
-                <div class="series-pick-block__title">Мои типовые задачи кроме игр:</div>
-                <div class="params-pick-list">
-                  <div class="params-pick-list__row">
-                    <div class="params-pick-list__item">
-                      <div class="params-picker">
-                        <input class="params-picker__input" id="7" type="checkbox" name="task" checked>
-                        <label class="params-picker__label" for="7">
-                          <span class="params-picker__title">Стриминг</span>
-                          <span class="params-picker__text">Строка 1<br> Строка 2</span>
-                        </label>
-                      </div>
-                    </div>
-                    <div class="params-pick-list__item">
-                      <div class="params-picker">
-                        <input class="params-picker__input" id="8" type="checkbox" name="task">
-                        <label class="params-picker__label" for="8">
-                          <span class="params-picker__title">Запись игр</span>
-                          <span class="params-picker__text">Строка 1<br> Строка 2</span>
-                        </label>
-                      </div>
-                    </div>
-                    <div class="params-pick-list__item">
-                      <div class="params-picker">
-                        <input class="params-picker__input" id="9" type="checkbox" name="task">
-                        <label class="params-picker__label" for="9">
-                          <span class="params-picker__title">Еще что-то</span>
-                          <span class="params-picker__text">Строка 1<br> Строка 2</span>
-                        </label>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="series-pick-block__title">Я монтирую видеоролики:</div>
-                <div class="params-pick-list">
-                  <div class="params-pick-list__row">
-                    <div class="params-pick-list__item">
-                      <div class="params-picker">
-                        <input class="params-picker__input" id="10" type="checkbox" name="video" checked>
-                        <label class="params-picker__label" for="10">
-                          <span class="params-picker__title">FullHD</span>
-                          <span class="params-picker__text">Строка 1<br> Строка 2</span>
-                        </label>
-                      </div>
-                    </div>
-                    <div class="params-pick-list__item">
-                      <div class="params-picker">
-                        <input class="params-picker__input" id="11" type="checkbox" name="video">
-                        <label class="params-picker__label" for="11">
-                          <span class="params-picker__title">4K</span>
-                          <span class="params-picker__text">Строка 1<br> Строка 2</span>
-                        </label>
-                      </div>
-                    </div>
-                    <div class="params-pick-list__item">
-                      <div class="params-picker">
-                        <input class="params-picker__input" id="12" type="checkbox" name="video">
-                        <label class="params-picker__label" for="12">
-                          <span class="params-picker__title">Рендеринг</span>
-                          <span class="params-picker__text">Строка 1<br> Строка 2</span>
-                        </label>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+            </div>
+            <div class="row">
+              <div class="offset-lg-4 col-lg-8">
+                <p class="fps-selection__note">Полученные показатели FPS являются усредненными и служат для демонстрации относительной производительности систем на максимальных настройках графики.</p>
               </div>
-            </form>
-            <div class="series-pick-button-block">
-              <button class="range-slider-button" type="button">Выбрать модель</button>
             </div>
           </div>
         </div>
@@ -216,7 +113,12 @@
               <div class="card card--glared">
                 <span class="card__top-block">
                   <a class="card__link" href="#">
-                    <span class="card__image"><img src="images/content/img5.png" alt="PROGAMING"></span>
+                    <span class="card__image">
+                      <img src="images/content/img5.png" alt="PROGAMING">
+                      <span class="card__fps">
+                        59 <span class="card__fps-units red">fps</span>
+                      </span>
+                    </span>
                     <span class="card__title">PERFORMANCE</span>
                   </a>
                   <div class="card__price-block">
@@ -272,7 +174,12 @@
               <div class="card card--glared">
                 <span class="card__top-block">
                   <a class="card__link" href="#">
-                    <span class="card__image"><img src="images/content/img5.png" alt="PROGAMING"></span>
+                    <span class="card__image">
+                      <img src="images/content/img5.png" alt="PROGAMING">
+                      <span class="card__fps">
+                        75 <span class="card__fps-units blue">fps</span>
+                      </span>
+                    </span>
                     <span class="card__title">PERFORMANCE</span>
                   </a>
                   <div class="card__price-block">
@@ -328,7 +235,12 @@
               <div class="card card--glared">
                 <span class="card__top-block">
                   <a class="card__link" href="#">
-                    <span class="card__image"><img src="images/content/img5.png" alt="PROGAMING"></span>
+                    <span class="card__image">
+                      <img src="images/content/img5.png" alt="PROGAMING">
+                      <span class="card__fps">
+                        85 <span class="card__fps-units blue">fps</span>
+                      </span>
+                    </span>
                     <span class="card__title">PERFORMANCE</span>
                   </a>
                   <div class="card__price-block">
@@ -384,7 +296,12 @@
               <div class="card card--glared">
                 <span class="card__top-block">
                   <a class="card__link" href="#">
-                    <span class="card__image"><img src="images/content/img5.png" alt="PROGAMING"></span>
+                    <span class="card__image">
+                      <img src="images/content/img5.png" alt="PROGAMING">
+                      <span class="card__fps">
+                        120 <span class="card__fps-units blue">fps</span>
+                      </span>
+                    </span>
                     <span class="card__title">PERFORMANCE</span>
                   </a>
                   <div class="card__price-block">
