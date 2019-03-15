@@ -189,12 +189,12 @@ $(document).ready(function() {
 
   //слайдер игр в блоке выбора конфигурации по fps
   $('.js-fps-slider').slick({
+    infinite: false,
     slidesToShow: 1,
     slidesToScroll: 1,
     dots: false,
     prevArrow: '<button class="slick-prev" aria-label="Назад" type="button"><svg class="slick-arrow__svg" aria-hidden="true"><use xlink:href="#slider_arrow_left"/></svg></button>',
     nextArrow: '<button class="slick-next" aria-label="Вперед" type="button"><svg class="slick-arrow__svg" aria-hidden="true"><use xlink:href="#slider_arrow_right"/></svg></button>',
-    focusOnSelect: true,
     mobileFirst: true,
     responsive: [
       {
@@ -226,5 +226,10 @@ $(document).ready(function() {
         }
       }
     ]
+  });
+
+  $(".js-game").click(function() {
+    $(".js-game").removeClass('is-active');
+    $(this).addClass('is-active');
   });
 });
