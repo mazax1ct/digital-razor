@@ -273,8 +273,29 @@
     margin-right: 10px
 
 .compare-button
+  display: flex
+  padding-left: 0
+  padding-right: 0
+
   @media(max-width: 1279px)
     display: none
+
+  @media(min-width: 992px)
+    padding-left: 0
+    padding-right: 0
+
+  &__link
+    align-items: center
+    display: flex
+    min-height: 40px
+    padding-left: 10px
+    padding-right: 10px
+
+    @media(min-width: 1600px) and (min-height: 850px)
+      min-height: 48px
+
+    &:hover
+      text-decoration: none
 
   &__icon
     display: block
@@ -290,17 +311,32 @@
     min-width: 24px
     width: 24px
 
-  &__qnt
-    background-color: #D02228
-    border-radius: 50%
-    bottom: 2px
+  &__qnt,
+  &__add
+    align-items: center
     color: #fff
-    font-size: 12px
-    font-weight: 400
-    height: 15px
-    left: auto
-    min-width: 15px
-    position: absolute
-    right: -2px
-    top: auto
+    display: flex
+    border-left: 1px solid #888
+    min-width: 40px
+    justify-content: center
+    min-height: 40px
     text-align: center
+
+    @media(min-width: 1600px) and (min-height: 850px)
+      min-height: 48px
+      min-width: 50px
+
+  &__qnt
+    cursor: default
+
+  &__add
+    background: #f13724
+    border: none
+    border-left: 1px solid #888
+    cursor: pointer
+    font-size: 24px
+    padding-left: 10px
+    padding-right: 10px
+
+    &:disabled
+      cursor: default
