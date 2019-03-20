@@ -1,0 +1,83 @@
+.sections-menu__item.is-active,
+.sections-menu__item:hover {
+  border-bottom-color: #2680EB
+}
+
+.intel-title1 {
+  font-family: 'Russo One', Arial, sans-serif;
+  font-size: 24px;
+  margin-bottom: 0 !important;
+}
+
+.intel-title2 {
+  color: #2680EB;
+  display: inline-block;
+  font-family: 'Roboto', Arial, sans-serif;
+  font-size: 35px;
+  font-weight: 900;
+  line-height: 1;
+  margin-bottom: 0 !important;
+  position: relative;
+  white-space: nowrap;
+}
+
+.intel-title1,
+.intel-title2,
+.intel-text {
+  text-align: center;
+}
+
+.intel-text {
+  margin-top: 10px;
+}
+
+@media(min-width: 768px) {
+  .intel-title1 {
+    font-size: 26px
+  }
+
+  .intel-title2 {
+    font-size: 50px;
+  }
+
+  .intel-title2 span {
+    font-size: 70%;
+    position: absolute;
+    left: 100%;
+    top: 0.065em;
+  }
+
+  .intel-title1,
+  .intel-title2,
+  .intel-text {
+    text-align: right;
+  }
+
+  .intel-text {
+    margin-bottom: 30px !important;
+  }
+}
+
+@media(min-width: 1200px) {
+  .intel-title1 {
+    font-size: 40px
+  }
+
+  .intel-title2 {
+    font-size: 80px;
+  }
+}
+
+@media(min-width: 1900px) {
+  .intel-title1 {
+    font-size: 54px
+  }
+
+  .intel-title2 {
+    font-size: 100px;
+  }
+
+  .intel-text {
+    font-size: 24px;
+  }
+}

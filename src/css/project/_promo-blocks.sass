@@ -480,3 +480,75 @@
 			height: 100%
 			object-fit: cover
 			object-position: 50% 50%
+
+.pb-7
+	display: flex
+	margin-bottom: 30px
+	padding-top: 20px
+	position: relative
+	width: 100%
+
+	&:last-child
+		margin-bottom: 0
+
+	&__image
+		padding-right: 15px
+		width: 80px
+
+		@media(min-width: 1200px)
+			padding-right: 30px
+			width: 150px
+
+		@media(min-width: 1900px)
+			width: 180px
+
+	&__graphs
+		flex-grow: 1
+
+	&__title
+		align-items: center
+		display: flex
+		font-size: 12px
+		justify-content: space-between
+		left: 0
+		position: absolute
+		top: -25px
+		width: 100%
+
+		@media(min-width: 1200px)
+			font-size: 14px
+
+	&__graphs
+		justify-content: center
+		display: flex
+		flex-direction: column
+		position: relative
+
+	&__graph
+		align-items: center
+		border: 3px solid #fff
+		color: #fff
+		display: flex
+		font-size: 12px
+		height: 40px
+		margin-bottom: 10px
+		padding-left: 10px
+		white-space: nowrap
+
+		@media(min-width: 768px)
+			font-size: 16px
+
+		@media(min-width: 1900px)
+			font-size: 20px
+
+		&--color_1
+			background-color: #2680EB
+
+		&--color_2
+			background-color: #1B4068
+
+		&--color_3
+			background-color: #68A6F1
+
+		&:last-child
+			margin-bottom: 0
