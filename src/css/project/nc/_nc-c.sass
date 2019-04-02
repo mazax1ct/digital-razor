@@ -47,6 +47,14 @@
     .nc-c__block
       cursor: default
 
+  &__title-block
+    align-items: center
+    display: flex
+    justify-content: space-between
+
+    @media (min-width: 992px)
+      margin-bottom: 2px
+
   &__title
     background-color: #888
     font-size: 10px
@@ -65,9 +73,9 @@
       display: block
       font-family: "Roboto", Arial, sans-serif
       font-size: 10px
-      line-height: 1
+      height: 10px
+      line-height: 10px
       min-height: 0
-      margin-bottom: 2px
       padding-left: 0
       padding-right: 0
       position: static
@@ -76,9 +84,27 @@
 
     @media (min-width: 1200px)
       font-size: 12px
+      height: 14px
+      line-height: 14px
 
-    @media(min-width: 1900px) and (min-height: 1000px)
+    //@media(min-width: 1900px) and (min-height: 1000px)
       font-size: 16px
+      height: 16px
+      line-height: 16px
+
+    .small
+      @media(min-width: 1900px)
+        display: none
+
+    .big
+      display: none
+
+      @media(min-width: 1900px)
+        display: block
+
+  &__multiplier
+    @media(max-width: 991px)
+      display: none
 
   &__block
     border: 1px solid #888
@@ -319,6 +345,13 @@
         @media (min-width: 1200px)
           min-width: 180px
 
+  &__list-multiplier
+    padding-left: 15px
+    padding-right: 15px
+
+    @media(min-width: 992px)
+      display: none
+
   &__list-filter-block
     margin-bottom: 5px
 
@@ -436,6 +469,11 @@
         margin-right: 0
         width: 100%
 
+  &__list-title-block
+    align-items: center
+    display: flex
+    justify-content: space-between
+
   &__list-title
     align-items: center
     color: #fff
@@ -443,6 +481,7 @@
     display: flex
     font-size: 15px
     font-weight: 700
+    line-height: 1
     min-height: 55px
     padding-left: 10px
     padding-right: 10px
@@ -484,3 +523,63 @@
     height: 30px
     transition: fill 0.3s
     width: 30px
+
+.multiplier
+  align-items: center
+  display: flex
+
+  @media (min-width: 992px)
+    border: 1px solid #444
+    background-color: #272727
+    font-size: 10px
+    height: 10px
+
+  @media (min-width: 1200px)
+    font-size: 12px
+    height: 14px
+
+  @media(min-width: 1900px) and (min-height: 1000px)
+    font-size: 13px
+
+  &__button
+    border: 1px solid #444
+    background-color: #272727
+    color: #919293
+    cursor: pointer
+    height: 30px
+    line-height: 1
+    width: 30px
+
+    @media(min-width: 992px)
+      border: none
+      background: none
+      height: 10px
+      position: relative
+      width: auto
+
+    @media(min-width: 1200px)
+      height: 12px
+
+    &:hover
+      color: #fff
+
+    span
+      @media(min-width: 992px)
+        height: 30px
+        left: 50%
+        position: absolute
+        top: 50%
+        transform: translate(-50%, -50%)
+        width: 30px
+
+  &__text
+    color: #fff
+    line-height: 1
+    min-width: 30px
+    margin-left: 5px
+    margin-right: 5px
+    text-align: center
+
+    @media(min-width: 992px)
+      margin-left: 0
+      margin-right: 0
