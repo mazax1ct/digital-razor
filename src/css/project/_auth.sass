@@ -1,3 +1,20 @@
+.auth-reg
+  @media(min-width: 768px)
+    display: flex
+    justify-content: center
+
+  .auth-form,
+  .reg-form
+    margin-left: 0
+    margin-right: 0
+    width: 50%
+
+.auth-form + .reg-form
+  margin-top: 30px
+
+  @media(min-width: 768px)
+    margin-top: 0
+
 .auth-form,
 .reg-form
   border: 1px solid #707070
@@ -11,6 +28,9 @@
   width: 100%
 
   @media(min-width: 768px)
+    padding: 30px 30px 40px
+
+  @media(min-width: 992px)
     padding: 30px 60px 40px
 
   &__title
@@ -20,7 +40,7 @@
     margin-bottom: 25px
     text-align: center
 
-    @media(min-width: 560px)
+    @media(min-width: 992px)
       font-size: 30px
 
   &__note
@@ -89,6 +109,9 @@
 
   &__checkboxes
     margin-top: 60px
+
+.reg-form
+  background-color: #282828
 
 .social-auth
   border-color: 2px
