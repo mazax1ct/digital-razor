@@ -21,73 +21,61 @@
 
     //= template/style.html
   </head>
-  <body>
+  <body class="auth-page">
     //= template/sprite.html
     <div class="wrapper">
       //= template/header.html
       <div class="page-content page-content--simple_page page-content--landing">
-        <div class="js-main-banner main-banner">
-          <div class="main-banner__slide" style="background-image: url(images/content/img1.jpg)">
-            <div class="main-banner__slide-inner container-fluid">
-              <div class="main-banner__title"><p class="decorated-title"><span class="decorated-title__red">ВСТРЕЧАЙТЕ</span> <span class="decorated-title__bordered">СУПЕРТУШКУ</span></p></div>
-              <div class="main-banner__subtitle"><p>такой еще ни у кого не было</p></div>
-              <div class="main-banner__text">
-                <p>Если ты купишь суперштуку, то будешь самый крутой<br> Если ты купишь суперштуку, то будешь самый крутой<br> Если ты купишь суперштуку, то будешь самый крутой</p>
-              </div>
-              <img class="main-banner__image" width="300" height="150" src="images/content/img2.png" alt="Intel Nvidia">
-              <div class="main-banner__buttons">
-                <a class="button button--red" href="#">Подробнее</a>
-                <a class="button" href="#">Купить</a>
-              </div>
-            </div>
-          </div>
-          <div class="main-banner__slide" style="background-image: url(images/content/img3.jpg)">
-            <div class="main-banner__slide-inner container-fluid">
-              <div class="main-banner__title"><p class="decorated-title"><span class="decorated-title__red">ВСТРЕЧАЙТЕ</span> <span class="decorated-title__bordered">СУПЕРТУШКУ</span></p></div>
-              <div class="main-banner__subtitle"><p>такой еще ни у кого не было</p></div>
-              <div class="main-banner__text">
-                <p>Если ты купишь суперштуку, то будешь самый крутой<br> Если ты купишь суперштуку, то будешь самый крутой<br> Если ты купишь суперштуку, то будешь самый крутой</p>
-              </div>
-              <img class="main-banner__image" width="300" height="150" src="images/content/img2.png" alt="Intel Nvidia">
-              <div class="main-banner__buttons">
-                <a class="button button--red" href="#">Подробнее</a>
-                <a class="button" href="#">Купить</a>
-              </div>
-            </div>
-          </div>
-        </div>
         <div class="container-fluid">
-          <div class="row">
-        		<div class="offset-md-3 col-md-6">
-        			<h1 class="text-center">Авторизация</h1>
-        			<form class="auth-form" method="post" action="/auth/?login=yes" novalidate="novalidate">
-        				<input name="AUTH_FORM" value="Y" type="hidden">
-        				<input name="TYPE" value="AUTH" type="hidden">
-        				<input name="backurl" value="/auth/" type="hidden">
-        				<div class="auth-form__row">
-        					<label class="auth-form__label" for="log-email2">Логин</label>
-        					<input class="input" name="USER_LOGIN" placeholder="Введите ваш логин" required="" value="" type="text">
-        				</div>
-        				<div class="auth-form__row">
-        					<label class="auth-form__label" for="log-password2">Пароль</label>
-        					<input class="input" name="USER_PASSWORD" placeholder="Введите ваш пароль" required="" type="password">
-        				</div>
-                <div class="auth-form__row">
-                  <a href="/auth/?forgot_password=yes">Забыли пароль?</a>
-                </div>
-                <div class="auth-form__row">
-                  <label class="checkbox-label" for="remember">
-                    <input class="checkbox-label__input" id="remember" name="USER_REMEMBER" type="checkbox">
-                    <span class="checkbox-label__icon"></span>
-                    Запомнить авторизацию
-                  </label>
-                </div>
-                <div class="auth-form__button-block">
-                  <input class="button button--red" value="Войти" type="submit">
-                </div>
-        			</form>
-        		</div>
-        	</div>
+      		<div class="auth-form">
+      			<h1 class="auth-form__title">Войти</h1>
+      			<form method="post" action="/auth/?login=yes" novalidate="novalidate">
+      				<input name="AUTH_FORM" value="Y" type="hidden">
+      				<input name="TYPE" value="AUTH" type="hidden">
+      				<input name="backurl" value="/auth/" type="hidden">
+      				<label class="auth-form__label" for="log-email2">
+                <input class="auth-form__input error" name="USER_LOGIN" placeholder="Логин" required="" value="" type="text">
+              </label>
+      				<label class="auth-form__label" for="log-password2">
+                <input class="auth-form__input" name="USER_PASSWORD" placeholder="Пароль" required="" type="password">
+              </label>
+              <div class="auth-form__button-block">
+                <input class="auth-form__button button button--red" value="Войти" type="submit">
+              </div>
+              <div class="auth-form__social-title">
+                или войдите с помощью<br> вашего профиля
+              </div>
+              <div class="auth-form__social-auth">
+                <a class="social-auth social-auth--blue" href="#">
+                  <span class="social-auth__icon">
+                    <svg class="social-auth__svg" aria-hidden="true"><use xlink:href="#vk"/></svg>
+                  </span>
+                  <span class="social-auth__text">Вконтакте</span>
+                </a>
+                <a class="social-auth social-auth--blue" href="#">
+                  <span class="social-auth__icon">
+                    <svg class="social-auth__svg" aria-hidden="true"><use xlink:href="#fb"/></svg>
+                  </span>
+                  <span class="social-auth__text">Facebook</span>
+                </a>
+                <a class="social-auth social-auth--red" href="#">
+                  <span class="social-auth__icon">
+                    <svg class="social-auth__svg" aria-hidden="true"><use xlink:href="#google"/></svg>
+                  </span>
+                  <span class="social-auth__text">Google</span>
+                </a>
+                <a class="social-auth social-auth--red" href="#">
+                  <span class="social-auth__icon">
+                    <svg class="social-auth__svg" aria-hidden="true"><use xlink:href="#yandex"/></svg>
+                  </span>
+                  <span class="social-auth__text">Yandex</span>
+                </a>
+              </div>
+              <div class="auth-form__forgot-block">
+                <a href="/auth/?forgot_password=yes">Забыл логин или пароль?</a>
+              </div>
+      			</form>
+      		</div>
         </div>
       </div>
     </div>

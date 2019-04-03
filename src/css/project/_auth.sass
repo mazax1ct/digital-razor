@@ -1,16 +1,143 @@
-.auth-form
-  &__row
-    margin-bottom: 15px
+.auth-form,
+.reg-form
+  border: 1px solid #707070
+  background-color: #1C1C1C
+  border-radius: 2px
+  font-size: 16px
+  margin-left: auto
+  margin-right: auto
+  max-width: 516px
+  padding: 15px 15px 30px
+  width: 100%
 
-    @media(min-width: 1200px)
-      margin-bottom: 25px
+  @media(min-width: 768px)
+    padding: 30px 60px 40px
+
+  &__title
+    font-family: 'Roboto', Arial, sans-serif
+    font-size: 24px
+    font-weight: 500
+    margin-bottom: 25px
+    text-align: center
+
+    @media(min-width: 560px)
+      font-size: 30px
+
+  &__note
+    font-size: 14px
+    margin-bottom: 30px
+    margin-top: -15px
+    opacity: 0.5
+    text-align: center
 
   &__label
     display: block
-    margin-bottom: 5px
+    margin-bottom: 20px
+
+  &__input
+    border: 1px solid #fff
+    border-radius: 2px
+    background-color: #1C1C1C
+    color: #fff
+    font-size: 16px
+    height: 40px
+    line-height: 40px
+    padding: 0 15px
+    width: 100%
+
+    &.error
+      border-color: #e5262d
+      color: #fff
+
+      &:focus
+        border-color: #e5262d
+        color: #fff
 
   &__button-block
+    font-size: 16px
+    margin-top: 45px
+    margin-bottom: 60px
     text-align: center
 
-  .checkbox-label
-    line-height: 22px
+    &:last-child
+      margin-bottom: 0
+
+  &__button
+    border-radius: 2px
+    background-color: #F13724
+    border-color: #AD2416
+    font-size: 20px
+    transition: background-color 0.3s
+
+    &:hover
+      background-color: #AD2416
+
+  &__social-title
+    color: #fff
+    font-size: 14px
+    margin-bottom: 20px
+    text-align: center
+
+  &__social-auth
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+
+  &__forgot-block
+    margin-top: 40px
+    text-align: center
+
+  &__checkboxes
+    margin-top: 60px
+
+.social-auth
+  border-color: 2px
+  border: 1px solid
+  color: #fff
+  display: flex
+  font-size: 18px
+  height: 38px
+  line-height: 38px
+  margin-left: 10px
+  margin-right: 10px
+  margin-bottom: 20px
+  text-decoration: none
+  width: 170px
+
+  &:hover
+    color: #fff
+    text-decoration: none
+
+    .social-auth__icon
+      background-color: rgba(0,0,0,0)
+
+    .social-auth__text
+      background-color: rgba(0,0,0,0.1)
+
+  &--blue
+    background-color: #4C70BA
+    border-color: #192A4C
+
+  &--red
+    background-color: #F13724
+    border-color: #AD2416
+
+  &__icon
+    align-items: center
+    background-color: rgba(0,0,0,0.1)
+    display: flex
+    justify-content: center
+    height: 38px
+    transition: background-color 0.3s
+    width: 34px
+
+  &__svg
+    fill: #fff
+    height: 19px
+    width: 19px
+
+  &__text
+    flex-grow: 1
+    padding: 0 10px
+    transition: background-color 0.3s
+    text-align: center

@@ -29,27 +29,38 @@
 .checkbox-label
   cursor: pointer
   display: block
-  font-weight: 500
-  margin-bottom: 5px
+  font-size: 16px
+  margin-bottom: 15px
   position: relative
-  padding-left: 25px
+  padding-left: 34px
 
   &:last-child
     margin-bottom: 0
 
   &__input
-    display: none
+    position: absolute
+    height: 1px
+    overflow: hidden
+    clip: rect(0 0 0 0)
+    width: 1px
 
     &:checked + .checkbox-label__icon
-      background-color: #ff0303
+      //background-color: #f13724
+      border-color: #fff
+
+      &::before
+        content: '\2713'
 
   &__icon
-    border: 3px solid #fff
-    background-color: #262626
-    border-radius: 3px
+    border: 1px solid #707070
+    border-radius: 2px
+    color: #fff
     cursor: pointer
-    height: 15px
+    font-size: 14px
+    height: 20px
+    line-height: 18px
     left: 0
     position: absolute
-    top: 2px
-    width: 15px
+    top: 0
+    text-align: center
+    width: 20px
