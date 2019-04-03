@@ -232,4 +232,13 @@ $(document).ready(function() {
     $(".js-game").removeClass('is-active');
     $(this).addClass('is-active');
   });
+
+  $('.auth-form__input, .reg-form__input').focus(function () {
+    $('.auth-form__input, .reg-form__input').addClass('no-focus');
+    $(this).removeClass('no-focus');
+  });
+
+  $('.auth-form__input, .reg-form__input').blur(function () {
+    $('.auth-form__input, .reg-form__input').removeClass('no-focus');
+  });
 });

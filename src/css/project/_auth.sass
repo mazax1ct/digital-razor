@@ -5,9 +5,10 @@
 
   .auth-form,
   .reg-form
-    margin-left: 0
-    margin-right: 0
-    width: 50%
+    @media(min-width: 768px)
+      margin-left: 0
+      margin-right: 0
+      width: 50%
 
 .auth-form + .reg-form
   margin-top: 30px
@@ -62,8 +63,13 @@
     font-size: 16px
     height: 40px
     line-height: 40px
+    opacity: 1
     padding: 0 15px
+    transition: opacity 0.3s
     width: 100%
+
+    &.no-focus
+      opacity: 0.5
 
     &.error
       border-color: #e5262d
