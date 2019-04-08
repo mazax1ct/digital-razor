@@ -5,17 +5,35 @@
   margin-bottom: 5px
   position: relative
 
+  @media(min-width: 992px)
+    background-color: transparent
+
+  @media(min-width: 1600px)
+    font-size: 18px
+
   &--tall
     min-height: 55px
 
     .tabs-menu__link
       min-height: 55px
 
-  @media(min-width: 992px)
-    background-color: transparent
+  &--mod_1
+    font-weight: 300
+    min-height: 55px
+    margin-bottom: 15px
 
-  @media(min-width: 1600px)
-    font-size: 18px
+    @media(min-width: 992px)
+      margin-bottom: 30px
+
+    @media(min-width: 1600px)
+      font-size: 20px
+
+    .tabs-menu__item
+      @media(min-width: 1600px)
+        margin-right: 85px
+
+    .tabs-menu__link
+      min-height: 55px
 
   &--text_left
     @media(min-width: 992px)
