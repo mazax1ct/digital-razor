@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+    <title>DIGITAL RAZOR</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="apple-touch-icon" sizes="120x120" href="images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="images/favicon/site.webmanifest">
+    <link rel="mask-icon" href="images/favicon/safari-pinned-tab.svg" color="#ffffff">
+    <link rel="shortcut icon" href="images/favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-config" content="images/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    //= template/config/style.html
+  </head>
+  <body>
+    //= template/sprite.html
+    //= template/personal/header.html
+
+    <div class="config config--personal">
+      <div class="config__content">
+        <div class="config__title-block">
+          <h2 class="config__title">ЗАЯВКА В СЕРВИСНЫЙ ОТДЕЛ DIGITALRAZOR</h2>
+        </div>
+        <div class="config__content-inner config__content-inner--personal">
+          <div class="config__content-block config__content-block--personal custom-scroll">
+            <div class="personal-block">
+              <div class="row">
+                <div class="col-md-10 col-xxl-8 offset-md-1 offset-xxl-2">
+                  <div id="REQUEST_FROM">
+                    <form class="request" action="/rma/" method="post">
+                      <input type="hidden" name="SESSID" value="d56121d5bed5d74ad2f9e0da29f38885">
+                      <label class="request__label" for="fio">
+                        <input class="request__input input" id="fio" name="fio" type="text" value="Смирнов " placeholder="ФИО">
+                      </label>
+                      <label class="request__label" for="number">
+                        <input class="request__input input" id="number" name="number" type="text" value="" placeholder="Телефон">
+                      </label>
+                      <label class="request__label" for="email">
+                        <input class="request__input input" id="email" name="email" type="text" value="vova@giveandget.ru" placeholder="Электронная почта">
+                      </label>
+                      <label class="request__label" for="serial">
+                        <input class="request__input input" id="serial" name="serial" type="text" value="" placeholder="Серийный номер ПК">
+                      </label>
+                      <label class="request__label" for="date_buy">
+                        <input class="request__input input" id="date_buy" name="date_buy" type="text" value="" placeholder="Дата покупки">
+                      </label>
+                      <label class="request__label" for="issue">
+                        <textarea class="request__textarea textarea" id="issue" name="issue" placeholder="Неисправность"></textarea>
+                      </label>
+                      <label class="request__label" for="message">
+                        <textarea class="request__textarea textarea" id="message" name="message" placeholder="Пожелания\комментарии"></textarea>
+                      </label>
+                      <div class="request__button-block">
+                        <button name="submit_form" value="Y" class="request__button button" type="submit">Отправить</button>
+                      </div>
+                    </form>
+                  </div>
+                  <br>
+                  <p>*Заполните максимально подробно всю информацю в форме для технической поддержки. Это позволит ускорить решение вопроса и найти нужную информацию по Вашему компьютеру.</p>
+                  <br>
+                  <p>Служба технической поддержки и сервиса работает с понедельника по пятницу с 10:00 до 18:00. Также мы собрали ответы на некоторые вопросы. Рекомендуем проверить F.A.Q, расположенный ниже.*</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="config__sidebar">
+        <ul class="config-menu">
+          <li class="config-menu__item">
+            <span class="config-menu__root-link is-active"><span class="config-menu__cnt">01.</span>Личный кабинет</span>
+            <ul class="config__submenu">
+              <li class="config-menu__item"><a class="config-menu__link is-active" href="#"><span class="config-menu__link-inner"><span class="config-menu__cnt">1.1</span>Сохраненные конфигурации</span></a></li>
+              <li class="config-menu__item"><a class="config-menu__link" href="#"><span class="config-menu__link-inner"><span class="config-menu__cnt">1.2</span>Сохраненные дизайны</span></a></li>
+              <li class="config-menu__item"><a class="config-menu__link" href="#"><span class="config-menu__link-inner"><span class="config-menu__cnt">1.3</span>Профиль пользователя</span></a></li>
+              <li class="config-menu__item"><a class="config-menu__link" href="#"><span class="config-menu__link-inner"><span class="config-menu__cnt">1.4</span>Текущие заказы</span></a></li>
+              <li class="config-menu__item"><a class="config-menu__link" href="#"><span class="config-menu__link-inner"><span class="config-menu__cnt">1.5</span>Корзина</span></a></li>
+              <li class="config-menu__item"><a class="config-menu__link" href="#"><span class="config-menu__link-inner"><span class="config-menu__cnt">1.6</span>Личные данные</span></a></li>
+              <li class="config-menu__item"><a class="config-menu__link" href="#"><span class="config-menu__link-inner"><span class="config-menu__cnt">1.7</span>История заказов</span></a></li>
+              <li class="config-menu__item"><a class="config-menu__link" href="#"><span class="config-menu__link-inner"><span class="config-menu__cnt">1.8</span>Поддержка</span></a></li>
+              <li class="config-menu__item"><a class="config-menu__link" href="#"><span class="config-menu__link-inner"><span class="config-menu__cnt">1.9</span>Выход</span></a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    //= template/personal/footer.html
+
+    //= template/config/scripts.html
+  </body>
+</html>
