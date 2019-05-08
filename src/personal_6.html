@@ -1,45 +1,48 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
 
-    <title>DIGITAL RAZOR</title>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="format-detection" content="telephone=no">
+  <title>DIGITAL RAZOR</title>
 
-    <link rel="apple-touch-icon" sizes="120x120" href="images/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
-    <link rel="manifest" href="images/favicon/site.webmanifest">
-    <link rel="mask-icon" href="images/favicon/safari-pinned-tab.svg" color="#ffffff">
-    <link rel="shortcut icon" href="images/favicon/favicon.ico">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-config" content="images/favicon/browserconfig.xml">
-    <meta name="theme-color" content="#ffffff">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
 
-    //= template/config/style.html
-  </head>
-  <body>
-    //= template/sprite.html
-    //= template/personal/header.html
+  <link rel="apple-touch-icon" sizes="120x120" href="images/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+  <link rel="manifest" href="images/favicon/site.webmanifest">
+  <link rel="mask-icon" href="images/favicon/safari-pinned-tab.svg" color="#ffffff">
+  <link rel="shortcut icon" href="images/favicon/favicon.ico">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-config" content="images/favicon/browserconfig.xml">
+  <meta name="theme-color" content="#ffffff">
 
-    <div class="config config--personal">
-      <div class="config__content">
-        <div class="config__title-block">
-          <h2 class="config__title">Профиль пользователя:</h2>
-        </div>
-        <div class="config__content-inner config__content-inner--personal">
-          <div class="config__content-block config__content-block--personal custom-scroll">
-            <div class="personal-block">
-              <div class="personal-profile">
-                <div class="tabs-menu tabs-menu--mod_1">
-                  <ul class="tabs-menu__list">
-                    <li class="tabs-menu__item"><a class="tabs-menu__link is-active" href="#">Оценка производительности</a></li>
-                    <li class="tabs-menu__item"><a class="tabs-menu__link" href="#">Мои предпочтения по железу</a></li>
-                  </ul>
-                </div>
+  //= template/config/style.html
+</head>
+
+<body>
+  //= template/sprite.html
+  //= template/personal/header.html
+
+  <div class="config config--personal">
+    <div class="config__content">
+      <div class="config__title-block">
+        <h2 class="config__title">Профиль пользователя:</h2>
+      </div>
+      <div class="config__content-inner config__content-inner--personal">
+        <div class="config__content-block config__content-block--personal custom-scroll">
+          <div class="personal-block">
+            <div class="personal-profile">
+              <div class="tabs-menu tabs-menu--mod_1">
+                <ul class="tabs-menu__list">
+                  <li class="tabs-menu__item"><a class="tabs-menu__link is-active" href="#" data-link="1">Оценка производительности</a></li>
+                  <li class="tabs-menu__item"><a class="tabs-menu__link" href="#" data-link="2">Дополнительные настройки</a></li>
+                </ul>
+              </div>
+              <div class="tab is-active" data-target="1">
                 <div class="row">
                   <div class="col-lg-6">
                     <p class="personal-profile__title">Показывать FPS в играх:</p>
@@ -244,7 +247,8 @@
                     </div>
                   </div>
                 </div>
-                <p class="personal-profile__section-title"><span>Дополнительные настройки:</span></p>
+              </div>
+              <div class="tab" data-target="2">
                 <div class="row">
                   <div class="col-xl-9 col-xxl-7">
                     <div class="row">
@@ -310,32 +314,44 @@
                   </div>
                 </div>
               </div>
+              <!--<p class="personal-profile__section-title"><span>Дополнительные настройки:</span></p>-->
             </div>
           </div>
         </div>
       </div>
-      <div class="config__sidebar">
-        <ul class="config-menu">
-          <li class="config-menu__item">
-            <span class="config-menu__root-link is-active"><span class="config-menu__cnt">01.</span>Личный кабинет</span>
-            <ul class="config__submenu">
-              <li class="config-menu__item"><a class="config-menu__link is-active" href="#"><span class="config-menu__link-inner"><span class="config-menu__cnt">1.1</span>Сохраненные конфигурации</span></a></li>
-              <li class="config-menu__item"><a class="config-menu__link" href="#"><span class="config-menu__link-inner"><span class="config-menu__cnt">1.2</span>Сохраненные дизайны</span></a></li>
-              <li class="config-menu__item"><a class="config-menu__link" href="#"><span class="config-menu__link-inner"><span class="config-menu__cnt">1.3</span>Профиль пользователя</span></a></li>
-              <li class="config-menu__item"><a class="config-menu__link" href="#"><span class="config-menu__link-inner"><span class="config-menu__cnt">1.4</span>Текущие заказы</span></a></li>
-              <li class="config-menu__item"><a class="config-menu__link" href="#"><span class="config-menu__link-inner"><span class="config-menu__cnt">1.5</span>Корзина</span></a></li>
-              <li class="config-menu__item"><a class="config-menu__link" href="#"><span class="config-menu__link-inner"><span class="config-menu__cnt">1.6</span>Личные данные</span></a></li>
-              <li class="config-menu__item"><a class="config-menu__link" href="#"><span class="config-menu__link-inner"><span class="config-menu__cnt">1.7</span>История заказов</span></a></li>
-              <li class="config-menu__item"><a class="config-menu__link" href="#"><span class="config-menu__link-inner"><span class="config-menu__cnt">1.8</span>Поддержка</span></a></li>
-              <li class="config-menu__item"><a class="config-menu__link" href="#"><span class="config-menu__link-inner"><span class="config-menu__cnt">1.9</span>Выход</span></a></li>
-            </ul>
-          </li>
-        </ul>
-      </div>
     </div>
+    <div class="config__sidebar">
+      <ul class="config-menu">
+        <li class="config-menu__item">
+          <span class="config-menu__root-link is-active"><span class="config-menu__cnt">01.</span>Личный кабинет</span>
+          <ul class="config__submenu">
+            <li class="config-menu__item"><a class="config-menu__link is-active" href="#"><span class="config-menu__link-inner"><span class="config-menu__cnt">1.1</span>Сохраненные конфигурации</span></a></li>
+            <li class="config-menu__item"><a class="config-menu__link" href="#"><span class="config-menu__link-inner"><span class="config-menu__cnt">1.2</span>Сохраненные дизайны</span></a></li>
+            <li class="config-menu__item"><a class="config-menu__link" href="#"><span class="config-menu__link-inner"><span class="config-menu__cnt">1.3</span>Профиль пользователя</span></a></li>
+            <li class="config-menu__item"><a class="config-menu__link" href="#"><span class="config-menu__link-inner"><span class="config-menu__cnt">1.4</span>Текущие заказы</span></a></li>
+            <li class="config-menu__item"><a class="config-menu__link" href="#"><span class="config-menu__link-inner"><span class="config-menu__cnt">1.5</span>Корзина</span></a></li>
+            <li class="config-menu__item"><a class="config-menu__link" href="#"><span class="config-menu__link-inner"><span class="config-menu__cnt">1.6</span>Личные данные</span></a></li>
+            <li class="config-menu__item"><a class="config-menu__link" href="#"><span class="config-menu__link-inner"><span class="config-menu__cnt">1.7</span>История заказов</span></a></li>
+            <li class="config-menu__item"><a class="config-menu__link" href="#"><span class="config-menu__link-inner"><span class="config-menu__cnt">1.8</span>Поддержка</span></a></li>
+            <li class="config-menu__item"><a class="config-menu__link" href="#"><span class="config-menu__link-inner"><span class="config-menu__cnt">1.9</span>Выход</span></a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
 
-    //= template/personal/footer.html
+  //= template/personal/footer.html
 
-    //= template/config/scripts.html
-  </body>
+  //= template/config/scripts.html
+  <script>
+    $('.tabs-menu__link').click(function() {
+      $('.tabs-menu__link').removeClass('is-active');
+      $(this).addClass('is-active');
+      $('.tab').removeClass('is-active');
+      $('.tab[data-target=' + $(this).attr('data-link') + ']').addClass('is-active');
+      return false;
+    });
+  </script>
+</body>
+
 </html>
