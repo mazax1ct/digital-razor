@@ -24,6 +24,10 @@
 .fps-selection
   margin-bottom: 30px
 
+  & > div:first-child
+    @media(max-width: 767px)
+      margin-bottom: 30px
+
   &__title
     color: #fff
     margin-bottom: 5px !important
@@ -35,9 +39,6 @@
   &__resolution-block
     display: flex
     margin-bottom: 30px
-
-    @media(min-width: 768px)
-      margin-bottom: 0
 
   &__resolution
     border-bottom: 4px solid rgba(39, 39, 39, 0.46)
