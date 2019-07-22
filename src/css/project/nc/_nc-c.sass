@@ -297,18 +297,43 @@
           display: block
 
     &--tile
+      .nc-c__list-inner
+        @media (min-width: 992px)
+          align-items: flex-start
+          display: flex !important
+          flex-wrap: wrap
+
+    &--tile_1
+      &.is-open
+        @media (min-width: 992px)
+          min-width: 142px
+
+        @media(min-width: 1500px) and (min-height: 730px)
+          min-width: 200px
+
+    &--tile_2
+      &.is-open
+        @media (min-width: 992px)
+          min-width: 285px
+
+        @media(min-width: 1500px) and (min-height: 730px)
+          min-width: 400px
+
+    &--tile_3
+      &.is-open
+        @media (min-width: 992px)
+          min-width: 426px
+
+        @media(min-width: 1500px) and (min-height: 730px)
+          min-width: 600px
+
+    &--tile_4
       &.is-open
         @media (min-width: 992px)
           min-width: 570px
 
         @media(min-width: 1500px) and (min-height: 730px)
           min-width: 800px
-
-        .nc-c__list-inner
-          @media (min-width: 992px)
-            align-items: flex-start
-            display: flex !important
-            flex-wrap: wrap
 
     &--double
       &.is-open
