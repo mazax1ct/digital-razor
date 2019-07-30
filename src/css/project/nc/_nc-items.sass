@@ -240,6 +240,28 @@
     min-width: 198px
     width: 198px
 
+  &--empty
+    display: none
+
+    @media(min-width: 992px)
+      background-color: #000
+      align-self: stretch
+      cursor: default
+      display: block
+      pointer-events: none
+      position: relative
+
+    &::before
+      @media(min-width: 992px)
+        background: url('../images/vertical_logo.png') no-repeat 50% 50% / 80% auto #000
+        content: ""
+        height: 100%
+        left: 0
+        opacity: 0.75
+        position: absolute
+        top: 0
+        width: 100%
+
   &__radio
     display: none
 

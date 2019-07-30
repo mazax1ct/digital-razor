@@ -1,872 +1,896 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
 
-    <title>DIGITAL RAZOR</title>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="format-detection" content="telephone=no">
+  <title>DIGITAL RAZOR</title>
 
-    <link rel="apple-touch-icon" sizes="120x120" href="images/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
-    <link rel="manifest" href="images/favicon/site.webmanifest">
-    <link rel="mask-icon" href="images/favicon/safari-pinned-tab.svg" color="#ffffff">
-    <link rel="shortcut icon" href="images/favicon/favicon.ico">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-config" content="images/favicon/browserconfig.xml">
-    <meta name="theme-color" content="#ffffff">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
 
-    //= template/config_collab/style.html
-  </head>
-  <body class="config-page">
-    //= template/config_collab/sprite.html
-    //= template/config_collab/header.html
+  <link rel="apple-touch-icon" sizes="120x120" href="images/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+  <link rel="manifest" href="images/favicon/site.webmanifest">
+  <link rel="mask-icon" href="images/favicon/safari-pinned-tab.svg" color="#ffffff">
+  <link rel="shortcut icon" href="images/favicon/favicon.ico">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-config" content="images/favicon/browserconfig.xml">
+  <meta name="theme-color" content="#ffffff">
 
-    <form class="nc" action="">
-      <div class="nc__section is-active">
-        <p class="js-config-section-opener config-title" data-section="1">Дизайн <svg class="config-title__icon" aria-hidden="true"><use xlink:href="#arrow_down"/></svg></p>
-        <div class="nc__inner nc__inner--config is-active" data-section="1">
-          <div class="nc__inner-top nc__inner-top--design-block nc__inner-top--design is-active" style="background-image: url('images/content/nc_bg.jpg')">
-            <div class="nc__inner-cell nc__inner-cell--canvas " data-side="back">
-              <canvas class="nc__inner-canvas" id="back_side"></canvas>
-            </div>
-            <div class="nc__inner-cell nc__inner-cell--canvas is-active" data-side="front">
-              <canvas class="nc__inner-canvas" id="front_side"></canvas>
-            </div>
+  //= template/config_collab/style.html
+</head>
+
+<body class="config-page">
+  //= template/config_collab/sprite.html
+  //= template/config_collab/header.html
+
+  <form class="nc" action="">
+    <div class="nc__section is-active">
+      <p class="js-config-section-opener config-title" data-section="1">Дизайн <svg class="config-title__icon" aria-hidden="true">
+          <use xlink:href="#arrow_down" /></svg></p>
+      <div class="nc__inner nc__inner--config is-active" data-section="1">
+        <div class="nc__inner-top nc__inner-top--design-block nc__inner-top--design is-active" style="background-image: url('images/content/nc_bg.jpg')">
+          <div class="nc__inner-cell nc__inner-cell--canvas " data-side="back">
+            <canvas class="nc__inner-canvas" id="back_side"></canvas>
           </div>
-          <div class="nc__inner-top nc__inner-top--design-block nc__inner-top--own_design ">
-            <p class="js-own-design-close own-design-closer" title="Закрыть">
-              <span class="own-design-closer__inner"><img class="own-design-closer__icon" src="images/icons/back.svg" alt="Назад"> Дизайн</span>
-              <svg class="own-design-closer__svg-icon" aria-hidden="true"><use xlink:href="#times-circle"/></svg>
-            </p>
-            <div class="nc__inner-cell nc__inner-cell--own_design nc__inner-cell--own_design_canvas">
-              <canvas class="nc__inner-canvas" id="own_back"></canvas>
-            </div>
-            <div class="nc__inner-cell nc__inner-cell--own_design custom-scroll">
-              <h2 class="own-design-title">СОЗДАТЬ СВОЙ ВАРИАНТ:</h2>
-              <div class="image-preview">
-                <div data-type="REDACTOR_CROP"></div>
-              </div>
-              <div class="image-preview-info">
-                <p class="image-preview-title">Загружено изображение: <span data-type="REDACTOR_FILE_NAME">…/Sasha_Gray_Boobs.jpg</span></p>
-                <div class="file-upload">
-                  <label class="file-upload__label" for="file">
-                    <input class="file-upload__input" id="file" type="file" data-type="REDACTOR_FILE">
-                    <input class="file-upload__input" name="DR_CUSTOM_ART" type="hidden" data-type="REDACTOR_FILE_VALUE">
-                  </label>
-                  <span class="file-upload__mobile-text">Применить /&nbsp;</span>Загрузить
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="design">
-            <div class="design__section">
-              <p class="js-design-section-opener design__section-title" data-section="1-1">Покраска <svg class="design__section-title-icon" aria-hidden="true"><use xlink:href="#arrow_down"></use></svg></p>
-              <div class="design__section-inner is-active" data-section="1-1">
-                <div class="design__section-list">
-                  <div class="nc-c2">
-                    <p class="nc-c2__title">Элемент А:</p>
-                    <div class="js-nc-c2-block nc-c2__block">
-                      <div class="nc-c2__block-image"><img src="images/content/img_61.jpg" alt="Название цвета"></div>
-                      <div class="nc-c2__block-text">
-                        <p class="nc-c2__block-title">BLACK</p>
-                        <p class="nc-c2__block-feature">Черный<br> Металик</p>
-                        <p class="nc-c2__block-sign">изменить</p>
-                      </div>
-                    </div>
-                    <div class="nc-c2__list">
-                      <p class="js-nc-c2-block-close nc-c2__list-title"><img class="nc-c2__list-title-icon" src="images/icons/back.svg" alt="Назад"> Покраска</p>
-                      <div class="nc-c2__list-inner">
-                        <label class="nc-item2" for="el_a1">
-                          <input class="nc-item2__radio" id="el_a1" type="radio" name="el_a" value="el_a1" checked>
-                          <div class="nc-item2__image"><img src="images/content/img17.jpg" alt="Название цвета"></div>
-                          <div class="nc-item2__title">Ослепительно Красный</div>
-                        </label>
-                        <label class="nc-item2" for="el_a2">
-                          <input class="nc-item2__radio" id="el_a2" type="radio" name="el_a" value="el_a2">
-                          <div class="nc-item2__image"><img src="images/content/img18.jpg" alt="Название цвета"></div>
-                          <div class="nc-item2__title">Ослепительно Красный</div>
-                        </label>
-                        <label class="nc-item2" for="el_a3">
-                          <input class="nc-item2__radio" id="el_a3" type="radio" name="el_a" value="el_a3">
-                          <div class="nc-item2__image"><img src="images/content/img19.jpg" alt="Название цвета"></div>
-                          <div class="nc-item2__title">Ослепительно Красный</div>
-                        </label>
-                        <label class="nc-item2" for="el_a4">
-                          <input class="nc-item2__radio" id="el_a4" type="radio" name="el_a" value="el_a4">
-                          <div class="nc-item2__image"><img src="images/content/img20.jpg" alt="Название цвета"></div>
-                          <div class="nc-item2__title">Ослепительно Красный</div>
-                        </label>
-                        <label class="nc-item2" for="el_a5">
-                          <input class="nc-item2__radio" id="el_a5" type="radio" name="el_a" value="el_a5">
-                          <div class="nc-item2__image"><img src="images/content/img21.jpg" alt="Название цвета"></div>
-                          <div class="nc-item2__title">Антрацитовый Черный</div>
-                        </label>
-                        <label class="nc-item2" for="el_a6">
-                          <input class="nc-item2__radio" id="el_a6" type="radio" name="el_a" value="el_a6">
-                          <div class="nc-item2__image"><img src="images/content/img22.jpg" alt="Название цвета"></div>
-                          <div class="nc-item2__title">Антрацитовый Черный</div>
-                        </label>
-                        <label class="nc-item2" for="el_a7">
-                          <input class="nc-item2__radio" id="el_a7" type="radio" name="el_a" value="el_a7">
-                          <div class="nc-item2__image"><img src="images/content/img23.jpg" alt="Название цвета"></div>
-                          <div class="nc-item2__title">Антрацитовый Черный</div>
-                        </label>
-                        <label class="nc-item2" for="el_a8">
-                          <input class="nc-item2__radio" id="el_a8" type="radio" name="el_a" value="el_a8">
-                          <div class="nc-item2__image"><img src="images/content/img24.jpg" alt="Название цвета"></div>
-                          <div class="nc-item2__title">Антрацитовый Черный</div>
-                        </label>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="nc-c2">
-                    <p class="nc-c2__title">Элемент B:</p>
-                    <div class="js-nc-c2-block nc-c2__block">
-                      <div class="nc-c2__block-image"><img src="images/content/img_60.jpg" alt="Название цвета"></div>
-                      <div class="nc-c2__block-text">
-                        <p class="nc-c2__block-title">RED</p>
-                        <p class="nc-c2__block-feature">Красный<br> огонь</p>
-                        <p class="nc-c2__block-sign">изменить</p>
-                      </div>
-                    </div>
-                    <div class="nc-c2__list">
-                      <p class="js-nc-c2-block-close nc-c2__list-title"><img class="nc-c2__list-title-icon" src="images/icons/back.svg" alt="Назад"> Корпус</p>
-                      <div class="nc-c2__list-inner">
-                        <label class="nc-item2" for="el_b1">
-                          <input class="nc-item2__radio" id="el_b1" type="radio" name="el_b" value="el_b1" checked>
-                          <div class="nc-item2__image"><img src="images/content/img17.jpg" alt="Название цвета"></div>
-                          <div class="nc-item2__title">Ослепительно Красный</div>
-                        </label>
-                        <label class="nc-item2" for="el_b2">
-                          <input class="nc-item2__radio" id="el_b2" type="radio" name="el_b" value="el_b2">
-                          <div class="nc-item2__image"><img src="images/content/img18.jpg" alt="Название цвета"></div>
-                          <div class="nc-item2__title">Ослепительно Красный</div>
-                        </label>
-                        <label class="nc-item2" for="el_b3">
-                          <input class="nc-item2__radio" id="el_b3" type="radio" name="el_b" value="el_b3">
-                          <div class="nc-item2__image"><img src="images/content/img19.jpg" alt="Название цвета"></div>
-                          <div class="nc-item2__title">Ослепительно Красный</div>
-                        </label>
-                        <label class="nc-item2" for="el_b4">
-                          <input class="nc-item2__radio" id="el_b4" type="radio" name="el_b" value="el_b4">
-                          <div class="nc-item2__image"><img src="images/content/img20.jpg" alt="Название цвета"></div>
-                          <div class="nc-item2__title">Ослепительно Красный</div>
-                        </label>
-                        <label class="nc-item2" for="el_b5">
-                          <input class="nc-item2__radio" id="el_b5" type="radio" name="el_b" value="el_b5">
-                          <div class="nc-item2__image"><img src="images/content/img21.jpg" alt="Название цвета"></div>
-                          <div class="nc-item2__title">Антрацитовый Черный</div>
-                        </label>
-                        <label class="nc-item2" for="el_b6">
-                          <input class="nc-item2__radio" id="el_b6" type="radio" name="el_b" value="el_b6">
-                          <div class="nc-item2__image"><img src="images/content/img22.jpg" alt="Название цвета"></div>
-                          <div class="nc-item2__title">Антрацитовый Черный</div>
-                        </label>
-                        <label class="nc-item2" for="el_b7">
-                          <input class="nc-item2__radio" id="el_b7" type="radio" name="el_b" value="el_b7">
-                          <div class="nc-item2__image"><img src="images/content/img23.jpg" alt="Название цвета"></div>
-                          <div class="nc-item2__title">Антрацитовый Черный</div>
-                        </label>
-                        <label class="nc-item2" for="el_b8">
-                          <input class="nc-item2__radio" id="el_b8" type="radio" name="el_b" value="el_b8">
-                          <div class="nc-item2__image"><img src="images/content/img24.jpg" alt="Название цвета"></div>
-                          <div class="nc-item2__title">Антрацитовый Черный</div>
-                        </label>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="nc-c2">
-                    <p class="nc-c2__title">Элемент C:</p>
-                    <div class="js-nc-c2-block nc-c2__block">
-                      <div class="nc-c2__block-image"><img src="images/content/img_61.jpg" alt="Название цвета"></div>
-                      <div class="nc-c2__block-text">
-                        <p class="nc-c2__block-title">GREY</p>
-                        <p class="nc-c2__block-feature">Серый<br> асфальт</p>
-                        <p class="nc-c2__block-sign">изменить</p>
-                      </div>
-                    </div>
-                    <div class="nc-c2__list">
-                      <p class="js-nc-c2-block-close nc-c2__list-title"><img class="nc-c2__list-title-icon" src="images/icons/back.svg" alt="Назад"> Покраска</p>
-                      <div class="nc-c2__list-inner">
-                        <label class="nc-item2" for="el_c1">
-                          <input class="nc-item2__radio" id="el_c1" type="radio" name="el_c" value="el_c1" checked>
-                          <div class="nc-item2__image"><img src="images/content/img17.jpg" alt="Название цвета"></div>
-                          <div class="nc-item2__title">Ослепительно Красный</div>
-                        </label>
-                        <label class="nc-item2" for="el_c2">
-                          <input class="nc-item2__radio" id="el_c2" type="radio" name="el_c" value="el_c2">
-                          <div class="nc-item2__image"><img src="images/content/img18.jpg" alt="Название цвета"></div>
-                          <div class="nc-item2__title">Ослепительно Красный</div>
-                        </label>
-                        <label class="nc-item2" for="el_c3">
-                          <input class="nc-item2__radio" id="el_c3" type="radio" name="el_c" value="el_c3">
-                          <div class="nc-item2__image"><img src="images/content/img19.jpg" alt="Название цвета"></div>
-                          <div class="nc-item2__title">Ослепительно Красный</div>
-                        </label>
-                        <label class="nc-item2" for="el_c4">
-                          <input class="nc-item2__radio" id="el_c4" type="radio" name="el_c" value="el_c4">
-                          <div class="nc-item2__image"><img src="images/content/img20.jpg" alt="Название цвета"></div>
-                          <div class="nc-item2__title">Ослепительно Красный</div>
-                        </label>
-                        <label class="nc-item2" for="el_c5">
-                          <input class="nc-item2__radio" id="el_c5" type="radio" name="el_c" value="el_c5">
-                          <div class="nc-item2__image"><img src="images/content/img21.jpg" alt="Название цвета"></div>
-                          <div class="nc-item2__title">Антрацитовый Черный</div>
-                        </label>
-                        <label class="nc-item2" for="el_c6">
-                          <input class="nc-item2__radio" id="el_c6" type="radio" name="el_c" value="el_c6">
-                          <div class="nc-item2__image"><img src="images/content/img22.jpg" alt="Название цвета"></div>
-                          <div class="nc-item2__title">Антрацитовый Черный</div>
-                        </label>
-                        <label class="nc-item2" for="el_c7">
-                          <input class="nc-item2__radio" id="el_c7" type="radio" name="el_c" value="el_c7">
-                          <div class="nc-item2__image"><img src="images/content/img23.jpg" alt="Название цвета"></div>
-                          <div class="nc-item2__title">Антрацитовый Черный</div>
-                        </label>
-                        <label class="nc-item2" for="el_c8">
-                          <input class="nc-item2__radio" id="el_c8" type="radio" name="el_c" value="el_c8">
-                          <div class="nc-item2__image"><img src="images/content/img24.jpg" alt="Название цвета"></div>
-                          <div class="nc-item2__title">Антрацитовый Черный</div>
-                        </label>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="design__section">
-              <p class="js-design-section-opener design__section-title" data-section="1-2">Нанесение изображения <svg class="design__section-title-icon" aria-hidden="true"><use xlink:href="#arrow_down"></use></svg></p>
-              <div class="design__section-inner " data-section="1-2">
-                <div class="design__section-list">
-                  <div class="nc-c2">
-                    <p class="nc-c2__title">Боковой арт:</p>
-                    <div class="js-nc-c2-block nc-c2__block">
-                      <div class="nc-c2__block-image"><img src="images/content/img_62.jpg" alt="Название цвета"></div>
-                      <div class="nc-c2__block-text">
-                        <p class="nc-c2__block-title">SKIN #1</p>
-                        <p class="nc-c2__block-feature">Вариант<br> из библиотеки</p>
-                        <p class="nc-c2__block-sign">изменить</p>
-                      </div>
-                    </div>
-                    <div class="nc-c2__list">
-                      <p class="js-nc-c2-block-close nc-c2__list-title"><img class="nc-c2__list-title-icon" src="images/icons/back.svg" alt="Назад"> Дизайн</p>
-                      <div class="nc-c2__list-filter-block">
-                        <ul class="nc-c2__list-filter">
-                          <li class="nc-c2__list-filter-item"><a class="nc-c2__list-filter-link" href="#">Dota 2</a></li>
-                          <li class="nc-c2__list-filter-item"><a class="nc-c2__list-filter-link is-active" href="#">OW</a></li>
-                          <li class="nc-c2__list-filter-item"><a class="nc-c2__list-filter-link" href="#">CS:GO</a></li>
-                          <li class="nc-c2__list-filter-item"><a class="nc-c2__list-filter-link" href="#">BF1</a></li>
-                        </ul>
-                      </div>
-                      <div class="nc-c2__list-inner">
-                        <label class="nc-item2" for="sk1">
-                          <input class="nc-item2__radio" id="sk1" type="radio" name="sk" value="sk1" checked>
-                          <div class="nc-item2__image"><img src="images/content/img_57.png" alt="Название цвета"></div>
-                          <div class="nc-item2__title">SKIN #1</div>
-                        </label>
-                        <label class="nc-item2" for="sk2">
-                          <input class="nc-item2__radio" id="sk2" type="radio" name="sk" value="sk2">
-                          <div class="nc-item2__image"><img src="images/content/img_57.png" alt="Название цвета"></div>
-                          <div class="nc-item2__title">SKIN #2</div>
-                        </label>
-                        <label class="nc-item2" for="sk3">
-                          <input class="nc-item2__radio" id="sk3" type="radio" name="sk" value="sk3">
-                          <div class="nc-item2__image"><img src="images/content/img_57.png" alt="Название цвета"></div>
-                          <div class="nc-item2__title">SKIN #3</div>
-                        </label>
-                        <label class="nc-item2" for="sk4">
-                          <input class="nc-item2__radio" id="sk4" type="radio" name="sk" value="sk4">
-                          <div class="nc-item2__image"><img src="images/content/img_57.png" alt="Название цвета"></div>
-                          <div class="nc-item2__title">SKIN #4</div>
-                        </label>
-                        <label class="nc-item2" for="sk5">
-                          <input class="nc-item2__radio" id="sk5" type="radio" name="sk" value="sk5">
-                          <div class="nc-item2__image"><img src="images/content/img_57.png" alt="Название цвета"></div>
-                          <div class="nc-item2__title">SKIN #5</div>
-                        </label>
-                        <label class="nc-item2" for="sk6">
-                          <input class="nc-item2__radio" id="sk6" type="radio" name="sk" value="sk6">
-                          <div class="nc-item2__image"><img src="images/content/img_57.png" alt="Название цвета"></div>
-                          <div class="nc-item2__title">SKIN #6</div>
-                        </label>
-                        <label class="nc-item2" for="sk7">
-                          <input class="nc-item2__radio" id="sk7" type="radio" name="sk" value="sk7">
-                          <div class="nc-item2__image"><img src="images/content/img_57.png" alt="Название цвета"></div>
-                          <div class="nc-item2__title">SKIN #7</div>
-                        </label>
-                        <label class="nc-item2" for="sk8">
-                          <input class="nc-item2__radio" id="sk8" type="radio" name="sk" value="sk8">
-                          <div class="nc-item2__image"><img src="images/content/img_57.png" alt="Название цвета"></div>
-                          <div class="nc-item2__title">SKIN #8</div>
-                        </label>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="nc-c2">
-                    <p class="nc-c2__title nc-c2__title--red">Создать</p>
-                    <div class="js-own-design-opener nc-c2__block">
-                      <div class="nc-c2__block-image"><img src="images/content/img_62.jpg" alt="Название цвета"></div>
-                      <div class="nc-c2__block-text">
-                        <p class="nc-c2__block-title">Свой дизайн</p>
-                        <p class="nc-c2__block-feature">Редактор<br> собственного дизайна</p>
-                        <p class="nc-c2__block-sign">изменить</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="design__section">
-              <p class="js-design-section-opener design__section-title" data-section="1-3">Дополнительные опции <svg class="design__section-title-icon" aria-hidden="true"><use xlink:href="#arrow_down"></use></svg></p>
-              <div class="design__section-inner " data-section="1-3">
-                <div class="design__section-list">
-                  <div class="nc-c">
-                    <p class="nc-c__title">Подсветка:</p>
-                    <div class="js-nc-c-block nc-c__block nc-c__block--with_icon">
-                      <div class="nc-c__block-icon"><img src="images/content/img_45.png" alt=""></div>
-                      <div class="nc-c__block-text">
-                        <p class="nc-c__block-title">ARGB</p>
-                        <p class="nc-c__block-feature">адресная<br> rgb-подсветка</p>
-                        <p class="nc-c__block-sign">изменить</p>
-                      </div>
-                    </div>
-                    <div class="nc-c__list">
-                      <p class="js-nc-c-block-close nc-c__list-title"><img class="nc-c__list-title-icon" src="images/icons/back.svg" alt="Назад"> Подсветка</p>
-                      <div class="nc-c__list-inner">
-                        <label class="nc-item2" for="lt1">
-                          <input class="nc-item2__radio" id="lt1" type="radio" name="lt" value="lt1" checked>
-                          <div class="nc-item2__image"><img src="images/content/img_58.png" alt="Название цвета"></div>
-                          <div class="nc-item2__title">Ослепительно Красный</div>
-                        </label>
-                        <label class="nc-item2" for="lt2">
-                          <input class="nc-item2__radio" id="lt2" type="radio" name="lt" value="lt2">
-                          <div class="nc-item2__image"><img src="images/content/img_58.png" alt="Название цвета"></div>
-                          <div class="nc-item2__title">Ослепительно Красный</div>
-                        </label>
-                        <label class="nc-item2" for="lt3">
-                          <input class="nc-item2__radio" id="lt3" type="radio" name="lt" value="lt3">
-                          <div class="nc-item2__image"><img src="images/content/img_58.png" alt="Название цвета"></div>
-                          <div class="nc-item2__title">Ослепительно Красный</div>
-                        </label>
-                        <label class="nc-item2" for="lt4">
-                          <input class="nc-item2__radio" id="lt4" type="radio" name="lt" value="lt4">
-                          <div class="nc-item2__image"><img src="images/content/img_58.png" alt="Название цвета"></div>
-                          <div class="nc-item2__title">Ослепительно Красный</div>
-                        </label>
-                        <label class="nc-item2" for="lt5">
-                          <input class="nc-item2__radio" id="lt5" type="radio" name="lt" value="lt5">
-                          <div class="nc-item2__image"><img src="images/content/img_58.png" alt="Название цвета"></div>
-                          <div class="nc-item2__title">Антрацитовый Черный</div>
-                        </label>
-                        <label class="nc-item2" for="lt6">
-                          <input class="nc-item2__radio" id="lt6" type="radio" name="lt" value="lt6">
-                          <div class="nc-item2__image"><img src="images/content/img_58.png" alt="Название цвета"></div>
-                          <div class="nc-item2__title">Антрацитовый Черный</div>
-                        </label>
-                        <label class="nc-item2" for="lt7">
-                          <input class="nc-item2__radio" id="lt7" type="radio" name="lt" value="lt7">
-                          <div class="nc-item2__image"><img src="images/content/img_58.png" alt="Название цвета"></div>
-                          <div class="nc-item2__title">Антрацитовый Черный</div>
-                        </label>
-                        <label class="nc-item2" for="lt8">
-                          <input class="nc-item2__radio" id="lt8" type="radio" name="lt" value="lt8">
-                          <div class="nc-item2__image"><img src="images/content/img_58.png" alt="Название цвета"></div>
-                          <div class="nc-item2__title">Антрацитовый Черный</div>
-                        </label>
-                      </div>
-                      <button class="js-nc-c-block-close nc-c__list-close" type="button" title="Закрыть"><svg class="nc-c__list-close-icon" aria-hidden="true"><use xlink:href="#times-circle"/></svg></button>
-                    </div>
-                  </div>
-                  <div class="nc-c">
-                    <p class="nc-c__title">Цветная оплетка:</p>
-                    <div class="js-nc-c-block nc-c__block nc-c__block--with_icon">
-                      <div class="nc-c__block-icon"><img src="images/content/img_45.png" alt=""></div>
-                      <div class="nc-c__block-text">
-                        <p class="nc-c__block-title">Нет</p>
-                        <p class="nc-c__block-feature">кастомная<br> оплетка проводов</p>
-                        <p class="nc-c__block-sign">изменить</p>
-                      </div>
-                    </div>
-                    <div class="nc-c__list nc-c__list--tile">
-                      <p class="js-nc-c-block-close nc-c__list-title"><img class="nc-c__list-title-icon" src="images/icons/back.svg" alt="Назад"> Цветная оплетка</p>
-                      <div class="nc-c__list-inner">
-                        <label class="nc-item2" for="wr1">
-                          <input class="nc-item2__radio" id="wr1" type="radio" name="wr" value="wr1" checked>
-                          <div class="nc-item2__image"><img src="images/content/img_59.png" alt="Название цвета"></div>
-                          <div class="nc-item2__title">Ослепительно Красный</div>
-                        </label>
-                        <label class="nc-item2" for="wr2">
-                          <input class="nc-item2__radio" id="wr2" type="radio" name="wr" value="wr2">
-                          <div class="nc-item2__image"><img src="images/content/img_59.png" alt="Название цвета"></div>
-                          <div class="nc-item2__title">Ослепительно Красный</div>
-                        </label>
-                        <label class="nc-item2" for="wr3">
-                          <input class="nc-item2__radio" id="wr3" type="radio" name="wr" value="wr3">
-                          <div class="nc-item2__image"><img src="images/content/img_59.png" alt="Название цвета"></div>
-                          <div class="nc-item2__title">Ослепительно Красный</div>
-                        </label>
-                        <label class="nc-item2" for="wr4">
-                          <input class="nc-item2__radio" id="wr4" type="radio" name="wr" value="wr4">
-                          <div class="nc-item2__image"><img src="images/content/img_59.png" alt="Название цвета"></div>
-                          <div class="nc-item2__title">Ослепительно Красный</div>
-                        </label>
-                        <label class="nc-item2" for="wr5">
-                          <input class="nc-item2__radio" id="wr5" type="radio" name="wr" value="wr5">
-                          <div class="nc-item2__image"><img src="images/content/img_59.png" alt="Название цвета"></div>
-                          <div class="nc-item2__title">Антрацитовый Черный</div>
-                        </label>
-                        <label class="nc-item2" for="wr6">
-                          <input class="nc-item2__radio" id="wr6" type="radio" name="wr" value="wr6">
-                          <div class="nc-item2__image"><img src="images/content/img_59.png" alt="Название цвета"></div>
-                          <div class="nc-item2__title">Антрацитовый Черный</div>
-                        </label>
-                        <label class="nc-item2" for="wr7">
-                          <input class="nc-item2__radio" id="wr7" type="radio" name="wr" value="wr7">
-                          <div class="nc-item2__image"><img src="images/content/img_59.png" alt="Название цвета"></div>
-                          <div class="nc-item2__title">Антрацитовый Черный</div>
-                        </label>
-                        <label class="nc-item2" for="wr8">
-                          <input class="nc-item2__radio" id="wr8" type="radio" name="wr" value="wr8">
-                          <div class="nc-item2__image"><img src="images/content/img_59.png" alt="Название цвета"></div>
-                          <div class="nc-item2__title">Антрацитовый Черный</div>
-                        </label>
-                      </div>
-                      <button class="js-nc-c-block-close nc-c__list-close" type="button" title="Закрыть"><svg class="nc-c__list-close-icon" aria-hidden="true"><use xlink:href="#times-circle"/></svg></button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="nc__list-block nc__list-block--design">
-            <div class="nc-c-list">
-              <a class="nc-c-list__arrow nc-c-list__arrow--prev heartBeat" href="new-smart-config.html" title="Назад"><svg class="nc-c-list__arrow-icon" aria-hidden="true"><use xlink:href="#slider_arrow_left"/></svg></a>
-              <div class="nc-c-list__inner">
-                <div class="nc-c-list__item-cell is-active">
-                  <div class="nc-c-list__item is-active">
-                    <div class="nc-c-list__item-list">
-                      <div class="nc-c">
-                        <p class="nc-c__title">Элемент A:</p>
-                        <div class="js-nc-c-block nc-c__block">
-                          <div class="nc-c__block-text">
-                            <p class="nc-c__block-title">Black</p>
-                            <p class="nc-c__block-feature">автомобильная<br> покраска</p>
-                            <p class="nc-c__block-sign">изменить</p>
-                          </div>
-                        </div>
-                        <div class="nc-c__list nc-c__list--tile">
-                          <p class="js-nc-c-block-close nc-c__list-title"><img class="nc-c__list-title-icon" src="images/icons/back.svg" alt="Назад"> Элемент A</p>
-                          <div class="nc-c__list-inner">
-                            <label class="nc-item2" for="el_a-1">
-                              <input class="nc-item2__radio" id="el_a-1" type="radio" name="el_a-" value="el_a-1" checked>
-                              <div class="nc-item2__image"><img src="images/content/img17.jpg" alt="Название цвета"></div>
-                              <div class="nc-item2__title">Ослепительно Красный</div>
-                            </label>
-                            <label class="nc-item2" for="el_a-2">
-                              <input class="nc-item2__radio" id="el_a-2" type="radio" name="el_a-" value="el_a-2">
-                              <div class="nc-item2__image"><img src="images/content/img18.jpg" alt="Название цвета"></div>
-                              <div class="nc-item2__title">Ослепительно Красный</div>
-                            </label>
-                            <label class="nc-item2" for="el_a-3">
-                              <input class="nc-item2__radio" id="el_a-3" type="radio" name="el_a-" value="el_a-3">
-                              <div class="nc-item2__image"><img src="images/content/img19.jpg" alt="Название цвета"></div>
-                              <div class="nc-item2__title">Ослепительно Красный</div>
-                            </label>
-                            <label class="nc-item2" for="el_a-4">
-                              <input class="nc-item2__radio" id="el_a-4" type="radio" name="el_a-" value="el_a-4">
-                              <div class="nc-item2__image"><img src="images/content/img20.jpg" alt="Название цвета"></div>
-                              <div class="nc-item2__title">Ослепительно Красный</div>
-                            </label>
-                            <label class="nc-item2" for="el_a-5">
-                              <input class="nc-item2__radio" id="el_a-5" type="radio" name="el_a-" value="el_a-5">
-                              <div class="nc-item2__image"><img src="images/content/img21.jpg" alt="Название цвета"></div>
-                              <div class="nc-item2__title">Антрацитовый Черный</div>
-                            </label>
-                            <label class="nc-item2" for="el_a-6">
-                              <input class="nc-item2__radio" id="el_a-6" type="radio" name="el_a-" value="el_a-6">
-                              <div class="nc-item2__image"><img src="images/content/img22.jpg" alt="Название цвета"></div>
-                              <div class="nc-item2__title">Антрацитовый Черный</div>
-                            </label>
-                            <label class="nc-item2" for="el_a-7">
-                              <input class="nc-item2__radio" id="el_a-7" type="radio" name="el_a-" value="el_a-7">
-                              <div class="nc-item2__image"><img src="images/content/img23.jpg" alt="Название цвета"></div>
-                              <div class="nc-item2__title">Антрацитовый Черный</div>
-                            </label>
-                            <label class="nc-item2" for="el_a-8">
-                              <input class="nc-item2__radio" id="el_a-8" type="radio" name="el_a-" value="el_a-8">
-                              <div class="nc-item2__image"><img src="images/content/img24.jpg" alt="Название цвета"></div>
-                              <div class="nc-item2__title">Антрацитовый Черный</div>
-                            </label>
-                          </div>
-                          <button class="js-nc-c-block-close nc-c__list-close" type="button" title="Закрыть"><svg class="nc-c__list-close-icon" aria-hidden="true"><use xlink:href="#times-circle"/></svg></button>
-                        </div>
-                      </div>
-                      <div class="nc-c">
-                        <p class="nc-c__title">Элемент B:</p>
-                        <div class="js-nc-c-block nc-c__block">
-                          <div class="nc-c__block-text">
-                            <p class="nc-c__block-title">Red</p>
-                            <p class="nc-c__block-feature">автомобильная<br> покраска</p>
-                            <p class="nc-c__block-sign">изменить</p>
-                          </div>
-                        </div>
-                        <div class="nc-c__list nc-c__list--tile">
-                          <p class="js-nc-c-block-close nc-c__list-title"><img class="nc-c__list-title-icon" src="images/icons/back.svg" alt="Назад"> Элемент B</p>
-                          <div class="nc-c__list-inner">
-                            <label class="nc-item2" for="el_b-1">
-                              <input class="nc-item2__radio" id="el_b-1" type="radio" name="el_b-" value="el_b-1" checked>
-                              <div class="nc-item2__image"><img src="images/content/img17.jpg" alt="Название цвета"></div>
-                              <div class="nc-item2__title">Ослепительно Красный</div>
-                            </label>
-                            <label class="nc-item2" for="el_b-2">
-                              <input class="nc-item2__radio" id="el_b-2" type="radio" name="el_b-" value="el_b-2">
-                              <div class="nc-item2__image"><img src="images/content/img18.jpg" alt="Название цвета"></div>
-                              <div class="nc-item2__title">Ослепительно Красный</div>
-                            </label>
-                            <label class="nc-item2" for="el_b-3">
-                              <input class="nc-item2__radio" id="el_b-3" type="radio" name="el_b-" value="el_b-3">
-                              <div class="nc-item2__image"><img src="images/content/img19.jpg" alt="Название цвета"></div>
-                              <div class="nc-item2__title">Ослепительно Красный</div>
-                            </label>
-                            <label class="nc-item2" for="el_b-4">
-                              <input class="nc-item2__radio" id="el_b-4" type="radio" name="el_b-" value="el_b-4">
-                              <div class="nc-item2__image"><img src="images/content/img20.jpg" alt="Название цвета"></div>
-                              <div class="nc-item2__title">Ослепительно Красный</div>
-                            </label>
-                            <label class="nc-item2" for="el_b-5">
-                              <input class="nc-item2__radio" id="el_b-5" type="radio" name="el_b-" value="el_b-5">
-                              <div class="nc-item2__image"><img src="images/content/img21.jpg" alt="Название цвета"></div>
-                              <div class="nc-item2__title">Антрацитовый Черный</div>
-                            </label>
-                            <label class="nc-item2" for="el_b-6">
-                              <input class="nc-item2__radio" id="el_b-6" type="radio" name="el_b-" value="el_b-6">
-                              <div class="nc-item2__image"><img src="images/content/img22.jpg" alt="Название цвета"></div>
-                              <div class="nc-item2__title">Антрацитовый Черный</div>
-                            </label>
-                            <label class="nc-item2" for="el_b-7">
-                              <input class="nc-item2__radio" id="el_b-7" type="radio" name="el_b-" value="el_b-7">
-                              <div class="nc-item2__image"><img src="images/content/img23.jpg" alt="Название цвета"></div>
-                              <div class="nc-item2__title">Антрацитовый Черный</div>
-                            </label>
-                            <label class="nc-item2" for="el_b-8">
-                              <input class="nc-item2__radio" id="el_b-8" type="radio" name="el_b-" value="el_b-8">
-                              <div class="nc-item2__image"><img src="images/content/img24.jpg" alt="Название цвета"></div>
-                              <div class="nc-item2__title">Антрацитовый Черный</div>
-                            </label>
-                          </div>
-                          <button class="js-nc-c-block-close nc-c__list-close" type="button" title="Закрыть"><svg class="nc-c__list-close-icon" aria-hidden="true"><use xlink:href="#times-circle"/></svg></button>
-                        </div>
-                      </div>
-                      <div class="nc-c">
-                        <p class="nc-c__title">Элемент C:</p>
-                        <div class="js-nc-c-block nc-c__block">
-                          <div class="nc-c__block-text">
-                            <p class="nc-c__block-title">Red</p>
-                            <p class="nc-c__block-feature">автомобильная<br> покраска</p>
-                            <p class="nc-c__block-sign">изменить</p>
-                          </div>
-                        </div>
-                        <div class="nc-c__list nc-c__list--tile">
-                          <p class="js-nc-c-block-close nc-c__list-title"><img class="nc-c__list-title-icon" src="images/icons/back.svg" alt="Назад"> Элемент C</p>
-                          <div class="nc-c__list-inner">
-                            <label class="nc-item2" for="el_c-1">
-                              <input class="nc-item2__radio" id="el_c-1" type="radio" name="el_c-" value="el_c-1" checked>
-                              <div class="nc-item2__image"><img src="images/content/img17.jpg" alt="Название цвета"></div>
-                              <div class="nc-item2__title">Ослепительно Красный</div>
-                            </label>
-                            <label class="nc-item2" for="el_c-2">
-                              <input class="nc-item2__radio" id="el_c-2" type="radio" name="el_c-" value="el_c-2">
-                              <div class="nc-item2__image"><img src="images/content/img18.jpg" alt="Название цвета"></div>
-                              <div class="nc-item2__title">Ослепительно Красный</div>
-                            </label>
-                            <label class="nc-item2" for="el_c-3">
-                              <input class="nc-item2__radio" id="el_c-3" type="radio" name="el_c-" value="el_c-3">
-                              <div class="nc-item2__image"><img src="images/content/img19.jpg" alt="Название цвета"></div>
-                              <div class="nc-item2__title">Ослепительно Красный</div>
-                            </label>
-                            <label class="nc-item2" for="el_c-4">
-                              <input class="nc-item2__radio" id="el_c-4" type="radio" name="el_c-" value="el_c-4">
-                              <div class="nc-item2__image"><img src="images/content/img20.jpg" alt="Название цвета"></div>
-                              <div class="nc-item2__title">Ослепительно Красный</div>
-                            </label>
-                            <label class="nc-item2" for="el_c-5">
-                              <input class="nc-item2__radio" id="el_c-5" type="radio" name="el_c-" value="el_c-5">
-                              <div class="nc-item2__image"><img src="images/content/img21.jpg" alt="Название цвета"></div>
-                              <div class="nc-item2__title">Антрацитовый Черный</div>
-                            </label>
-                            <label class="nc-item2" for="el_c-6">
-                              <input class="nc-item2__radio" id="el_c-6" type="radio" name="el_c-" value="el_c-6">
-                              <div class="nc-item2__image"><img src="images/content/img22.jpg" alt="Название цвета"></div>
-                              <div class="nc-item2__title">Антрацитовый Черный</div>
-                            </label>
-                            <label class="nc-item2" for="el_c-7">
-                              <input class="nc-item2__radio" id="el_c-7" type="radio" name="el_c-" value="el_c-7">
-                              <div class="nc-item2__image"><img src="images/content/img23.jpg" alt="Название цвета"></div>
-                              <div class="nc-item2__title">Антрацитовый Черный</div>
-                            </label>
-                            <label class="nc-item2" for="el_c-8">
-                              <input class="nc-item2__radio" id="el_c-8" type="radio" name="el_c-" value="el_c-8">
-                              <div class="nc-item2__image"><img src="images/content/img24.jpg" alt="Название цвета"></div>
-                              <div class="nc-item2__title">Антрацитовый Черный</div>
-                            </label>
-                          </div>
-                          <button class="js-nc-c-block-close nc-c__list-close" type="button" title="Закрыть"><svg class="nc-c__list-close-icon" aria-hidden="true"><use xlink:href="#times-circle"/></svg></button>
-                        </div>
-                      </div>
-                      <div class="nc-c">
-                        <p class="nc-c__title">Подсветка:</p>
-                        <div class="js-nc-c-block nc-c__block nc-c__block--with_icon">
-                          <div class="nc-c__block-icon"><img src="images/content/img_45.png" alt=""></div>
-                          <div class="nc-c__block-text">
-                            <p class="nc-c__block-title">ARGB</p>
-                            <p class="nc-c__block-feature">адресная<br> rgb-подсветка</p>
-                            <p class="nc-c__block-sign">изменить</p>
-                          </div>
-                        </div>
-                        <div class="nc-c__list nc-c__list--tile">
-                          <p class="js-nc-c-block-close nc-c__list-title"><img class="nc-c__list-title-icon" src="images/icons/back.svg" alt="Назад"> Подсветка</p>
-                          <div class="nc-c__list-inner">
-                            <label class="nc-item2" for="lt-1">
-                              <input class="nc-item2__radio" id="lt-1" type="radio" name="lt-" value="lt-1" checked>
-                              <div class="nc-item2__image"><img src="images/content/img_58.png" alt="Название цвета"></div>
-                              <div class="nc-item2__title">Ослепительно Красный</div>
-                            </label>
-                            <label class="nc-item2" for="lt-2">
-                              <input class="nc-item2__radio" id="lt-2" type="radio" name="lt-" value="lt-2">
-                              <div class="nc-item2__image"><img src="images/content/img_58.png" alt="Название цвета"></div>
-                              <div class="nc-item2__title">Ослепительно Красный</div>
-                            </label>
-                            <label class="nc-item2" for="lt-3">
-                              <input class="nc-item2__radio" id="lt-3" type="radio" name="lt-" value="lt-3">
-                              <div class="nc-item2__image"><img src="images/content/img_58.png" alt="Название цвета"></div>
-                              <div class="nc-item2__title">Ослепительно Красный</div>
-                            </label>
-                            <label class="nc-item2" for="lt-4">
-                              <input class="nc-item2__radio" id="lt-4" type="radio" name="lt-" value="lt-4">
-                              <div class="nc-item2__image"><img src="images/content/img_58.png" alt="Название цвета"></div>
-                              <div class="nc-item2__title">Ослепительно Красный</div>
-                            </label>
-                            <label class="nc-item2" for="lt-5">
-                              <input class="nc-item2__radio" id="lt-5" type="radio" name="lt-" value="lt-5">
-                              <div class="nc-item2__image"><img src="images/content/img_58.png" alt="Название цвета"></div>
-                              <div class="nc-item2__title">Антрацитовый Черный</div>
-                            </label>
-                            <label class="nc-item2" for="lt-6">
-                              <input class="nc-item2__radio" id="lt-6" type="radio" name="lt-" value="lt-6">
-                              <div class="nc-item2__image"><img src="images/content/img_58.png" alt="Название цвета"></div>
-                              <div class="nc-item2__title">Антрацитовый Черный</div>
-                            </label>
-                            <label class="nc-item2" for="lt-7">
-                              <input class="nc-item2__radio" id="lt-7" type="radio" name="lt-" value="lt-7">
-                              <div class="nc-item2__image"><img src="images/content/img_58.png" alt="Название цвета"></div>
-                              <div class="nc-item2__title">Антрацитовый Черный</div>
-                            </label>
-                            <label class="nc-item2" for="lt-8">
-                              <input class="nc-item2__radio" id="lt-8" type="radio" name="lt-" value="lt-8">
-                              <div class="nc-item2__image"><img src="images/content/img_58.png" alt="Название цвета"></div>
-                              <div class="nc-item2__title">Антрацитовый Черный</div>
-                            </label>
-                          </div>
-                          <button class="js-nc-c-block-close nc-c__list-close" type="button" title="Закрыть"><svg class="nc-c__list-close-icon" aria-hidden="true"><use xlink:href="#times-circle"/></svg></button>
-                        </div>
-                      </div>
-                      <div class="nc-c">
-                        <p class="nc-c__title">Цветная оплетка:</p>
-                        <div class="js-nc-c-block nc-c__block nc-c__block--with_icon">
-                          <div class="nc-c__block-icon"><img src="images/content/img_45.png" alt=""></div>
-                          <div class="nc-c__block-text">
-                            <p class="nc-c__block-title">Нет</p>
-                            <p class="nc-c__block-feature">кастомная<br> оплетка проводов</p>
-                            <p class="nc-c__block-sign">изменить</p>
-                          </div>
-                        </div>
-                        <div class="nc-c__list nc-c__list--tile">
-                          <p class="js-nc-c-block-close nc-c__list-title"><img class="nc-c__list-title-icon" src="images/icons/back.svg" alt="Назад"> Цветная оплетка</p>
-                          <div class="nc-c__list-inner">
-                            <label class="nc-item2" for="wr-1">
-                              <input class="nc-item2__radio" id="wr-1" type="radio" name="wr-" value="wr-1" checked>
-                              <div class="nc-item2__image"><img src="images/content/img_59.png" alt="Название цвета"></div>
-                              <div class="nc-item2__title">Ослепительно Красный</div>
-                            </label>
-                            <label class="nc-item2" for="wr-2">
-                              <input class="nc-item2__radio" id="wr-2" type="radio" name="wr-" value="wr-2">
-                              <div class="nc-item2__image"><img src="images/content/img_59.png" alt="Название цвета"></div>
-                              <div class="nc-item2__title">Ослепительно Красный</div>
-                            </label>
-                            <label class="nc-item2" for="wr-3">
-                              <input class="nc-item2__radio" id="wr-3" type="radio" name="wr-" value="wr-3">
-                              <div class="nc-item2__image"><img src="images/content/img_59.png" alt="Название цвета"></div>
-                              <div class="nc-item2__title">Ослепительно Красный</div>
-                            </label>
-                            <label class="nc-item2" for="wr-4">
-                              <input class="nc-item2__radio" id="wr-4" type="radio" name="wr-" value="wr-4">
-                              <div class="nc-item2__image"><img src="images/content/img_59.png" alt="Название цвета"></div>
-                              <div class="nc-item2__title">Ослепительно Красный</div>
-                            </label>
-                            <label class="nc-item2" for="wr-5">
-                              <input class="nc-item2__radio" id="wr-5" type="radio" name="wr-" value="wr-5">
-                              <div class="nc-item2__image"><img src="images/content/img_59.png" alt="Название цвета"></div>
-                              <div class="nc-item2__title">Антрацитовый Черный</div>
-                            </label>
-                            <label class="nc-item2" for="wr-6">
-                              <input class="nc-item2__radio" id="wr-6" type="radio" name="wr-" value="wr-6">
-                              <div class="nc-item2__image"><img src="images/content/img_59.png" alt="Название цвета"></div>
-                              <div class="nc-item2__title">Антрацитовый Черный</div>
-                            </label>
-                            <label class="nc-item2" for="wr-7">
-                              <input class="nc-item2__radio" id="wr-7" type="radio" name="wr-" value="wr-7">
-                              <div class="nc-item2__image"><img src="images/content/img_59.png" alt="Название цвета"></div>
-                              <div class="nc-item2__title">Антрацитовый Черный</div>
-                            </label>
-                            <label class="nc-item2" for="wr-8">
-                              <input class="nc-item2__radio" id="wr-8" type="radio" name="wr-" value="wr-8">
-                              <div class="nc-item2__image"><img src="images/content/img_59.png" alt="Название цвета"></div>
-                              <div class="nc-item2__title">Антрацитовый Черный</div>
-                            </label>
-                          </div>
-                          <button class="js-nc-c-block-close nc-c__list-close" type="button" title="Закрыть"><svg class="nc-c__list-close-icon" aria-hidden="true"><use xlink:href="#times-circle"/></svg></button>
-                        </div>
-                      </div>
-                      <div class="nc-c">
-                        <p class="nc-c__title">Изображение:</p>
-                        <div class="js-nc-c-block nc-c__block nc-c__block--with_icon">
-                          <div class="nc-c__block-icon"><img src="images/content/img_45.png" alt=""></div>
-                          <div class="nc-c__block-text">
-                            <p class="nc-c__block-title">Skin</p>
-                            <p class="nc-c__block-feature">Арт<br> дизайн #10</p>
-                            <p class="nc-c__block-sign">изменить</p>
-                          </div>
-                        </div>
-                        <div class="nc-c__list nc-c__list--tile">
-                          <p class="js-nc-c-block-close nc-c__list-title"><img class="nc-c__list-title-icon" src="images/icons/back.svg" alt="Назад"> Изображение</p>
-                          <div class="nc-c__list-filter-block">
-                            <ul class="nc-c__list-filter">
-                              <li class="nc-c__list-filter-item"><a class="nc-c__list-filter-link" href="#">Dota 2</a></li>
-                              <li class="nc-c__list-filter-item"><a class="nc-c__list-filter-link is-active" href="#">OW</a></li>
-                              <li class="nc-c__list-filter-item"><a class="nc-c__list-filter-link" href="#">CS:GO</a></li>
-                              <li class="nc-c__list-filter-item"><a class="nc-c__list-filter-link" href="#">BF1</a></li>
-                            </ul>
-                          </div>
-                          <div class="nc-c__list-inner">
-                            <label class="nc-item2" for="sk-1">
-                              <input class="nc-item2__radio" id="sk-1" type="radio" name="sk-" value="sk-1" checked>
-                              <div class="nc-item2__image"><img src="images/content/img_57.png" alt="Название цвета"></div>
-                              <div class="nc-item2__title">SKIN #1<br>DigitalRazor</div>
-                            </label>
-                            <label class="nc-item2" for="sk-2">
-                              <input class="nc-item2__radio" id="sk-2" type="radio" name="sk-" value="sk-2">
-                              <div class="nc-item2__image"><img src="images/content/img_57.png" alt="Название цвета"></div>
-                              <div class="nc-item2__title">SKIN #1<br>DigitalRazor</div>
-                            </label>
-                            <label class="nc-item2" for="sk-3">
-                              <input class="nc-item2__radio" id="sk-3" type="radio" name="sk-" value="sk-3">
-                              <div class="nc-item2__image"><img src="images/content/img_57.png" alt="Название цвета"></div>
-                              <div class="nc-item2__title">SKIN #1<br>DigitalRazor</div>
-                            </label>
-                            <label class="nc-item2" for="sk-4">
-                              <input class="nc-item2__radio" id="sk-4" type="radio" name="sk-" value="sk-4">
-                              <div class="nc-item2__image"><img src="images/content/img_57.png" alt="Название цвета"></div>
-                              <div class="nc-item2__title">SKIN #1<br>DigitalRazor</div>
-                            </label>
-                            <label class="nc-item2" for="sk-5">
-                              <input class="nc-item2__radio" id="sk-5" type="radio" name="sk-" value="sk-5">
-                              <div class="nc-item2__image"><img src="images/content/img_57.png" alt="Название цвета"></div>
-                              <div class="nc-item2__title">SKIN #1<br>DigitalRazor</div>
-                            </label>
-                            <label class="nc-item2" for="sk-6">
-                              <input class="nc-item2__radio" id="sk-6" type="radio" name="sk-" value="sk-6">
-                              <div class="nc-item2__image"><img src="images/content/img_57.png" alt="Название цвета"></div>
-                              <div class="nc-item2__title">SKIN #1<br>DigitalRazor</div>
-                            </label>
-                            <label class="nc-item2" for="sk-7">
-                              <input class="nc-item2__radio" id="sk-7" type="radio" name="sk-" value="sk-7">
-                              <div class="nc-item2__image"><img src="images/content/img_57.png" alt="Название цвета"></div>
-                              <div class="nc-item2__title">SKIN #1<br>DigitalRazor</div>
-                            </label>
-                            <div class="js-own-design-opener nc-item2">
-                              <div class="nc-item2__image"><img src="images/content/img25.jpg" alt=""></div>
-                              <div class="nc-item2__title">Создать<br> свой дизайн</div>
-                            </div>
-                          </div>
-                          <button class="js-nc-c-block-close nc-c__list-close" type="button" title="Закрыть"><svg class="nc-c__list-close-icon" aria-hidden="true"><use xlink:href="#times-circle"/></svg></button>
-                        </div>
-                      </div>
-                      <div class="nc-c nc-c--empty">
-                        <p class="nc-c__title">&nbsp;</p>
-                        <div class="nc-c__block">
-                          <div class="nc-c__block-text">
-                            <p class="nc-c__block-title"></p>
-                            <p class="nc-c__block-feature"></p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <a class="nc-c-list__arrow nc-c-list__arrow--next heartBeat" href="new-smart-config.html#accessories" title="Вперед"><svg class="nc-c-list__arrow-icon" aria-hidden="true"><use xlink:href="#slider_arrow_right"/></svg></a>
-            </div>
+          <div class="nc__inner-cell nc__inner-cell--canvas is-active" data-side="front">
+            <canvas class="nc__inner-canvas" id="front_side"></canvas>
           </div>
         </div>
-      </div>
-      <a class="config-title" href="new-smart-config.html">Конфигурация <svg class="config-title__icon" aria-hidden="true"><use xlink:href="#arrow_down"/></svg></a>
-      <a class="config-title" href="new-smart-config.html#accessories">Аксессуары <svg class="config-title__icon" aria-hidden="true"><use xlink:href="#arrow_down"/></svg></a>
-      <div class="nc__section nc__section--result ">
-        <div class="nc__inner nc__inner--result" data-section="2">
-          <p class="config-title">Итого <svg class="config-title__icon" aria-hidden="true"><use xlink:href="#arrow_down"/></svg></p>
-          <div class="nc__inner-cell nc__inner-cell--result_picture" style="background-image: url('images/content/img_44.png')"></div>
-          <div class="nc__inner-cell nc__inner-cell--result_info custom-scroll">
-            <h3>ИТОГОВАЯ КОНФИГУРАЦИЯ:</h3>
-            <div class="result-info">
-              <div class="result-info__row">
-                <div class="result-info__cell result-info__cell--info">
-                  <p class="result-info__title">Игровой компьютер:</p>
-                  Процессор: 6-ядерный Intel Core i5-8400 2.80 GHz<br>
-                  Кулер: CoolerMaster MasterAir G100L<br>
-                  Системная плата: ASUS PRIME B360M-K<br>
-                  Оперативная память: 8GB (2x4Gb) DDR4 2400Mhz Kingston Hyperx Fury<br>
-                  Видеокарта: ASUS DUAL GTX1060 3G<br>
-                  SSD накопитель - SATA: 120GB WD GREEN<br>
-                  HDD накопитель: HDD 1TB Seagate Barracuda<br>
-                  Корпус: Cooler Master MasterBox MB600L<br>
-                  Блок питания: 500W Cooler Master Elite V3 500<br>
-                  Тестирование: Стандартный стресс-тест основных компонентов 8 часов<br>
-                  Гарантия: Базовая гарантия 12 месяцев<br>
-                  Доставка: Бесплатная доставка
-                </div>
-                <div class="result-info__cell result-info__cell--qnt">1 шт.</div>
-              </div>
-              <div class="result-info__row">
-                <div class="result-info__cell result-info__cell--info">
-                  Монитор: ASUS MG278Q 27"
-                </div>
-                <div class="result-info__cell result-info__cell--qnt">1 шт.</div>
-              </div>
-              <div class="result-info__row">
-                <div class="result-info__cell result-info__cell--info">
-                  Игровая мышь: Corsair Sabre 95 RGB
-                </div>
-                <div class="result-info__cell result-info__cell--qnt">1 шт.</div>
-              </div>
-              <div class="result-info__row">
-                <div class="result-info__cell result-info__cell--transparent"></div>
-                <div class="result-info__cell result-info__cell--price">Итого: 100 000 руб.</div>
+        <div class="nc__inner-top nc__inner-top--design-block nc__inner-top--own_design ">
+          <p class="js-own-design-close own-design-closer" title="Закрыть">
+            <span class="own-design-closer__inner"><img class="own-design-closer__icon" src="images/icons/back.svg" alt="Назад"> Дизайн</span>
+            <svg class="own-design-closer__svg-icon" aria-hidden="true">
+              <use xlink:href="#times-circle" /></svg>
+          </p>
+          <div class="nc__inner-cell nc__inner-cell--own_design nc__inner-cell--own_design_canvas">
+            <canvas class="nc__inner-canvas" id="own_back"></canvas>
+          </div>
+          <div class="nc__inner-cell nc__inner-cell--own_design custom-scroll">
+            <h2 class="own-design-title">СОЗДАТЬ СВОЙ ВАРИАНТ:</h2>
+            <div class="image-preview">
+              <div data-type="REDACTOR_CROP"></div>
+            </div>
+            <div class="image-preview-info">
+              <p class="image-preview-title">Загружено изображение: <span data-type="REDACTOR_FILE_NAME">…/Sasha_Gray_Boobs.jpg</span></p>
+              <div class="file-upload">
+                <label class="file-upload__label" for="file">
+                  <input class="file-upload__input" id="file" type="file" data-type="REDACTOR_FILE">
+                  <input class="file-upload__input" name="DR_CUSTOM_ART" type="hidden" data-type="REDACTOR_FILE_VALUE">
+                </label>
+                <span class="file-upload__mobile-text">Применить /&nbsp;</span>Загрузить
               </div>
             </div>
           </div>
         </div>
+        <div class="design">
+          <div class="design__section">
+            <p class="js-design-section-opener design__section-title" data-section="1-1">Покраска <svg class="design__section-title-icon" aria-hidden="true">
+                <use xlink:href="#arrow_down"></use>
+              </svg></p>
+            <div class="design__section-inner is-active" data-section="1-1">
+              <div class="design__section-list">
+                <div class="nc-c2">
+                  <p class="nc-c2__title">Элемент А:</p>
+                  <div class="js-nc-c2-block nc-c2__block">
+                    <div class="nc-c2__block-image"><img src="images/content/img_61.jpg" alt="Название цвета"></div>
+                    <div class="nc-c2__block-text">
+                      <p class="nc-c2__block-title">BLACK</p>
+                      <p class="nc-c2__block-feature">Черный<br> Металик</p>
+                      <p class="nc-c2__block-sign">изменить</p>
+                    </div>
+                  </div>
+                  <div class="nc-c2__list">
+                    <p class="js-nc-c2-block-close nc-c2__list-title"><img class="nc-c2__list-title-icon" src="images/icons/back.svg" alt="Назад"> Покраска</p>
+                    <div class="nc-c2__list-inner">
+                      <label class="nc-item2" for="el_a1">
+                        <input class="nc-item2__radio" id="el_a1" type="radio" name="el_a" value="el_a1" checked>
+                        <div class="nc-item2__image"><img src="images/content/img17.jpg" alt="Название цвета"></div>
+                        <div class="nc-item2__title">Ослепительно Красный</div>
+                      </label>
+                      <label class="nc-item2" for="el_a2">
+                        <input class="nc-item2__radio" id="el_a2" type="radio" name="el_a" value="el_a2">
+                        <div class="nc-item2__image"><img src="images/content/img18.jpg" alt="Название цвета"></div>
+                        <div class="nc-item2__title">Ослепительно Красный</div>
+                      </label>
+                      <label class="nc-item2" for="el_a3">
+                        <input class="nc-item2__radio" id="el_a3" type="radio" name="el_a" value="el_a3">
+                        <div class="nc-item2__image"><img src="images/content/img19.jpg" alt="Название цвета"></div>
+                        <div class="nc-item2__title">Ослепительно Красный</div>
+                      </label>
+                      <label class="nc-item2" for="el_a4">
+                        <input class="nc-item2__radio" id="el_a4" type="radio" name="el_a" value="el_a4">
+                        <div class="nc-item2__image"><img src="images/content/img20.jpg" alt="Название цвета"></div>
+                        <div class="nc-item2__title">Ослепительно Красный</div>
+                      </label>
+                      <label class="nc-item2" for="el_a5">
+                        <input class="nc-item2__radio" id="el_a5" type="radio" name="el_a" value="el_a5">
+                        <div class="nc-item2__image"><img src="images/content/img21.jpg" alt="Название цвета"></div>
+                        <div class="nc-item2__title">Антрацитовый Черный</div>
+                      </label>
+                      <label class="nc-item2" for="el_a6">
+                        <input class="nc-item2__radio" id="el_a6" type="radio" name="el_a" value="el_a6">
+                        <div class="nc-item2__image"><img src="images/content/img22.jpg" alt="Название цвета"></div>
+                        <div class="nc-item2__title">Антрацитовый Черный</div>
+                      </label>
+                      <label class="nc-item2" for="el_a7">
+                        <input class="nc-item2__radio" id="el_a7" type="radio" name="el_a" value="el_a7">
+                        <div class="nc-item2__image"><img src="images/content/img23.jpg" alt="Название цвета"></div>
+                        <div class="nc-item2__title">Антрацитовый Черный</div>
+                      </label>
+                      <label class="nc-item2" for="el_a8">
+                        <input class="nc-item2__radio" id="el_a8" type="radio" name="el_a" value="el_a8">
+                        <div class="nc-item2__image"><img src="images/content/img24.jpg" alt="Название цвета"></div>
+                        <div class="nc-item2__title">Антрацитовый Черный</div>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="nc-c2">
+                  <p class="nc-c2__title">Элемент B:</p>
+                  <div class="js-nc-c2-block nc-c2__block">
+                    <div class="nc-c2__block-image"><img src="images/content/img_60.jpg" alt="Название цвета"></div>
+                    <div class="nc-c2__block-text">
+                      <p class="nc-c2__block-title">RED</p>
+                      <p class="nc-c2__block-feature">Красный<br> огонь</p>
+                      <p class="nc-c2__block-sign">изменить</p>
+                    </div>
+                  </div>
+                  <div class="nc-c2__list">
+                    <p class="js-nc-c2-block-close nc-c2__list-title"><img class="nc-c2__list-title-icon" src="images/icons/back.svg" alt="Назад"> Корпус</p>
+                    <div class="nc-c2__list-inner">
+                      <label class="nc-item2" for="el_b1">
+                        <input class="nc-item2__radio" id="el_b1" type="radio" name="el_b" value="el_b1" checked>
+                        <div class="nc-item2__image"><img src="images/content/img17.jpg" alt="Название цвета"></div>
+                        <div class="nc-item2__title">Ослепительно Красный</div>
+                      </label>
+                      <label class="nc-item2" for="el_b2">
+                        <input class="nc-item2__radio" id="el_b2" type="radio" name="el_b" value="el_b2">
+                        <div class="nc-item2__image"><img src="images/content/img18.jpg" alt="Название цвета"></div>
+                        <div class="nc-item2__title">Ослепительно Красный</div>
+                      </label>
+                      <label class="nc-item2" for="el_b3">
+                        <input class="nc-item2__radio" id="el_b3" type="radio" name="el_b" value="el_b3">
+                        <div class="nc-item2__image"><img src="images/content/img19.jpg" alt="Название цвета"></div>
+                        <div class="nc-item2__title">Ослепительно Красный</div>
+                      </label>
+                      <label class="nc-item2" for="el_b4">
+                        <input class="nc-item2__radio" id="el_b4" type="radio" name="el_b" value="el_b4">
+                        <div class="nc-item2__image"><img src="images/content/img20.jpg" alt="Название цвета"></div>
+                        <div class="nc-item2__title">Ослепительно Красный</div>
+                      </label>
+                      <label class="nc-item2" for="el_b5">
+                        <input class="nc-item2__radio" id="el_b5" type="radio" name="el_b" value="el_b5">
+                        <div class="nc-item2__image"><img src="images/content/img21.jpg" alt="Название цвета"></div>
+                        <div class="nc-item2__title">Антрацитовый Черный</div>
+                      </label>
+                      <label class="nc-item2" for="el_b6">
+                        <input class="nc-item2__radio" id="el_b6" type="radio" name="el_b" value="el_b6">
+                        <div class="nc-item2__image"><img src="images/content/img22.jpg" alt="Название цвета"></div>
+                        <div class="nc-item2__title">Антрацитовый Черный</div>
+                      </label>
+                      <label class="nc-item2" for="el_b7">
+                        <input class="nc-item2__radio" id="el_b7" type="radio" name="el_b" value="el_b7">
+                        <div class="nc-item2__image"><img src="images/content/img23.jpg" alt="Название цвета"></div>
+                        <div class="nc-item2__title">Антрацитовый Черный</div>
+                      </label>
+                      <label class="nc-item2" for="el_b8">
+                        <input class="nc-item2__radio" id="el_b8" type="radio" name="el_b" value="el_b8">
+                        <div class="nc-item2__image"><img src="images/content/img24.jpg" alt="Название цвета"></div>
+                        <div class="nc-item2__title">Антрацитовый Черный</div>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="nc-c2">
+                  <p class="nc-c2__title">Элемент C:</p>
+                  <div class="js-nc-c2-block nc-c2__block">
+                    <div class="nc-c2__block-image"><img src="images/content/img_61.jpg" alt="Название цвета"></div>
+                    <div class="nc-c2__block-text">
+                      <p class="nc-c2__block-title">GREY</p>
+                      <p class="nc-c2__block-feature">Серый<br> асфальт</p>
+                      <p class="nc-c2__block-sign">изменить</p>
+                    </div>
+                  </div>
+                  <div class="nc-c2__list">
+                    <p class="js-nc-c2-block-close nc-c2__list-title"><img class="nc-c2__list-title-icon" src="images/icons/back.svg" alt="Назад"> Покраска</p>
+                    <div class="nc-c2__list-inner">
+                      <label class="nc-item2" for="el_c1">
+                        <input class="nc-item2__radio" id="el_c1" type="radio" name="el_c" value="el_c1" checked>
+                        <div class="nc-item2__image"><img src="images/content/img17.jpg" alt="Название цвета"></div>
+                        <div class="nc-item2__title">Ослепительно Красный</div>
+                      </label>
+                      <label class="nc-item2" for="el_c2">
+                        <input class="nc-item2__radio" id="el_c2" type="radio" name="el_c" value="el_c2">
+                        <div class="nc-item2__image"><img src="images/content/img18.jpg" alt="Название цвета"></div>
+                        <div class="nc-item2__title">Ослепительно Красный</div>
+                      </label>
+                      <label class="nc-item2" for="el_c3">
+                        <input class="nc-item2__radio" id="el_c3" type="radio" name="el_c" value="el_c3">
+                        <div class="nc-item2__image"><img src="images/content/img19.jpg" alt="Название цвета"></div>
+                        <div class="nc-item2__title">Ослепительно Красный</div>
+                      </label>
+                      <label class="nc-item2" for="el_c4">
+                        <input class="nc-item2__radio" id="el_c4" type="radio" name="el_c" value="el_c4">
+                        <div class="nc-item2__image"><img src="images/content/img20.jpg" alt="Название цвета"></div>
+                        <div class="nc-item2__title">Ослепительно Красный</div>
+                      </label>
+                      <label class="nc-item2" for="el_c5">
+                        <input class="nc-item2__radio" id="el_c5" type="radio" name="el_c" value="el_c5">
+                        <div class="nc-item2__image"><img src="images/content/img21.jpg" alt="Название цвета"></div>
+                        <div class="nc-item2__title">Антрацитовый Черный</div>
+                      </label>
+                      <label class="nc-item2" for="el_c6">
+                        <input class="nc-item2__radio" id="el_c6" type="radio" name="el_c" value="el_c6">
+                        <div class="nc-item2__image"><img src="images/content/img22.jpg" alt="Название цвета"></div>
+                        <div class="nc-item2__title">Антрацитовый Черный</div>
+                      </label>
+                      <label class="nc-item2" for="el_c7">
+                        <input class="nc-item2__radio" id="el_c7" type="radio" name="el_c" value="el_c7">
+                        <div class="nc-item2__image"><img src="images/content/img23.jpg" alt="Название цвета"></div>
+                        <div class="nc-item2__title">Антрацитовый Черный</div>
+                      </label>
+                      <label class="nc-item2" for="el_c8">
+                        <input class="nc-item2__radio" id="el_c8" type="radio" name="el_c" value="el_c8">
+                        <div class="nc-item2__image"><img src="images/content/img24.jpg" alt="Название цвета"></div>
+                        <div class="nc-item2__title">Антрацитовый Черный</div>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="design__section">
+            <p class="js-design-section-opener design__section-title" data-section="1-2">Нанесение изображения <svg class="design__section-title-icon" aria-hidden="true">
+                <use xlink:href="#arrow_down"></use>
+              </svg></p>
+            <div class="design__section-inner " data-section="1-2">
+              <div class="design__section-list">
+                <div class="nc-c2">
+                  <p class="nc-c2__title">Боковой арт:</p>
+                  <div class="js-nc-c2-block nc-c2__block">
+                    <div class="nc-c2__block-image"><img src="images/content/img_62.jpg" alt="Название цвета"></div>
+                    <div class="nc-c2__block-text">
+                      <p class="nc-c2__block-title">SKIN #1</p>
+                      <p class="nc-c2__block-feature">Вариант<br> из библиотеки</p>
+                      <p class="nc-c2__block-sign">изменить</p>
+                    </div>
+                  </div>
+                  <div class="nc-c2__list">
+                    <p class="js-nc-c2-block-close nc-c2__list-title"><img class="nc-c2__list-title-icon" src="images/icons/back.svg" alt="Назад"> Дизайн</p>
+                    <div class="nc-c2__list-filter-block">
+                      <ul class="nc-c2__list-filter">
+                        <li class="nc-c2__list-filter-item"><a class="nc-c2__list-filter-link" href="#">Dota 2</a></li>
+                        <li class="nc-c2__list-filter-item"><a class="nc-c2__list-filter-link is-active" href="#">OW</a></li>
+                        <li class="nc-c2__list-filter-item"><a class="nc-c2__list-filter-link" href="#">CS:GO</a></li>
+                        <li class="nc-c2__list-filter-item"><a class="nc-c2__list-filter-link" href="#">BF1</a></li>
+                      </ul>
+                    </div>
+                    <div class="nc-c2__list-inner">
+                      <label class="nc-item2" for="sk1">
+                        <input class="nc-item2__radio" id="sk1" type="radio" name="sk" value="sk1" checked>
+                        <div class="nc-item2__image"><img src="images/content/img_57.png" alt="Название цвета"></div>
+                        <div class="nc-item2__title">SKIN #1</div>
+                      </label>
+                      <label class="nc-item2" for="sk2">
+                        <input class="nc-item2__radio" id="sk2" type="radio" name="sk" value="sk2">
+                        <div class="nc-item2__image"><img src="images/content/img_57.png" alt="Название цвета"></div>
+                        <div class="nc-item2__title">SKIN #2</div>
+                      </label>
+                      <label class="nc-item2" for="sk3">
+                        <input class="nc-item2__radio" id="sk3" type="radio" name="sk" value="sk3">
+                        <div class="nc-item2__image"><img src="images/content/img_57.png" alt="Название цвета"></div>
+                        <div class="nc-item2__title">SKIN #3</div>
+                      </label>
+                      <label class="nc-item2" for="sk4">
+                        <input class="nc-item2__radio" id="sk4" type="radio" name="sk" value="sk4">
+                        <div class="nc-item2__image"><img src="images/content/img_57.png" alt="Название цвета"></div>
+                        <div class="nc-item2__title">SKIN #4</div>
+                      </label>
+                      <label class="nc-item2" for="sk5">
+                        <input class="nc-item2__radio" id="sk5" type="radio" name="sk" value="sk5">
+                        <div class="nc-item2__image"><img src="images/content/img_57.png" alt="Название цвета"></div>
+                        <div class="nc-item2__title">SKIN #5</div>
+                      </label>
+                      <label class="nc-item2" for="sk6">
+                        <input class="nc-item2__radio" id="sk6" type="radio" name="sk" value="sk6">
+                        <div class="nc-item2__image"><img src="images/content/img_57.png" alt="Название цвета"></div>
+                        <div class="nc-item2__title">SKIN #6</div>
+                      </label>
+                      <label class="nc-item2" for="sk7">
+                        <input class="nc-item2__radio" id="sk7" type="radio" name="sk" value="sk7">
+                        <div class="nc-item2__image"><img src="images/content/img_57.png" alt="Название цвета"></div>
+                        <div class="nc-item2__title">SKIN #7</div>
+                      </label>
+                      <label class="nc-item2" for="sk8">
+                        <input class="nc-item2__radio" id="sk8" type="radio" name="sk" value="sk8">
+                        <div class="nc-item2__image"><img src="images/content/img_57.png" alt="Название цвета"></div>
+                        <div class="nc-item2__title">SKIN #8</div>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="nc-c2">
+                  <p class="nc-c2__title nc-c2__title--red">Создать</p>
+                  <div class="js-own-design-opener nc-c2__block">
+                    <div class="nc-c2__block-image"><img src="images/content/img_62.jpg" alt="Название цвета"></div>
+                    <div class="nc-c2__block-text">
+                      <p class="nc-c2__block-title">Свой дизайн</p>
+                      <p class="nc-c2__block-feature">Редактор<br> собственного дизайна</p>
+                      <p class="nc-c2__block-sign">изменить</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="design__section">
+            <p class="js-design-section-opener design__section-title" data-section="1-3">Дополнительные опции <svg class="design__section-title-icon" aria-hidden="true">
+                <use xlink:href="#arrow_down"></use>
+              </svg></p>
+            <div class="design__section-inner " data-section="1-3">
+              <div class="design__section-list">
+                <div class="nc-c">
+                  <p class="nc-c__title">Подсветка:</p>
+                  <div class="js-nc-c-block nc-c__block nc-c__block--with_icon">
+                    <div class="nc-c__block-icon"><img src="images/content/img_45.png" alt=""></div>
+                    <div class="nc-c__block-text">
+                      <p class="nc-c__block-title">ARGB</p>
+                      <p class="nc-c__block-feature">адресная<br> rgb-подсветка</p>
+                      <p class="nc-c__block-sign">изменить</p>
+                    </div>
+                  </div>
+                  <div class="nc-c__list">
+                    <p class="js-nc-c-block-close nc-c__list-title"><img class="nc-c__list-title-icon" src="images/icons/back.svg" alt="Назад"> Подсветка</p>
+                    <div class="nc-c__list-inner">
+                      <label class="nc-item2" for="lt1">
+                        <input class="nc-item2__radio" id="lt1" type="radio" name="lt" value="lt1" checked>
+                        <div class="nc-item2__image"><img src="images/content/img_58.png" alt="Название цвета"></div>
+                        <div class="nc-item2__title">Ослепительно Красный</div>
+                      </label>
+                      <label class="nc-item2" for="lt2">
+                        <input class="nc-item2__radio" id="lt2" type="radio" name="lt" value="lt2">
+                        <div class="nc-item2__image"><img src="images/content/img_58.png" alt="Название цвета"></div>
+                        <div class="nc-item2__title">Ослепительно Красный</div>
+                      </label>
+                      <label class="nc-item2" for="lt3">
+                        <input class="nc-item2__radio" id="lt3" type="radio" name="lt" value="lt3">
+                        <div class="nc-item2__image"><img src="images/content/img_58.png" alt="Название цвета"></div>
+                        <div class="nc-item2__title">Ослепительно Красный</div>
+                      </label>
+                      <label class="nc-item2" for="lt4">
+                        <input class="nc-item2__radio" id="lt4" type="radio" name="lt" value="lt4">
+                        <div class="nc-item2__image"><img src="images/content/img_58.png" alt="Название цвета"></div>
+                        <div class="nc-item2__title">Ослепительно Красный</div>
+                      </label>
+                      <label class="nc-item2" for="lt5">
+                        <input class="nc-item2__radio" id="lt5" type="radio" name="lt" value="lt5">
+                        <div class="nc-item2__image"><img src="images/content/img_58.png" alt="Название цвета"></div>
+                        <div class="nc-item2__title">Антрацитовый Черный</div>
+                      </label>
+                      <label class="nc-item2" for="lt6">
+                        <input class="nc-item2__radio" id="lt6" type="radio" name="lt" value="lt6">
+                        <div class="nc-item2__image"><img src="images/content/img_58.png" alt="Название цвета"></div>
+                        <div class="nc-item2__title">Антрацитовый Черный</div>
+                      </label>
+                      <label class="nc-item2" for="lt7">
+                        <input class="nc-item2__radio" id="lt7" type="radio" name="lt" value="lt7">
+                        <div class="nc-item2__image"><img src="images/content/img_58.png" alt="Название цвета"></div>
+                        <div class="nc-item2__title">Антрацитовый Черный</div>
+                      </label>
+                      <label class="nc-item2" for="lt8">
+                        <input class="nc-item2__radio" id="lt8" type="radio" name="lt" value="lt8">
+                        <div class="nc-item2__image"><img src="images/content/img_58.png" alt="Название цвета"></div>
+                        <div class="nc-item2__title">Антрацитовый Черный</div>
+                      </label>
+                    </div>
+                    <button class="js-nc-c-block-close nc-c__list-close" type="button" title="Закрыть"><svg class="nc-c__list-close-icon" aria-hidden="true">
+                        <use xlink:href="#times-circle" /></svg></button>
+                  </div>
+                </div>
+                <div class="nc-c">
+                  <p class="nc-c__title">Цветная оплетка:</p>
+                  <div class="js-nc-c-block nc-c__block nc-c__block--with_icon">
+                    <div class="nc-c__block-icon"><img src="images/content/img_45.png" alt=""></div>
+                    <div class="nc-c__block-text">
+                      <p class="nc-c__block-title">Нет</p>
+                      <p class="nc-c__block-feature">кастомная<br> оплетка проводов</p>
+                      <p class="nc-c__block-sign">изменить</p>
+                    </div>
+                  </div>
+                  <div class="nc-c__list nc-c__list--tile nc-c__list--tile_4">
+                    <p class="js-nc-c-block-close nc-c__list-title"><img class="nc-c__list-title-icon" src="images/icons/back.svg" alt="Назад"> Цветная оплетка</p>
+                    <div class="nc-c__list-inner">
+                      <label class="nc-item2" for="wr1">
+                        <input class="nc-item2__radio" id="wr1" type="radio" name="wr" value="wr1" checked>
+                        <div class="nc-item2__image"><img src="images/content/img_59.png" alt="Название цвета"></div>
+                        <div class="nc-item2__title">Ослепительно Красный</div>
+                      </label>
+                      <label class="nc-item2" for="wr2">
+                        <input class="nc-item2__radio" id="wr2" type="radio" name="wr" value="wr2">
+                        <div class="nc-item2__image"><img src="images/content/img_59.png" alt="Название цвета"></div>
+                        <div class="nc-item2__title">Ослепительно Красный</div>
+                      </label>
+                      <label class="nc-item2" for="wr3">
+                        <input class="nc-item2__radio" id="wr3" type="radio" name="wr" value="wr3">
+                        <div class="nc-item2__image"><img src="images/content/img_59.png" alt="Название цвета"></div>
+                        <div class="nc-item2__title">Ослепительно Красный</div>
+                      </label>
+                      <label class="nc-item2" for="wr4">
+                        <input class="nc-item2__radio" id="wr4" type="radio" name="wr" value="wr4">
+                        <div class="nc-item2__image"><img src="images/content/img_59.png" alt="Название цвета"></div>
+                        <div class="nc-item2__title">Ослепительно Красный</div>
+                      </label>
+                      <label class="nc-item2" for="wr5">
+                        <input class="nc-item2__radio" id="wr5" type="radio" name="wr" value="wr5">
+                        <div class="nc-item2__image"><img src="images/content/img_59.png" alt="Название цвета"></div>
+                        <div class="nc-item2__title">Антрацитовый Черный</div>
+                      </label>
+                      <label class="nc-item2" for="wr6">
+                        <input class="nc-item2__radio" id="wr6" type="radio" name="wr" value="wr6">
+                        <div class="nc-item2__image"><img src="images/content/img_59.png" alt="Название цвета"></div>
+                        <div class="nc-item2__title">Антрацитовый Черный</div>
+                      </label>
+                      <label class="nc-item2" for="wr7">
+                        <input class="nc-item2__radio" id="wr7" type="radio" name="wr" value="wr7">
+                        <div class="nc-item2__image"><img src="images/content/img_59.png" alt="Название цвета"></div>
+                        <div class="nc-item2__title">Антрацитовый Черный</div>
+                      </label>
+                      <label class="nc-item2" for="wr8">
+                        <input class="nc-item2__radio" id="wr8" type="radio" name="wr" value="wr8">
+                        <div class="nc-item2__image"><img src="images/content/img_59.png" alt="Название цвета"></div>
+                        <div class="nc-item2__title">Антрацитовый Черный</div>
+                      </label>
+                    </div>
+                    <button class="js-nc-c-block-close nc-c__list-close" type="button" title="Закрыть"><svg class="nc-c__list-close-icon" aria-hidden="true">
+                        <use xlink:href="#times-circle" /></svg></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="nc__list-block nc__list-block--design">
+          <div class="nc-c-list">
+            <a class="nc-c-list__arrow nc-c-list__arrow--prev heartBeat" href="new-smart-config.html" title="Назад"><svg class="nc-c-list__arrow-icon" aria-hidden="true">
+                <use xlink:href="#slider_arrow_left" /></svg></a>
+            <div class="nc-c-list__inner">
+              <div class="nc-c-list__item-cell is-active">
+                <div class="nc-c-list__item is-active">
+                  <div class="nc-c-list__item-list">
+                    <div class="nc-c">
+                      <p class="nc-c__title">Элемент A:</p>
+                      <div class="js-nc-c-block nc-c__block">
+                        <div class="nc-c__block-text">
+                          <p class="nc-c__block-title">Black</p>
+                          <p class="nc-c__block-feature">автомобильная<br> покраска</p>
+                          <p class="nc-c__block-sign">изменить</p>
+                        </div>
+                      </div>
+                      <div class="nc-c__list nc-c__list--tile nc-c__list--tile_4">
+                        <p class="js-nc-c-block-close nc-c__list-title"><img class="nc-c__list-title-icon" src="images/icons/back.svg" alt="Назад"> Элемент A</p>
+                        <div class="nc-c__list-inner">
+                          <label class="nc-item2" for="el_a-1">
+                            <input class="nc-item2__radio" id="el_a-1" type="radio" name="el_a-" value="el_a-1" checked>
+                            <div class="nc-item2__image"><img src="images/content/img17.jpg" alt="Название цвета"></div>
+                            <div class="nc-item2__title">Ослепительно Красный</div>
+                          </label>
+                          <label class="nc-item2" for="el_a-2">
+                            <input class="nc-item2__radio" id="el_a-2" type="radio" name="el_a-" value="el_a-2">
+                            <div class="nc-item2__image"><img src="images/content/img18.jpg" alt="Название цвета"></div>
+                            <div class="nc-item2__title">Ослепительно Красный</div>
+                          </label>
+                          <label class="nc-item2" for="el_a-3">
+                            <input class="nc-item2__radio" id="el_a-3" type="radio" name="el_a-" value="el_a-3">
+                            <div class="nc-item2__image"><img src="images/content/img19.jpg" alt="Название цвета"></div>
+                            <div class="nc-item2__title">Ослепительно Красный</div>
+                          </label>
+                          <label class="nc-item2" for="el_a-4">
+                            <input class="nc-item2__radio" id="el_a-4" type="radio" name="el_a-" value="el_a-4">
+                            <div class="nc-item2__image"><img src="images/content/img20.jpg" alt="Название цвета"></div>
+                            <div class="nc-item2__title">Ослепительно Красный</div>
+                          </label>
+                          <label class="nc-item2" for="el_a-5">
+                            <input class="nc-item2__radio" id="el_a-5" type="radio" name="el_a-" value="el_a-5">
+                            <div class="nc-item2__image"><img src="images/content/img21.jpg" alt="Название цвета"></div>
+                            <div class="nc-item2__title">Антрацитовый Черный</div>
+                          </label>
+                          <label class="nc-item2" for="el_a-6">
+                            <input class="nc-item2__radio" id="el_a-6" type="radio" name="el_a-" value="el_a-6">
+                            <div class="nc-item2__image"><img src="images/content/img22.jpg" alt="Название цвета"></div>
+                            <div class="nc-item2__title">Антрацитовый Черный</div>
+                          </label>
+                          <label class="nc-item2" for="el_a-7">
+                            <input class="nc-item2__radio" id="el_a-7" type="radio" name="el_a-" value="el_a-7">
+                            <div class="nc-item2__image"><img src="images/content/img23.jpg" alt="Название цвета"></div>
+                            <div class="nc-item2__title">Антрацитовый Черный</div>
+                          </label>
+                          <label class="nc-item2" for="el_a-8">
+                            <input class="nc-item2__radio" id="el_a-8" type="radio" name="el_a-" value="el_a-8">
+                            <div class="nc-item2__image"><img src="images/content/img24.jpg" alt="Название цвета"></div>
+                            <div class="nc-item2__title">Антрацитовый Черный</div>
+                          </label>
+                        </div>
+                        <button class="js-nc-c-block-close nc-c__list-close" type="button" title="Закрыть"><svg class="nc-c__list-close-icon" aria-hidden="true">
+                            <use xlink:href="#times-circle" /></svg></button>
+                      </div>
+                    </div>
+                    <div class="nc-c">
+                      <p class="nc-c__title">Элемент B:</p>
+                      <div class="js-nc-c-block nc-c__block">
+                        <div class="nc-c__block-text">
+                          <p class="nc-c__block-title">Red</p>
+                          <p class="nc-c__block-feature">автомобильная<br> покраска</p>
+                          <p class="nc-c__block-sign">изменить</p>
+                        </div>
+                      </div>
+                      <div class="nc-c__list nc-c__list--tile nc-c__list--tile_4">
+                        <p class="js-nc-c-block-close nc-c__list-title"><img class="nc-c__list-title-icon" src="images/icons/back.svg" alt="Назад"> Элемент B</p>
+                        <div class="nc-c__list-inner">
+                          <label class="nc-item2" for="el_b-1">
+                            <input class="nc-item2__radio" id="el_b-1" type="radio" name="el_b-" value="el_b-1" checked>
+                            <div class="nc-item2__image"><img src="images/content/img17.jpg" alt="Название цвета"></div>
+                            <div class="nc-item2__title">Ослепительно Красный</div>
+                          </label>
+                          <label class="nc-item2" for="el_b-2">
+                            <input class="nc-item2__radio" id="el_b-2" type="radio" name="el_b-" value="el_b-2">
+                            <div class="nc-item2__image"><img src="images/content/img18.jpg" alt="Название цвета"></div>
+                            <div class="nc-item2__title">Ослепительно Красный</div>
+                          </label>
+                          <label class="nc-item2" for="el_b-3">
+                            <input class="nc-item2__radio" id="el_b-3" type="radio" name="el_b-" value="el_b-3">
+                            <div class="nc-item2__image"><img src="images/content/img19.jpg" alt="Название цвета"></div>
+                            <div class="nc-item2__title">Ослепительно Красный</div>
+                          </label>
+                          <label class="nc-item2" for="el_b-4">
+                            <input class="nc-item2__radio" id="el_b-4" type="radio" name="el_b-" value="el_b-4">
+                            <div class="nc-item2__image"><img src="images/content/img20.jpg" alt="Название цвета"></div>
+                            <div class="nc-item2__title">Ослепительно Красный</div>
+                          </label>
+                          <label class="nc-item2" for="el_b-5">
+                            <input class="nc-item2__radio" id="el_b-5" type="radio" name="el_b-" value="el_b-5">
+                            <div class="nc-item2__image"><img src="images/content/img21.jpg" alt="Название цвета"></div>
+                            <div class="nc-item2__title">Антрацитовый Черный</div>
+                          </label>
+                          <label class="nc-item2" for="el_b-6">
+                            <input class="nc-item2__radio" id="el_b-6" type="radio" name="el_b-" value="el_b-6">
+                            <div class="nc-item2__image"><img src="images/content/img22.jpg" alt="Название цвета"></div>
+                            <div class="nc-item2__title">Антрацитовый Черный</div>
+                          </label>
+                          <label class="nc-item2" for="el_b-7">
+                            <input class="nc-item2__radio" id="el_b-7" type="radio" name="el_b-" value="el_b-7">
+                            <div class="nc-item2__image"><img src="images/content/img23.jpg" alt="Название цвета"></div>
+                            <div class="nc-item2__title">Антрацитовый Черный</div>
+                          </label>
+                          <label class="nc-item2" for="el_b-8">
+                            <input class="nc-item2__radio" id="el_b-8" type="radio" name="el_b-" value="el_b-8">
+                            <div class="nc-item2__image"><img src="images/content/img24.jpg" alt="Название цвета"></div>
+                            <div class="nc-item2__title">Антрацитовый Черный</div>
+                          </label>
+                        </div>
+                        <button class="js-nc-c-block-close nc-c__list-close" type="button" title="Закрыть"><svg class="nc-c__list-close-icon" aria-hidden="true">
+                            <use xlink:href="#times-circle" /></svg></button>
+                      </div>
+                    </div>
+                    <div class="nc-c">
+                      <p class="nc-c__title">Элемент C:</p>
+                      <div class="js-nc-c-block nc-c__block">
+                        <div class="nc-c__block-text">
+                          <p class="nc-c__block-title">Red</p>
+                          <p class="nc-c__block-feature">автомобильная<br> покраска</p>
+                          <p class="nc-c__block-sign">изменить</p>
+                        </div>
+                      </div>
+                      <div class="nc-c__list nc-c__list--tile nc-c__list--tile_4">
+                        <p class="js-nc-c-block-close nc-c__list-title"><img class="nc-c__list-title-icon" src="images/icons/back.svg" alt="Назад"> Элемент C</p>
+                        <div class="nc-c__list-inner">
+                          <label class="nc-item2" for="el_c-1">
+                            <input class="nc-item2__radio" id="el_c-1" type="radio" name="el_c-" value="el_c-1" checked>
+                            <div class="nc-item2__image"><img src="images/content/img17.jpg" alt="Название цвета"></div>
+                            <div class="nc-item2__title">Ослепительно Красный</div>
+                          </label>
+                          <label class="nc-item2" for="el_c-2">
+                            <input class="nc-item2__radio" id="el_c-2" type="radio" name="el_c-" value="el_c-2">
+                            <div class="nc-item2__image"><img src="images/content/img18.jpg" alt="Название цвета"></div>
+                            <div class="nc-item2__title">Ослепительно Красный</div>
+                          </label>
+                          <label class="nc-item2" for="el_c-3">
+                            <input class="nc-item2__radio" id="el_c-3" type="radio" name="el_c-" value="el_c-3">
+                            <div class="nc-item2__image"><img src="images/content/img19.jpg" alt="Название цвета"></div>
+                            <div class="nc-item2__title">Ослепительно Красный</div>
+                          </label>
+                          <label class="nc-item2" for="el_c-4">
+                            <input class="nc-item2__radio" id="el_c-4" type="radio" name="el_c-" value="el_c-4">
+                            <div class="nc-item2__image"><img src="images/content/img20.jpg" alt="Название цвета"></div>
+                            <div class="nc-item2__title">Ослепительно Красный</div>
+                          </label>
+                          <label class="nc-item2" for="el_c-5">
+                            <input class="nc-item2__radio" id="el_c-5" type="radio" name="el_c-" value="el_c-5">
+                            <div class="nc-item2__image"><img src="images/content/img21.jpg" alt="Название цвета"></div>
+                            <div class="nc-item2__title">Антрацитовый Черный</div>
+                          </label>
+                          <label class="nc-item2" for="el_c-6">
+                            <input class="nc-item2__radio" id="el_c-6" type="radio" name="el_c-" value="el_c-6">
+                            <div class="nc-item2__image"><img src="images/content/img22.jpg" alt="Название цвета"></div>
+                            <div class="nc-item2__title">Антрацитовый Черный</div>
+                          </label>
+                          <label class="nc-item2" for="el_c-7">
+                            <input class="nc-item2__radio" id="el_c-7" type="radio" name="el_c-" value="el_c-7">
+                            <div class="nc-item2__image"><img src="images/content/img23.jpg" alt="Название цвета"></div>
+                            <div class="nc-item2__title">Антрацитовый Черный</div>
+                          </label>
+                          <label class="nc-item2" for="el_c-8">
+                            <input class="nc-item2__radio" id="el_c-8" type="radio" name="el_c-" value="el_c-8">
+                            <div class="nc-item2__image"><img src="images/content/img24.jpg" alt="Название цвета"></div>
+                            <div class="nc-item2__title">Антрацитовый Черный</div>
+                          </label>
+                        </div>
+                        <button class="js-nc-c-block-close nc-c__list-close" type="button" title="Закрыть"><svg class="nc-c__list-close-icon" aria-hidden="true">
+                            <use xlink:href="#times-circle" /></svg></button>
+                      </div>
+                    </div>
+                    <div class="nc-c">
+                      <p class="nc-c__title">Подсветка:</p>
+                      <div class="js-nc-c-block nc-c__block nc-c__block--with_icon">
+                        <div class="nc-c__block-icon"><img src="images/content/img_45.png" alt=""></div>
+                        <div class="nc-c__block-text">
+                          <p class="nc-c__block-title">ARGB</p>
+                          <p class="nc-c__block-feature">адресная<br> rgb-подсветка</p>
+                          <p class="nc-c__block-sign">изменить</p>
+                        </div>
+                      </div>
+                      <div class="nc-c__list nc-c__list--tile nc-c__list--tile_4">
+                        <p class="js-nc-c-block-close nc-c__list-title"><img class="nc-c__list-title-icon" src="images/icons/back.svg" alt="Назад"> Подсветка</p>
+                        <div class="nc-c__list-inner">
+                          <label class="nc-item2" for="lt-1">
+                            <input class="nc-item2__radio" id="lt-1" type="radio" name="lt-" value="lt-1" checked>
+                            <div class="nc-item2__image"><img src="images/content/img_58.png" alt="Название цвета"></div>
+                            <div class="nc-item2__title">Ослепительно Красный</div>
+                          </label>
+                          <label class="nc-item2" for="lt-2">
+                            <input class="nc-item2__radio" id="lt-2" type="radio" name="lt-" value="lt-2">
+                            <div class="nc-item2__image"><img src="images/content/img_58.png" alt="Название цвета"></div>
+                            <div class="nc-item2__title">Ослепительно Красный</div>
+                          </label>
+                          <label class="nc-item2" for="lt-3">
+                            <input class="nc-item2__radio" id="lt-3" type="radio" name="lt-" value="lt-3">
+                            <div class="nc-item2__image"><img src="images/content/img_58.png" alt="Название цвета"></div>
+                            <div class="nc-item2__title">Ослепительно Красный</div>
+                          </label>
+                          <label class="nc-item2" for="lt-4">
+                            <input class="nc-item2__radio" id="lt-4" type="radio" name="lt-" value="lt-4">
+                            <div class="nc-item2__image"><img src="images/content/img_58.png" alt="Название цвета"></div>
+                            <div class="nc-item2__title">Ослепительно Красный</div>
+                          </label>
+                          <label class="nc-item2" for="lt-5">
+                            <input class="nc-item2__radio" id="lt-5" type="radio" name="lt-" value="lt-5">
+                            <div class="nc-item2__image"><img src="images/content/img_58.png" alt="Название цвета"></div>
+                            <div class="nc-item2__title">Антрацитовый Черный</div>
+                          </label>
+                          <label class="nc-item2" for="lt-6">
+                            <input class="nc-item2__radio" id="lt-6" type="radio" name="lt-" value="lt-6">
+                            <div class="nc-item2__image"><img src="images/content/img_58.png" alt="Название цвета"></div>
+                            <div class="nc-item2__title">Антрацитовый Черный</div>
+                          </label>
+                          <label class="nc-item2" for="lt-7">
+                            <input class="nc-item2__radio" id="lt-7" type="radio" name="lt-" value="lt-7">
+                            <div class="nc-item2__image"><img src="images/content/img_58.png" alt="Название цвета"></div>
+                            <div class="nc-item2__title">Антрацитовый Черный</div>
+                          </label>
+                          <label class="nc-item2" for="lt-8">
+                            <input class="nc-item2__radio" id="lt-8" type="radio" name="lt-" value="lt-8">
+                            <div class="nc-item2__image"><img src="images/content/img_58.png" alt="Название цвета"></div>
+                            <div class="nc-item2__title">Антрацитовый Черный</div>
+                          </label>
+                        </div>
+                        <button class="js-nc-c-block-close nc-c__list-close" type="button" title="Закрыть"><svg class="nc-c__list-close-icon" aria-hidden="true">
+                            <use xlink:href="#times-circle" /></svg></button>
+                      </div>
+                    </div>
+                    <div class="nc-c">
+                      <p class="nc-c__title">Цветная оплетка:</p>
+                      <div class="js-nc-c-block nc-c__block nc-c__block--with_icon">
+                        <div class="nc-c__block-icon"><img src="images/content/img_45.png" alt=""></div>
+                        <div class="nc-c__block-text">
+                          <p class="nc-c__block-title">Нет</p>
+                          <p class="nc-c__block-feature">кастомная<br> оплетка проводов</p>
+                          <p class="nc-c__block-sign">изменить</p>
+                        </div>
+                      </div>
+                      <div class="nc-c__list nc-c__list--tile nc-c__list--tile_4">
+                        <p class="js-nc-c-block-close nc-c__list-title"><img class="nc-c__list-title-icon" src="images/icons/back.svg" alt="Назад"> Цветная оплетка</p>
+                        <div class="nc-c__list-inner">
+                          <label class="nc-item2" for="wr-1">
+                            <input class="nc-item2__radio" id="wr-1" type="radio" name="wr-" value="wr-1" checked>
+                            <div class="nc-item2__image"><img src="images/content/img_59.png" alt="Название цвета"></div>
+                            <div class="nc-item2__title">Ослепительно Красный</div>
+                          </label>
+                          <label class="nc-item2" for="wr-2">
+                            <input class="nc-item2__radio" id="wr-2" type="radio" name="wr-" value="wr-2">
+                            <div class="nc-item2__image"><img src="images/content/img_59.png" alt="Название цвета"></div>
+                            <div class="nc-item2__title">Ослепительно Красный</div>
+                          </label>
+                          <label class="nc-item2" for="wr-3">
+                            <input class="nc-item2__radio" id="wr-3" type="radio" name="wr-" value="wr-3">
+                            <div class="nc-item2__image"><img src="images/content/img_59.png" alt="Название цвета"></div>
+                            <div class="nc-item2__title">Ослепительно Красный</div>
+                          </label>
+                          <label class="nc-item2" for="wr-4">
+                            <input class="nc-item2__radio" id="wr-4" type="radio" name="wr-" value="wr-4">
+                            <div class="nc-item2__image"><img src="images/content/img_59.png" alt="Название цвета"></div>
+                            <div class="nc-item2__title">Ослепительно Красный</div>
+                          </label>
+                          <label class="nc-item2" for="wr-5">
+                            <input class="nc-item2__radio" id="wr-5" type="radio" name="wr-" value="wr-5">
+                            <div class="nc-item2__image"><img src="images/content/img_59.png" alt="Название цвета"></div>
+                            <div class="nc-item2__title">Антрацитовый Черный</div>
+                          </label>
+                          <label class="nc-item2" for="wr-6">
+                            <input class="nc-item2__radio" id="wr-6" type="radio" name="wr-" value="wr-6">
+                            <div class="nc-item2__image"><img src="images/content/img_59.png" alt="Название цвета"></div>
+                            <div class="nc-item2__title">Антрацитовый Черный</div>
+                          </label>
+                          <label class="nc-item2" for="wr-7">
+                            <input class="nc-item2__radio" id="wr-7" type="radio" name="wr-" value="wr-7">
+                            <div class="nc-item2__image"><img src="images/content/img_59.png" alt="Название цвета"></div>
+                            <div class="nc-item2__title">Антрацитовый Черный</div>
+                          </label>
+                          <label class="nc-item2" for="wr-8">
+                            <input class="nc-item2__radio" id="wr-8" type="radio" name="wr-" value="wr-8">
+                            <div class="nc-item2__image"><img src="images/content/img_59.png" alt="Название цвета"></div>
+                            <div class="nc-item2__title">Антрацитовый Черный</div>
+                          </label>
+                        </div>
+                        <button class="js-nc-c-block-close nc-c__list-close" type="button" title="Закрыть"><svg class="nc-c__list-close-icon" aria-hidden="true">
+                            <use xlink:href="#times-circle" /></svg></button>
+                      </div>
+                    </div>
+                    <div class="nc-c">
+                      <p class="nc-c__title">Изображение:</p>
+                      <div class="js-nc-c-block nc-c__block nc-c__block--with_icon">
+                        <div class="nc-c__block-icon"><img src="images/content/img_45.png" alt=""></div>
+                        <div class="nc-c__block-text">
+                          <p class="nc-c__block-title">Skin</p>
+                          <p class="nc-c__block-feature">Арт<br> дизайн #10</p>
+                          <p class="nc-c__block-sign">изменить</p>
+                        </div>
+                      </div>
+                      <div class="nc-c__list nc-c__list--tile nc-c__list--tile_4">
+                        <p class="js-nc-c-block-close nc-c__list-title"><img class="nc-c__list-title-icon" src="images/icons/back.svg" alt="Назад"> Изображение</p>
+                        <div class="nc-c__list-filter-block">
+                          <ul class="nc-c__list-filter">
+                            <li class="nc-c__list-filter-item"><a class="nc-c__list-filter-link" href="#">Dota 2</a></li>
+                            <li class="nc-c__list-filter-item"><a class="nc-c__list-filter-link is-active" href="#">OW</a></li>
+                            <li class="nc-c__list-filter-item"><a class="nc-c__list-filter-link" href="#">CS:GO</a></li>
+                            <li class="nc-c__list-filter-item"><a class="nc-c__list-filter-link" href="#">BF1</a></li>
+                          </ul>
+                        </div>
+                        <div class="nc-c__list-inner">
+                          <label class="nc-item2" for="sk-1">
+                            <input class="nc-item2__radio" id="sk-1" type="radio" name="sk-" value="sk-1" checked>
+                            <div class="nc-item2__image"><img src="images/content/img_57.png" alt="Название цвета"></div>
+                            <div class="nc-item2__title">SKIN #1<br>DigitalRazor</div>
+                          </label>
+                          <label class="nc-item2" for="sk-2">
+                            <input class="nc-item2__radio" id="sk-2" type="radio" name="sk-" value="sk-2">
+                            <div class="nc-item2__image"><img src="images/content/img_57.png" alt="Название цвета"></div>
+                            <div class="nc-item2__title">SKIN #1<br>DigitalRazor</div>
+                          </label>
+                          <label class="nc-item2" for="sk-3">
+                            <input class="nc-item2__radio" id="sk-3" type="radio" name="sk-" value="sk-3">
+                            <div class="nc-item2__image"><img src="images/content/img_57.png" alt="Название цвета"></div>
+                            <div class="nc-item2__title">SKIN #1<br>DigitalRazor</div>
+                          </label>
+                          <label class="nc-item2" for="sk-4">
+                            <input class="nc-item2__radio" id="sk-4" type="radio" name="sk-" value="sk-4">
+                            <div class="nc-item2__image"><img src="images/content/img_57.png" alt="Название цвета"></div>
+                            <div class="nc-item2__title">SKIN #1<br>DigitalRazor</div>
+                          </label>
+                          <label class="nc-item2" for="sk-5">
+                            <input class="nc-item2__radio" id="sk-5" type="radio" name="sk-" value="sk-5">
+                            <div class="nc-item2__image"><img src="images/content/img_57.png" alt="Название цвета"></div>
+                            <div class="nc-item2__title">SKIN #1<br>DigitalRazor</div>
+                          </label>
+                          <label class="nc-item2" for="sk-6">
+                            <input class="nc-item2__radio" id="sk-6" type="radio" name="sk-" value="sk-6">
+                            <div class="nc-item2__image"><img src="images/content/img_57.png" alt="Название цвета"></div>
+                            <div class="nc-item2__title">SKIN #1<br>DigitalRazor</div>
+                          </label>
+                          <label class="nc-item2" for="sk-7">
+                            <input class="nc-item2__radio" id="sk-7" type="radio" name="sk-" value="sk-7">
+                            <div class="nc-item2__image"><img src="images/content/img_57.png" alt="Название цвета"></div>
+                            <div class="nc-item2__title">SKIN #1<br>DigitalRazor</div>
+                          </label>
+                          <div class="js-own-design-opener nc-item2">
+                            <div class="nc-item2__image"><img src="images/content/img25.jpg" alt=""></div>
+                            <div class="nc-item2__title">Создать<br> свой дизайн</div>
+                          </div>
+                        </div>
+                        <button class="js-nc-c-block-close nc-c__list-close" type="button" title="Закрыть"><svg class="nc-c__list-close-icon" aria-hidden="true">
+                            <use xlink:href="#times-circle" /></svg></button>
+                      </div>
+                    </div>
+                    <div class="nc-c nc-c--empty">
+                      <p class="nc-c__title">&nbsp;</p>
+                      <div class="nc-c__block">
+                        <div class="nc-c__block-text">
+                          <p class="nc-c__block-title"></p>
+                          <p class="nc-c__block-feature"></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <a class="nc-c-list__arrow nc-c-list__arrow--next heartBeat" href="new-smart-config.html#accessories" title="Вперед"><svg class="nc-c-list__arrow-icon" aria-hidden="true">
+                <use xlink:href="#slider_arrow_right" /></svg></a>
+          </div>
+        </div>
       </div>
-    </form>
+    </div>
+    <a class="config-title" href="new-smart-config.html">Конфигурация <svg class="config-title__icon" aria-hidden="true">
+        <use xlink:href="#arrow_down" /></svg></a>
+    <a class="config-title" href="new-smart-config.html#accessories">Аксессуары <svg class="config-title__icon" aria-hidden="true">
+        <use xlink:href="#arrow_down" /></svg></a>
+    <div class="nc__section nc__section--result ">
+      <div class="nc__inner nc__inner--result" data-section="2">
+        <p class="config-title">Итого <svg class="config-title__icon" aria-hidden="true">
+            <use xlink:href="#arrow_down" /></svg></p>
+        <div class="nc__inner-cell nc__inner-cell--result_picture" style="background-image: url('images/content/img_44.png')"></div>
+        <div class="nc__inner-cell nc__inner-cell--result_info custom-scroll">
+          <h3>ИТОГОВАЯ КОНФИГУРАЦИЯ:</h3>
+          <div class="result-info">
+            <div class="result-info__row">
+              <div class="result-info__cell result-info__cell--info">
+                <p class="result-info__title">Игровой компьютер:</p>
+                Процессор: 6-ядерный Intel Core i5-8400 2.80 GHz<br>
+                Кулер: CoolerMaster MasterAir G100L<br>
+                Системная плата: ASUS PRIME B360M-K<br>
+                Оперативная память: 8GB (2x4Gb) DDR4 2400Mhz Kingston Hyperx Fury<br>
+                Видеокарта: ASUS DUAL GTX1060 3G<br>
+                SSD накопитель - SATA: 120GB WD GREEN<br>
+                HDD накопитель: HDD 1TB Seagate Barracuda<br>
+                Корпус: Cooler Master MasterBox MB600L<br>
+                Блок питания: 500W Cooler Master Elite V3 500<br>
+                Тестирование: Стандартный стресс-тест основных компонентов 8 часов<br>
+                Гарантия: Базовая гарантия 12 месяцев<br>
+                Доставка: Бесплатная доставка
+              </div>
+              <div class="result-info__cell result-info__cell--qnt">1 шт.</div>
+            </div>
+            <div class="result-info__row">
+              <div class="result-info__cell result-info__cell--info">
+                Монитор: ASUS MG278Q 27"
+              </div>
+              <div class="result-info__cell result-info__cell--qnt">1 шт.</div>
+            </div>
+            <div class="result-info__row">
+              <div class="result-info__cell result-info__cell--info">
+                Игровая мышь: Corsair Sabre 95 RGB
+              </div>
+              <div class="result-info__cell result-info__cell--qnt">1 шт.</div>
+            </div>
+            <div class="result-info__row">
+              <div class="result-info__cell result-info__cell--transparent"></div>
+              <div class="result-info__cell result-info__cell--price">Итого: 100 000 руб.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
 
-    //= template/config_collab/footer.html
+  //= template/config_collab/footer.html
 
-    //= template/config/popup.html
+  //= template/config/popup.html
 
-    //= template/config_collab/scripts.html
-    <script type="text/javascript" src="js/nc/design-config.js"></script>
-  </body>
+  //= template/config_collab/scripts.html
+  <script type="text/javascript" src="js/nc/design-config.js"></script>
+</body>
+
 </html>
