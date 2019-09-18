@@ -241,4 +241,13 @@ $(document).ready(function() {
   $('.auth-form__input, .reg-form__input').blur(function () {
     $('.auth-form__input, .reg-form__input').removeClass('no-focus');
   });
+
+  //слайдер в отзывах
+  if ($(".js-review-slider").length) {
+    $('.js-review-slider').slick({
+      infinite: false,
+      arrows: false,
+      dots: true
+    });
+  }
 });
