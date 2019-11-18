@@ -98,8 +98,17 @@ $(document).ready(function() {
 
   //выбор города
   $('.js-geo').click(function() {
-    $('.geo__list').toggleClass('is-open');
+    $('.geo2__dropdown').toggleClass('is-open');
     return false;
+  });
+
+  //автосаггест
+  $('.js-geo-list').focus(function() {
+    $('.geo2__suggest').show();
+  });
+
+  $('.js-geo-list').blur(function() {
+    $('.geo2__suggest').hide();
   });
 
   //удалить

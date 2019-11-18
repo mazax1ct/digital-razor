@@ -1,13 +1,53 @@
 <header class="header">
   <div class="header__top">
     <div class="header__top-inner container-fluid">
-      <div class="header__geo geo">
+      <!--<div class="header__geo geo">
         <button class="js-geo geo__opener" type="button" title="Выберите ваш город"><img width="20" height="20" src="images/icons/geo.png" alt=""></button>
         <div class="geo__list">
           <p class="geo__list-title">ВЫБОР ГОРОДА</p>
           <button class="geo__list-item" type="button">Москва</button>
           <button class="geo__list-item" type="button">Санкт-Петербург</button>
           <button class="geo__list-item" type="button">Другой город</button>
+        </div>
+      </div>-->
+      <div class="header__geo geo2">
+        <button class="js-geo geo2__opener" type="button" title="Выберите ваш город">
+          <img class="geo2__opener-icon" src="images/icons/geo-arrow.svg" alt="">
+          <span>Санкт-Петербург</span>
+        </button>
+        <div class="geo2__dropdown">
+          <div class="geo2__dropdown-inner">
+            <p class="geo2__dropdown-title">Начните вводить название своего города или выберите из списка ниже.</p>
+            <div class="geo2__dropdown-form">
+              <div class="geo2__dropdown-inputin">
+                <input class="js-geo-list geo2__dropdown-input" type="text" placeholder="Ваш населенный пункт" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+              </div>
+              <div class="geo2__suggest">
+                <p class="geo2__suggest-title">Выберите вариант или продолжайте ввод</p>
+                <div class="geo2__suggest-list">
+                  <div class="geo2__suggest-item">Россия, г <span>Мос</span>ква</div>
+                  <div class="geo2__suggest-item">США, Айдахо, <span>Мос</span>ква</div>
+                  <div class="geo2__suggest-item">Таджикистан, г <span>Мос</span>ковский</div>
+                  <div class="geo2__suggest-item">Россия, г <span>Мос</span>ква</div>
+                  <div class="geo2__suggest-item">США, Айдахо, <span>Мос</span>ква</div>
+                  <div class="geo2__suggest-item">Таджикистан, г <span>Мос</span>ковский</div>
+                  <div class="geo2__suggest-item">Россия, г <span>Мос</span>ква</div>
+                  <div class="geo2__suggest-item">США, Айдахо, <span>Мос</span>ква</div>
+                  <div class="geo2__suggest-item">Таджикистан, г <span>Мос</span>ковский</div>
+                </div>
+              </div>
+            </div>
+            <div class="geo2__dropdown-list">
+              <span class="geo2__dropdown-link">Москва</span>, <span class="geo2__dropdown-link">Санкт-Петербург</span>,
+              <span class="geo2__dropdown-link">Новосибирск</span>, <span class="geo2__dropdown-link">Екатеринбург</span>,
+              <span class="geo2__dropdown-link">Нижний Новгород</span>, <span class="geo2__dropdown-link">Казань</span>,
+              <span class="geo2__dropdown-link">Челябинск</span>, <span class="geo2__dropdown-link">Омск</span>,
+              <span class="geo2__dropdown-link">Самара</span>, <span class="geo2__dropdown-link">Ростов-на-Дону</span>,
+              <span class="geo2__dropdown-link">Уфа</span>, <span class="geo2__dropdown-link">Красноярск</span>,
+              <span class="geo2__dropdown-link">Краснодар</span>, <span class="geo2__dropdown-link">Пермь</span>,
+              <span class="geo2__dropdown-link">Воронеж</span>, <span class="geo2__dropdown-link">Волгоград</span>
+            </div>
+          </div>
         </div>
       </div>
       <a class="header__top-link header__top-link--phone" href="tel:88005009926">+7 (800) 500-99-26</a>

@@ -240,3 +240,139 @@
 
     &:hover
       border-left-color: #d02228
+
+.geo2
+  align-items: center
+  display: flex
+  position: relative
+
+  &__opener
+    align-items: center
+    background: none
+    border: none
+    color: #fff
+    cursor: pointer
+    display: flex
+    justify-content: center
+    height: 50px
+    padding: 0 15px
+
+  &__opener-icon
+    height: 16px
+    margin-right: 5px
+    width: 16px
+
+  &__dropdown
+    background-color: #272727
+    display: none
+    left: 50%
+    line-height: 1.7
+    position: absolute
+    top: calc(100% + 13px)
+    transform: translateX(-30%)
+    width: 450px
+    z-index: 1
+
+    @media(min-width: 992px)
+      transform: translateX(-50%)
+
+    &::before
+      bottom: 100%
+      left: 50%
+      border: solid transparent
+      content: ''
+      height: 0
+      width: 0
+      position: absolute
+      pointer-events: none
+      border-color: rgba(39, 39, 39, 0)
+      border-bottom-color: #272727
+      border-width: 10px
+      margin-left: -100px
+
+      @media(min-width: 992px)
+        margin-left: -10px
+
+    &.is-open
+      display: block
+
+  &__dropdown-inner
+    padding: 20px
+
+  &__dropdown-title
+    color: #ccc
+    margin-bottom: 15px
+
+  &__dropdown-form
+    margin-bottom: 15px
+    position: relative
+
+  &__dropdown-inputin
+    position: relative
+
+    &::before
+      background-image: url("data:image/svg+xml,%3Csvg width='15' height='15' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg' data-svg='location'%3E%3Cpath fill='none' stroke='%23ccc' stroke-width='1.01' d='M10,0.5 C6.41,0.5 3.5,3.39 3.5,6.98 C3.5,11.83 10,19 10,19 C10,19 16.5,11.83 16.5,6.98 C16.5,3.39 13.59,0.5 10,0.5 L10,0.5 Z'%3E%3C/path%3E%3Ccircle fill='none' stroke='%23ccc' cx='10' cy='6.8' r='2.3'%3E%3C/circle%3E%3C/svg%3E%0A")
+      background-position: 50% 50%
+      background-repeat: no-repeat
+      background-color: transparent
+      content: ''
+      height: 15px
+      left: 10px
+      position: absolute
+      top: 12px
+      width: 15px
+      z-index: 1
+
+  &__dropdown-input
+    border: 1px solid #ccc
+    background: #1e1e1e
+    color: #fff
+    display: block
+    height: 40px
+    line-height: 15px
+    padding-left: 40px
+    padding-right: 15px
+    padding-top: 9px
+    padding-bottom: 11px
+    width: 100%
+
+  &__dropdown-link
+    color: #ccc
+    cursor: pointer
+    text-decoration: underline
+
+    &:hover,
+    &:focus
+      text-decoration: none
+
+  &__suggest
+    border: 1px solid #ccc
+    background-color: #1e1e1e
+    display: none
+    left: 0
+    position: absolute
+    padding-top: 10px
+    margin-top: -1px
+    top: 100%
+    width: 100%
+    z-index: 1
+
+  &__suggest-title
+    color: #ccc
+    font-size: 12px
+    padding-left: 5px
+    padding-right: 5px
+
+  &__suggest-list
+    max-height: 200px
+    overflow-y: auto
+
+  &__suggest-item
+    cursor: pointer
+    padding: 5px
+
+    &:hover
+      background-color: #272727
+
+    span
+      color: #e7212e
