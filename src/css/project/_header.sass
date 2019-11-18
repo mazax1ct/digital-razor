@@ -264,34 +264,18 @@
 
   &__dropdown
     background-color: #272727
+    border-bottom: 2px solid #d02228
     display: none
     left: 50%
     line-height: 1.7
     position: absolute
-    top: calc(100% + 13px)
+    top: 100%
     transform: translateX(-30%)
     width: 450px
     z-index: 1
 
     @media(min-width: 992px)
       transform: translateX(-50%)
-
-    &::before
-      bottom: 100%
-      left: 50%
-      border: solid transparent
-      content: ''
-      height: 0
-      width: 0
-      position: absolute
-      pointer-events: none
-      border-color: rgba(39, 39, 39, 0)
-      border-bottom-color: #272727
-      border-width: 10px
-      margin-left: -100px
-
-      @media(min-width: 992px)
-        margin-left: -10px
 
     &.is-open
       display: block
@@ -339,11 +323,11 @@
   &__dropdown-link
     color: #ccc
     cursor: pointer
-    text-decoration: underline
+    text-decoration: none
 
     &:hover,
     &:focus
-      text-decoration: none
+      text-decoration: underline
 
   &__suggest
     border: 1px solid #ccc
