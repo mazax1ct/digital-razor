@@ -152,7 +152,7 @@ $(document).ready(function() {
     $('.performance').slideToggle();
   });
 
-  // скролл к началу конфига
+  //скролл к началу конфига
   $('.js-config-scroll').click(function() {
     var topOffset = $('.config__intro').outerHeight(true);
     $("html, body").animate({
@@ -160,7 +160,7 @@ $(document).ready(function() {
     }, 500);
   });
 
-  // переключение вида списков конфига
+  //переключение вида списков конфига
   $('.js-config-view').click(function() {
     var className = $(this).attr('data-class');
     $('.js-config-view').removeClass('is-active');
@@ -173,13 +173,13 @@ $(document).ready(function() {
     return false;
   });
 
-  // переключение описания при выборе элемента в конфиге
+  //переключение описания при выборе элемента в конфиге
   $('.js-config-element').click(function() {
     $('.component--config_description').removeClass('is-active');
     $('.component--config_description[data-description=' + $(this).attr('for') + ']').addClass('is-active');
   });
 
-  // переключение вида списков смарт-конфига
+  //переключение вида списков смарт-конфига
   $('.js-smart-config-view').click(function() {
     var className = $(this).attr('data-class');
     $(this).closest('.config__views-block').find('.js-smart-config-view').removeClass('is-active');
@@ -192,7 +192,7 @@ $(document).ready(function() {
     return false;
   });
 
-  // попап сохранение конфига
+  //попап сохранение конфига
   $('.js-config-save').click(function() {
     if($(this).hasClass('open')) {
       $("body").removeClass("overflow"); //возвращаем прокрутку
@@ -223,7 +223,7 @@ $(document).ready(function() {
     $(".footer").removeClass("blur");
   });
 
-  // попап консультации
+  //попап консультации
   $('.js-config-consult').click(function() {
     if($(this).hasClass('open')) {
       $("body").removeClass("overflow"); //возвращаем прокрутку
@@ -256,7 +256,7 @@ $(document).ready(function() {
     $(".footer").removeClass("blur");
   });
 
-  // тогл описания в корзине
+  //тогл описания в корзине
   $('.js-cart-description-opener').click(function() {
     $(".cart-table__description[data-target=" + $(this).attr("data-link") + "]").slideToggle(300);
     return false;

@@ -49,6 +49,11 @@ $(document).ready(function() {
       arrows: false,
       dots: true
     });
+
+    $('.js-main-banner').on('afterChange', function(slick, currentSlide) {
+      $('.main-banner__slide').removeClass('animate');
+      $('.slick-active').find('.main-banner__slide').addClass('animate');
+    });
   }
 
   //баннер в деталке каталога
