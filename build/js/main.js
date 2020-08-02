@@ -51,8 +51,8 @@ $(document).ready(function() {
     });
 
     $('.js-main-banner').on('afterChange', function(slick, currentSlide) {
-      $('.main-banner__slide').removeClass('animate');
-      $('.slick-active').find('.main-banner__slide').addClass('animate');
+      $('.main-banner__slide-back').removeClass('animate');
+      $('.slick-active').find('.main-banner__slide-back').addClass('animate');
     });
   }
 
